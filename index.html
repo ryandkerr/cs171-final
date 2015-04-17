@@ -37,10 +37,19 @@
 
   <script>
 
+    var WIDTH = 800
+    var HEIGHT = 500 
+
+    var ELECGLOBAL;
+
+    var quantize = d3.scale.quantize()
+      .domain([-.02, .05])
+      .range(d3.range(9).map(function(i) { return "q" + i + "-9"; })); 
+
     var svg = d3.select("#choroVis")
       .append("svg")
-      .attr("width", 900)
-      .attr("height", 500);
+      .attr("width", WIDTH)
+      .attr("height", HEIGHT);
 
     var projection = d3.geo.albersUsa()
       .scale(1000);
@@ -55,10 +64,22 @@
       states.selectAll("path")
         .data(stateJSON.features)
         .enter().append("path")
+        // .attr( assign class based on color )
+        // .attr ( assign id or maybe class based on state name )
+        .attr("id", function(d) { return d.properties.NAME; })
         .attr("d", path)
+        .attr("fill", function(d) { if(d.properties.CENSUSAREA > 113590) {
+            return "#000000"; 
+          } else {
+            return "#AAAAAA";
+          }})
         .attr("stroke", "#555555")
-        .attr("stroke-width", 2)
+        .attr("stroke-width", 1.5)
     });
+
+    d3.json("data/elec08_12.json", function(elecJSON) {
+      ELECGLOBAL = elecJSON;
+    })
 
   </script>
 </body>
