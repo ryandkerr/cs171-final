@@ -8,7 +8,16 @@
     "demEV":0,
     "gopVotes":1255925,
     "gopPct":0.605,
-    "gopEV":9
+    "gopEV":9,
+    "VEP":3539018,
+    "VAP":3707440,
+    "pctNonCit":0.026,
+    "prison":32431,
+    "probation":57993,
+    "parole":8616,
+    "felon":71783,
+    "turntE":0.586133781,
+    "turntA":0.55950683
   },
   {
     "year":2012,
@@ -19,7 +28,16 @@
     "demEV":0,
     "gopVotes":164676,
     "gopPct":0.548,
-    "gopEV":3
+    "gopEV":3,
+    "VEP":511792,
+    "VAP":543763,
+    "pctNonCit":0.038,
+    "prison":5633,
+    "probation":7173,
+    "parole":1882,
+    "felon":11317,
+    "turntE":0.587142824,
+    "turntA":0.552621271
   },
   {
     "year":2012,
@@ -30,7 +48,16 @@
     "demEV":0,
     "gopVotes":1233654,
     "gopPct":0.537,
-    "gopEV":11
+    "gopEV":11,
+    "VEP":4383008,
+    "VAP":4959270,
+    "pctNonCit":0.099,
+    "prison":40080,
+    "probation":72452,
+    "parole":7460,
+    "felon":85940,
+    "turntE":0.524583574,
+    "turntA":0.46362751
   },
   {
     "year":2012,
@@ -41,7 +68,16 @@
     "demEV":0,
     "gopVotes":647744,
     "gopPct":0.606,
-    "gopEV":6
+    "gopEV":6,
+    "VEP":2109664,
+    "VAP":2242740,
+    "pctNonCit":0.035,
+    "prison":14654,
+    "probation":30122,
+    "parole":23372,
+    "felon":53991,
+    "turntE":0.506937598,
+    "turntA":0.476857772
   },
   {
     "year":2012,
@@ -52,7 +88,16 @@
     "demEV":55,
     "gopVotes":4839958,
     "gopPct":0.371,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":23666758,
+    "VAP":28913129,
+    "pctNonCit":0.174,
+    "prison":134534,
+    "probation":0,
+    "parole":89287,
+    "felon":223821,
+    "turntE":0.550922395,
+    "turntA":0.450955931
   },
   {
     "year":2012,
@@ -63,7 +108,16 @@
     "demEV":9,
     "gopVotes":1185243,
     "gopPct":0.461,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":3674216,
+    "VAP":3981208,
+    "pctNonCit":0.069,
+    "prison":20462,
+    "probation":0,
+    "parole":11458,
+    "felon":31920,
+    "turntE":0.699338308,
+    "turntA":0.645412146
   },
   {
     "year":2012,
@@ -74,7 +128,16 @@
     "demEV":7,
     "gopVotes":634892,
     "gopPct":0.407,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":2542607,
+    "VAP":2801375,
+    "pctNonCit":0.085,
+    "prison":17530,
+    "probation":0,
+    "parole":2793,
+    "felon":20323,
+    "turntE":0.613134472,
+    "turntA":0.556498148
   },
   {
     "year":2012,
@@ -85,7 +148,16 @@
     "demEV":3,
     "gopVotes":165484,
     "gopPct":0.4,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":663663,
+    "VAP":715708,
+    "pctNonCit":0.051,
+    "prison":6914,
+    "probation":15641,
+    "parole":601,
+    "felon":15805,
+    "turntE":0.623691542,
+    "turntA":0.578337814
   },
   {
     "year":2012,
@@ -96,7 +168,16 @@
     "demEV":3,
     "gopVotes":21381,
     "gopPct":0.073,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":477582,
+    "VAP":528848,
+    "pctNonCit":0.097,
+    "prison":0,
+    "probation":0,
+    "parole":0,
+    "felon":0,
+    "turntE":0.615106935,
+    "turntA":0.555479079
   },
   {
     "year":2012,
@@ -107,7 +188,16 @@
     "demEV":29,
     "gopVotes":4163447,
     "gopPct":0.491,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":13485081,
+    "VAP":15380947,
+    "pctNonCit":0.108,
+    "prison":101930,
+    "probation":240869,
+    "parole":4538,
+    "felon":234129,
+    "turntE":0.628411427,
+    "turntA":0.550953007
   },
   {
     "year":2012,
@@ -118,7 +208,16 @@
     "demEV":0,
     "gopVotes":2078688,
     "gopPct":0.533,
-    "gopEV":16
+    "gopEV":16,
+    "VEP":6603887,
+    "VAP":7452696,
+    "pctNonCit":0.072,
+    "prison":55457,
+    "probation":442061,
+    "parole":24761,
+    "felon":314510,
+    "turntE":0.590568857,
+    "turntA":0.52330727
   },
   {
     "year":2012,
@@ -129,7 +228,16 @@
     "demEV":4,
     "gopVotes":121015,
     "gopPct":0.278,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":982615,
+    "VAP":1088335,
+    "pctNonCit":0.092,
+    "prison":5831,
+    "probation":0,
+    "parole":0,
+    "felon":5831,
+    "turntE":0.442387914,
+    "turntA":0.399414702
   },
   {
     "year":2012,
@@ -140,7 +248,16 @@
     "demEV":0,
     "gopVotes":420911,
     "gopPct":0.645,
-    "gopEV":4
+    "gopEV":4,
+    "VEP":1091410,
+    "VAP":1173727,
+    "pctNonCit":0.046,
+    "prison":7985,
+    "probation":31606,
+    "parole":3848,
+    "felon":28584,
+    "turntE":0.597643415,
+    "turntA":0.555728888
   },
   {
     "year":2012,
@@ -151,7 +268,16 @@
     "demEV":20,
     "gopVotes":2135216,
     "gopPct":0.407,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":8899143,
+    "VAP":9827043,
+    "pctNonCit":0.089,
+    "prison":49348,
+    "probation":0,
+    "parole":0,
+    "felon":49348,
+    "turntE":0.589047058,
+    "turntA":0.5334274
   },
   {
     "year":2012,
@@ -162,7 +288,16 @@
     "demEV":0,
     "gopVotes":1420543,
     "gopPct":0.541,
-    "gopEV":11
+    "gopEV":11,
+    "VEP":4754726,
+    "VAP":4960376,
+    "pctNonCit":0.036,
+    "prison":28831,
+    "probation":0,
+    "parole":0,
+    "felon":28831,
+    "turntE":0.551984278,
+    "turntA":0.52909981
   },
   {
     "year":2012,
@@ -173,7 +308,16 @@
     "demEV":6,
     "gopVotes":730617,
     "gopPct":0.462,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":2251485,
+    "VAP":2356209,
+    "pctNonCit":0.032,
+    "prison":8733,
+    "probation":29333,
+    "parole":5151,
+    "felon":29430,
+    "turntE":0.702727311,
+    "turntA":0.671493912
   },
   {
     "year":2012,
@@ -184,7 +328,16 @@
     "demEV":0,
     "gopVotes":692634,
     "gopPct":0.597,
-    "gopEV":6
+    "gopEV":6,
+    "VEP":2030350,
+    "VAP":2162442,
+    "pctNonCit":0.05,
+    "prison":9682,
+    "probation":17021,
+    "parole":5126,
+    "felon":23829,
+    "turntE":0.571315783,
+    "turntA":0.536417162
   },
   {
     "year":2012,
@@ -195,7 +348,16 @@
     "demEV":0,
     "gopVotes":1087190,
     "gopPct":0.605,
-    "gopEV":8
+    "gopEV":8,
+    "VEP":3228938,
+    "VAP":3368684,
+    "pctNonCit":0.022,
+    "prison":22110,
+    "probation":54511,
+    "parole":14419,
+    "felon":65420,
+    "turntE":0.556595388,
+    "turntA":0.533505666
   },
   {
     "year":2012,
@@ -206,7 +368,16 @@
     "demEV":0,
     "gopVotes":1152262,
     "gopPct":0.578,
-    "gopEV":8
+    "gopEV":8,
+    "VEP":3311501,
+    "VAP":3495847,
+    "pctNonCit":0.027,
+    "prison":40172,
+    "probation":41298,
+    "parole":28946,
+    "felon":91006,
+    "turntE":0.60216349,
+    "turntA":0.570409689
   },
   {
     "year":2012,
@@ -217,7 +388,16 @@
     "demEV":4,
     "gopVotes":292276,
     "gopPct":0.41,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":1046008,
+    "VAP":1064779,
+    "pctNonCit":0.018,
+    "prison":0,
+    "probation":0,
+    "parole":0,
+    "felon":0,
+    "turntE":0.681811229,
+    "turntA":0.669791572
   },
   {
     "year":2012,
@@ -228,7 +408,16 @@
     "demEV":10,
     "gopVotes":971869,
     "gopPct":0.359,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":4062931,
+    "VAP":4553853,
+    "pctNonCit":0.089,
+    "prison":21522,
+    "probation":96640,
+    "parole":13195,
+    "felon":85936,
+    "turntE":0.666348259,
+    "turntA":0.594513481
   },
   {
     "year":2012,
@@ -239,7 +428,16 @@
     "demEV":11,
     "gopVotes":1188314,
     "gopPct":0.375,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":4808650,
+    "VAP":5263550,
+    "pctNonCit":0.084,
+    "prison":11308,
+    "probation":0,
+    "parole":0,
+    "felon":11308,
+    "turntE":0.65876431,
+    "turntA":0.601830894
   },
   {
     "year":2012,
@@ -250,7 +448,16 @@
     "demEV":16,
     "gopVotes":2115256,
     "gopPct":0.447,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":7312108,
+    "VAP":7625576,
+    "pctNonCit":0.035,
+    "prison":43636,
+    "probation":0,
+    "parole":0,
+    "felon":43636,
+    "turntE":0.647003709,
+    "turntA":0.620407035
   },
   {
     "year":2012,
@@ -261,7 +468,16 @@
     "demEV":10,
     "gopVotes":1320225,
     "gopPct":0.45,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":3861043,
+    "VAP":4114820,
+    "pctNonCit":0.044,
+    "prison":9938,
+    "probation":108157,
+    "parole":6006,
+    "felon":73267,
+    "turntE":0.760561589,
+    "turntA":0.713654789
   },
   {
     "year":2012,
@@ -272,7 +488,16 @@
     "demEV":0,
     "gopVotes":710746,
     "gopPct":0.553,
-    "gopEV":6
+    "gopEV":6,
+    "VEP":2166811,
+    "VAP":2246931,
+    "pctNonCit":0.015,
+    "prison":22319,
+    "probation":30768,
+    "parole":6804,
+    "felon":45430,
+    "turntE":0.593306938,
+    "turntA":0.572151081
   },
   {
     "year":2012,
@@ -283,7 +508,16 @@
     "demEV":0,
     "gopVotes":1482440,
     "gopPct":0.538,
-    "gopEV":10
+    "gopEV":10,
+    "VEP":4432424,
+    "VAP":4628500,
+    "pctNonCit":0.025,
+    "prison":31247,
+    "probation":55470,
+    "parole":20672,
+    "felon":81318,
+    "turntE":0.622080153,
+    "turntA":0.595727125
   },
   {
     "year":2012,
@@ -294,7 +528,16 @@
     "demEV":0,
     "gopVotes":267928,
     "gopPct":0.554,
-    "gopEV":3
+    "gopEV":3,
+    "VEP":774459,
+    "VAP":785454,
+    "pctNonCit":0.009,
+    "prison":3609,
+    "probation":0,
+    "parole":0,
+    "felon":3609,
+    "turntE":0.625014365,
+    "turntA":0.616265243
   },
   {
     "year":2012,
@@ -305,7 +548,16 @@
     "demEV":0,
     "gopVotes":475064,
     "gopPct":0.598,
-    "gopEV":5
+    "gopEV":5,
+    "VEP":1316676,
+    "VAP":1396507,
+    "pctNonCit":0.047,
+    "prison":4705,
+    "probation":14260,
+    "parole":1383,
+    "felon":13646,
+    "turntE":0.603321546,
+    "turntA":0.568832809
   },
   {
     "year":2012,
@@ -316,7 +568,16 @@
     "demEV":6,
     "gopVotes":463567,
     "gopPct":0.457,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":1800969,
+    "VAP":2105976,
+    "pctNonCit":0.133,
+    "prison":12883,
+    "probation":11321,
+    "parole":5379,
+    "felon":24262,
+    "turntE":0.563539961,
+    "turntA":0.481922871
   },
   {
     "year":2012,
@@ -327,7 +588,16 @@
     "demEV":4,
     "gopVotes":329918,
     "gopPct":0.465,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":1013302,
+    "VAP":1047978,
+    "pctNonCit":0.03,
+    "prison":2790,
+    "probation":0,
+    "parole":0,
+    "felon":2790,
+    "turntE":0.701638801,
+    "turntA":0.678422639
   },
   {
     "year":2012,
@@ -338,7 +608,16 @@
     "demEV":14,
     "gopVotes":1478088,
     "gopPct":0.406,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":5916716,
+    "VAP":6847503,
+    "pctNonCit":0.121,
+    "prison":23225,
+    "probation":114886,
+    "parole":14987,
+    "felon":99102,
+    "turntE":0.61495245,
+    "turntA":0.531361432
   },
   {
     "year":2012,
@@ -349,7 +628,16 @@
     "demEV":5,
     "gopVotes":335788,
     "gopPct":0.428,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":1436189,
+    "VAP":1573400,
+    "pctNonCit":0.073,
+    "prison":6727,
+    "probation":21381,
+    "parole":5078,
+    "felon":23137,
+    "turntE":0.545720654,
+    "turntA":0.498130164
   },
   {
     "year":2012,
@@ -360,7 +648,16 @@
     "demEV":29,
     "gopVotes":2485432,
     "gopPct":0.352,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":13319786,
+    "VAP":15344671,
+    "pctNonCit":0.125,
+    "prison":54210,
+    "probation":0,
+    "parole":46222,
+    "felon":100432,
+    "turntE":0.530183068,
+    "turntA":0.460220033
   },
   {
     "year":2012,
@@ -371,7 +668,16 @@
     "demEV":0,
     "gopVotes":2270395,
     "gopPct":0.504,
-    "gopEV":15
+    "gopEV":15,
+    "VEP":6946385,
+    "VAP":7496980,
+    "pctNonCit":0.061,
+    "prison":37136,
+    "probation":96070,
+    "parole":4359,
+    "felon":92412,
+    "turntE":0.648592325,
+    "turntA":0.600958253
   },
   {
     "year":2012,
@@ -382,7 +688,16 @@
     "demEV":0,
     "gopVotes":188320,
     "gopPct":0.583,
-    "gopEV":3
+    "gopEV":3,
+    "VEP":539152,
+    "VAP":549955,
+    "pctNonCit":0.017,
+    "prison":1512,
+    "probation":0,
+    "parole":0,
+    "felon":1512,
+    "turntE":0.598962816,
+    "turntA":0.587197134
   },
   {
     "year":2012,
@@ -393,7 +708,16 @@
     "demEV":18,
     "gopVotes":2661407,
     "gopPct":0.477,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":8648932,
+    "VAP":8896930,
+    "pctNonCit":0.022,
+    "prison":50876,
+    "probation":0,
+    "parole":0,
+    "felon":50876,
+    "turntE":0.645261403,
+    "turntA":0.627275026
   },
   {
     "year":2012,
@@ -404,7 +728,16 @@
     "demEV":0,
     "gopVotes":891325,
     "gopPct":0.668,
-    "gopEV":7
+    "gopEV":7,
+    "VEP":2713268,
+    "VAP":2885093,
+    "pctNonCit":0.045,
+    "prison":25225,
+    "probation":25506,
+    "parole":2310,
+    "felon":41053,
+    "turntE":0.491979414,
+    "turntA":0.462679019
   },
   {
     "year":2012,
@@ -415,7 +748,16 @@
     "demEV":7,
     "gopVotes":754175,
     "gopPct":0.421,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":2834868,
+    "VAP":3050747,
+    "pctNonCit":0.066,
+    "prison":14840,
+    "probation":0,
+    "parole":0,
+    "felon":14840,
+    "turntE":0.63116519,
+    "turntA":0.586502257
   },
   {
     "year":2012,
@@ -426,7 +768,16 @@
     "demEV":20,
     "gopVotes":2680434,
     "gopPct":0.467,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":9650361,
+    "VAP":10037099,
+    "pctNonCit":0.033,
+    "prison":51125,
+    "probation":0,
+    "parole":0,
+    "felon":51125,
+    "turntE":0.596212929,
+    "turntA":0.573240336
   },
   {
     "year":2012,
@@ -437,7 +788,16 @@
     "demEV":4,
     "gopVotes":157204,
     "gopPct":0.352,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":768849,
+    "VAP":834983,
+    "pctNonCit":0.075,
+    "prison":3318,
+    "probation":0,
+    "parole":0,
+    "felon":3318,
+    "turntE":0.580151629,
+    "turntA":0.534201295
   },
   {
     "year":2012,
@@ -448,7 +808,16 @@
     "demEV":0,
     "gopVotes":1071645,
     "gopPct":0.546,
-    "gopEV":9
+    "gopEV":9,
+    "VEP":3486345,
+    "VAP":3662322,
+    "pctNonCit":0.035,
+    "prison":22388,
+    "probation":34945,
+    "parole":6116,
+    "felon":47025,
+    "turntE":0.563374537,
+    "turntA":0.536304017
   },
   {
     "year":2012,
@@ -459,7 +828,16 @@
     "demEV":0,
     "gopVotes":210610,
     "gopPct":0.579,
-    "gopEV":3
+    "gopEV":3,
+    "VEP":613114,
+    "VAP":631472,
+    "pctNonCit":0.019,
+    "prison":3650,
+    "probation":0,
+    "parole":2761,
+    "felon":6411,
+    "turntE":0.593388831,
+    "turntA":0.576137976
   },
   {
     "year":2012,
@@ -470,7 +848,16 @@
     "demEV":0,
     "gopVotes":1462330,
     "gopPct":0.595,
-    "gopEV":11
+    "gopEV":11,
+    "VEP":4735808,
+    "VAP":4976284,
+    "pctNonCit":0.033,
+    "prison":28411,
+    "probation":64430,
+    "parole":13138,
+    "felon":75697,
+    "turntE":0.519146258,
+    "turntA":0.49405882
   },
   {
     "year":2012,
@@ -481,7 +868,16 @@
     "demEV":0,
     "gopVotes":4569843,
     "gopPct":0.572,
-    "gopEV":38
+    "gopEV":38,
+    "VEP":16111165,
+    "VAP":19185395,
+    "pctNonCit":0.135,
+    "prison":166372,
+    "probation":405473,
+    "parole":112288,
+    "felon":493561,
+    "turntE":0.496168402,
+    "turntA":0.416663353
   },
   {
     "year":2012,
@@ -492,7 +888,16 @@
     "demEV":0,
     "gopVotes":740600,
     "gopPct":0.728,
-    "gopEV":6
+    "gopEV":6,
+    "VEP":1832988,
+    "VAP":1978956,
+    "pctNonCit":0.07,
+    "prison":6962,
+    "probation":0,
+    "parole":0,
+    "felon":6962,
+    "turntE":0.555071828,
+    "turntA":0.514129672
   },
   {
     "year":2012,
@@ -503,7 +908,16 @@
     "demEV":3,
     "gopVotes":92698,
     "gopPct":0.31,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":493355,
+    "VAP":502242,
+    "pctNonCit":0.018,
+    "prison":0,
+    "probation":0,
+    "parole":0,
+    "felon":0,
+    "turntE":0.606642276,
+    "turntA":0.595907949
   },
   {
     "year":2012,
@@ -514,7 +928,16 @@
     "demEV":13,
     "gopVotes":1822522,
     "gopPct":0.473,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":5834057,
+    "VAP":6348827,
+    "pctNonCit":0.071,
+    "prison":37044,
+    "probation":52956,
+    "parole":1983,
+    "felon":67094,
+    "turntE":0.660687751,
+    "turntA":0.607118449
   },
   {
     "year":2012,
@@ -525,7 +948,16 @@
     "demEV":12,
     "gopVotes":1290670,
     "gopPct":0.413,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":4821144,
+    "VAP":5329782,
+    "pctNonCit":0.082,
+    "prison":17271,
+    "probation":88339,
+    "parole":8895,
+    "felon":72986,
+    "turntE":0.648293434,
+    "turntA":0.586424736
   },
   {
     "year":2012,
@@ -536,7 +968,16 @@
     "demEV":0,
     "gopVotes":417655,
     "gopPct":0.623,
-    "gopEV":5
+    "gopEV":5,
+    "VEP":1447048,
+    "VAP":1472642,
+    "pctNonCit":0.008,
+    "prison":7070,
+    "probation":8573,
+    "parole":2052,
+    "felon":13666,
+    "turntE":0.463314278,
+    "turntA":0.455262039
   },
   {
     "year":2012,
@@ -547,7 +988,16 @@
     "demEV":10,
     "gopVotes":1410966,
     "gopPct":0.46,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":4208757,
+    "VAP":4417273,
+    "pctNonCit":0.032,
+    "prison":22600,
+    "probation":46328,
+    "parole":20023,
+    "felon":67177,
+    "turntE":0.729772234,
+    "turntA":0.695323563
   },
   {
     "year":2012,
@@ -558,7 +1008,16 @@
     "demEV":0,
     "gopVotes":170962,
     "gopPct":0.686,
-    "gopEV":3
+    "gopEV":3,
+    "VEP":425101,
+    "VAP":441726,
+    "pctNonCit":0.025,
+    "prison":2204,
+    "probation":5162,
+    "parole":762,
+    "felon":5702,
+    "turntE":0.585886648,
+    "turntA":0.563835953
   },
   {
     "year":2012,
@@ -569,7 +1028,16 @@
     "demEV":332,
     "gopVotes":60932152,
     "gopPct":0.472,
-    "gopEV":206
+    "gopEV":206,
+    "VEP":222381268,
+    "VAP":240957993,
+    "pctNonCit":0.084,
+    "prison":1566255,
+    "probation":2342582,
+    "parole":637410,
+    "felon":3445233,
+    "turntE":0.580389091,
+    "turntA":0.535643829
   },
   {
     "year":2008,
@@ -580,7 +1048,16 @@
     "demEV":0,
     "gopVotes":1266546,
     "gopPct":0.603,
-    "gopEV":9
+    "gopEV":9,
+    "VEP":3454510,
+    "VAP":3595708,
+    "pctNonCit":0.022,
+    "prison":30508,
+    "probation":53252,
+    "parole":8042,
+    "felon":61155,
+    "turntE":0.607848581,
+    "turntA":0.583979289
   },
   {
     "year":2008,
@@ -591,7 +1068,16 @@
     "demEV":0,
     "gopVotes":193841,
     "gopPct":0.594,
-    "gopEV":3
+    "gopEV":3,
+    "VEP":479429,
+    "VAP":507645,
+    "pctNonCit":0.037,
+    "prison":5014,
+    "probation":6708,
+    "parole":1732,
+    "felon":9234,
+    "turntE":0.68038646,
+    "turntA":0.642569118
   },
   {
     "year":2008,
@@ -602,7 +1088,16 @@
     "demEV":0,
     "gopVotes":1230111,
     "gopPct":0.536,
-    "gopEV":10
+    "gopEV":10,
+    "VEP":4046075,
+    "VAP":4673718,
+    "pctNonCit":0.116,
+    "prison":39589,
+    "probation":82232,
+    "parole":7534,
+    "felon":84472,
+    "turntE":0.566839468,
+    "turntA":0.490717454
   },
   {
     "year":2008,
@@ -613,7 +1108,16 @@
     "demEV":0,
     "gopVotes":638017,
     "gopPct":0.587,
-    "gopEV":6
+    "gopEV":6,
+    "VEP":2071563,
+    "VAP":2174846,
+    "pctNonCit":0.029,
+    "prison":14716,
+    "probation":31169,
+    "parole":19908,
+    "felon":40255,
+    "turntE":0.524539683,
+    "turntA":0.499629399
   },
   {
     "year":2008,
@@ -624,7 +1128,16 @@
     "demEV":55,
     "gopVotes":5011781,
     "gopPct":0.37,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":22261504,
+    "VAP":27411094,
+    "pctNonCit":0.179,
+    "prison":173670,
+    "probation":0,
+    "parole":120753,
+    "felon":234047,
+    "turntE":0.609208614,
+    "turntA":0.494759531
   },
   {
     "year":2008,
@@ -635,7 +1148,16 @@
     "demEV":9,
     "gopVotes":1073589,
     "gopPct":0.447,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":3382959,
+    "VAP":3708955,
+    "pctNonCit":0.08,
+    "prison":23274,
+    "probation":0,
+    "parole":11654,
+    "felon":29101,
+    "turntE":0.709840409,
+    "turntA":0.647449484
   },
   {
     "year":2008,
@@ -646,7 +1168,16 @@
     "demEV":7,
     "gopVotes":629428,
     "gopPct":0.382,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":2471082,
+    "VAP":2725917,
+    "pctNonCit":0.085,
+    "prison":20661,
+    "probation":0,
+    "parole":2328,
+    "felon":21825,
+    "turntE":0.666425477,
+    "turntA":0.604124043
   },
   {
     "year":2008,
@@ -657,7 +1188,16 @@
     "demEV":3,
     "gopVotes":152374,
     "gopPct":0.369,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":628200,
+    "VAP":680493,
+    "pctNonCit":0.053,
+    "prison":7075,
+    "probation":17216,
+    "parole":551,
+    "felon":15959,
+    "turntE":0.656497931,
+    "turntA":0.60604885
   },
   {
     "year":2008,
@@ -668,7 +1208,16 @@
     "demEV":3,
     "gopVotes":17367,
     "gopPct":0.065,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":432566,
+    "VAP":481971,
+    "pctNonCit":0.103,
+    "prison":0,
+    "probation":0,
+    "parole":0,
+    "felon":0,
+    "turntE":0.614595229,
+    "turntA":0.551595428
   },
   {
     "year":2008,
@@ -679,7 +1228,16 @@
     "demEV":27,
     "gopVotes":4045624,
     "gopPct":0.482,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":12687407,
+    "VAP":14558436,
+    "pctNonCit":0.112,
+    "prison":102388,
+    "probation":279760,
+    "parole":4528,
+    "felon":244532,
+    "turntE":0.661344276,
+    "turntA":0.576349273
   },
   {
     "year":2008,
@@ -690,7 +1248,16 @@
     "demEV":0,
     "gopVotes":2048744,
     "gopPct":0.522,
-    "gopEV":15
+    "gopEV":15,
+    "VEP":6281872,
+    "VAP":7063638,
+    "pctNonCit":0.073,
+    "prison":52719,
+    "probation":397081,
+    "parole":23448,
+    "felon":262984,
+    "turntE":0.624724604,
+    "turntA":0.555583398
   },
   {
     "year":2008,
@@ -701,7 +1268,16 @@
     "demEV":4,
     "gopVotes":120566,
     "gopPct":0.266,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":930067,
+    "VAP":1036088,
+    "pctNonCit":0.097,
+    "prison":5955,
+    "probation":0,
+    "parole":0,
+    "felon":5955,
+    "turntE":0.487672393,
+    "turntA":0.437769765
   },
   {
     "year":2008,
@@ -712,7 +1288,16 @@
     "demEV":0,
     "gopVotes":403012,
     "gopPct":0.615,
-    "gopEV":4
+    "gopEV":4,
+    "VEP":1029416,
+    "VAP":1117842,
+    "pctNonCit":0.049,
+    "prison":7290,
+    "probation":49513,
+    "parole":3361,
+    "felon":33727,
+    "turntE":0.636314182,
+    "turntA":0.585979056
   },
   {
     "year":2008,
@@ -723,7 +1308,16 @@
     "demEV":21,
     "gopVotes":2031527,
     "gopPct":0.368,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":8681138,
+    "VAP":9615700,
+    "pctNonCit":0.092,
+    "prison":45474,
+    "probation":0,
+    "parole":0,
+    "felon":45474,
+    "turntE":0.636212787,
+    "turntA":0.574378464
   },
   {
     "year":2008,
@@ -734,7 +1328,16 @@
     "demEV":11,
     "gopVotes":1345648,
     "gopPct":0.489,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":4653019,
+    "VAP":4826231,
+    "pctNonCit":0.03,
+    "prison":28322,
+    "probation":0,
+    "parole":0,
+    "felon":28322,
+    "turntE":0.591240655,
+    "turntA":0.570021203
   },
   {
     "year":2008,
@@ -745,7 +1348,16 @@
     "demEV":7,
     "gopVotes":682379,
     "gopPct":0.442,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":2216094,
+    "VAP":2298515,
+    "pctNonCit":0.026,
+    "prison":8766,
+    "probation":22958,
+    "parole":3159,
+    "felon":21825,
+    "turntE":0.696568828,
+    "turntA":0.671591005
   },
   {
     "year":2008,
@@ -756,7 +1368,16 @@
     "demEV":0,
     "gopVotes":699655,
     "gopPct":0.566,
-    "gopEV":6
+    "gopEV":6,
+    "VEP":1991759,
+    "VAP":2100084,
+    "pctNonCit":0.042,
+    "prison":8539,
+    "probation":16263,
+    "parole":4958,
+    "felon":19150,
+    "turntE":0.62049274,
+    "turntA":0.588486937
   },
   {
     "year":2008,
@@ -767,7 +1388,16 @@
     "demEV":0,
     "gopVotes":1048462,
     "gopPct":0.574,
-    "gopEV":8
+    "gopEV":8,
+    "VEP":3152629,
+    "VAP":3277617,
+    "pctNonCit":0.022,
+    "prison":21706,
+    "probation":51035,
+    "parole":12277,
+    "felon":53362,
+    "turntE":0.579360274,
+    "turntA":0.557267063
   },
   {
     "year":2008,
@@ -778,7 +1408,16 @@
     "demEV":0,
     "gopVotes":1148275,
     "gopPct":0.586,
-    "gopEV":9
+    "gopEV":9,
+    "VEP":3205794,
+    "VAP":3342279,
+    "pctNonCit":0.02,
+    "prison":38381,
+    "probation":40025,
+    "parole":24636,
+    "felon":70712,
+    "turntE":0.611630379,
+    "turntA":0.586653897
   },
   {
     "year":2008,
@@ -789,7 +1428,16 @@
     "demEV":4,
     "gopVotes":295273,
     "gopPct":0.404,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":1036242,
+    "VAP":1049816,
+    "pctNonCit":0.013,
+    "prison":0,
+    "probation":0,
+    "parole":0,
+    "felon":0,
+    "turntE":0.705590972,
+    "turntA":0.696467762
   },
   {
     "year":2008,
@@ -800,7 +1448,16 @@
     "demEV":10,
     "gopVotes":959862,
     "gopPct":0.365,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":3925117,
+    "VAP":4342850,
+    "pctNonCit":0.078,
+    "prison":23324,
+    "probation":96360,
+    "parole":13220,
+    "felon":78114,
+    "turntE":0.670450333,
+    "turntA":0.605960602
   },
   {
     "year":2008,
@@ -811,7 +1468,16 @@
     "demEV":12,
     "gopVotes":1108854,
     "gopPct":0.36,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":4612550,
+    "VAP":5058035,
+    "pctNonCit":0.086,
+    "prison":11408,
+    "probation":0,
+    "parole":0,
+    "felon":11408,
+    "turntE":0.667956987,
+    "turntA":0.609126864
   },
   {
     "year":2008,
@@ -822,7 +1488,16 @@
     "demEV":17,
     "gopVotes":2048639,
     "gopPct":0.41,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":7229512,
+    "VAP":7528460,
+    "pctNonCit":0.033,
+    "prison":48738,
+    "probation":0,
+    "parole":0,
+    "felon":48738,
+    "turntE":0.69185389,
+    "turntA":0.664381029
   },
   {
     "year":2008,
@@ -833,7 +1508,16 @@
     "demEV":10,
     "gopVotes":1275409,
     "gopPct":0.438,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":3740142,
+    "VAP":3975974,
+    "pctNonCit":0.04,
+    "prison":9910,
+    "probation":127627,
+    "parole":5081,
+    "felon":76264,
+    "turntE":0.778143985,
+    "turntA":0.731988942
   },
   {
     "year":2008,
@@ -844,7 +1528,16 @@
     "demEV":0,
     "gopVotes":724597,
     "gopPct":0.562,
-    "gopEV":6
+    "gopEV":6,
+    "VEP":2113347,
+    "VAP":2190402,
+    "pctNonCit":0.019,
+    "prison":22754,
+    "probation":22267,
+    "parole":2922,
+    "felon":35349,
+    "turntE":0.610342268,
+    "turntA":0.588871358
   },
   {
     "year":2008,
@@ -855,7 +1548,16 @@
     "demEV":0,
     "gopVotes":1445814,
     "gopPct":0.494,
-    "gopEV":11
+    "gopEV":11,
+    "VEP":4327572,
+    "VAP":4507688,
+    "pctNonCit":0.025,
+    "prison":30186,
+    "probation":57360,
+    "parole":20683,
+    "felon":69208,
+    "turntE":0.675946004,
+    "turntA":0.648936883
   },
   {
     "year":2008,
@@ -866,7 +1568,16 @@
     "demEV":0,
     "gopVotes":242763,
     "gopPct":0.495,
-    "gopEV":3
+    "gopEV":3,
+    "VEP":741853,
+    "VAP":755384,
+    "pctNonCit":0.013,
+    "prison":3545,
+    "probation":0,
+    "parole":0,
+    "felon":3545,
+    "turntE":0.660655143,
+    "turntA":0.648820997
   },
   {
     "year":2008,
@@ -877,7 +1588,16 @@
     "demEV":1,
     "gopVotes":452979,
     "gopPct":0.565,
-    "gopEV":4
+    "gopEV":4,
+    "VEP":1274719,
+    "VAP":1348048,
+    "pctNonCit":0.043,
+    "prison":4520,
+    "probation":19606,
+    "parole":846,
+    "felon":14746,
+    "turntE":0.628594224,
+    "turntA":0.594400941
   },
   {
     "year":2008,
@@ -888,7 +1608,16 @@
     "demEV":5,
     "gopVotes":412827,
     "gopPct":0.427,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":1696831,
+    "VAP":2000277,
+    "pctNonCit":0.141,
+    "prison":12743,
+    "probation":13337,
+    "parole":3908,
+    "felon":21366,
+    "turntE":0.570385619,
+    "turntA":0.483856986
   },
   {
     "year":2008,
@@ -899,7 +1628,16 @@
     "demEV":4,
     "gopVotes":316534,
     "gopPct":0.447,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":992226,
+    "VAP":1021787,
+    "pctNonCit":0.026,
+    "prison":2702,
+    "probation":0,
+    "parole":0,
+    "felon":2702,
+    "turntE":0.713155067,
+    "turntA":0.692523001
   },
   {
     "year":2008,
@@ -910,7 +1648,16 @@
     "demEV":15,
     "gopVotes":1613207,
     "gopPct":0.417,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":5776527,
+    "VAP":6651284,
+    "pctNonCit":0.117,
+    "prison":25953,
+    "probation":128737,
+    "parole":15849,
+    "felon":98246,
+    "turntE":0.669647524,
+    "turntA":0.581577482
   },
   {
     "year":2008,
@@ -921,7 +1668,16 @@
     "demEV":5,
     "gopVotes":346832,
     "gopPct":0.418,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":1362629,
+    "VAP":1505830,
+    "pctNonCit":0.083,
+    "prison":6402,
+    "probation":20883,
+    "parole":3724,
+    "felon":18706,
+    "turntE":0.609232594,
+    "turntA":0.551295963
   },
   {
     "year":2008,
@@ -932,7 +1688,16 @@
     "demEV":31,
     "gopVotes":2742298,
     "gopPct":0.361,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":12948969,
+    "VAP":14876971,
+    "pctNonCit":0.124,
+    "prison":60347,
+    "probation":0,
+    "parole":52225,
+    "felon":86460,
+    "turntE":0.586242271,
+    "turntA":0.510267379
   },
   {
     "year":2008,
@@ -943,7 +1708,16 @@
     "demEV":15,
     "gopVotes":2128474,
     "gopPct":0.494,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":6584302,
+    "VAP":7096503,
+    "pctNonCit":0.059,
+    "prison":39482,
+    "probation":109678,
+    "parole":3409,
+    "felon":96026,
+    "turntE":0.654707059,
+    "turntA":0.607452572
   },
   {
     "year":2008,
@@ -954,7 +1728,16 @@
     "demEV":0,
     "gopVotes":168601,
     "gopPct":0.533,
-    "gopEV":3
+    "gopEV":3,
+    "VEP":504762,
+    "VAP":512768,
+    "pctNonCit":0.013,
+    "prison":1452,
+    "probation":0,
+    "parole":0,
+    "felon":1452,
+    "turntE":0.627267901,
+    "turntA":0.617474179
   },
   {
     "year":2008,
@@ -965,7 +1748,16 @@
     "demEV":20,
     "gopVotes":2674491,
     "gopPct":0.469,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":8513079,
+    "VAP":8757453,
+    "pctNonCit":0.022,
+    "prison":51686,
+    "probation":0,
+    "parole":0,
+    "felon":51686,
+    "turntE":0.669353591,
+    "turntA":0.650675487
   },
   {
     "year":2008,
@@ -976,7 +1768,16 @@
     "demEV":0,
     "gopVotes":960165,
     "gopPct":0.656,
-    "gopEV":7
+    "gopEV":7,
+    "VEP":2619121,
+    "VAP":2770219,
+    "pctNonCit":0.04,
+    "prison":25864,
+    "probation":27940,
+    "parole":3073,
+    "felon":41371,
+    "turntE":0.558454917,
+    "turntA":0.527994718
   },
   {
     "year":2008,
@@ -987,7 +1788,16 @@
     "demEV":7,
     "gopVotes":738475,
     "gopPct":0.404,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":2700327,
+    "VAP":2916246,
+    "pctNonCit":0.069,
+    "prison":14167,
+    "probation":0,
+    "parole":0,
+    "felon":14167,
+    "turntE":0.676904686,
+    "turntA":0.626786629
   },
   {
     "year":2008,
@@ -998,7 +1808,16 @@
     "demEV":21,
     "gopVotes":2655885,
     "gopPct":0.44,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":9457942,
+    "VAP":9813664,
+    "pctNonCit":0.031,
+    "prison":49215,
+    "probation":0,
+    "parole":0,
+    "felon":49215,
+    "turntE":0.638061113,
+    "turntA":0.614932914
   },
   {
     "year":2008,
@@ -1009,7 +1828,16 @@
     "demEV":4,
     "gopVotes":165391,
     "gopPct":0.352,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":763608,
+    "VAP":825786,
+    "pctNonCit":0.07,
+    "prison":4045,
+    "probation":0,
+    "parole":0,
+    "felon":4045,
+    "turntE":0.615193921,
+    "turntA":0.568872565
   },
   {
     "year":2008,
@@ -1020,7 +1848,16 @@
     "demEV":0,
     "gopVotes":1034896,
     "gopPct":0.539,
-    "gopEV":8
+    "gopEV":8,
+    "VEP":3311044,
+    "VAP":3473488,
+    "pctNonCit":0.034,
+    "prison":24326,
+    "probation":41254,
+    "parole":1947,
+    "felon":45927,
+    "turntE":0.580170182,
+    "turntA":0.553037466
   },
   {
     "year":2008,
@@ -1031,7 +1868,16 @@
     "demEV":0,
     "gopVotes":203054,
     "gopPct":0.532,
-    "gopEV":3
+    "gopEV":3,
+    "VEP":590720,
+    "VAP":602539,
+    "pctNonCit":0.012,
+    "prison":3342,
+    "probation":0,
+    "parole":2720,
+    "felon":4702,
+    "turntE":0.646626151,
+    "turntA":0.633942367
   },
   {
     "year":2008,
@@ -1042,7 +1888,16 @@
     "demEV":0,
     "gopVotes":1479178,
     "gopPct":0.569,
-    "gopEV":11
+    "gopEV":11,
+    "VEP":4563192,
+    "VAP":4771926,
+    "pctNonCit":0.031,
+    "prison":27228,
+    "probation":58109,
+    "parole":10578,
+    "felon":61572,
+    "turntE":0.56972159,
+    "turntA":0.544800779
   },
   {
     "year":2008,
@@ -1053,7 +1908,16 @@
     "demEV":0,
     "gopVotes":4479328,
     "gopPct":0.555,
-    "gopEV":34
+    "gopEV":34,
+    "VEP":14929810,
+    "VAP":17756112,
+    "pctNonCit":0.135,
+    "prison":172506,
+    "probation":427080,
+    "parole":102921,
+    "felon":437507,
+    "turntE":0.541051427,
+    "turntA":0.454930392
   },
   {
     "year":2008,
@@ -1064,7 +1928,16 @@
     "demEV":0,
     "gopVotes":596030,
     "gopPct":0.626,
-    "gopEV":5
+    "gopEV":5,
+    "VEP":1700286,
+    "VAP":1840087,
+    "pctNonCit":0.072,
+    "prison":6552,
+    "probation":0,
+    "parole":0,
+    "felon":6552,
+    "turntE":0.560123415,
+    "turntA":0.517567919
   },
   {
     "year":2008,
@@ -1075,7 +1948,16 @@
     "demEV":3,
     "gopVotes":98974,
     "gopPct":0.304,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":482677,
+    "VAP":492610,
+    "pctNonCit":0.02,
+    "prison":0,
+    "probation":0,
+    "parole":0,
+    "felon":0,
+    "turntE":0.673423428,
+    "turntA":0.659844502
   },
   {
     "year":2008,
@@ -1086,7 +1968,16 @@
     "demEV":13,
     "gopVotes":1725005,
     "gopPct":0.463,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":5555415,
+    "VAP":6022123,
+    "pctNonCit":0.066,
+    "prison":38276,
+    "probation":53614,
+    "parole":4471,
+    "felon":67319,
+    "turntE":0.670203756,
+    "turntA":0.618263692
   },
   {
     "year":2008,
@@ -1097,7 +1988,16 @@
     "demEV":11,
     "gopVotes":1229216,
     "gopPct":0.405,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":4561163,
+    "VAP":5032960,
+    "pctNonCit":0.078,
+    "prison":17926,
+    "probation":113134,
+    "parole":11768,
+    "felon":80377,
+    "turntE":0.665812206,
+    "turntA":0.603398
   },
   {
     "year":2008,
@@ -1108,7 +2008,16 @@
     "demEV":0,
     "gopVotes":397466,
     "gopPct":0.557,
-    "gopEV":5
+    "gopEV":5,
+    "VEP":1430439,
+    "VAP":1453045,
+    "pctNonCit":0.008,
+    "prison":6059,
+    "probation":8283,
+    "parole":2005,
+    "felon":11203,
+    "turntE":0.498701448,
+    "turntA":0.490942813
   },
   {
     "year":2008,
@@ -1119,7 +2028,16 @@
     "demEV":10,
     "gopVotes":1262393,
     "gopPct":0.423,
-    "gopEV":0
+    "gopEV":0,
+    "VEP":4120694,
+    "VAP":4306876,
+    "pctNonCit":0.03,
+    "prison":23379,
+    "probation":50418,
+    "parole":18105,
+    "felon":57641,
+    "turntE":0.724008383,
+    "turntA":0.692710215
   },
   {
     "year":2008,
@@ -1130,7 +2048,16 @@
     "demEV":0,
     "gopVotes":164958,
     "gopPct":0.644,
-    "gopEV":3
+    "gopEV":3,
+    "VEP":405732,
+    "VAP":418040,
+    "pctNonCit":0.017,
+    "prison":2084,
+    "probation":5438,
+    "parole":727,
+    "felon":5167,
+    "turntE":0.63104463,
+    "turntA":0.612465314
   },
   {
     "year":2008,
@@ -1141,6 +2068,15 @@
     "demEV":365,
     "gopVotes":59934814,
     "gopPct":0.457,
-    "gopEV":173
+    "gopEV":173,
+    "VEP":213313508,
+    "VAP":230872030,
+    "pctNonCit":0.084,
+    "prison":1605448,
+    "probation":2451085,
+    "parole":627680,
+    "felon":3144831,
+    "turntE":0.615423319,
+    "turntA":0.568618498
   }
 ]
