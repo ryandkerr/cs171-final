@@ -45,7 +45,7 @@
     var states = svg.append("g")
       .attr("id", "states");
 
-    d3.json("data/us_states.json", function(stateJSON) {
+    d3.json("data/us_states_small.json", function(stateJSON) {
       states.selectAll("path")
         .data(stateJSON.features)
         .enter().append("path")
