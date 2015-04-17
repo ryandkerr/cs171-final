@@ -19,7 +19,7 @@
     
     <div class="row">
       <div class="col-md-9" id="choroVis" style="background-color: #CCF2FF">
-        Main Cloropleth goes here
+        <!-- Main Cloropleth goes here -->
       </div>
 
       <div class="col-md-3" id="clickVis" style="background-color: #FFD8D8">
@@ -35,12 +35,17 @@
   </div>
 
   <script>
-    var path = d3.geo.path();
 
     var svg = d3.select("#choroVis")
       .append("svg")
       .attr("width", 900)
       .attr("height", 500);
+
+    var projection = d3.geo.albersUsa()
+      .scale(1000);
+
+    var path = d3.geo.path()
+      .projection(projection);
 
     var states = svg.append("g")
       .attr("id", "states");
@@ -50,6 +55,7 @@
         .data(stateJSON.features)
         .enter().append("path")
         .attr("d", path);
+        // .attr("d", d3.geo.path().projection(d3.geo.mercator()));
     });
 
   </script>
