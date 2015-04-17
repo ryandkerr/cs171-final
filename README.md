@@ -1,2 +1,2 @@
 # cs171-final
-cs171 final project shared repositoy
+cs171 final project shared repository

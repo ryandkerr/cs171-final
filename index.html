@@ -12,6 +12,7 @@
 
   <!--Stylesheets-->
   <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <div class ="container">
@@ -19,7 +20,7 @@
     
     <div class="row">
       <div class="col-md-9" id="choroVis" style="background-color: #CCF2FF">
-        Main Cloropleth goes here
+        <!-- Main Cloropleth goes here -->
       </div>
 
       <div class="col-md-3" id="clickVis" style="background-color: #FFD8D8">
@@ -33,5 +34,33 @@
       </div>
     </div>
   </div>
+
+  <script>
+
+    var svg = d3.select("#choroVis")
+      .append("svg")
+      .attr("width", 900)
+      .attr("height", 500);
+
+    var projection = d3.geo.albersUsa()
+      .scale(1000);
+
+    var path = d3.geo.path()
+      .projection(projection);
+
+    var states = svg.append("g")
+      .attr("class", "states");
+
+    d3.json("data/us_states_small.json", function(stateJSON) {
+      states.selectAll("path")
+        .data(stateJSON.features)
+        .enter().append("path")
+        .attr("d", path)
+        .attr("stroke", "#555555")
+        .attr("stroke-width", 2)
+        // .attr("d", d3.geo.path().projection(d3.geo.mercator()));
+    });
+
+  </script>
 </body>
 </html>
