@@ -38,11 +38,20 @@
     var path = d3.geo.path();
 
     var svg = d3.select("#choroVis")
-      .append("svg");
+      .append("svg")
+      .attr("width", 900)
+      .attr("height", 500);
 
     var states = svg.append("g")
       .attr("id", "states");
-      
+
+    d3.json("data/us_states.json", function(stateJSON) {
+      states.selectAll("path")
+        .data(stateJSON.features)
+        .enter().append("path")
+        .attr("d", path);
+    });
+
   </script>
 </body>
 </html>
