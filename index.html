@@ -19,9 +19,19 @@
     <h1>Electoral Map: 1789 - Present</h1>
     
     <div class="row">
-      <div class="col-md-9" id="choroVis" style="background-color: #CCF2FF">
-        <!-- Main Cloropleth goes here -->
-      </div>
+      <div class="col-md-9" id="col1" style="background-color: #CCF2FF">
+        <form>
+          <div>
+            <label>Year:</label>
+            <label>1980</label>
+            <label><input type="range" name="points" min='1980' max='2012' step="4" value="0" id="year_slider" oninput="" style="width: 300px"></label><label>2012</label>
+          </div>
+        </form>
+        <br>
+        
+        <div id="choroVis">
+          <!-- Main Cloropleth goes here -->
+        </div>
 
       <div class="col-md-3" id="clickVis" style="background-color: #FFD8D8">
         click extra data goes here
@@ -43,8 +53,14 @@
 
   <script>
 
-    var WIDTH = 800
-    var HEIGHT = 500 
+    var getInnerWidth = function(element) {
+        var style = window.getComputedStyle(element.node(), null);
+
+        return parseInt(style.getPropertyValue('width'));
+    }
+
+    var WIDTH = getInnerWidth(d3.select("#col1")) - 15;
+    var HEIGHT = 500;
 
     var ELECGLOBAL;
 
@@ -55,7 +71,7 @@
     var svg = d3.select("#choroVis")
       .append("svg")
       .attr("width", WIDTH)
-      .attr("height", HEIGHT);
+      .attr("height", HEIGHT)
 
     var projection = d3.geo.albersUsa()
       .scale(1000);
