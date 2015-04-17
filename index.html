@@ -12,6 +12,7 @@
 
   <!--Stylesheets-->
   <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <div class ="container">
@@ -48,13 +49,15 @@
       .projection(projection);
 
     var states = svg.append("g")
-      .attr("id", "states");
+      .attr("class", "states");
 
     d3.json("data/us_states.json", function(stateJSON) {
       states.selectAll("path")
         .data(stateJSON.features)
         .enter().append("path")
-        .attr("d", path);
+        .attr("d", path)
+        .attr("stroke", "#555555")
+        .attr("stroke-width", 2)
         // .attr("d", d3.geo.path().projection(d3.geo.mercator()));
     });
 
