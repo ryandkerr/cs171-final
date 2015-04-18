@@ -54,27 +54,46 @@
   </div>
 
   <script>
+    //testing commit
+    // some of this code is taken from these sources:
+    // http://bl.ocks.org/stevenae/8362841
+    // http://synthesis.sbecker.net/articles/2012/07/18/learning-d3-part-7-choropleth-maps
+    // http://bl.ocks.org/mbostock/4060606
+
+    // helper to find width of element
     var getInnerWidth = function(element) {
         var style = window.getComputedStyle(element.node(), null);
         return parseInt(style.getPropertyValue('width'));
     }
+
+    // global variables
     var WIDTH = getInnerWidth(d3.select("#col1")) - 15;
-    var HEIGHT = 500;
-    var ELECGLOBAL;
+    var HEIGHT = 500;    
+    var ELECGLOBAL;    
     var CURRENT_YEAR = 2012;
+    
+    // scale to assign margin of victory to bins, which end up as colors
     var quantize = d3.scale.quantize()
       .domain([-20, 20])
       .range(d3.range(8).map(function(i) { return "q" + i + "-8"; })); 
+    
+    // create svg canvas in chorovis div
     var svg = d3.select("#choroVis")
       .append("svg")
       .attr("width", WIDTH)
       .attr("height", HEIGHT)
+    
+    // greate usa projection
     var projection = d3.geo.albersUsa()
       .scale(1000);
+    
     var path = d3.geo.path()
       .projection(projection);
+    
     var states = svg.append("g")
       .attr("class", "states");
+    
+    // load in geojson state border/path file
     d3.json("data/us_states_small.json", function(stateJSON) {
       states.selectAll("path")
         .data(stateJSON.features)
@@ -91,10 +110,14 @@
         .attr("stroke", "#555555")
         .attr("stroke-width", 1.5)
     });
+    
+    // load in our central election data file for 1980-2012
     d3.json("data/jsonMain.json", function(elecJSON) {
       ELECGLOBAL = elecJSON;
       updateVis()
     })
+    
+    // updates choropleth
     function updateVis() {
       
       var state_paths = states.selectAll("path");
