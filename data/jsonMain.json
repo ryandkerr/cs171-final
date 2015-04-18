@@ -4,10 +4,10 @@
     "state":"Alabama",
     "totVotes":2074338,
     "demVotes":795696,
-    "demPct":0.384,
+    "demPct":38.4,
     "demEV":"0",
     "gopVotes":1255925,
-    "gopPct":0.605,
+    "gopPct":60.5,
     "gopEV":9,
     "VEP":3539018,
     "VAP":3707440,
@@ -21,17 +21,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Alaska",
     "totVotes":300495,
     "demVotes":122640,
-    "demPct":0.408,
+    "demPct":40.8,
     "demEV":"0",
     "gopVotes":164676,
-    "gopPct":0.548,
+    "gopPct":54.8,
     "gopEV":3,
     "VEP":511792,
     "VAP":543763,
@@ -45,17 +49,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Arizona",
     "totVotes":2299254,
     "demVotes":1025232,
-    "demPct":0.446,
+    "demPct":44.6,
     "demEV":"0",
     "gopVotes":1233654,
-    "gopPct":0.537,
+    "gopPct":53.7,
     "gopEV":11,
     "VEP":4383008,
     "VAP":4959270,
@@ -69,17 +77,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Arkansas",
     "totVotes":1069468,
     "demVotes":394409,
-    "demPct":0.369,
+    "demPct":36.9,
     "demEV":"0",
     "gopVotes":647744,
-    "gopPct":0.606,
+    "gopPct":60.6,
     "gopEV":6,
     "VEP":2109664,
     "VAP":2242740,
@@ -93,17 +105,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"California",
     "totVotes":13038547,
     "demVotes":7854285,
-    "demPct":0.602,
+    "demPct":60.2,
     "demEV":"55",
     "gopVotes":4839958,
-    "gopPct":0.371,
+    "gopPct":37.1,
     "gopEV":0,
     "VEP":23666758,
     "VAP":28913129,
@@ -117,17 +133,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Colorado",
     "totVotes":2569520,
     "demVotes":1323101,
-    "demPct":0.515,
+    "demPct":51.5,
     "demEV":"9",
     "gopVotes":1185243,
-    "gopPct":0.461,
+    "gopPct":46.1,
     "gopEV":0,
     "VEP":3674216,
     "VAP":3981208,
@@ -141,17 +161,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Connecticut",
     "totVotes":1558960,
     "demVotes":905083,
-    "demPct":0.581,
+    "demPct":58.1,
     "demEV":"7",
     "gopVotes":634892,
-    "gopPct":0.407,
+    "gopPct":40.7,
     "gopEV":0,
     "VEP":2542607,
     "VAP":2801375,
@@ -165,17 +189,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Delaware",
     "totVotes":413921,
     "demVotes":242584,
-    "demPct":0.586,
+    "demPct":58.6,
     "demEV":"3",
     "gopVotes":165484,
-    "gopPct":0.4,
+    "gopPct":40,
     "gopEV":0,
     "VEP":663663,
     "VAP":715708,
@@ -189,17 +217,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Dist. of Col.",
     "totVotes":293764,
     "demVotes":267070,
-    "demPct":0.909,
+    "demPct":90.9,
     "demEV":"3",
     "gopVotes":21381,
-    "gopPct":0.073,
+    "gopPct":7.3,
     "gopEV":0,
     "VEP":477582,
     "VAP":528848,
@@ -213,17 +245,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Florida",
     "totVotes":8474179,
     "demVotes":4237756,
-    "demPct":0.5,
+    "demPct":50,
     "demEV":"29",
     "gopVotes":4163447,
-    "gopPct":0.491,
+    "gopPct":49.1,
     "gopEV":0,
     "VEP":13485081,
     "VAP":15380947,
@@ -237,17 +273,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Georgia",
     "totVotes":3900050,
     "demVotes":1773827,
-    "demPct":0.455,
+    "demPct":45.5,
     "demEV":"0",
     "gopVotes":2078688,
-    "gopPct":0.533,
+    "gopPct":53.3,
     "gopEV":16,
     "VEP":6603887,
     "VAP":7452696,
@@ -261,17 +301,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Hawaii",
     "totVotes":434697,
     "demVotes":306658,
-    "demPct":0.705,
+    "demPct":70.5,
     "demEV":"4",
     "gopVotes":121015,
-    "gopPct":0.278,
+    "gopPct":27.8,
     "gopEV":0,
     "VEP":982615,
     "VAP":1088335,
@@ -285,17 +329,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Idaho",
     "totVotes":652274,
     "demVotes":212787,
-    "demPct":0.326,
+    "demPct":32.6,
     "demEV":"0",
     "gopVotes":420911,
-    "gopPct":0.645,
+    "gopPct":64.5,
     "gopEV":4,
     "VEP":1091410,
     "VAP":1173727,
@@ -309,17 +357,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Illinois",
     "totVotes":5242014,
     "demVotes":3019512,
-    "demPct":0.576,
+    "demPct":57.6,
     "demEV":"20",
     "gopVotes":2135216,
-    "gopPct":0.407,
+    "gopPct":40.7,
     "gopEV":0,
     "VEP":8899143,
     "VAP":9827043,
@@ -333,17 +385,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Indiana",
     "totVotes":2624534,
     "demVotes":1152887,
-    "demPct":0.439,
+    "demPct":43.9,
     "demEV":"0",
     "gopVotes":1420543,
-    "gopPct":0.541,
+    "gopPct":54.1,
     "gopEV":11,
     "VEP":4754726,
     "VAP":4960376,
@@ -357,17 +413,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Iowa",
     "totVotes":1582180,
     "demVotes":822544,
-    "demPct":0.52,
+    "demPct":52,
     "demEV":"6",
     "gopVotes":730617,
-    "gopPct":0.462,
+    "gopPct":46.2,
     "gopEV":0,
     "VEP":2251485,
     "VAP":2356209,
@@ -381,17 +441,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Kansas",
     "totVotes":1159971,
     "demVotes":440726,
-    "demPct":0.38,
+    "demPct":38,
     "demEV":"0",
     "gopVotes":692634,
-    "gopPct":0.597,
+    "gopPct":59.7,
     "gopEV":6,
     "VEP":2030350,
     "VAP":2162442,
@@ -405,17 +469,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Kentucky",
     "totVotes":1797212,
     "demVotes":679370,
-    "demPct":0.378,
+    "demPct":37.8,
     "demEV":"0",
     "gopVotes":1087190,
-    "gopPct":0.605,
+    "gopPct":60.5,
     "gopEV":8,
     "VEP":3228938,
     "VAP":3368684,
@@ -429,17 +497,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Louisiana",
     "totVotes":1994065,
     "demVotes":809141,
-    "demPct":0.406,
+    "demPct":40.6,
     "demEV":"0",
     "gopVotes":1152262,
-    "gopPct":0.578,
+    "gopPct":57.8,
     "gopEV":8,
     "VEP":3311501,
     "VAP":3495847,
@@ -453,17 +525,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Maine",
     "totVotes":713180,
     "demVotes":401306,
-    "demPct":0.563,
+    "demPct":56.3,
     "demEV":"4",
     "gopVotes":292276,
-    "gopPct":0.41,
+    "gopPct":41,
     "gopEV":0,
     "VEP":1046008,
     "VAP":1064779,
@@ -477,17 +553,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Maryland",
     "totVotes":2707327,
     "demVotes":1677844,
-    "demPct":0.62,
+    "demPct":62,
     "demEV":"10",
     "gopVotes":971869,
-    "gopPct":0.359,
+    "gopPct":35.9,
     "gopEV":0,
     "VEP":4062931,
     "VAP":4553853,
@@ -501,17 +581,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Massachusetts",
     "totVotes":3167767,
     "demVotes":1921290,
-    "demPct":0.607,
+    "demPct":60.7,
     "demEV":"11",
     "gopVotes":1188314,
-    "gopPct":0.375,
+    "gopPct":37.5,
     "gopEV":0,
     "VEP":4808650,
     "VAP":5263550,
@@ -525,17 +609,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Michigan",
     "totVotes":4730961,
     "demVotes":2564569,
-    "demPct":0.542,
+    "demPct":54.2,
     "demEV":"16",
     "gopVotes":2115256,
-    "gopPct":0.447,
+    "gopPct":44.7,
     "gopEV":0,
     "VEP":7312108,
     "VAP":7625576,
@@ -549,17 +637,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Minnesota",
     "totVotes":2936561,
     "demVotes":1546167,
-    "demPct":0.527,
+    "demPct":52.7,
     "demEV":"10",
     "gopVotes":1320225,
-    "gopPct":0.45,
+    "gopPct":45,
     "gopEV":0,
     "VEP":3861043,
     "VAP":4114820,
@@ -573,17 +665,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Mississippi",
     "totVotes":1285584,
     "demVotes":562949,
-    "demPct":0.438,
+    "demPct":43.8,
     "demEV":"0",
     "gopVotes":710746,
-    "gopPct":0.553,
+    "gopPct":55.3,
     "gopEV":6,
     "VEP":2166811,
     "VAP":2246931,
@@ -597,17 +693,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Missouri",
     "totVotes":2757323,
     "demVotes":1223796,
-    "demPct":0.444,
+    "demPct":44.4,
     "demEV":"0",
     "gopVotes":1482440,
-    "gopPct":0.538,
+    "gopPct":53.8,
     "gopEV":10,
     "VEP":4432424,
     "VAP":4628500,
@@ -621,17 +721,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Montana",
     "totVotes":484048,
     "demVotes":201839,
-    "demPct":0.417,
+    "demPct":41.7,
     "demEV":"0",
     "gopVotes":267928,
-    "gopPct":0.554,
+    "gopPct":55.4,
     "gopEV":3,
     "VEP":774459,
     "VAP":785454,
@@ -645,17 +749,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Nebraska",
     "totVotes":794379,
     "demVotes":302081,
-    "demPct":0.38,
+    "demPct":38,
     "demEV":"0",
     "gopVotes":475064,
-    "gopPct":0.598,
+    "gopPct":59.8,
     "gopEV":5,
     "VEP":1316676,
     "VAP":1396507,
@@ -669,17 +777,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Nevada",
     "totVotes":1014918,
     "demVotes":531373,
-    "demPct":0.524,
+    "demPct":52.4,
     "demEV":"6",
     "gopVotes":463567,
-    "gopPct":0.457,
+    "gopPct":45.7,
     "gopEV":0,
     "VEP":1800969,
     "VAP":2105976,
@@ -693,17 +805,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"New Hampshire",
     "totVotes":710972,
     "demVotes":369561,
-    "demPct":0.52,
+    "demPct":52,
     "demEV":"4",
     "gopVotes":329918,
-    "gopPct":0.465,
+    "gopPct":46.5,
     "gopEV":0,
     "VEP":1013302,
     "VAP":1047978,
@@ -717,17 +833,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"New Jersey",
     "totVotes":3638499,
     "demVotes":2122786,
-    "demPct":0.583,
+    "demPct":58.3,
     "demEV":"14",
     "gopVotes":1478088,
-    "gopPct":0.406,
+    "gopPct":40.6,
     "gopEV":0,
     "VEP":5916716,
     "VAP":6847503,
@@ -741,17 +861,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"New Mexico",
     "totVotes":783758,
     "demVotes":415335,
-    "demPct":0.53,
+    "demPct":53,
     "demEV":"5",
     "gopVotes":335788,
-    "gopPct":0.428,
+    "gopPct":42.8,
     "gopEV":0,
     "VEP":1436189,
     "VAP":1573400,
@@ -765,17 +889,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"New York",
     "totVotes":7061925,
     "demVotes":4471871,
-    "demPct":0.634,
+    "demPct":63.4,
     "demEV":"29",
     "gopVotes":2485432,
-    "gopPct":0.352,
+    "gopPct":35.2,
     "gopEV":0,
     "VEP":13319786,
     "VAP":15344671,
@@ -789,17 +917,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"North Carolina",
     "totVotes":4505372,
     "demVotes":2178391,
-    "demPct":0.484,
+    "demPct":48.4,
     "demEV":"0",
     "gopVotes":2270395,
-    "gopPct":0.504,
+    "gopPct":50.4,
     "gopEV":15,
     "VEP":6946385,
     "VAP":7496980,
@@ -813,17 +945,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"North Dakota",
     "totVotes":322932,
     "demVotes":124966,
-    "demPct":0.387,
+    "demPct":38.7,
     "demEV":"0",
     "gopVotes":188320,
-    "gopPct":0.583,
+    "gopPct":58.3,
     "gopEV":3,
     "VEP":539152,
     "VAP":549955,
@@ -837,17 +973,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Ohio",
     "totVotes":5580822,
     "demVotes":2827621,
-    "demPct":0.507,
+    "demPct":50.7,
     "demEV":"18",
     "gopVotes":2661407,
-    "gopPct":0.477,
+    "gopPct":47.7,
     "gopEV":0,
     "VEP":8648932,
     "VAP":8896930,
@@ -861,17 +1001,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Oklahoma",
     "totVotes":1334872,
     "demVotes":443547,
-    "demPct":0.332,
+    "demPct":33.2,
     "demEV":"0",
     "gopVotes":891325,
-    "gopPct":0.668,
+    "gopPct":66.8,
     "gopEV":7,
     "VEP":2713268,
     "VAP":2885093,
@@ -885,17 +1029,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Oregon",
     "totVotes":1789270,
     "demVotes":970488,
-    "demPct":0.542,
+    "demPct":54.2,
     "demEV":"7",
     "gopVotes":754175,
-    "gopPct":0.421,
+    "gopPct":42.1,
     "gopEV":0,
     "VEP":2834868,
     "VAP":3050747,
@@ -909,17 +1057,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Pennsylvania",
     "totVotes":5753670,
     "demVotes":2990274,
-    "demPct":0.521,
+    "demPct":52.1,
     "demEV":"20",
     "gopVotes":2680434,
-    "gopPct":0.467,
+    "gopPct":46.7,
     "gopEV":0,
     "VEP":9650361,
     "VAP":10037099,
@@ -933,17 +1085,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Rhode Island",
     "totVotes":446049,
     "demVotes":279677,
-    "demPct":0.627,
+    "demPct":62.7,
     "demEV":"4",
     "gopVotes":157204,
-    "gopPct":0.352,
+    "gopPct":35.2,
     "gopEV":0,
     "VEP":768849,
     "VAP":834983,
@@ -957,17 +1113,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"South Carolina",
     "totVotes":1964118,
     "demVotes":865941,
-    "demPct":0.441,
+    "demPct":44.1,
     "demEV":"0",
     "gopVotes":1071645,
-    "gopPct":0.546,
+    "gopPct":54.6,
     "gopEV":9,
     "VEP":3486345,
     "VAP":3662322,
@@ -981,17 +1141,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"South Dakota",
     "totVotes":363815,
     "demVotes":145039,
-    "demPct":0.399,
+    "demPct":39.9,
     "demEV":"0",
     "gopVotes":210610,
-    "gopPct":0.579,
+    "gopPct":57.9,
     "gopEV":3,
     "VEP":613114,
     "VAP":631472,
@@ -1005,17 +1169,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Tennessee",
     "totVotes":2458577,
     "demVotes":960709,
-    "demPct":0.391,
+    "demPct":39.1,
     "demEV":"0",
     "gopVotes":1462330,
-    "gopPct":0.595,
+    "gopPct":59.5,
     "gopEV":11,
     "VEP":4735808,
     "VAP":4976284,
@@ -1029,17 +1197,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Texas",
     "totVotes":7993851,
     "demVotes":3308124,
-    "demPct":0.414,
+    "demPct":41.4,
     "demEV":"0",
     "gopVotes":4569843,
-    "gopPct":0.572,
+    "gopPct":57.2,
     "gopEV":38,
     "VEP":16111165,
     "VAP":19185395,
@@ -1053,17 +1225,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Utah",
     "totVotes":1017440,
     "demVotes":251813,
-    "demPct":0.247,
+    "demPct":24.7,
     "demEV":"0",
     "gopVotes":740600,
-    "gopPct":0.728,
+    "gopPct":72.8,
     "gopEV":6,
     "VEP":1832988,
     "VAP":1978956,
@@ -1077,17 +1253,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Vermont",
     "totVotes":299290,
     "demVotes":199239,
-    "demPct":0.666,
+    "demPct":66.6,
     "demEV":"3",
     "gopVotes":92698,
-    "gopPct":0.31,
+    "gopPct":31,
     "gopEV":0,
     "VEP":493355,
     "VAP":502242,
@@ -1101,17 +1281,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Virginia",
     "totVotes":3854490,
     "demVotes":1971820,
-    "demPct":0.512,
+    "demPct":51.2,
     "demEV":"13",
     "gopVotes":1822522,
-    "gopPct":0.473,
+    "gopPct":47.3,
     "gopEV":0,
     "VEP":5834057,
     "VAP":6348827,
@@ -1125,17 +1309,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Washington",
     "totVotes":3125516,
     "demVotes":1755396,
-    "demPct":0.562,
+    "demPct":56.2,
     "demEV":"12",
     "gopVotes":1290670,
-    "gopPct":0.413,
+    "gopPct":41.3,
     "gopEV":0,
     "VEP":4821144,
     "VAP":5329782,
@@ -1149,17 +1337,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"West Virginia",
     "totVotes":670438,
     "demVotes":238269,
-    "demPct":0.355,
+    "demPct":35.5,
     "demEV":"0",
     "gopVotes":417655,
-    "gopPct":0.623,
+    "gopPct":62.3,
     "gopEV":5,
     "VEP":1447048,
     "VAP":1472642,
@@ -1173,17 +1365,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Wisconsin",
     "totVotes":3071434,
     "demVotes":1620985,
-    "demPct":0.529,
+    "demPct":52.9,
     "demEV":"10",
     "gopVotes":1410966,
-    "gopPct":0.46,
+    "gopPct":46,
     "gopEV":0,
     "VEP":4208757,
     "VAP":4417273,
@@ -1197,17 +1393,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Wyoming",
     "totVotes":249061,
     "demVotes":69286,
-    "demPct":0.278,
+    "demPct":27.8,
     "demEV":"0",
     "gopVotes":170962,
-    "gopPct":0.686,
+    "gopPct":68.6,
     "gopEV":3,
     "VEP":425101,
     "VAP":441726,
@@ -1221,17 +1421,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2012,
     "state":"Totals",
     "totVotes":129067662,
     "demVotes":65899660,
-    "demPct":0.511,
+    "demPct":51.1,
     "demEV":"332",
     "gopVotes":60932152,
-    "gopPct":0.472,
+    "gopPct":47.2,
     "gopEV":206,
     "VEP":222381268,
     "VAP":240957993,
@@ -1245,17 +1449,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"Mitt Romney",
-    "gopVice":"Paul Ryan"
+    "gopVice":"Paul Ryan",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Michigan",
+    "gopViceBorn":"Wisconsin"
   },
   {
     "year":2008,
     "state":"Alabama",
     "totVotes":2099819,
     "demVotes":813479,
-    "demPct":0.387,
+    "demPct":38.7,
     "demEV":"0",
     "gopVotes":1266546,
-    "gopPct":0.603,
+    "gopPct":60.3,
     "gopEV":9,
     "VEP":3454510,
     "VAP":3595708,
@@ -1269,17 +1477,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Alaska",
     "totVotes":326197,
     "demVotes":123594,
-    "demPct":0.379,
+    "demPct":37.9,
     "demEV":"0",
     "gopVotes":193841,
-    "gopPct":0.594,
+    "gopPct":59.4,
     "gopEV":3,
     "VEP":479429,
     "VAP":507645,
@@ -1293,17 +1505,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Arizona",
     "totVotes":2293475,
     "demVotes":1034707,
-    "demPct":0.451,
+    "demPct":45.1,
     "demEV":"0",
     "gopVotes":1230111,
-    "gopPct":0.536,
+    "gopPct":53.6,
     "gopEV":10,
     "VEP":4046075,
     "VAP":4673718,
@@ -1317,17 +1533,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Arkansas",
     "totVotes":1086617,
     "demVotes":422310,
-    "demPct":0.389,
+    "demPct":38.9,
     "demEV":"0",
     "gopVotes":638017,
-    "gopPct":0.587,
+    "gopPct":58.7,
     "gopEV":6,
     "VEP":2071563,
     "VAP":2174846,
@@ -1341,17 +1561,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"California",
     "totVotes":13561900,
     "demVotes":8274473,
-    "demPct":0.61,
+    "demPct":61,
     "demEV":"55",
     "gopVotes":5011781,
-    "gopPct":0.37,
+    "gopPct":37,
     "gopEV":0,
     "VEP":22261504,
     "VAP":27411094,
@@ -1365,17 +1589,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Colorado",
     "totVotes":2401361,
     "demVotes":1288576,
-    "demPct":0.537,
+    "demPct":53.7,
     "demEV":"9",
     "gopVotes":1073589,
-    "gopPct":0.447,
+    "gopPct":44.7,
     "gopEV":0,
     "VEP":3382959,
     "VAP":3708955,
@@ -1389,17 +1617,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Connecticut",
     "totVotes":1646792,
     "demVotes":997772,
-    "demPct":0.606,
+    "demPct":60.6,
     "demEV":"7",
     "gopVotes":629428,
-    "gopPct":0.382,
+    "gopPct":38.2,
     "gopEV":0,
     "VEP":2471082,
     "VAP":2725917,
@@ -1413,17 +1645,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Delaware",
     "totVotes":412412,
     "demVotes":255459,
-    "demPct":0.619,
+    "demPct":61.9,
     "demEV":"3",
     "gopVotes":152374,
-    "gopPct":0.369,
+    "gopPct":36.9,
     "gopEV":0,
     "VEP":628200,
     "VAP":680493,
@@ -1437,17 +1673,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Dist. of Col.",
     "totVotes":265853,
     "demVotes":245800,
-    "demPct":0.925,
+    "demPct":92.5,
     "demEV":"3",
     "gopVotes":17367,
-    "gopPct":0.065,
+    "gopPct":6.5,
     "gopEV":0,
     "VEP":432566,
     "VAP":481971,
@@ -1461,17 +1701,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Florida",
     "totVotes":8390744,
     "demVotes":4282074,
-    "demPct":0.51,
+    "demPct":51,
     "demEV":"27",
     "gopVotes":4045624,
-    "gopPct":0.482,
+    "gopPct":48.2,
     "gopEV":0,
     "VEP":12687407,
     "VAP":14558436,
@@ -1485,17 +1729,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Georgia",
     "totVotes":3924440,
     "demVotes":1844137,
-    "demPct":0.47,
+    "demPct":47,
     "demEV":"0",
     "gopVotes":2048744,
-    "gopPct":0.522,
+    "gopPct":52.2,
     "gopEV":15,
     "VEP":6281872,
     "VAP":7063638,
@@ -1509,17 +1757,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Hawaii",
     "totVotes":453568,
     "demVotes":325871,
-    "demPct":0.718,
+    "demPct":71.8,
     "demEV":"4",
     "gopVotes":120566,
-    "gopPct":0.266,
+    "gopPct":26.6,
     "gopEV":0,
     "VEP":930067,
     "VAP":1036088,
@@ -1533,17 +1785,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Idaho",
     "totVotes":655032,
     "demVotes":236440,
-    "demPct":0.361,
+    "demPct":36.1,
     "demEV":"0",
     "gopVotes":403012,
-    "gopPct":0.615,
+    "gopPct":61.5,
     "gopEV":4,
     "VEP":1029416,
     "VAP":1117842,
@@ -1557,17 +1813,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Illinois",
     "totVotes":5523051,
     "demVotes":3419673,
-    "demPct":0.619,
+    "demPct":61.9,
     "demEV":"21",
     "gopVotes":2031527,
-    "gopPct":0.368,
+    "gopPct":36.8,
     "gopEV":0,
     "VEP":8681138,
     "VAP":9615700,
@@ -1581,17 +1841,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Indiana",
     "totVotes":2751054,
     "demVotes":1374039,
-    "demPct":0.499,
+    "demPct":49.9,
     "demEV":"11",
     "gopVotes":1345648,
-    "gopPct":0.489,
+    "gopPct":48.9,
     "gopEV":0,
     "VEP":4653019,
     "VAP":4826231,
@@ -1605,17 +1869,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Iowa",
     "totVotes":1543662,
     "demVotes":828940,
-    "demPct":0.537,
+    "demPct":53.7,
     "demEV":"7",
     "gopVotes":682379,
-    "gopPct":0.442,
+    "gopPct":44.2,
     "gopEV":0,
     "VEP":2216094,
     "VAP":2298515,
@@ -1629,17 +1897,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Kansas",
     "totVotes":1235872,
     "demVotes":514765,
-    "demPct":0.417,
+    "demPct":41.7,
     "demEV":"0",
     "gopVotes":699655,
-    "gopPct":0.566,
+    "gopPct":56.6,
     "gopEV":6,
     "VEP":1991759,
     "VAP":2100084,
@@ -1653,17 +1925,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Kentucky",
     "totVotes":1826508,
     "demVotes":751985,
-    "demPct":0.412,
+    "demPct":41.2,
     "demEV":"0",
     "gopVotes":1048462,
-    "gopPct":0.574,
+    "gopPct":57.4,
     "gopEV":8,
     "VEP":3152629,
     "VAP":3277617,
@@ -1677,17 +1953,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Louisiana",
     "totVotes":1960761,
     "demVotes":782989,
-    "demPct":0.399,
+    "demPct":39.9,
     "demEV":"0",
     "gopVotes":1148275,
-    "gopPct":0.586,
+    "gopPct":58.6,
     "gopEV":9,
     "VEP":3205794,
     "VAP":3342279,
@@ -1701,17 +1981,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Maine",
     "totVotes":731163,
     "demVotes":421923,
-    "demPct":0.577,
+    "demPct":57.7,
     "demEV":"4",
     "gopVotes":295273,
-    "gopPct":0.404,
+    "gopPct":40.4,
     "gopEV":0,
     "VEP":1036242,
     "VAP":1049816,
@@ -1725,17 +2009,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Maryland",
     "totVotes":2631596,
     "demVotes":1629467,
-    "demPct":0.619,
+    "demPct":61.9,
     "demEV":"10",
     "gopVotes":959862,
-    "gopPct":0.365,
+    "gopPct":36.5,
     "gopEV":0,
     "VEP":3925117,
     "VAP":4342850,
@@ -1749,17 +2037,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Massachusetts",
     "totVotes":3080985,
     "demVotes":1904097,
-    "demPct":0.618,
+    "demPct":61.8,
     "demEV":"12",
     "gopVotes":1108854,
-    "gopPct":0.36,
+    "gopPct":36,
     "gopEV":0,
     "VEP":4612550,
     "VAP":5058035,
@@ -1773,17 +2065,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Michigan",
     "totVotes":5001766,
     "demVotes":2872579,
-    "demPct":0.574,
+    "demPct":57.4,
     "demEV":"17",
     "gopVotes":2048639,
-    "gopPct":0.41,
+    "gopPct":41,
     "gopEV":0,
     "VEP":7229512,
     "VAP":7528460,
@@ -1797,17 +2093,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Minnesota",
     "totVotes":2910369,
     "demVotes":1573354,
-    "demPct":0.541,
+    "demPct":54.1,
     "demEV":"10",
     "gopVotes":1275409,
-    "gopPct":0.438,
+    "gopPct":43.8,
     "gopEV":0,
     "VEP":3740142,
     "VAP":3975974,
@@ -1821,17 +2121,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Mississippi",
     "totVotes":1289865,
     "demVotes":554662,
-    "demPct":0.43,
+    "demPct":43,
     "demEV":"0",
     "gopVotes":724597,
-    "gopPct":0.562,
+    "gopPct":56.2,
     "gopEV":6,
     "VEP":2113347,
     "VAP":2190402,
@@ -1845,17 +2149,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Missouri",
     "totVotes":2925205,
     "demVotes":1441911,
-    "demPct":0.493,
+    "demPct":49.3,
     "demEV":"0",
     "gopVotes":1445814,
-    "gopPct":0.494,
+    "gopPct":49.4,
     "gopEV":11,
     "VEP":4327572,
     "VAP":4507688,
@@ -1869,17 +2177,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Montana",
     "totVotes":490109,
     "demVotes":231667,
-    "demPct":0.473,
+    "demPct":47.3,
     "demEV":"0",
     "gopVotes":242763,
-    "gopPct":0.495,
+    "gopPct":49.5,
     "gopEV":3,
     "VEP":741853,
     "VAP":755384,
@@ -1893,17 +2205,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Nebraska",
     "totVotes":801281,
     "demVotes":333319,
-    "demPct":0.416,
+    "demPct":41.6,
     "demEV":"1",
     "gopVotes":452979,
-    "gopPct":0.565,
+    "gopPct":56.5,
     "gopEV":4,
     "VEP":1274719,
     "VAP":1348048,
@@ -1917,17 +2233,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Nevada",
     "totVotes":967848,
     "demVotes":533736,
-    "demPct":0.551,
+    "demPct":55.1,
     "demEV":"5",
     "gopVotes":412827,
-    "gopPct":0.427,
+    "gopPct":42.7,
     "gopEV":0,
     "VEP":1696831,
     "VAP":2000277,
@@ -1941,17 +2261,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"New Hampshire",
     "totVotes":707611,
     "demVotes":384826,
-    "demPct":0.544,
+    "demPct":54.4,
     "demEV":"4",
     "gopVotes":316534,
-    "gopPct":0.447,
+    "gopPct":44.7,
     "gopEV":0,
     "VEP":992226,
     "VAP":1021787,
@@ -1965,17 +2289,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"New Jersey",
     "totVotes":3868237,
     "demVotes":2215422,
-    "demPct":0.573,
+    "demPct":57.3,
     "demEV":"15",
     "gopVotes":1613207,
-    "gopPct":0.417,
+    "gopPct":41.7,
     "gopEV":0,
     "VEP":5776527,
     "VAP":6651284,
@@ -1989,17 +2317,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"New Mexico",
     "totVotes":830158,
     "demVotes":472422,
-    "demPct":0.569,
+    "demPct":56.9,
     "demEV":"5",
     "gopVotes":346832,
-    "gopPct":0.418,
+    "gopPct":41.8,
     "gopEV":0,
     "VEP":1362629,
     "VAP":1505830,
@@ -2013,17 +2345,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"New York",
     "totVotes":7591233,
     "demVotes":4769700,
-    "demPct":0.628,
+    "demPct":62.8,
     "demEV":"31",
     "gopVotes":2742298,
-    "gopPct":0.361,
+    "gopPct":36.1,
     "gopEV":0,
     "VEP":12948969,
     "VAP":14876971,
@@ -2037,17 +2373,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"North Carolina",
     "totVotes":4310789,
     "demVotes":2142651,
-    "demPct":0.497,
+    "demPct":49.7,
     "demEV":"15",
     "gopVotes":2128474,
-    "gopPct":0.494,
+    "gopPct":49.4,
     "gopEV":0,
     "VEP":6584302,
     "VAP":7096503,
@@ -2061,17 +2401,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"North Dakota",
     "totVotes":316621,
     "demVotes":141278,
-    "demPct":0.446,
+    "demPct":44.6,
     "demEV":"0",
     "gopVotes":168601,
-    "gopPct":0.533,
+    "gopPct":53.3,
     "gopEV":3,
     "VEP":504762,
     "VAP":512768,
@@ -2085,17 +2429,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Ohio",
     "totVotes":5698260,
     "demVotes":2933388,
-    "demPct":0.515,
+    "demPct":51.5,
     "demEV":"20",
     "gopVotes":2674491,
-    "gopPct":0.469,
+    "gopPct":46.9,
     "gopEV":0,
     "VEP":8513079,
     "VAP":8757453,
@@ -2109,17 +2457,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Oklahoma",
     "totVotes":1462661,
     "demVotes":502496,
-    "demPct":0.344,
+    "demPct":34.4,
     "demEV":"0",
     "gopVotes":960165,
-    "gopPct":0.656,
+    "gopPct":65.6,
     "gopEV":7,
     "VEP":2619121,
     "VAP":2770219,
@@ -2133,17 +2485,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Oregon",
     "totVotes":1827864,
     "demVotes":1037291,
-    "demPct":0.567,
+    "demPct":56.7,
     "demEV":"7",
     "gopVotes":738475,
-    "gopPct":0.404,
+    "gopPct":40.4,
     "gopEV":0,
     "VEP":2700327,
     "VAP":2916246,
@@ -2157,17 +2513,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Pennsylvania",
     "totVotes":6034745,
     "demVotes":3276363,
-    "demPct":0.543,
+    "demPct":54.3,
     "demEV":"21",
     "gopVotes":2655885,
-    "gopPct":0.44,
+    "gopPct":44,
     "gopEV":0,
     "VEP":9457942,
     "VAP":9813664,
@@ -2181,17 +2541,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Rhode Island",
     "totVotes":469767,
     "demVotes":296571,
-    "demPct":0.631,
+    "demPct":63.1,
     "demEV":"4",
     "gopVotes":165391,
-    "gopPct":0.352,
+    "gopPct":35.2,
     "gopEV":0,
     "VEP":763608,
     "VAP":825786,
@@ -2205,17 +2569,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"South Carolina",
     "totVotes":1920969,
     "demVotes":862449,
-    "demPct":0.449,
+    "demPct":44.9,
     "demEV":"0",
     "gopVotes":1034896,
-    "gopPct":0.539,
+    "gopPct":53.9,
     "gopEV":8,
     "VEP":3311044,
     "VAP":3473488,
@@ -2229,17 +2597,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"South Dakota",
     "totVotes":381975,
     "demVotes":170924,
-    "demPct":0.447,
+    "demPct":44.7,
     "demEV":"0",
     "gopVotes":203054,
-    "gopPct":0.532,
+    "gopPct":53.2,
     "gopEV":3,
     "VEP":590720,
     "VAP":602539,
@@ -2253,17 +2625,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Tennessee",
     "totVotes":2599749,
     "demVotes":1087437,
-    "demPct":0.418,
+    "demPct":41.8,
     "demEV":"0",
     "gopVotes":1479178,
-    "gopPct":0.569,
+    "gopPct":56.9,
     "gopEV":11,
     "VEP":4563192,
     "VAP":4771926,
@@ -2277,17 +2653,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Texas",
     "totVotes":8077795,
     "demVotes":3528633,
-    "demPct":0.437,
+    "demPct":43.7,
     "demEV":"0",
     "gopVotes":4479328,
-    "gopPct":0.555,
+    "gopPct":55.5,
     "gopEV":34,
     "VEP":14929810,
     "VAP":17756112,
@@ -2301,17 +2681,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Utah",
     "totVotes":952370,
     "demVotes":327670,
-    "demPct":0.344,
+    "demPct":34.4,
     "demEV":"0",
     "gopVotes":596030,
-    "gopPct":0.626,
+    "gopPct":62.6,
     "gopEV":5,
     "VEP":1700286,
     "VAP":1840087,
@@ -2325,17 +2709,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Vermont",
     "totVotes":325046,
     "demVotes":219262,
-    "demPct":0.675,
+    "demPct":67.5,
     "demEV":"3",
     "gopVotes":98974,
-    "gopPct":0.304,
+    "gopPct":30.4,
     "gopEV":0,
     "VEP":482677,
     "VAP":492610,
@@ -2349,17 +2737,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Virginia",
     "totVotes":3723260,
     "demVotes":1959532,
-    "demPct":0.526,
+    "demPct":52.6,
     "demEV":"13",
     "gopVotes":1725005,
-    "gopPct":0.463,
+    "gopPct":46.3,
     "gopEV":0,
     "VEP":5555415,
     "VAP":6022123,
@@ -2373,17 +2765,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Washington",
     "totVotes":3036878,
     "demVotes":1750848,
-    "demPct":0.577,
+    "demPct":57.7,
     "demEV":"11",
     "gopVotes":1229216,
-    "gopPct":0.405,
+    "gopPct":40.5,
     "gopEV":0,
     "VEP":4561163,
     "VAP":5032960,
@@ -2397,17 +2793,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"West Virginia",
     "totVotes":713362,
     "demVotes":303857,
-    "demPct":0.426,
+    "demPct":42.6,
     "demEV":"0",
     "gopVotes":397466,
-    "gopPct":0.557,
+    "gopPct":55.7,
     "gopEV":5,
     "VEP":1430439,
     "VAP":1453045,
@@ -2421,17 +2821,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Wisconsin",
     "totVotes":2983417,
     "demVotes":1677211,
-    "demPct":0.562,
+    "demPct":56.2,
     "demEV":"10",
     "gopVotes":1262393,
-    "gopPct":0.423,
+    "gopPct":42.3,
     "gopEV":0,
     "VEP":4120694,
     "VAP":4306876,
@@ -2445,17 +2849,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Wyoming",
     "totVotes":256035,
     "demVotes":82868,
-    "demPct":0.324,
+    "demPct":32.4,
     "demEV":"0",
     "gopVotes":164958,
-    "gopPct":0.644,
+    "gopPct":64.4,
     "gopEV":3,
     "VEP":405732,
     "VAP":418040,
@@ -2469,17 +2877,21 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2008,
     "state":"Totals",
     "totVotes":131278107,
     "demVotes":69456897,
-    "demPct":0.529,
+    "demPct":52.9,
     "demEV":"365",
     "gopVotes":59934814,
-    "gopPct":0.457,
+    "gopPct":45.7,
     "gopEV":173,
     "VEP":213313508,
     "VAP":230872030,
@@ -2493,7 +2905,11 @@
     "demPres":"Barack Obama",
     "demVice":"Joseph Biden",
     "gopPres":"John McCain",
-    "gopVice":"Sarah Palin"
+    "gopVice":"Sarah Palin",
+    "demPresBorn":"Hawaii",
+    "demViceBorn":"Pennsylvania",
+    "gopPresBorn":"Coco Solo",
+    "gopViceBorn":"Idaho"
   },
   {
     "year":2004,
@@ -2517,7 +2933,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2541,7 +2961,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2565,7 +2989,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2589,7 +3017,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2613,7 +3045,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2637,7 +3073,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2661,7 +3101,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2685,7 +3129,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2709,7 +3157,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2733,7 +3185,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2757,7 +3213,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2781,7 +3241,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2805,7 +3269,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2829,7 +3297,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2853,7 +3325,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2877,7 +3353,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2901,7 +3381,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2925,7 +3409,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2949,7 +3437,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2973,7 +3465,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -2997,7 +3493,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3021,7 +3521,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3045,15 +3549,19 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
-    "state":"Minnesota",
+    "state":"Minnesota*",
     "totVotes":2828387,
     "demVotes":1445014,
     "demPct":51.1,
-    "demEV":"9",
+    "demEV":"9*",
     "gopVotes":1346695,
     "gopPct":47.6,
     "gopEV":0,
@@ -3069,7 +3577,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3093,7 +3605,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3117,7 +3633,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3141,7 +3661,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3165,7 +3689,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3189,7 +3717,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3213,7 +3745,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3237,7 +3773,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3261,7 +3801,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3285,7 +3829,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3309,7 +3857,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3333,7 +3885,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3357,7 +3913,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3381,7 +3941,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3405,7 +3969,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3429,7 +3997,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3453,7 +4025,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3477,7 +4053,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3501,7 +4081,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3525,7 +4109,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3549,7 +4137,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3573,7 +4165,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3597,7 +4193,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3621,7 +4221,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3645,7 +4249,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3669,7 +4277,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3693,7 +4305,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3717,7 +4333,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2004,
@@ -3741,7 +4361,11 @@
     "demPres":"John Kerry",
     "demVice":"John Edwards",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Colorado",
+    "demViceBorn":"South Carolina",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -3765,7 +4389,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -3789,7 +4417,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -3813,7 +4445,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -3837,7 +4473,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -3861,7 +4501,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -3885,7 +4529,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -3909,7 +4557,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -3933,11 +4585,15 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
-    "state":"Dist. of Col.",
+    "state":"Dist. of Col.*",
     "totVotes":201894,
     "demVotes":171923,
     "demPct":85.2,
@@ -3957,7 +4613,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -3981,7 +4641,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4005,7 +4669,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4029,7 +4697,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4053,7 +4725,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4077,7 +4753,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4101,7 +4781,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4125,7 +4809,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4149,7 +4837,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4173,7 +4865,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4197,7 +4893,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4221,7 +4921,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4245,7 +4949,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4269,7 +4977,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4293,7 +5005,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4317,7 +5033,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4341,7 +5061,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4365,7 +5089,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4389,7 +5117,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4413,7 +5145,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4437,7 +5173,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4461,7 +5201,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4485,7 +5229,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4509,7 +5257,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4533,7 +5285,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4557,7 +5313,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4581,7 +5341,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4605,7 +5369,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4629,7 +5397,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4653,7 +5425,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4677,7 +5453,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4701,7 +5481,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4725,7 +5509,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4749,7 +5537,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4773,7 +5565,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4797,7 +5593,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4821,7 +5621,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4845,7 +5649,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4869,7 +5677,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4893,7 +5705,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4917,7 +5733,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4941,7 +5761,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4965,7 +5789,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":2000,
@@ -4989,7 +5817,11 @@
     "demPres":"Albert Gore, Jr.",
     "demVice":"Joseph Lieberman",
     "gopPres":"George W. Bush",
-    "gopVice":"Richard Cheney"
+    "gopVice":"Richard Cheney",
+    "demPresBorn":"Dist. of Col.",
+    "demViceBorn":"Connecticut",
+    "gopPresBorn":"Connecticut",
+    "gopViceBorn":"Nebraska"
   },
   {
     "year":1996,
@@ -5013,7 +5845,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5037,7 +5873,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5061,7 +5901,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5085,7 +5929,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5109,7 +5957,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5133,7 +5985,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5157,7 +6013,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5181,7 +6041,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5205,7 +6069,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5229,7 +6097,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5253,7 +6125,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5277,7 +6153,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5301,7 +6181,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5325,7 +6209,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5349,7 +6237,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5373,7 +6265,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5397,7 +6293,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5421,7 +6321,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5445,7 +6349,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5469,7 +6377,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5493,7 +6405,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5517,7 +6433,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5541,7 +6461,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5565,7 +6489,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5589,7 +6517,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5613,7 +6545,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5637,7 +6573,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5661,7 +6601,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5685,7 +6629,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5709,7 +6657,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5733,7 +6685,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5757,7 +6713,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5781,7 +6741,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5805,7 +6769,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5829,7 +6797,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5853,7 +6825,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5877,7 +6853,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5901,7 +6881,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5925,7 +6909,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5949,7 +6937,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5973,7 +6965,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -5997,7 +6993,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -6021,7 +7021,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -6045,7 +7049,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -6069,7 +7077,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -6093,7 +7105,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -6117,7 +7133,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -6141,7 +7161,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -6165,7 +7189,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -6189,7 +7217,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -6213,7 +7245,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1996,
@@ -6237,7 +7273,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"Robert Dole",
-    "gopVice":"Jack Kemp"
+    "gopVice":"Jack Kemp",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Kansas",
+    "gopViceBorn":"California"
   },
   {
     "year":1992,
@@ -6261,7 +7301,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6285,7 +7329,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6309,7 +7357,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6333,7 +7385,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6357,7 +7413,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6381,7 +7441,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6405,7 +7469,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6429,7 +7497,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6453,7 +7525,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6477,7 +7553,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6501,7 +7581,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6525,7 +7609,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6549,7 +7637,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6573,7 +7665,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6597,7 +7693,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6621,7 +7721,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6645,7 +7749,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6669,7 +7777,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6693,7 +7805,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6717,7 +7833,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6741,7 +7861,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6765,7 +7889,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6789,7 +7917,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6813,7 +7945,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6837,7 +7973,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6861,7 +8001,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6885,7 +8029,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6909,7 +8057,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6933,7 +8085,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6957,7 +8113,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -6981,7 +8141,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7005,7 +8169,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7029,7 +8197,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7053,7 +8225,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7077,7 +8253,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7101,7 +8281,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7125,7 +8309,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7149,7 +8337,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7173,7 +8365,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7197,7 +8393,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7221,7 +8421,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7245,7 +8449,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7269,7 +8477,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7293,7 +8505,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7317,7 +8533,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7341,7 +8561,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7365,7 +8589,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7389,7 +8617,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7413,7 +8645,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7437,7 +8673,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7461,7 +8701,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1992,
@@ -7485,7 +8729,11 @@
     "demPres":"William J. Clinton",
     "demVice":"Albert Gore, Jr.",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Arkansas",
+    "demViceBorn":"Dist. of Col.",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7509,7 +8757,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7533,7 +8785,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7557,7 +8813,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7581,7 +8841,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7605,7 +8869,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7629,7 +8897,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7653,7 +8925,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7677,7 +8953,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7701,7 +8981,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7725,7 +9009,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7749,7 +9037,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7773,7 +9065,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7797,7 +9093,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7821,7 +9121,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7845,7 +9149,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7869,7 +9177,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7893,7 +9205,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7917,7 +9233,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7941,7 +9261,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7965,7 +9289,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -7989,7 +9317,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8013,7 +9345,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8037,7 +9373,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8061,7 +9401,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8085,7 +9429,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8109,7 +9457,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8133,7 +9485,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8157,7 +9513,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8181,7 +9541,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8205,7 +9569,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8229,7 +9597,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8253,7 +9625,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8277,7 +9653,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8301,7 +9681,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8325,7 +9709,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8349,7 +9737,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8373,7 +9765,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8397,7 +9793,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8421,7 +9821,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8445,7 +9849,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8469,7 +9877,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8493,7 +9905,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8517,7 +9933,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8541,7 +9961,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8565,7 +9989,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8589,7 +10017,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8613,7 +10045,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8637,11 +10073,15 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
-    "state":"West Virginia",
+    "state":"West Virginia*",
     "totVotes":653311,
     "demVotes":341016,
     "demPct":52.2,
@@ -8661,7 +10101,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8685,7 +10129,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8709,7 +10157,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1988,
@@ -8733,7 +10185,11 @@
     "demPres":"Michael Dukakis",
     "demVice":"Lloyd Bentsen",
     "gopPres":"George Bush",
-    "gopVice":"Dan Quayle"
+    "gopVice":"Dan Quayle",
+    "demPresBorn":"Massachusetts",
+    "demViceBorn":"Texas",
+    "gopPresBorn":"Massachusetts",
+    "gopViceBorn":"Indiana"
   },
   {
     "year":1984,
@@ -8757,7 +10213,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -8781,7 +10241,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -8805,7 +10269,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -8829,7 +10297,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -8853,7 +10325,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -8877,7 +10353,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -8901,7 +10381,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -8925,7 +10409,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -8949,7 +10437,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -8973,7 +10465,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -8997,7 +10493,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9021,7 +10521,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9045,7 +10549,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9069,7 +10577,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9093,7 +10605,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9117,7 +10633,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9141,7 +10661,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9165,7 +10689,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9189,7 +10717,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9213,7 +10745,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9237,7 +10773,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9261,7 +10801,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9285,7 +10829,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9309,7 +10857,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9333,7 +10885,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9357,7 +10913,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9381,7 +10941,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9405,7 +10969,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9429,7 +10997,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9453,7 +11025,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9477,7 +11053,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9501,7 +11081,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9525,7 +11109,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9549,7 +11137,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9573,7 +11165,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9597,7 +11193,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9621,7 +11221,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9645,7 +11249,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9669,7 +11277,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9693,7 +11305,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9717,7 +11333,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9741,7 +11361,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9765,7 +11389,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9789,7 +11417,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9813,7 +11445,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9837,7 +11473,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9861,7 +11501,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9885,7 +11529,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9909,7 +11557,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9933,7 +11585,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9957,7 +11613,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1984,
@@ -9981,7 +11641,11 @@
     "demPres":"Walter Mondale",
     "demVice":"Geraldine Ferraro",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Minnesota",
+    "demViceBorn":"New York",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10005,7 +11669,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10029,7 +11697,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10053,7 +11725,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10077,7 +11753,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10101,7 +11781,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10125,7 +11809,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10149,7 +11837,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10173,7 +11865,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10197,7 +11893,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10221,7 +11921,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10245,7 +11949,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10269,7 +11977,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10293,7 +12005,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10317,7 +12033,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10341,7 +12061,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10365,7 +12089,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10389,7 +12117,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10413,7 +12145,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10437,7 +12173,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10461,7 +12201,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10485,7 +12229,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10509,7 +12257,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10533,7 +12285,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10557,7 +12313,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10581,7 +12341,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10605,7 +12369,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10629,7 +12397,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10653,7 +12425,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10677,7 +12453,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10701,7 +12481,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10725,7 +12509,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10749,7 +12537,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10773,7 +12565,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10797,7 +12593,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10821,7 +12621,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10845,7 +12649,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10869,7 +12677,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10893,7 +12705,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10917,7 +12733,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10941,7 +12761,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10965,7 +12789,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -10989,7 +12817,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -11013,7 +12845,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -11037,7 +12873,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -11061,7 +12901,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -11085,7 +12929,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -11109,7 +12957,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -11133,7 +12985,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -11157,7 +13013,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -11181,7 +13041,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -11205,7 +13069,11 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   },
   {
     "year":1980,
@@ -11229,6 +13097,10 @@
     "demPres":"Jimmy Carter",
     "demVice":"Walter Mondale",
     "gopPres":"Ronald Reagan",
-    "gopVice":"George Bush"
+    "gopVice":"George Bush",
+    "demPresBorn":"Georgia",
+    "demViceBorn":"Minnesota",
+    "gopPresBorn":"Illinois",
+    "gopViceBorn":"Massachusetts"
   }
 ]
