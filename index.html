@@ -96,15 +96,13 @@ var states = svg.append("g")
 
 // updates choropleth with election data
 var updateVis = function () {
-  
+  debugger;
   var state_paths = states.selectAll("path");
-    // .data([elecJSON])
+
   state_paths.attr("class", function() { 
-    // return "cat";
     var that = this;
     var noodle = "cat";
     ELECGLOBAL.forEach(function(d) {
-      debugger;
       if(d.year == CURRENT_YEAR && d.state == that.id) {
         noodle = quantize(d.demPct - d.gopPct);
       }
@@ -148,7 +146,9 @@ var startHere = function () {
     .await(initVis);
 };
 
-startHere();
+startHere()
+
+
 
 </script>
 </body>
