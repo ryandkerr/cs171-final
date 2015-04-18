@@ -53,89 +53,103 @@
     </div>
   </div>
 
-  <script>
-    //testing commit
-    // some of this code is taken from these sources:
-    // http://bl.ocks.org/stevenae/8362841
-    // http://synthesis.sbecker.net/articles/2012/07/18/learning-d3-part-7-choropleth-maps
-    // http://bl.ocks.org/mbostock/4060606
+<script>
+//testing commit
+// some of this code is taken from these sources:
+// http://bl.ocks.org/stevenae/8362841
+// http://synthesis.sbecker.net/articles/2012/07/18/learning-d3-part-7-choropleth-maps
+// http://bl.ocks.org/mbostock/4060606
 
-    // helper to find width of element
-    var getInnerWidth = function(element) {
-        var style = window.getComputedStyle(element.node(), null);
-        return parseInt(style.getPropertyValue('width'));
-    }
+// helper to find width of element
+var getInnerWidth = function(element) {
+    var style = window.getComputedStyle(element.node(), null);
+    return parseInt(style.getPropertyValue('width'));
+};
 
-    // global variables
-    var WIDTH = getInnerWidth(d3.select("#col1")) - 15;
-    var HEIGHT = 500;    
-    var ELECGLOBAL;    
-    var CURRENT_YEAR = 2012;
-    
-    // scale to assign margin of victory to bins, which end up as colors
-    var quantize = d3.scale.quantize()
-      .domain([-20, 20])
-      .range(d3.range(8).map(function(i) { return "q" + i + "-8"; })); 
-    
-    // create svg canvas in chorovis div
-    var svg = d3.select("#choroVis")
-      .append("svg")
-      .attr("width", WIDTH)
-      .attr("height", HEIGHT)
-    
-    // greate usa projection
-    var projection = d3.geo.albersUsa()
-      .scale(1000);
-    
-    var path = d3.geo.path()
-      .projection(projection);
-    
-    var states = svg.append("g")
-      .attr("class", "states");
-    
-    // load in geojson state border/path file
-    d3.json("data/us_states_small.json", function(stateJSON) {
-      states.selectAll("path")
-        .data(stateJSON.features)
-        .enter().append("path")
-        // .attr( assign class based on color )
-        // .attr ( assign id or maybe class based on state name )
-        .attr("id", function(d) { return d.properties.NAME; })
-        .attr("d", path)
-        .attr("fill", function(d) { if(d.properties.CENSUSAREA > 113590) {
-            return "#000000"; 
-          } else {
-            return "#AAAAAA";
-          }})
-        .attr("stroke", "#555555")
-        .attr("stroke-width", 1.5)
-    });
-    
-    // load in our central election data file for 1980-2012
-    d3.json("data/jsonMain.json", function(elecJSON) {
-      ELECGLOBAL = elecJSON;
-      updateVis()
+// global variables
+var WIDTH = getInnerWidth(d3.select("#col1")) - 15;
+var HEIGHT = 500;    
+var ELECGLOBAL;    
+var CURRENT_YEAR = 2012;
+
+// scale to assign margin of victory to bins, which end up as colors
+var quantize = d3.scale.quantize()
+  .domain([-20, 20])
+  .range(d3.range(8).map(function(i) { return "q" + i + "-8"; }));
+
+// create svg canvas in chorovis div
+var svg = d3.select("#choroVis")
+  .append("svg")
+  .attr("width", WIDTH)
+  .attr("height", HEIGHT)
+
+// create usa projection
+var projection = d3.geo.albersUsa()
+  .scale(1000);
+
+var path = d3.geo.path()
+  .projection(projection);
+
+var states = svg.append("g")
+  .attr("class", "states");
+
+
+// updates choropleth with election data
+var updateVis = function () {
+  
+  var state_paths = states.selectAll("path");
+    // .data([elecJSON])
+  state_paths.attr("class", function() { 
+    // return "cat";
+    var that = this;
+    var noodle = "cat";
+    ELECGLOBAL.forEach(function(d) {
+      debugger;
+      if(d.year == CURRENT_YEAR && d.state == that.id) {
+        noodle = quantize(d.demPct - d.gopPct);
+      }
     })
-    
-    // updates choropleth
-    function updateVis() {
-      
-      var state_paths = states.selectAll("path");
-        // .data([elecJSON])
-      state_paths.attr("class", function() { 
-        // return "cat";
-        var that = this;
-        var noodle = "cat";
-        ELECGLOBAL.forEach(function(d) {
-          debugger;
-          if(d.year == CURRENT_YEAR && d.state == that.id) {
-            noodle = quantize(d.demPct - d.gopPct);
-          }
-        })
-        return noodle;
-         
-      })
-    }
-  </script>
+    return noodle;
+     
+  })
+};
+
+// initializes the visualization
+var initVis = function (error, stateJson, elecData) {
+  // assign election data global
+  ELECGLOBAL = elecData
+
+  // draw states
+  states.selectAll("path")
+    .data(stateJson.features)
+    .enter().append("path")
+    // .attr( assign class based on color )
+    // .attr ( assign id or maybe class based on state name )
+    .attr("id", function(d) { return d.properties.NAME; })
+    .attr("d", path)
+    .attr("fill", function(d) { if(d.properties.CENSUSAREA > 113590) {
+        return "#000000"; 
+      } else {
+        return "#AAAAAA";
+      }})
+    .attr("stroke", "#555555")
+    .attr("stroke-width", 1.5)
+
+  // load in our central election data file for 1980-2012
+  updateVis()
+};
+
+// loads data and then calls visualization-drawing function
+var startHere = function () {
+  debugger;
+  queue()
+    .defer(d3.json, "data/us_states_small.json")
+    .defer(d3.json, "data/jsonMain.json")
+    .await(initVis);
+};
+
+startHere();
+
+</script>
 </body>
 </html>
