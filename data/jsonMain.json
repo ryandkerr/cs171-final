@@ -3557,11 +3557,11 @@
   },
   {
     "year":2004,
-    "state":"Minnesota*",
+    "state":"Minnesota",
     "totVotes":2828387,
     "demVotes":1445014,
     "demPct":51.1,
-    "demEV":"9*",
+    "demEV":9,
     "gopVotes":1346695,
     "gopPct":47.6,
     "gopEV":0,
@@ -4593,7 +4593,7 @@
   },
   {
     "year":2000,
-    "state":"Dist. of Col.*",
+    "state":"Dist. of Col.",
     "totVotes":201894,
     "demVotes":171923,
     "demPct":85.2,
@@ -10081,7 +10081,7 @@
   },
   {
     "year":1988,
-    "state":"West Virginia*",
+    "state":"West Virginia",
     "totVotes":653311,
     "demVotes":341016,
     "demPct":52.2,
