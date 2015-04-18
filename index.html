@@ -35,7 +35,7 @@
 
       </div>
       
-      <div class="col-md-3" id="clickVis" style="background-color: #FFD8D8">
+      <div class="col-md-3" id="presVis" style="background-color: #FFD8D8">
         overall election vis goes here
       </div>
     </div>
@@ -78,20 +78,27 @@ var quantize = d3.scale.quantize()
   .range(d3.range(8).map(function(i) { return "q" + i + "-8"; }));
 
 // create svg canvas in chorovis div
-var svg = d3.select("#choroVis")
+var choro_svg = d3.select("#choroVis")
   .append("svg")
   .attr("width", WIDTH)
-  .attr("height", HEIGHT)
+  .attr("height", HEIGHT);
+
+// create svg canvas for president vis
+var pres_svg = d3.select("#presVis")
+  .append("svg")
+  .attr("width", getInnerWidth(d3.select("#presVis")))
+  .attr("height", 500);
 
 // create usa projection
 var projection = d3.geo.albersUsa()
-  .scale(1000);
+  .scale(1050);
 
 var path = d3.geo.path()
   .projection(projection);
 
-var states = svg.append("g")
-  .attr("class", "states");
+var states = choro_svg.append("g")
+  .attr("class", "states")
+  .attr("transform", "translate(-40, -10)");
 
 
 // updates choropleth with election data
@@ -121,15 +128,14 @@ var initVis = function (error, stateJson, elecData) {
   states.selectAll("path")
     .data(stateJson.features)
     .enter().append("path")
-    // .attr( assign class based on color )
-    // .attr ( assign id or maybe class based on state name )
     .attr("id", function(d) { return d.properties.NAME; })
     .attr("d", path)
     .attr("fill", function(d) { if(d.properties.CENSUSAREA > 113590) {
-        return "#000000"; 
+        return "#AAAAAA"; 
       } else {
         return "#AAAAAA";
-      }})
+      }
+      })
     .attr("stroke", "#555555")
     .attr("stroke-width", 1.5)
 
