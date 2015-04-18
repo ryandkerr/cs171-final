@@ -16,7 +16,7 @@
 </head>
 <body>
   <div class ="container">
-    <h1>Electoral Map: 1789 - Present</h1>
+    <h1>Electoral Map: 1980 - Present</h1>
     
     <div class="row">
       <div class="col-md-9" id="col1" style="background-color: #CCF2FF">
@@ -54,65 +54,23 @@
   </div>
 
   <script>
+
     var getInnerWidth = function(element) {
         var style = window.getComputedStyle(element.node(), null);
+
         return parseInt(style.getPropertyValue('width'));
     }
+
     var WIDTH = getInnerWidth(d3.select("#col1")) - 15;
     var HEIGHT = 500;
+
     var ELECGLOBAL;
+    
     var CURRENT_YEAR = 2012;
-    var quantize = d3.scale.quantize()
-      .domain([-20, 20])
-      .range(d3.range(8).map(function(i) { return "q" + i + "-8"; })); 
-    var svg = d3.select("#choroVis")
-      .append("svg")
-      .attr("width", WIDTH)
-      .attr("height", HEIGHT)
-    var projection = d3.geo.albersUsa()
-      .scale(1000);
-    var path = d3.geo.path()
-      .projection(projection);
-    var states = svg.append("g")
-      .attr("class", "states");
-    d3.json("data/us_states_small.json", function(stateJSON) {
-      states.selectAll("path")
-        .data(stateJSON.features)
-        .enter().append("path")
-        // .attr( assign class based on color )
-        // .attr ( assign id or maybe class based on state name )
-        .attr("id", function(d) { return d.properties.NAME; })
-        .attr("d", path)
-        .attr("fill", function(d) { if(d.properties.CENSUSAREA > 113590) {
-            return "#000000"; 
-          } else {
-            return "#AAAAAA";
-          }})
-        .attr("stroke", "#555555")
-        .attr("stroke-width", 1.5)
-    });
-    d3.json("data/jsonMain.json", function(elecJSON) {
-      ELECGLOBAL = elecJSON;
-      updateVis()
-    })
-    function updateVis() {
-      
-      var state_paths = states.selectAll("path");
-        // .data([elecJSON])
-      state_paths.attr("class", function() { 
-        // return "cat";
-        var that = this;
-        var noodle = "cat";
-        ELECGLOBAL.forEach(function(d) {
-          debugger;
-          if(d.year == CURRENT_YEAR && d.state == that.id) {
-            noodle = quantize(d.demPct - d.gopPct);
-          }
-        })
-        return noodle;
-         
-      })
-    }
+
+    <script src = "js/choroVis.js"></script>
+
+
   </script>
 </body>
 </html>
