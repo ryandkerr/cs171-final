@@ -1,3 +1,35 @@
 .states {
-	fill: #FFFFFF
+    fill: #FFFFFF
 }
+
+/*.Arizona {
+    fill: #456712
+}*/
+
+/*.q0-8 { fill:#b2182b; }
+  .q1-8 { fill:#d6604d; }
+  .q2-8 { fill:#f4a582; }
+  .q3-8 { fill:#fddbc7; }
+  .q4-8 { fill:#f7f7f7; }
+  .q5-8 { fill:#d1e5f0; }
+  .q6-8 { fill:#92c5de; }
+  .q7-8 { fill:#4393c3; }
+  .q8-8 { fill:#2166ac; }*/
+
+/*.q0-8 { fill:#cc0000; }
+.q1-8 { fill:#d63333; }
+.q2-8 { fill:#e06666; }
+.q3-8 { fill:#eb9999; }
+.q4-8 { fill:#99ccff; }
+.q5-8 { fill:#5cadff; }
+.q6-8 { fill:#3399ff; }
+.q7-8 { fill:#297acc; }*/
+
+.q0-8 { fill:#ff8383; }
+.q1-8 { fill:#ff9e9e; }
+.q2-8 { fill:#ffbaba; }
+.q3-8 { fill:#ffd6d6; }
+.q4-8 { fill:#c2eaff; }
+.q5-8 { fill:#aae2ff; }
+.q6-8 { fill:#91daff; }
+.q7-8 { fill:#75d1ff; }
