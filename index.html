@@ -24,7 +24,7 @@
           <div>
             <label>Year:</label>
             <label>1980</label>
-            <label><input type="range" name="points" min='1980' max='2012' step="4" value="2012" id="year_slider" oninput="CURRENT_YEAR=this.value; updateVis();" style="width: 300px"></label><label>2012</label>
+            <label><input type="range" name="points" min='1980' max='2012' step="4" value="2012" id="year_slider" oninput="CURRENT_YEAR=this.value; document.getElementById('cur').innerHTML = CURRENT_YEAR; updateVis();" style="width: 300px"></label><label>2012 (Currently showing <span id="cur">2012</span>)</label>
           </div>
         </form>
         <br>
@@ -36,19 +36,19 @@
       </div>
       
       <div class="col-md-3" id="clickVis" style="background-color: #FFD8D8">
-        click extra data goes here
+        overall election vis goes here
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-3" id="extraEthnicity" style="background-color: #D6FFEB">
-        ethnicity pie chart 
+        state ethnicity pie chart 
       </div>
       <div class="col-md-3" id="extraParty" style="background-color: #D6FF65">
-        party line graph
+        state party line graph
       </div>
       <div class="col-md-3" id="extraCompare" style="background-color: #D6FFEB">
-        bars of state comparison
+        state to nation comparison
       </div>
     </div>
   </div>
