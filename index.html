@@ -99,8 +99,28 @@
         .attr("stroke-width", 1.5)
     });
 
-    d3.json("data/elec08_12.json", function(elecJSON) {
+    d3.json("data/jsonMain.json", function(elecJSON) {
       ELECGLOBAL = elecJSON;
+
+      var state_paths = states.selectAll("path");
+        // .data([elecJSON])
+
+      state_paths.attr("class", function() { 
+        // return "cat";
+        var that = this;
+
+        var noodle = "cat";
+
+        elecJSON.forEach(function(d) {
+          debugger;
+          if(d.year == 2012 && d.state == that.id) {
+            noodle = d.state;
+          }
+        })
+
+        return noodle;
+         
+      })
     })
 
   </script>
