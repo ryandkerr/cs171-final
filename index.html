@@ -118,6 +118,14 @@ var pie = d3.layout.pie()
   .sort(null)
   .value(function(d) { return d; });
 
+var arcTween = function (a) {
+  var i = d3.interpolate(this._current, a);
+  this._current = i(0);
+  return function(t) {
+    return arc(i(t));
+  };
+}
+
 // updates choropleth with election data
 var updateVis = function () {
 
@@ -138,7 +146,7 @@ var updateVis = function () {
   })
   
   // change names in html
-  if(gop_evotes > dem_evotes) {
+  if(gop_evotes >= dem_evotes) {
     document.getElementById('winner').innerHTML = gop_pres;
     d3.select("#winner")
       .attr("style", "color:red");
@@ -156,10 +164,11 @@ var updateVis = function () {
       .attr("style", "color:red");
   }
 
-  // new code
+  // select pie paths
   var path = pres_svg.selectAll("path")
       .data(pie([gop_evotes, dem_evotes]));
     
+  // add new slices for first time
   path.enter().append("path")
       .attr("fill", function(d, i) { 
         if(i == 0) {
@@ -172,69 +181,12 @@ var updateVis = function () {
         debugger;
         return arc(d);
       })
-      .attr("transform", "translate(100, 100)")
+      .attr("transform", "translate(130, 100)")
       .each(function(d) { this._current = d; });
 
+  // update if slices alsready exist
   path
-    .attr("d", function(d) {
-        debugger;
-        return arc(d);
-      });
-
-
-  // var arcTween = function (a) {
-  //   var i = d3.interpolate(this._current, a);
-  //   this._current = i(0);
-  //   return function(t) {
-  //     return arc(i(t));
-  //   };
-  // }
-
-  
-
-  // path.transition().duration(500).attrTween("d", arcTween);
-
-  // medium code
-  // var slices = pres_svg.selectAll(".arc")
-  //   .data(pie([gop_evotes, dem_evotes]))
-  // .enter()
-  //   .append("g")
-  //   .attr("class", "arc")
-  //   .attr("transform", "translate(100, 100)");
-
-
-  // slices.append("path")
-  //   .attr("d", arc)
-  //   .style("fill", function(d, i) { if(i == 0) {
-  //         return "red";
-  //       } else {
-  //         return "blue";
-  //       }
-  //       })
-
-
-  // old code
-  // var slice_paths = slices.selectAll("path")
-  //   .data(pie([gop_evotes, dem_evotes]))
-  //   .enter()
-  //   .attr("d", arc)
-  //   .style("fill", function(d, i) { if(i == 0) {
-  //     return "red";
-  //   } else {
-  //     return "blue";
-  //   }
-  //   })
-
-
-  // slice_paths
-  //   .attr("d", arc)
-  //   .style("fill", function(d, i) { if(i == 0) {
-  //     return "red";
-  //   } else {
-  //     return "blue";
-  //   }
-  //   })
-
+    .transition().duration(500).attrTween("d", arcTween);   
 
   // update choropleth
   var state_paths = states.selectAll("path");
