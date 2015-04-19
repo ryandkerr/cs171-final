@@ -158,8 +158,9 @@ var updateVis = function () {
 
   // new code
   var path = pres_svg.selectAll("path")
-      .data(pie([gop_evotes, dem_evotes]))
-    .enter().append("path")
+      .data(pie([gop_evotes, dem_evotes]));
+    
+  path.enter().append("path")
       .attr("fill", function(d, i) { 
         if(i == 0) {
           return "red";
@@ -174,6 +175,13 @@ var updateVis = function () {
       .attr("transform", "translate(100, 100)")
       .each(function(d) { this._current = d; });
 
+  path
+    .attr("d", function(d) {
+        debugger;
+        return arc(d);
+      });
+
+
   // var arcTween = function (a) {
   //   var i = d3.interpolate(this._current, a);
   //   this._current = i(0);
@@ -182,15 +190,7 @@ var updateVis = function () {
   //   };
   // }
 
-  debugger;
-
-  var new_path = pres_svg.selectAll("path")
-
-  new_path.data(pie([gop_evotes, dem_evotes]))
-    .attr("d", function(d) {
-        debugger;
-        return arc(d);
-      });
+  
 
   // path.transition().duration(500).attrTween("d", arcTween);
 
