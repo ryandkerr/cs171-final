@@ -66,6 +66,7 @@
 // http://synthesis.sbecker.net/articles/2012/07/18/learning-d3-part-7-choropleth-maps
 // http://bl.ocks.org/mbostock/4060606
 // http://bl.ocks.org/mbostock/3887235
+// http://bl.ocks.org/mbostock/1346410
 
 
 // helper to find width of element
@@ -155,22 +156,41 @@ var updateVis = function () {
       .attr("style", "color:red");
   }
 
-  var slices = pres_svg.selectAll(".arc")
-    .data(pie([gop_evotes, dem_evotes]))
-  .enter()
-    .append("g")
-    .attr("class", "arc")
-    .attr("transform", "translate(100, 100)");
-
-  slices.append("path")
-    .attr("d", arc)
-    .style("fill", function(d, i) { if(i == 0) {
+  // new code
+  var path = pres_svg.selectAll("path")
+      .data(pie([gop_evotes, dem_evotes]))
+    .enter().append("path")
+      .attr("fill", function(d, i) { if(i == 0) {
           return "red";
         } else {
           return "blue";
         }
         })
+      .attr("d", arc)
+      .attr("transform", "translate(100, 100)")
+      .each(function(d) { this._current = d; });
 
+  // medium code
+  // var slices = pres_svg.selectAll(".arc")
+  //   .data(pie([gop_evotes, dem_evotes]))
+  // .enter()
+  //   .append("g")
+  //   .attr("class", "arc")
+  //   .attr("transform", "translate(100, 100)");
+
+  // debugger;
+
+  // slices.append("path")
+  //   .attr("d", arc)
+  //   .style("fill", function(d, i) { if(i == 0) {
+  //         return "red";
+  //       } else {
+  //         return "blue";
+  //       }
+  //       })
+
+
+  // old code
   // var slice_paths = slices.selectAll("path")
   //   .data(pie([gop_evotes, dem_evotes]))
   //   .enter()
@@ -182,7 +202,6 @@ var updateVis = function () {
   //   }
   //   })
 
-  debugger;
 
   // slice_paths
   //   .attr("d", arc)
