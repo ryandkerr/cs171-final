@@ -27,7 +27,6 @@
             <label>Year:</label>
             <label>1980</label>
             <label><input type="range" name="points" min='1980' max='2012' step="4" value="2012" id="year_slider" oninput="CURRENT_YEAR=this.value;
-            debugger;
             document.getElementsByClassName('cur')[0].innerHTML = CURRENT_YEAR;
             document.getElementsByClassName('cur')[1].innerHTML = CURRENT_YEAR;
             updateVis();" style="width: 300px"></label><label>2012 (Currently showing <span class="cur">2012</span>)</label>
@@ -43,8 +42,8 @@
       
       <div class="col-md-3" id="presVis" style="background-color: #FFD8D8">
         <h2 class="centered"><span class="cur">2012</span> Election</h2>
-        <h4 class="centered">Winner: <span class="pres"></span></h4>
-        <h4 class="centered">Opponent: <span class="pres"></span></h4>
+        <h4 class="centered">Winner: <span id="winner"></span></h4>
+        <h4 class="centered">Opponent: <span id="loser"></span></h4>
       </div>
 
     <div class="row">
@@ -107,7 +106,46 @@ var states = choro_svg.append("g")
 
 // updates choropleth with election data
 var updateVis = function () {
+
+  // figure out winner for that year
+  var gop_evotes = 0;
+  var dem_evotes = 0;
+  var gop_pres;
+  var dem_pres;
+
+  ELECGLOBAL.forEach(function(d) {
+    if(d.year == CURRENT_YEAR) {
+      gop_evotes += d.gopEV;
+      dem_evotes += d.demEV;
+
+      gop_pres = d.gopPres;
+      dem_pres = d.demPres;
+    }
+  })
+
+  
+  if(gop_evotes > dem_evotes) {
+    document.getElementById('winner').innerHTML = gop_pres;
+    d3.select("#winner")
+      .attr("style", "color:red");
+    document.getElementById('loser').innerHTML = dem_pres;
+    d3.select("#loser")
+      .attr("style", "color:blue");
+
+  } else {
+    document.getElementById('winner').innerHTML = dem_pres;
+    d3.select("#winner")
+      .attr("style", "color:blue");
+
+    document.getElementById('loser').innerHTML = gop_pres;
+    d3.select("#loser")
+      .attr("style", "color:red");
+
+  }
+
+  // update choropleth
   var state_paths = states.selectAll("path");
+  
   state_paths.attr("class", function() { 
     var that = this;
     var noodle = "cat";
@@ -125,6 +163,7 @@ var updateVis = function () {
 var initVis = function (error, stateJson, elecData) {
   // assign election data global
   ELECGLOBAL = elecData
+  
   // draw states
   states.selectAll("path")
     .data(stateJson.features)
@@ -139,6 +178,7 @@ var initVis = function (error, stateJson, elecData) {
       })
     .attr("stroke", "#555555")
     .attr("stroke-width", 1.5)
+  
   // load in our central election data file for 1980-2012
   updateVis()
 };
