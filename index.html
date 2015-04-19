@@ -20,6 +20,8 @@
     
     <div class="row">
       <div class="col-md-9" id="col1" style="background-color: #CCF2FF">
+        
+        <!-- Slider here -->
         <form>
           <div>
             <label>Year:</label>
@@ -36,9 +38,9 @@
       </div>
       
       <div class="col-md-3" id="presVis" style="background-color: #FFD8D8">
-        overall election vis goes here
+        <h3 class="centered"><span class="cur">2012</span> Election</h3>
+        <h5 class="centered">Winner: <span class="pres"></span></h5>
       </div>
-    </div>
 
     <div class="row">
       <div class="col-md-3" id="extraEthnicity" style="background-color: #D6FFEB">
@@ -59,8 +61,8 @@
 // http://bl.ocks.org/stevenae/8362841
 // http://synthesis.sbecker.net/articles/2012/07/18/learning-d3-part-7-choropleth-maps
 // http://bl.ocks.org/mbostock/4060606
-
 // helper to find width of element
+
 var getInnerWidth = function(element) {
     var style = window.getComputedStyle(element.node(), null);
     return parseInt(style.getPropertyValue('width'));
@@ -92,20 +94,15 @@ var pres_svg = d3.select("#presVis")
 // create usa projection
 var projection = d3.geo.albersUsa()
   .scale(1050);
-
 var path = d3.geo.path()
   .projection(projection);
-
 var states = choro_svg.append("g")
   .attr("class", "states")
   .attr("transform", "translate(-40, -10)");
 
-
 // updates choropleth with election data
 var updateVis = function () {
-  debugger;
   var state_paths = states.selectAll("path");
-
   state_paths.attr("class", function() { 
     var that = this;
     var noodle = "cat";
@@ -123,7 +120,6 @@ var updateVis = function () {
 var initVis = function (error, stateJson, elecData) {
   // assign election data global
   ELECGLOBAL = elecData
-
   // draw states
   states.selectAll("path")
     .data(stateJson.features)
@@ -138,14 +134,12 @@ var initVis = function (error, stateJson, elecData) {
       })
     .attr("stroke", "#555555")
     .attr("stroke-width", 1.5)
-
   // load in our central election data file for 1980-2012
   updateVis()
 };
 
 // loads data and then calls visualization-drawing function
 var startHere = function () {
-  debugger;
   queue()
     .defer(d3.json, "data/us_states_small.json")
     .defer(d3.json, "data/jsonMain.json")
@@ -153,8 +147,6 @@ var startHere = function () {
 };
 
 startHere()
-
-
 
 </script>
 </body>

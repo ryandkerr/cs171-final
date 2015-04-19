@@ -2,6 +2,11 @@
     fill: #FFFFFF
 }
 
+.centered {
+  text-align: center;
+  text-decoration: underline;
+}
+
 /*.Arizona {
     fill: #456712
 }*/
