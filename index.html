@@ -26,7 +26,11 @@
           <div>
             <label>Year:</label>
             <label>1980</label>
-            <label><input type="range" name="points" min='1980' max='2012' step="4" value="2012" id="year_slider" oninput="CURRENT_YEAR=this.value; document.getElementById('cur').innerHTML = CURRENT_YEAR; updateVis();" style="width: 300px"></label><label>2012 (Currently showing <span id="cur">2012</span>)</label>
+            <label><input type="range" name="points" min='1980' max='2012' step="4" value="2012" id="year_slider" oninput="CURRENT_YEAR=this.value;
+            debugger;
+            document.getElementsByClassName('cur')[0].innerHTML = CURRENT_YEAR;
+            document.getElementsByClassName('cur')[1].innerHTML = CURRENT_YEAR;
+            updateVis();" style="width: 300px"></label><label>2012 (Currently showing <span class="cur">2012</span>)</label>
           </div>
         </form>
         <br>
@@ -38,8 +42,9 @@
       </div>
       
       <div class="col-md-3" id="presVis" style="background-color: #FFD8D8">
-        <h3 class="centered"><span class="cur">2012</span> Election</h3>
-        <h5 class="centered">Winner: <span class="pres"></span></h5>
+        <h2 class="centered"><span class="cur">2012</span> Election</h2>
+        <h4 class="centered">Winner: <span class="pres"></span></h4>
+        <h4 class="centered">Opponent: <span class="pres"></span></h4>
       </div>
 
     <div class="row">
