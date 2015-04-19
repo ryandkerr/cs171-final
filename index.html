@@ -112,7 +112,11 @@ var states = choro_svg.append("g")
 // pie chart functions
 var arc = d3.svg.arc()
   .outerRadius(100)
-  .innerRadius(0);
+  .innerRadius(70);
+
+var arcInner = d3.svg.arc()
+  .outerRadius(65)
+  .innerRadius(35);
 
 var pie = d3.layout.pie()
   .sort(null)
@@ -126,19 +130,32 @@ var arcTween = function (a) {
   };
 }
 
+var arcTweenInner = function (a) {
+  var i = d3.interpolate(this._current, a);
+  this._current = i(0);
+  return function(t) {
+    return arcInner(i(t));
+  };
+}
+
 // updates choropleth with election data
 var updateVis = function () {
 
   // figure out winner for that year
-  var gop_evotes = 0;
-  var dem_evotes = 0;
+  var gop_ev = 0;
+  var dem_ev = 0;
+  var gop_votes = 0;
+  var dem_votes = 0;
   var gop_pres;
   var dem_pres;
 
   ELECGLOBAL.forEach(function(d) {
     if(d.year == CURRENT_YEAR) {
-      gop_evotes += d.gopEV;
-      dem_evotes += d.demEV;
+      gop_ev += d.gopEV;
+      dem_ev += d.demEV;
+
+      gop_votes = d.gopVotes;
+      dem_votes = d.demVotes;
 
       gop_pres = d.gopPres;
       dem_pres = d.demPres;
@@ -146,7 +163,7 @@ var updateVis = function () {
   })
   
   // change names in html
-  if(gop_evotes >= dem_evotes) {
+  if(gop_ev >= dem_ev) {
     document.getElementById('winner').innerHTML = gop_pres;
     d3.select("#winner")
       .attr("style", "color:red");
@@ -165,11 +182,15 @@ var updateVis = function () {
   }
 
   // select pie paths
-  var path = pres_svg.selectAll("path")
-      .data(pie([gop_evotes, dem_evotes]));
+  var ev_path = pres_svg.selectAll("#outer")
+      .data(pie([gop_ev, dem_ev]));
+
+  var vote_path = pres_svg.selectAll("#inner")
+      .data(pie([gop_votes, dem_votes]));
     
   // add new slices for first time
-  path.enter().append("path")
+  ev_path.enter().append("path")
+      .attr("id", "outer")
       .attr("fill", function(d, i) { 
         if(i == 0) {
           return "#ff8383";
@@ -184,9 +205,30 @@ var updateVis = function () {
       .attr("transform", "translate(130, 100)")
       .each(function(d) { this._current = d; });
 
+  vote_path.enter().append("path")
+      .attr("id", "inner")
+      .attr("fill", function(d, i) { 
+        if(i == 0) {
+          return "#ff8383";
+        } else {
+          return "#75d1ff";
+        }
+        })
+      .attr("d", function(d) {
+        debugger;
+        return arcInner(d);
+      })
+      .attr("transform", "translate(130, 100)")
+      .each(function(d) { this._current = d; });
+
   // update if slices alsready exist
-  path
-    .transition().duration(500).attrTween("d", arcTween);   
+  ev_path
+    .transition().duration(500).attrTween("d", arcTween); 
+
+  vote_path
+    .transition().duration(500).attrTween("d", arcTweenInner);  
+
+  
 
   // update choropleth
   var state_paths = states.selectAll("path");
