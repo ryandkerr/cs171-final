@@ -65,8 +65,10 @@
 // http://bl.ocks.org/stevenae/8362841
 // http://synthesis.sbecker.net/articles/2012/07/18/learning-d3-part-7-choropleth-maps
 // http://bl.ocks.org/mbostock/4060606
-// helper to find width of element
+// http://bl.ocks.org/mbostock/3887235
 
+
+// helper to find width of element
 var getInnerWidth = function(element) {
     var style = window.getComputedStyle(element.node(), null);
     return parseInt(style.getPropertyValue('width'));
@@ -98,11 +100,22 @@ var pres_svg = d3.select("#presVis")
 // create usa projection
 var projection = d3.geo.albersUsa()
   .scale(1050);
+
 var path = d3.geo.path()
   .projection(projection);
+
 var states = choro_svg.append("g")
   .attr("class", "states")
   .attr("transform", "translate(-40, -10)");
+
+// pie chart functions
+var arc = d3.svg.arc()
+  .outerRadius(100)
+  .innerRadius(0);
+
+var pie = d3.layout.pie()
+  .sort(null)
+  .value(function(d) { return d; });
 
 // updates choropleth with election data
 var updateVis = function () {
@@ -122,8 +135,8 @@ var updateVis = function () {
       dem_pres = d.demPres;
     }
   })
-
   
+  // change names in html
   if(gop_evotes > dem_evotes) {
     document.getElementById('winner').innerHTML = gop_pres;
     d3.select("#winner")
@@ -140,8 +153,46 @@ var updateVis = function () {
     document.getElementById('loser').innerHTML = gop_pres;
     d3.select("#loser")
       .attr("style", "color:red");
-
   }
+
+  var slices = pres_svg.selectAll(".arc")
+    .data(pie([gop_evotes, dem_evotes]))
+  .enter()
+    .append("g")
+    .attr("class", "arc")
+    .attr("transform", "translate(100, 100)");
+
+  slices.append("path")
+    .attr("d", arc)
+    .style("fill", function(d, i) { if(i == 0) {
+          return "red";
+        } else {
+          return "blue";
+        }
+        })
+
+  // var slice_paths = slices.selectAll("path")
+  //   .data(pie([gop_evotes, dem_evotes]))
+  //   .enter()
+  //   .attr("d", arc)
+  //   .style("fill", function(d, i) { if(i == 0) {
+  //     return "red";
+  //   } else {
+  //     return "blue";
+  //   }
+  //   })
+
+  debugger;
+
+  // slice_paths
+  //   .attr("d", arc)
+  //   .style("fill", function(d, i) { if(i == 0) {
+  //     return "red";
+  //   } else {
+  //     return "blue";
+  //   }
+  //   })
+
 
   // update choropleth
   var state_paths = states.selectAll("path");
