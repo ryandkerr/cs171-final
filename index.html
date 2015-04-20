@@ -87,9 +87,9 @@ var CURRENT_YEAR = 2012;
 //   .range(d3.range(8).map(function(i) { return "q" + i + "-8"; }));
 
 
-var quantize = d3.scale.linear()
+var quantize = d3.scale.quantize()
   .domain([-20, 20])
-  .range(["#ff8383", "#75d1ff"]);
+  .range(["#ff8383", "#ff9e9e", "#ffbaba", "#ffd6d6", "#c2eaff", "#aae2ff", "#91daff", "#75d1ff"]);
 
 // create svg canvas in chorovis div
 var choro_svg = d3.select("#choroVis")
