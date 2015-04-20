@@ -67,6 +67,7 @@
 // http://bl.ocks.org/mbostock/4060606
 // http://bl.ocks.org/mbostock/3887235
 // http://bl.ocks.org/mbostock/1346410
+// http://bl.ocks.org/mbostock/3151228
 
 
 // helper to find width of element
@@ -77,8 +78,8 @@ var getInnerWidth = function(element) {
 
 // global variables
 var WIDTH = getInnerWidth(d3.select("#col1")) - 15;
-var HEIGHT = 500;    
-var ELECGLOBAL;    
+var HEIGHT = 500;
+var ELECGLOBAL;
 var CURRENT_YEAR = 2012;
 
 // scale to assign margin of victory to bins, which end up as colors
@@ -199,10 +200,9 @@ var updateVis = function () {
         }
         })
       .attr("d", function(d) {
-        debugger;
         return arc(d);
       })
-      .attr("transform", "translate(130, 100)")
+      .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
   vote_path.enter().append("path")
@@ -215,10 +215,9 @@ var updateVis = function () {
         }
         })
       .attr("d", function(d) {
-        debugger;
         return arcInner(d);
       })
-      .attr("transform", "translate(130, 100)")
+      .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
   // update if slices already exist
@@ -227,6 +226,26 @@ var updateVis = function () {
 
   vote_path
     .transition().duration(500).attrTween("d", arcTweenInner);  
+
+  // make arc for text
+  var ev_arc = d3.svg.arc()
+    .innerRadius(135)
+    .outerRadius(135)
+    .startAngle(- Math.PI / 7.3)
+    .endAngle(Math.PI / 7.3)
+
+  pres_svg.append("path")
+    .attr("id", "ev_path")
+    .attr("d", ev_arc())
+    .attr("transform", "translate(130, 120)");
+
+  pres_svg.append("text")
+    .attr("x", 8)
+    .attr("dy", 28)
+    .append("textPath")
+    .attr("class", "textpath")
+    .attr("xlink:href", "#ev_path")
+    .text("Electoral Votes");
 
 
   // update choropleth
