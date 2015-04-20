@@ -82,9 +82,14 @@ var ELECGLOBAL;
 var CURRENT_YEAR = 2012;
 
 // scale to assign margin of victory to bins, which end up as colors
-var quantize = d3.scale.quantize()
+// var quantize = d3.scale.quantize()
+//   .domain([-20, 20])
+//   .range(d3.range(8).map(function(i) { return "q" + i + "-8"; }));
+
+
+var quantize = d3.scale.linear()
   .domain([-20, 20])
-  .range(d3.range(8).map(function(i) { return "q" + i + "-8"; }));
+  .range(["#ff8383", "#75d1ff"]);
 
 // create svg canvas in chorovis div
 var choro_svg = d3.select("#choroVis")
@@ -221,19 +226,31 @@ var updateVis = function () {
       .attr("transform", "translate(130, 100)")
       .each(function(d) { this._current = d; });
 
-  // update if slices alsready exist
+  // update if slices already exist
   ev_path
     .transition().duration(500).attrTween("d", arcTween); 
 
   vote_path
     .transition().duration(500).attrTween("d", arcTweenInner);  
 
-  
 
   // update choropleth
   var state_paths = states.selectAll("path");
   
-  state_paths.attr("class", function() { 
+  // state_paths.attr("class", function() { 
+  //   var that = this;
+  //   var noodle = "cat";
+  //   ELECGLOBAL.forEach(function(d) {
+  //     if(d.year == CURRENT_YEAR && d.state == that.id) {
+  //       noodle = quantize(d.demPct - d.gopPct);
+  //     }
+  //   })
+  //   return noodle;
+     
+  // })
+
+  state_paths.transition().duration(500)
+    .attr("fill", function() { 
     var that = this;
     var noodle = "cat";
     ELECGLOBAL.forEach(function(d) {
