@@ -47,13 +47,13 @@
       </div>
 
     <div class="row">
-      <div class="col-md-3" id="extraEthnicity" style="background-color: #D6FFEB">
-        state ethnicity pie chart 
+      <div class="col-md-3" id="stDemographic" style="background-color: #D6FFEB">
+        state demographic pie chart 
       </div>
-      <div class="col-md-3" id="extraParty" style="background-color: #D6FF65">
+      <div class="col-md-3" id="stParty" style="background-color: #D6FF65">
         state party line graph
       </div>
-      <div class="col-md-3" id="extraCompare" style="background-color: #D6FFEB">
+      <div class="col-md-3" id="stCompare" style="background-color: #D6FFEB">
         state to nation comparison
       </div>
     </div>
@@ -67,6 +67,7 @@
 // http://bl.ocks.org/mbostock/4060606
 // http://bl.ocks.org/mbostock/3887235
 // http://bl.ocks.org/mbostock/1346410
+// http://bl.ocks.org/mbostock/3151228
 
 
 // helper to find width of element
@@ -77,14 +78,18 @@ var getInnerWidth = function(element) {
 
 // global variables
 var WIDTH = getInnerWidth(d3.select("#col1")) - 15;
-var HEIGHT = 500;    
-var ELECGLOBAL;    
+var HEIGHT = 500;
+var ELECGLOBAL;
 var CURRENT_YEAR = 2012;
 
 // scale to assign margin of victory to bins, which end up as colors
 var quantize = d3.scale.quantize()
   .domain([-20, 20])
-  .range(d3.range(8).map(function(i) { return "q" + i + "-8"; }));
+  .range(["#ff8383", "#ff9e9e", "#ffbaba", "#ffd6d6", "#c2eaff", "#aae2ff", "#91daff", "#75d1ff"]);
+
+var demo_scale = d3.scale.ordinal()
+  .domain([0, 1, 2, 3, 4, 5])
+  .range(["#fae7d0", "#573719", "#c18e74", "#e8cda8", "#ceab67", "#c8aca3"]);
 
 // create svg canvas in chorovis div
 var choro_svg = d3.select("#choroVis")
@@ -96,7 +101,13 @@ var choro_svg = d3.select("#choroVis")
 var pres_svg = d3.select("#presVis")
   .append("svg")
   .attr("width", getInnerWidth(d3.select("#presVis")))
-  .attr("height", 500);
+  .attr("height", 450);
+
+// create svg canvas for president vis
+var st_demo_svg = d3.select("#stDemographic")
+  .append("svg")
+  .attr("width", getInnerWidth(d3.select("#stDemographic")))
+  .attr("height", 450);
 
 // create usa projection
 var projection = d3.geo.albersUsa()
@@ -115,8 +126,12 @@ var arc = d3.svg.arc()
   .innerRadius(70);
 
 var arcInner = d3.svg.arc()
-  .outerRadius(65)
-  .innerRadius(35);
+  .outerRadius(53)
+  .innerRadius(23);
+
+var arcDemo = d3.svg.arc()
+  .outerRadius(100)
+  .innerRadius(0);
 
 var pie = d3.layout.pie()
   .sort(null)
@@ -138,6 +153,46 @@ var arcTweenInner = function (a) {
   };
 }
 
+// make arc for text
+var ev_arc = d3.svg.arc()
+  .innerRadius(135)
+  .outerRadius(135)
+  .startAngle(- Math.PI / 7.3)
+  .endAngle(Math.PI / 7.3)
+
+var vote_arc = d3.svg.arc()
+  .innerRadius(85)
+  .outerRadius(85)
+  .startAngle(- Math.PI / 6)
+  .endAngle(Math.PI / 6);
+
+// add curved text
+pres_svg.append("path")
+  .attr("id", "ev_path")
+  .attr("d", ev_arc())
+  .attr("transform", "translate(130, 120)");
+
+pres_svg.append("path")
+  .attr("id", "vote_path")
+  .attr("d", vote_arc())
+  .attr("transform", "translate(130, 120)");
+
+pres_svg.append("text")
+  .attr("x", 8)
+  .attr("dy", 28)
+  .append("textPath")
+  .attr("class", "textpath")
+  .attr("xlink:href", "#ev_path")
+  .text("Electoral Votes");
+
+pres_svg.append("text")
+  .attr("x", 8)
+  .attr("dy", 28)
+  .append("textPath")
+  .attr("class", "textpath")
+  .attr("xlink:href", "#vote_path")
+  .text("Total Votes");
+
 // updates choropleth with election data
 var updateVis = function () {
 
@@ -150,9 +205,9 @@ var updateVis = function () {
   var dem_pres;
 
   ELECGLOBAL.forEach(function(d) {
-    if(d.year == CURRENT_YEAR) {
-      gop_ev += d.gopEV;
-      dem_ev += d.demEV;
+    if(d.year == CURRENT_YEAR && d.state == "Totals") {
+      gop_ev = d.gopEV;
+      dem_ev = d.demEV;
 
       gop_votes = d.gopVotes;
       dem_votes = d.demVotes;
@@ -199,10 +254,9 @@ var updateVis = function () {
         }
         })
       .attr("d", function(d) {
-        debugger;
         return arc(d);
       })
-      .attr("transform", "translate(130, 100)")
+      .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
   vote_path.enter().append("path")
@@ -215,13 +269,12 @@ var updateVis = function () {
         }
         })
       .attr("d", function(d) {
-        debugger;
         return arcInner(d);
       })
-      .attr("transform", "translate(130, 100)")
+      .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
-  // update if slices alsready exist
+  // update if slices already exist
   ev_path
     .transition().duration(500).attrTween("d", arcTween); 
 
@@ -229,11 +282,50 @@ var updateVis = function () {
     .transition().duration(500).attrTween("d", arcTweenInner);  
 
   
+  //get state demographic data
+  var st_white = 0;
+  var st_black = 0;
+  var st_native = 0;
+  var st_asian = 0;
+  var st_pacific = 0;
+  var st_mult = 0;
+
+  // updating values
+  ELECGLOBAL.forEach(function(d) {
+    if(d.year == CURRENT_YEAR && d.state == "Florida") {
+      st_white = d.white;
+      st_black = d.black;
+      st_native = d.native;
+      st_asian = d.asian;
+      st_pacific = d.pacific;
+      st_mult = d.mult;
+    }
+  })
+
+  // select pie paths
+  var demo_path = st_demo_svg.selectAll("#demographic")
+      .data(pie([st_white, st_black, st_native, st_asian, st_pacific, st_mult]));
+
+  // add new slices for first time
+  demo_path.enter().append("path")
+      .attr("id", "demographic")
+      .attr("fill", function(d, i) {
+        return demo_scale(i);
+      })
+      .attr("d", function(d) {
+        return arcDemo(d);
+      })
+      .attr("transform", "translate(130, 120)")
+      .each(function(d) { this._current = d; });
+
+
+
 
   // update choropleth
   var state_paths = states.selectAll("path");
   
-  state_paths.attr("class", function() { 
+  state_paths.transition().duration(500)
+    .attr("fill", function() { 
     var that = this;
     var noodle = "cat";
     ELECGLOBAL.forEach(function(d) {
