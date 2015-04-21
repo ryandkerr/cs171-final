@@ -87,6 +87,10 @@ var quantize = d3.scale.quantize()
   .domain([-20, 20])
   .range(["#ff8383", "#ff9e9e", "#ffbaba", "#ffd6d6", "#c2eaff", "#aae2ff", "#91daff", "#75d1ff"]);
 
+var demo_scale = d3.scale.ordinal()
+  .domain([0, 1, 2, 3, 4, 5])
+  .range(["#fae7d0", "#573719", "#c18e74", "#e8cda8", "#ceab67", "#c8aca3"]);
+
 // create svg canvas in chorovis div
 var choro_svg = d3.select("#choroVis")
   .append("svg")
@@ -305,13 +309,9 @@ var updateVis = function () {
   // add new slices for first time
   demo_path.enter().append("path")
       .attr("id", "demographic")
-      .attr("fill", function(d, i) { 
-        if(i == 0) {
-          return "#ff8383";
-        } else {
-          return "#75d1ff";
-        }
-        })
+      .attr("fill", function(d, i) {
+        return demo_scale(i);
+      })
       .attr("d", function(d) {
         return arcDemo(d);
       })
