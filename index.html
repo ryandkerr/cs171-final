@@ -47,13 +47,13 @@
       </div>
 
     <div class="row">
-      <div class="col-md-3" id="extraEthnicity" style="background-color: #D6FFEB">
-        state ethnicity pie chart 
+      <div class="col-md-3" id="stDemographic" style="background-color: #D6FFEB">
+        state demographic pie chart 
       </div>
-      <div class="col-md-3" id="extraParty" style="background-color: #D6FF65">
+      <div class="col-md-3" id="stParty" style="background-color: #D6FF65">
         state party line graph
       </div>
-      <div class="col-md-3" id="extraCompare" style="background-color: #D6FFEB">
+      <div class="col-md-3" id="stCompare" style="background-color: #D6FFEB">
         state to nation comparison
       </div>
     </div>
@@ -99,6 +99,12 @@ var pres_svg = d3.select("#presVis")
   .attr("width", getInnerWidth(d3.select("#presVis")))
   .attr("height", 450);
 
+// create svg canvas for president vis
+var st_demo_svg = d3.select("#stDemographic")
+  .append("svg")
+  .attr("width", getInnerWidth(d3.select("#stDemographic")))
+  .attr("height", 450);
+
 // create usa projection
 var projection = d3.geo.albersUsa()
   .scale(1050);
@@ -118,6 +124,10 @@ var arc = d3.svg.arc()
 var arcInner = d3.svg.arc()
   .outerRadius(53)
   .innerRadius(23);
+
+var arcDemo = d3.svg.arc()
+  .outerRadius(100)
+  .innerRadius(0);
 
 var pie = d3.layout.pie()
   .sort(null)
@@ -268,6 +278,49 @@ var updateVis = function () {
     .transition().duration(500).attrTween("d", arcTweenInner);  
 
   
+  //get state demographic data
+  var st_white = 0;
+  var st_black = 0;
+  var st_native = 0;
+  var st_asian = 0;
+  var st_pacific = 0;
+  var st_mult = 0;
+
+  // updating values
+  ELECGLOBAL.forEach(function(d) {
+    if(d.year == CURRENT_YEAR && d.state == "Florida") {
+      st_white = d.white;
+      st_black = d.black;
+      st_native = d.native;
+      st_asian = d.asian;
+      st_pacific = d.pacific;
+      st_mult = d.mult;
+    }
+  })
+
+  // select pie paths
+  var demo_path = st_demo_svg.selectAll("#demographic")
+      .data(pie([st_white, st_black, st_native, st_asian, st_pacific, st_mult]));
+
+  // add new slices for first time
+  demo_path.enter().append("path")
+      .attr("id", "demographic")
+      .attr("fill", function(d, i) { 
+        if(i == 0) {
+          return "#ff8383";
+        } else {
+          return "#75d1ff";
+        }
+        })
+      .attr("d", function(d) {
+        return arcDemo(d);
+      })
+      .attr("transform", "translate(130, 120)")
+      .each(function(d) { this._current = d; });
+
+
+
+
   // update choropleth
   var state_paths = states.selectAll("path");
   
