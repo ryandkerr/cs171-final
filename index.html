@@ -24,7 +24,7 @@
   .axis line {
       fill: none;
       stroke: grey;
-      stroke-width: 1;
+      stroke-width: 0;
       shape-rendering: crispEdges;
   }
   </style>
@@ -345,36 +345,36 @@ var updateVis = function () {
     return obj.state == "Totals"
   }
 
+  function formatYear(year) {
+    return year;
+  }
+
   var ELECTOTALS = ELECGLOBAL.filter(isTotals);
 
   var stPartyHeight = 300;
   var stPartyWidth = (getInnerWidth(d3.select("#stParty")) - 55);
   var x = d3.scale.linear().range([35, stPartyWidth]);
-  var yGop = d3.scale.linear().range([stPartyHeight, 0]);
-  var yDem = d3.scale.linear().range([stPartyHeight, 0]);
+  var y = d3.scale.linear().range([stPartyHeight, 0]);
 
   var xAxis = d3.svg.axis().scale(x)
-    .orient("bottom").ticks(5);
+    .tickFormat(function(d) {return formatYear(d)})
+    .tickValues([1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012]);
+    // .orient("bottom").ticks(5);
 
-  var yAxisDem = d3.svg.axis().scale(yDem)
+  var yAxis = d3.svg.axis().scale(y)
     .orient("left").ticks(5);
-
-  var yAxisGop = d3.svg.axis().scale(yGop)
-    .orient("right").ticks(5);
 
   var valueline = d3.svg.line()
     .x(function(d) {  {return x(d.year)}} )
-    .y(function(d) {  {return yDem(d.demEV)}});
+    .y(function(d) {  {return y(d.demEV)}});
     
   var valueline2 = d3.svg.line()  
     .x(function(d) { return x(d.year)})
-    .y(function(d) {  {return yGop(d.gopEV)} });
+    .y(function(d) {  {return y(d.gopEV)} });
 
   x.domain(d3.extent(ELECTOTALS, function(d) { return d.year }));
-  yGop.domain([0, d3.max(ELECTOTALS, function(d) {
-     return Math.max(d.gopEV)})]); 
-  yDem.domain([0, d3.max(ELECTOTALS, function(d) {
-     return Math.max(d.demEV)})]); 
+  y.domain([0, d3.max(ELECTOTALS, function(d) {
+     return Math.max(d.gopEV, d.demEV)})]); 
   st_party_svg.append("path")
     .attr("class", "pathLine")
     .attr("d", valueline(ELECTOTALS));
@@ -385,19 +385,14 @@ var updateVis = function () {
     .attr("d", valueline2(ELECTOTALS));
 
   st_party_svg.append("g")          
-    .attr("class", "x axis")
+    .attr("class", "axis")
     .attr("transform", "translate(0," + stPartyHeight + ")")
     .call(xAxis);
 
   st_party_svg.append("g")
-    .attr("class", "y axis")
+    .attr("class", "axis")
     .attr("transform", "translate(35,0)")
-    .call(yAxisDem); 
-
-  st_party_svg.append("g")
-    .attr("class", "y axis")
-    .attr("transform", "translate(" + stPartyWidth + ",0)")
-    .call(yAxisGop); 
+    .call(yAxis); 
 
   // update choropleth
   var state_paths = states.selectAll("path");
