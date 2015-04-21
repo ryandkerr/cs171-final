@@ -321,6 +321,7 @@ var updateVis = function () {
       st_asian = d.asian;
       st_pacific = d.pacific;
       st_mult = d.mult;
+      st_name = d.state;
     }
   })
 
@@ -341,15 +342,15 @@ var updateVis = function () {
       .each(function(d) { this._current = d; });
 
   // prepare state-party line graph
-  function isTotals(obj) {
-    return obj.state == "Totals"
+  function isGood(obj) {
+    return obj.state == st_name
   }
 
   function formatYear(year) {
     return year;
   }
 
-  var ELECTOTALS = ELECGLOBAL.filter(isTotals);
+  var ELECFILTERED = ELECGLOBAL.filter(isGood);
 
   var stPartyHeight = 300;
   var stPartyWidth = (getInnerWidth(d3.select("#stParty")) - 55);
@@ -366,23 +367,23 @@ var updateVis = function () {
 
   var valueline = d3.svg.line()
     .x(function(d) {  {return x(d.year)}} )
-    .y(function(d) {  {return y(d.demEV)}});
+    .y(function(d) {  {return y(d.demPct)}});
     
   var valueline2 = d3.svg.line()  
     .x(function(d) { return x(d.year)})
-    .y(function(d) {  {return y(d.gopEV)} });
+    .y(function(d) {  {return y(d.gopPct)} });
 
-  x.domain(d3.extent(ELECTOTALS, function(d) { return d.year }));
-  y.domain([0, d3.max(ELECTOTALS, function(d) {
-     return Math.max(d.gopEV, d.demEV)})]); 
+  x.domain(d3.extent(ELECFILTERED, function(d) { return d.year }));
+  y.domain([0, d3.max(ELECFILTERED, function(d) {
+     return Math.max(d.gopPct, d.demPct)})]); 
   st_party_svg.append("path")
     .attr("class", "pathLine")
-    .attr("d", valueline(ELECTOTALS));
+    .attr("d", valueline(ELECFILTERED));
     
   st_party_svg.append("path")
     .style("stroke", "red")
     .attr("class", "pathLine")
-    .attr("d", valueline2(ELECTOTALS));
+    .attr("d", valueline2(ELECFILTERED));
 
   st_party_svg.append("g")          
     .attr("class", "axis")
@@ -411,6 +412,8 @@ var updateVis = function () {
   })
 };
 
+function click() {alert('click')}
+
 // initializes the visualization
 var initVis = function (error, stateJson, elecData) {
   // assign election data global
@@ -421,6 +424,8 @@ var initVis = function (error, stateJson, elecData) {
     .data(stateJson.features)
     .enter().append("path")
     .attr("id", function(d) { return d.properties.NAME; })
+    // .attr("onclick", click())
+    // .on("click", alert("click"))
     .attr("d", path)
     .attr("fill", function(d) { if(d.properties.CENSUSAREA > 113590) {
         return "#AAAAAA"; 
@@ -434,6 +439,11 @@ var initVis = function (error, stateJson, elecData) {
   // load in our central election data file for 1980-2012
   updateVis()
 };
+
+// click listeners and handlers
+// $('#Arizona').on('click',alert("Click"));
+// var California = document.getElementById("California")
+// California
 
 // loads data and then calls visualization-drawing function
 var startHere = function () {
