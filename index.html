@@ -14,11 +14,18 @@
   <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <style>
-  .axis line {
+  .pathLine { 
+    stroke: steelblue;
+    stroke-width: 2;
     fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
+  }
+
+  .axis pathLine,
+  .axis line {
+      fill: none;
+      stroke: grey;
+      stroke-width: 1;
+      shape-rendering: crispEdges;
   }
   </style>
 </head>
@@ -369,10 +376,12 @@ var updateVis = function () {
   yDem.domain([0, d3.max(ELECTOTALS, function(d) {
      return Math.max(d.demEV)})]); 
   st_party_svg.append("path")
+    .attr("class", "pathLine")
     .attr("d", valueline(ELECTOTALS));
     
   st_party_svg.append("path")
     .style("stroke", "red")
+    .attr("class", "pathLine")
     .attr("d", valueline2(ELECTOTALS));
 
   st_party_svg.append("g")          
