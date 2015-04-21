@@ -13,6 +13,14 @@
   <!--Stylesheets-->
   <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+  .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+  }
+  </style>
 </head>
 <body>
   <div class ="container">
@@ -68,6 +76,7 @@
 // http://bl.ocks.org/mbostock/3887235
 // http://bl.ocks.org/mbostock/1346410
 // http://bl.ocks.org/mbostock/3151228
+// http://bl.ocks.org/d3noob/e34791a32a54e015f57d
 
 
 // helper to find width of element
@@ -107,6 +116,12 @@ var pres_svg = d3.select("#presVis")
 var st_demo_svg = d3.select("#stDemographic")
   .append("svg")
   .attr("width", getInnerWidth(d3.select("#stDemographic")))
+  .attr("height", 450);
+
+// create svg canvas for stParty vis
+var st_party_svg = d3.select("#stParty")
+  .append("svg")
+  .attr("width", getInnerWidth(d3.select("#stParty")))
   .attr("height", 450);
 
 // create usa projection
@@ -318,8 +333,50 @@ var updateVis = function () {
       .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
+  // prepare state-party line graph
+  function isntJunk(obj) {
+    return obj.state == "Totals"
+  }
 
+  var ELECTOTALS = ELECGLOBAL.filter(isntJunk);
 
+  var stPartyHeight = 300;
+  var x = d3.scale.linear().range([0, getInnerWidth(d3.select("#stParty"))]);
+  var y = d3.scale.linear().range([stPartyHeight, 0]);
+
+  var xAxis = d3.svg.axis().scale(x)
+    .orient("bottom").ticks(5);
+
+  var yAxis = d3.svg.axis().scale(y)
+    .orient("left").ticks(5);
+
+  var valueline = d3.svg.line()
+    .x(function(d) {  {return x(d.year)}} )
+    .y(function(d) {  {return y(d.demEV)}});
+    
+  var valueline2 = d3.svg.line()  
+    .x(function(d) { return x(d.year) })
+    .y(function(d) {  {return y(d.gopEV)} });
+
+  x.domain(d3.extent(ELECTOTALS, function(d) { return d.year }));
+  y.domain([0, d3.max(ELECTOTALS, function(d) {
+     return Math.max(d.gopEV + d.demEV)})]); 
+  st_party_svg.append("path")
+    .attr("d", valueline(ELECTOTALS));
+
+  st_party_svg.append("path")
+    .style("stroke", "red")
+    .attr("d", valueline2(ELECTOTALS));
+
+  st_party_svg.append("g")          
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + stPartyHeight + ")")
+    .call(xAxis);
+
+  st_party_svg.append("g")
+    .attr("class", "y axis")
+    .style("fill", "steelblue")
+    .call(yAxis); 
 
   // update choropleth
   var state_paths = states.selectAll("path");
