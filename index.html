@@ -191,9 +191,9 @@ var updateVis = function () {
   var dem_pres;
 
   ELECGLOBAL.forEach(function(d) {
-    if(d.year == CURRENT_YEAR) {
-      gop_ev += d.gopEV;
-      dem_ev += d.demEV;
+    if(d.year == CURRENT_YEAR && d.state == "Totals") {
+      gop_ev = d.gopEV;
+      dem_ev = d.demEV;
 
       gop_votes = d.gopVotes;
       dem_votes = d.demVotes;
