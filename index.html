@@ -334,36 +334,43 @@ var updateVis = function () {
       .each(function(d) { this._current = d; });
 
   // prepare state-party line graph
-  function isntJunk(obj) {
+  function isTotals(obj) {
     return obj.state == "Totals"
   }
 
-  var ELECTOTALS = ELECGLOBAL.filter(isntJunk);
+  var ELECTOTALS = ELECGLOBAL.filter(isTotals);
 
   var stPartyHeight = 300;
-  var x = d3.scale.linear().range([0, getInnerWidth(d3.select("#stParty"))]);
-  var y = d3.scale.linear().range([stPartyHeight, 0]);
+  var stPartyWidth = (getInnerWidth(d3.select("#stParty")) - 55);
+  var x = d3.scale.linear().range([35, stPartyWidth]);
+  var yGop = d3.scale.linear().range([stPartyHeight, 0]);
+  var yDem = d3.scale.linear().range([stPartyHeight, 0]);
 
   var xAxis = d3.svg.axis().scale(x)
     .orient("bottom").ticks(5);
 
-  var yAxis = d3.svg.axis().scale(y)
+  var yAxisDem = d3.svg.axis().scale(yDem)
     .orient("left").ticks(5);
+
+  var yAxisGop = d3.svg.axis().scale(yGop)
+    .orient("right").ticks(5);
 
   var valueline = d3.svg.line()
     .x(function(d) {  {return x(d.year)}} )
-    .y(function(d) {  {return y(d.demEV)}});
+    .y(function(d) {  {return yDem(d.demEV)}});
     
   var valueline2 = d3.svg.line()  
-    .x(function(d) { return x(d.year) })
-    .y(function(d) {  {return y(d.gopEV)} });
+    .x(function(d) { return x(d.year)})
+    .y(function(d) {  {return yGop(d.gopEV)} });
 
   x.domain(d3.extent(ELECTOTALS, function(d) { return d.year }));
-  y.domain([0, d3.max(ELECTOTALS, function(d) {
-     return Math.max(d.gopEV + d.demEV)})]); 
+  yGop.domain([0, d3.max(ELECTOTALS, function(d) {
+     return Math.max(d.gopEV)})]); 
+  yDem.domain([0, d3.max(ELECTOTALS, function(d) {
+     return Math.max(d.demEV)})]); 
   st_party_svg.append("path")
     .attr("d", valueline(ELECTOTALS));
-
+    
   st_party_svg.append("path")
     .style("stroke", "red")
     .attr("d", valueline2(ELECTOTALS));
@@ -375,8 +382,13 @@ var updateVis = function () {
 
   st_party_svg.append("g")
     .attr("class", "y axis")
-    .style("fill", "steelblue")
-    .call(yAxis); 
+    .attr("transform", "translate(35,0)")
+    .call(yAxisDem); 
+
+  st_party_svg.append("g")
+    .attr("class", "y axis")
+    .attr("transform", "translate(" + stPartyWidth + ",0)")
+    .call(yAxisGop); 
 
   // update choropleth
   var state_paths = states.selectAll("path");
