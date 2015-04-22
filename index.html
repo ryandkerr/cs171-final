@@ -215,6 +215,9 @@ pres_svg.append("text")
   .attr("xlink:href", "#vote_path")
   .text("Total Votes");
 
+// initialize state views for FLorida before user clicks anything
+var clickState = "Florida";
+
 // updates choropleth with election data
 var updateVis = function () {
 
@@ -314,7 +317,8 @@ var updateVis = function () {
 
   // updating values
   ELECGLOBAL.forEach(function(d) {
-    if(d.year == CURRENT_YEAR && d.state == "Florida") {
+    // make sure all names line up between map json and data json
+    if(d.year == CURRENT_YEAR && d.state == clickState) {
       st_white = d.white;
       st_black = d.black;
       st_native = d.native;
@@ -398,6 +402,8 @@ var updateVis = function () {
   // update choropleth
   var state_paths = states.selectAll("path");
   
+  state_paths.on("click", function() {clickState = this.id; updateVis()});
+
   state_paths.transition().duration(500)
     .attr("fill", function() { 
     var that = this;
@@ -412,7 +418,7 @@ var updateVis = function () {
   })
 };
 
-function click() {alert('click')}
+
 
 // initializes the visualization
 var initVis = function (error, stateJson, elecData) {
@@ -439,11 +445,6 @@ var initVis = function (error, stateJson, elecData) {
   // load in our central election data file for 1980-2012
   updateVis()
 };
-
-// click listeners and handlers
-// $('#Arizona').on('click',alert("Click"));
-// var California = document.getElementById("California")
-// California
 
 // loads data and then calls visualization-drawing function
 var startHere = function () {
