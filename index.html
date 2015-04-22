@@ -280,10 +280,10 @@ var updateVis = function () {
   
   // select pie paths
   var ev_path = pres_svg.selectAll("#outer")
-      .data(pie([gop_ev, dem_ev]));
+      .data(pie([gop_ev, dem_ev, third_ev]));
 
   var vote_path = pres_svg.selectAll("#inner")
-      .data(pie([gop_votes, dem_votes]));
+      .data(pie([gop_votes, dem_votes, third_votes]));
     
   // add new slices for first time
   ev_path.enter().append("path")
@@ -291,8 +291,10 @@ var updateVis = function () {
       .attr("fill", function(d, i) { 
         if(i == 0) {
           return "#ff8383";
-        } else {
+        } else if (i == 1) {
           return "#75d1ff";
+        } else {
+          return "#8533D6"
         }
         })
       .attr("d", function(d) {
@@ -306,8 +308,10 @@ var updateVis = function () {
       .attr("fill", function(d, i) { 
         if(i == 0) {
           return "#ff8383";
-        } else {
+        } else if (i == 1) {
           return "#75d1ff";
+        } else {
+          return "#8533D6"
         }
         })
       .attr("d", function(d) {
