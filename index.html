@@ -27,6 +27,9 @@
       stroke-width: 0;
       shape-rendering: crispEdges;
   }
+  .dotAxis {
+
+  }
   </style>
 </head>
 <body>
@@ -365,14 +368,14 @@ var updateVis = function () {
 
   var xAxis = d3.svg.axis().scale(x)
     .tickFormat(function(d) {return formatYear(d)})
-    .tickValues([1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012]);
-    // .orient("bottom").ticks(5);
+    .tickValues([1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012])
+    .orient("bottom").ticks(5);
 
   var yAxis = d3.svg.axis().scale(y)
     .orient("left").ticks(5);
 
-  // var yAxisDot = d3.svg.axis().scale(y)
-  //   .ticks(0).style("stroke-dasharray", ("3, 3"));
+  var yAxisDot = d3.svg.axis().scale(y)
+    .orient("left").ticks(0);
 
   var valueline = d3.svg.line()
     .x(function(d) {  {return x(d.year)}} )
@@ -410,10 +413,12 @@ var updateVis = function () {
     .attr("transform", "translate(35,0)")
     .call(yAxis); 
 
-  // st_party_svg.append("g")
-  //   .attr("class", "axis")
-  //   .attr("transform", "translate(" + (35 + 5 * (CURRENT_YEAR - 1980)) + ",0)")
-  //   .call(yAxisDot); 
+  st_party_svg.append("g")
+    .attr("class", "dotAxis")
+    .attr("class", "axis")
+    .attr("transform", "translate(" + (35 + 5 * (CURRENT_YEAR - 1980)) + ",0)")
+    .style("stroke-dasharray", ("3, 3"))
+    .call(yAxisDot); 
 
   // update choropleth
   var state_paths = states.selectAll("path");
