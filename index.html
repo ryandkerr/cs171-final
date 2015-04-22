@@ -61,6 +61,8 @@
         <h4 class="centered">Opponent: <span id="loser"></span></h4>
       </div>
 
+    <br>State Views (currently showing <span id="clickState">Florida</span>)
+
     <div class="row">
       <div class="col-md-3" id="stDemographic" style="background-color: #D6FFEB">
         state demographic pie chart 
@@ -369,6 +371,9 @@ var updateVis = function () {
   var yAxis = d3.svg.axis().scale(y)
     .orient("left").ticks(5);
 
+  // var yAxisDot = d3.svg.axis().scale(y)
+  //   .ticks(0).style("stroke-dasharray", ("3, 3"));
+
   var valueline = d3.svg.line()
     .x(function(d) {  {return x(d.year)}} )
     .y(function(d) {  {return y(d.demPct)}});
@@ -376,6 +381,12 @@ var updateVis = function () {
   var valueline2 = d3.svg.line()  
     .x(function(d) { return x(d.year)})
     .y(function(d) {  {return y(d.gopPct)} });
+
+  d3.selectAll(".pathLine")
+    .remove();
+
+  d3.selectAll(".axis")
+    .remove();
 
   x.domain(d3.extent(ELECFILTERED, function(d) { return d.year }));
   y.domain([0, d3.max(ELECFILTERED, function(d) {
@@ -399,10 +410,19 @@ var updateVis = function () {
     .attr("transform", "translate(35,0)")
     .call(yAxis); 
 
+  // st_party_svg.append("g")
+  //   .attr("class", "axis")
+  //   .attr("transform", "translate(" + (35 + 5 * (CURRENT_YEAR - 1980)) + ",0)")
+  //   .call(yAxisDot); 
+
   // update choropleth
   var state_paths = states.selectAll("path");
   
-  state_paths.on("click", function() {clickState = this.id; updateVis()});
+  state_paths.on("click", function() {
+    clickState = this.id;
+    document.getElementById("clickState").innerHTML = clickState;
+    updateVis();
+  });
 
   state_paths.transition().duration(500)
     .attr("fill", function() { 
