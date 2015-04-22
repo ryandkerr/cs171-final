@@ -110,8 +110,12 @@ var quantize = d3.scale.quantize()
   .domain([-20, 20])
   .range(["#ff8383", "#ff9e9e", "#ffbaba", "#ffd6d6", "#c2eaff", "#aae2ff", "#91daff", "#75d1ff"]);
 
+var quantizeAm = d3.scale.quantize()
+  .domain([-20, 20])
+  .range(["#D1B2F0","#C299EB","#B280E6","#A366E0"]);
+
 var demo_scale = d3.scale.ordinal()
-  .domain([0, 1, 2, 3, 4, 5])
+  .domain([0, 1, 2, 3, 4, 5]) 
   .range(["#fae7d0", "#573719", "#c18e74", "#e8cda8", "#ceab67", "#c8aca3"]);
 
 // create svg canvas in chorovis div
@@ -458,7 +462,19 @@ var updateVis = function () {
     var noodle = "cat";
     ELECGLOBAL.forEach(function(d) {
       if(d.year == CURRENT_YEAR && d.state == that.id) {
-        noodle = quantize(d.demPct - d.gopPct);
+        // if there is a third party 
+        if (d.thirdPct !== null) {
+          // if the third party loses the state
+          if (d.thirdPct < d.demPct || d.thirdPct < d.gopPct) {
+            noodle = quantize(Math.max(d.thirdPct,d.demPct) - Math.max(d.thirdPct, d.gopPct));
+          // if the third party wins the state
+          } else {
+          noodle = quantizeAm(d.thirdPct - Math.max(d.demPct, d.gopPct));
+          }
+        // if there is no third party
+        } else {
+          noodle = quantize(d.demPct - d.gopPct);
+        }
       }
     })
     return noodle;
