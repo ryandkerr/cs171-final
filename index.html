@@ -63,8 +63,7 @@
         <h2 class="centered"><span class="cur">2012</span> Election</h2>
         <h4 class="centered">Winner: <span id="winner"></span></h4>
         <h4 class="centered">Runner-up: <span id="loser"></span></h4>
-        <!--add "loser 2 prelude" so second-runner-up isn't colored -->
-        <h4 class="centered"> <span id="loser2"></span></h4>
+        <h4 class="centered"> <span id="loser2pre"></span><span id="loser2"></span></h4>
       </div>
 
     <br>State Views (currently showing <span id="clickState">Florida</span>)
@@ -271,6 +270,7 @@ var updateVis = function () {
       document.getElementById('loser').innerHTML = dem_pres;
       d3.select("#loser")
         .attr("style", "color:blue");
+      document.getElementById('loser2pre').innerHTML = "";
       document.getElementById('loser2').innerHTML = "";
     } else {
       document.getElementById('winner').innerHTML = dem_pres;
@@ -280,6 +280,8 @@ var updateVis = function () {
       document.getElementById('loser').innerHTML = gop_pres;
       d3.select("#loser")
         .attr("style", "color:red");
+      document.getElementById('loser2pre').innerHTML = "";
+      document.getElementById('loser2').innerHTML = "";
     } 
   // if there is a third party
   } else {
@@ -290,7 +292,8 @@ var updateVis = function () {
       document.getElementById('loser').innerHTML = dem_pres;
       d3.select("#loser")
         .attr("style", "color:blue");
-      document.getElementById('loser2').innerHTML = "Second runner-up: " + third_pres;
+      document.getElementById('loser2pre').innerHTML = "Second runner-up: ";
+      document.getElementById('loser2').innerHTML = third_pres;
       d3.select("#loser2")
         .attr("style", "color:purple");
     } else {
@@ -300,7 +303,8 @@ var updateVis = function () {
       document.getElementById('loser').innerHTML = gop_pres;
       d3.select("#loser")
         .attr("style", "color:red");
-      document.getElementById('loser2').innerHTML = "Second runner-up: " + third_pres;
+      document.getElementById('loser2pre').innerHTML = "Second runner-up: ";
+      document.getElementById('loser2').innerHTML = third_pres;
       d3.select("#loser2")
         .attr("style", "color:purple");
     } 
