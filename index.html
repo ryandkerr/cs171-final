@@ -22,10 +22,10 @@
 
   .axis pathLine,
   .axis line {
-      fill: none;
-      stroke: grey;
-      stroke-width: 0;
-      shape-rendering: crispEdges;
+    fill: none;
+    stroke: grey;
+    stroke-width: 0;
+    shape-rendering: crispEdges;
   }
   .dotAxis {
 
@@ -508,6 +508,14 @@ var updateVis = function () {
       clickState = this.id;
       document.getElementById("clickState").innerHTML = clickState;
       updateVis();
+    })
+    .on("mouseover", function() {
+      d3.select(this)
+        .attr("fill", "orange");
+    })
+    .on("mouseout", function() {
+      d3.select(this)
+        .attr("fill", "blue");
     })
     .style('cursor', 'pointer');
 
