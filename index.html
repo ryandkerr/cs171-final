@@ -62,7 +62,9 @@
       <div class="col-md-3" id="presVis" style="background-color: #FFD8D8">
         <h2 class="centered"><span class="cur">2012</span> Election</h2>
         <h4 class="centered">Winner: <span id="winner"></span></h4>
-        <h4 class="centered">Opponent: <span id="loser"></span></h4>
+        <h4 class="centered">Runner-up: <span id="loser"></span></h4>
+        <!--add "loser 2 prelude" so second-runner-up isn't colored -->
+        <h4 class="centered"> <span id="loser2"></span></h4>
       </div>
 
     <br>State Views (currently showing <span id="clickState">Florida</span>)
@@ -260,23 +262,49 @@ var updateVis = function () {
   })
   
   // change names in html
-  if(gop_ev > dem_ev) {
-    document.getElementById('winner').innerHTML = gop_pres;
-    d3.select("#winner")
-      .attr("style", "color:red");
-    document.getElementById('loser').innerHTML = dem_pres;
-    d3.select("#loser")
-      .attr("style", "color:blue");
+  // if there is no third party
+  if (third_pres == "") {
+    if(gop_ev > dem_ev) {
+      document.getElementById('winner').innerHTML = gop_pres;
+      d3.select("#winner")
+        .attr("style", "color:red");
+      document.getElementById('loser').innerHTML = dem_pres;
+      d3.select("#loser")
+        .attr("style", "color:blue");
+      document.getElementById('loser2').innerHTML = "";
+    } else {
+      document.getElementById('winner').innerHTML = dem_pres;
+      d3.select("#winner")
+        .attr("style", "color:blue");
 
+      document.getElementById('loser').innerHTML = gop_pres;
+      d3.select("#loser")
+        .attr("style", "color:red");
+    } 
+  // if there is a third party
   } else {
-    document.getElementById('winner').innerHTML = dem_pres;
-    d3.select("#winner")
-      .attr("style", "color:blue");
-
-    document.getElementById('loser').innerHTML = gop_pres;
-    d3.select("#loser")
-      .attr("style", "color:red");
-  } 
+    if(gop_ev > dem_ev) {
+      document.getElementById('winner').innerHTML = gop_pres;
+      d3.select("#winner")
+        .attr("style", "color:red");
+      document.getElementById('loser').innerHTML = dem_pres;
+      d3.select("#loser")
+        .attr("style", "color:blue");
+      document.getElementById('loser2').innerHTML = "Second runner-up: " + third_pres;
+      d3.select("#loser2")
+        .attr("style", "color:purple");
+    } else {
+      document.getElementById('winner').innerHTML = dem_pres;
+      d3.select("#winner")
+        .attr("style", "color:blue");
+      document.getElementById('loser').innerHTML = gop_pres;
+      d3.select("#loser")
+        .attr("style", "color:red");
+      document.getElementById('loser2').innerHTML = "Second runner-up: " + third_pres;
+      d3.select("#loser2")
+        .attr("style", "color:purple");
+    } 
+  }
   
   // select pie paths
   var ev_path = pres_svg.selectAll("#outer")
