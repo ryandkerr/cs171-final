@@ -243,6 +243,7 @@ var updateVis = function () {
   var gop_pres;
   var dem_pres;
   var third_pres;
+  var third_name;
 
   ELECGLOBAL.forEach(function(d) {
     if(d.year == CURRENT_YEAR && d.state == "Totals") {
@@ -257,6 +258,8 @@ var updateVis = function () {
       gop_pres = d.gopPres;
       dem_pres = d.demPres;
       third_pres = d.thirdPres;
+
+      third_name = d.thirdName;
     }
   })
   
@@ -295,7 +298,13 @@ var updateVis = function () {
       document.getElementById('loser2pre').innerHTML = "Second runner-up: ";
       document.getElementById('loser2').innerHTML = third_pres;
       d3.select("#loser2")
-        .attr("style", "color:purple");
+        .attr("style", function(d) {
+          if (third_name == "Democratic") {
+            return "color:blue"
+          } else if (third_name == "American Independent") {
+            return "color:purple"
+          }
+        });
     } else {
       document.getElementById('winner').innerHTML = dem_pres;
       d3.select("#winner")
@@ -306,7 +315,13 @@ var updateVis = function () {
       document.getElementById('loser2pre').innerHTML = "Second runner-up: ";
       document.getElementById('loser2').innerHTML = third_pres;
       d3.select("#loser2")
-        .attr("style", "color:purple");
+        .attr("style", function(d) {
+          if (third_name == "Democratic") {
+            return "color:blue"
+          } else if (third_name == "American Independent") {
+            return "color:purple"
+          }
+        });
     } 
   }
   
@@ -322,13 +337,15 @@ var updateVis = function () {
       .attr("id", "outer")
       .attr("fill", function(d, i) { 
         if(i == 0) {
-          return "#ff8383";
+          console.log(third_name);return "#ff8383";
         } else if (i == 1) {
           return "#75d1ff";
-        } else {
+        } else if (third_name == "Democratic") {
+          return "blue"
+        } else if (third_name == "American Independent") {
           return "#8533D6"
         }
-        })
+      })
       .attr("d", function(d) {
         return arc(d);
       })
@@ -342,10 +359,12 @@ var updateVis = function () {
           return "#ff8383";
         } else if (i == 1) {
           return "#75d1ff";
-        } else {
+        } else if (third_name == "Democratic") {
+          return "blue"
+        } else if (third_name == "American Independent") {
           return "#8533D6"
         }
-        })
+      })
       .attr("d", function(d) {
         return arcInner(d);
       })
