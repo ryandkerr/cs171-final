@@ -236,10 +236,12 @@ var updateVis = function () {
   // figure out winner for that year
   var gop_ev = 0;
   var dem_ev = 0;
-  var third_ev = 0;
+  var amer_ev = 0;
+  var badDem_ev = 0;
   var gop_votes = 0;
   var dem_votes = 0;
-  var third_votes = 0;
+  var badDem_votes = 0;
+  var amer_votes = 0;
   var gop_pres;
   var dem_pres;
   var third_pres;
@@ -249,11 +251,17 @@ var updateVis = function () {
     if(d.year == CURRENT_YEAR && d.state == "Totals") {
       gop_ev = d.gopEV;
       dem_ev = d.demEV;
-      third_ev = d.thirdEV;
+      if (d.thirdName == "American Independent") {
+        amer_ev = d.thirdEV;
+        amer_votes = d.thirdVotes;
+      }
+      else if (d.thirdName == "Democratic") {
+        badDem_ev = d.thirdEV;
+        badDem_votes = d.thirdVotes;
+      }
 
       gop_votes = d.gopVotes;
       dem_votes = d.demVotes;
-      third_votes = d.thirdVotes;
 
       gop_pres = d.gopPres;
       dem_pres = d.demPres;
@@ -327,23 +335,23 @@ var updateVis = function () {
   
   // select pie paths
   var ev_path = pres_svg.selectAll("#outer")
-      .data(pie([gop_ev, dem_ev, third_ev]));
+      .data(pie([gop_ev, dem_ev, amer_ev, badDem_ev]));
 
   var vote_path = pres_svg.selectAll("#inner")
-      .data(pie([gop_votes, dem_votes, third_votes]));
+      .data(pie([gop_votes, dem_votes, amer_votes, badDem_votes]));
     
   // add new slices for first time
   ev_path.enter().append("path")
       .attr("id", "outer")
       .attr("fill", function(d, i) { 
         if(i == 0) {
-          console.log(third_name);return "#ff8383";
+          return "#ff8383";
         } else if (i == 1) {
           return "#75d1ff";
-        } else if (third_name == "Democratic") {
-          return "blue"
-        } else if (third_name == "American Independent") {
-          return "#8533D6"
+        } else if (i == 2) {
+          return "#8533D6";
+        } else {
+          return "blue";
         }
       })
       .attr("d", function(d) {
@@ -359,10 +367,10 @@ var updateVis = function () {
           return "#ff8383";
         } else if (i == 1) {
           return "#75d1ff";
-        } else if (third_name == "Democratic") {
-          return "blue"
-        } else if (third_name == "American Independent") {
-          return "#8533D6"
+        } else if (i == 2) {
+          return "#8533D6";
+        } else {
+          return "blue";
         }
       })
       .attr("d", function(d) {
