@@ -238,10 +238,16 @@ var updateVis = function () {
   var dem_ev = 0;
   var amer_ev = 0;
   var badDem_ev = 0;
+  var SR_ev = 0;
+  var prog_ev = 0;
+  var progTwo_ev = 0;
   var gop_votes = 0;
   var dem_votes = 0;
   var badDem_votes = 0;
   var amer_votes = 0;
+  var SR_votes = 0;
+  var prog_votes = 0;
+  var progTwo_votes = 0;
   var gop_pres;
   var dem_pres;
   var third_pres;
@@ -254,10 +260,18 @@ var updateVis = function () {
       if (d.thirdName == "American Independent") {
         amer_ev = d.thirdEV;
         amer_votes = d.thirdVotes;
-      }
-      else if (d.thirdName == "Democratic") {
+      } else if (d.thirdName == "Democratic") {
         badDem_ev = d.thirdEV;
         badDem_votes = d.thirdVotes;
+      } else if (d.thirdName == "States' Rights") {
+        SR_ev = d.thirdEV;
+        SR_votes = d.thirdVotes;
+      } else if (d.thirdName == "Progressive (1912)") {
+        prog_ev = d.thirdEV;
+        prog_votes = d.thirdVotes;
+      } else if (d.thirdName == "Progressive (1924)") {
+        progTwo_ev = d.thirdEV;
+        progTwo_votes = d.thirdVotes;
       }
 
       gop_votes = d.gopVotes;
@@ -335,10 +349,11 @@ var updateVis = function () {
   
   // select pie paths
   var ev_path = pres_svg.selectAll("#outer")
-      .data(pie([gop_ev, dem_ev, amer_ev, badDem_ev]));
+      .data(pie([gop_ev, dem_ev, amer_ev, badDem_ev, prog_ev, progTwo_ev, SR_ev]));
 
   var vote_path = pres_svg.selectAll("#inner")
-      .data(pie([gop_votes, dem_votes, amer_votes, badDem_votes]));
+      .data(pie([gop_votes, dem_votes, amer_votes,
+                 badDem_votes, prog_votes, progTwo_votes, SR_votes]));
     
   // add new slices for first time
   ev_path.enter().append("path")
@@ -350,8 +365,14 @@ var updateVis = function () {
           return "#75d1ff";
         } else if (i == 2) {
           return "#8533D6";
-        } else {
+        } else if (i == 3) {
           return "blue";
+        } else if (i == 4) {
+          return "orange";
+        } else if (i == 5) {
+          return "green";
+        } else if (i == 6) {
+          return "brown";
         }
       })
       .attr("d", function(d) {
@@ -369,8 +390,14 @@ var updateVis = function () {
           return "#75d1ff";
         } else if (i == 2) {
           return "#8533D6";
-        } else {
+        } else if (i == 3) {
           return "blue";
+        } else if (i == 4) {
+          return "orange";
+        } else if (i == 5) {
+          return "green";
+        } else if (i == 6) {
+          return "brown";
         }
       })
       .attr("d", function(d) {
