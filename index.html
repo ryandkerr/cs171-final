@@ -611,8 +611,6 @@ var initVis = function (error, stateJson, elecData) {
     .data(stateJson.features)
     .enter().append("path")
     .attr("id", function(d) { return d.properties.NAME; })
-    // .attr("onclick", click())
-    // .on("click", alert("click"))
     .attr("d", path)
     .attr("fill", function(d) { if(d.properties.CENSUSAREA > 113590) {
         return "#AAAAAA"; 
