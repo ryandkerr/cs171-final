@@ -536,7 +536,9 @@ var updateVis = function () {
   st_party_svg.append("g")          
     .attr("class", "axis")
     .attr("transform", "translate(0," + stPartyHeight + ")")
-    .call(xAxis);
+    .call(xAxis)
+    .selectAll("text")
+    .attr("transform", "rotate(-90)");
 
   st_party_svg.append("g")
     .attr("class", "axis")
