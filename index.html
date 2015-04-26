@@ -111,37 +111,6 @@ var quantize = d3.scale.quantize()
   .domain([-20, 20])
   .range(["#ff8383", "#ff9e9e", "#ffbaba", "#ffd6d6", "#c2eaff", "#aae2ff", "#91daff", "#75d1ff"]);
 
-function whichThird() {
-  // what if third party is just always purple?
-  // whoops, don't actually have third_name here
-  if (third_name == "Democratic") {
-    // blue, but with distinction from main blue
-    quantizeThird = d3.scale.quantize()
-      .domain([-20, 20])
-      .range(["","","",""]);
-  } else if (third_name == "American Independent") {
-    // purple
-    quantizeThird = d3.scale.quantize()
-      .domain([-20, 20])
-      .range(["#D1B2F0","#C299EB","#B280E6","#A366E0"]);
-  } else if (third_name == "Progressive (1912)") {
-    // orange
-    quantizeThird = d3.scale.quantize()
-      .domain([-20, 20])
-      .range(["","","",""]);
-  } else if (third_name == "Progressive (1924)") {
-    // green
-    quantizeThird = d3.scale.quantize()
-      .domain([-20, 20])
-      .range(["","","",""]);
-  } else if (third_name == "States' Rights") {
-    // brown
-    quantizeThird = d3.scale.quantize()
-      .domain([-20, 20])
-      .range(["","","",""]);
-  }
-}
-
 var demo_scale = d3.scale.ordinal()
   .domain([0, 1, 2, 3, 4, 5]) 
   .range(["#fae7d0", "#573719", "#c18e74", "#e8cda8", "#ceab67", "#c8aca3"]);
@@ -357,7 +326,7 @@ var updateVis = function () {
           } else if (third_name == "Progressive (1924)") {
             return "color:green"
           } else if (third_name == "States' Rights") {
-            return "color:brown"
+            return "color:#663300"
           }
         });
     } else {
@@ -380,7 +349,7 @@ var updateVis = function () {
           } else if (third_name == "Progressive (1924)") {
             console.log('green');return "color:green"
           } else if (third_name == "States' Rights") {
-            return "color:brown"
+            return "color:#663300"
           }
         });
     } 
@@ -411,7 +380,7 @@ var updateVis = function () {
         } else if (i == 5) {
           return "green";
         } else if (i == 6) {
-          return "brown";
+          return "#663300";
         }
       })
       .attr("d", function(d) {
@@ -436,7 +405,7 @@ var updateVis = function () {
         } else if (i == 5) {
           return "green";
         } else if (i == 6) {
-          return "brown";
+          return "#663300";
         }
       })
       .attr("d", function(d) {
@@ -574,12 +543,12 @@ var updateVis = function () {
     .attr("transform", "translate(35,0)")
     .call(yAxis); 
 
-  st_party_svg.append("g")
-    .attr("class", "dotAxis")
-    .attr("class", "axis")
-    .attr("transform", "translate(" + (35 + 4.5 * (CURRENT_YEAR - 1912)) + ",0)")
-    .style("stroke-dasharray", ("3, 3"))
-    .call(yAxisDot); 
+  // st_party_svg.append("g")
+  //   .attr("class", "dotAxis")
+  //   .attr("class", "axis")
+  //   .attr("transform", "translate(" + (35 + 4.5 * (CURRENT_YEAR - 1912)) + ",0)")
+  //   .style("stroke-dasharray", ("3, 3"))
+  //   .call(yAxisDot); 
 
   // update choropleth
   var state_paths = states.selectAll("path");
@@ -613,7 +582,33 @@ var updateVis = function () {
             noodle = quantize(Math.max(d.thirdPct,d.demPct) - Math.max(d.thirdPct, d.gopPct));
           // if the third party wins the state
           } else {
-            whichThird();
+            // what if third party is just always purple?
+            if (third_name == "Democratic") {
+              // blue, but with distinction from main blue
+              var quantizeThird = d3.scale.quantize()
+                .domain([0, 20])
+                .range(["#335CAD","#1947A3","#003399","#002E8A"]);
+            } else if (third_name == "American Independent") {
+              // purple
+              var quantizeThird = d3.scale.quantize()
+                .domain([0, 20])
+                .range(["#D1B2F0","#C299EB","#B280E6","#A366E0"]);
+            } else if (third_name == "Progressive (1912)") {
+              // orange
+              var quantizeThird = d3.scale.quantize()
+                .domain([0, 20])
+                .range(["#FFB84D","#FFAD33","#FFA319","#FF9900"]);
+            } else if (third_name == "Progressive (1924)") {
+              // green
+              var quantizeThird = d3.scale.quantize()
+                .domain([0, 20])
+                .range(["#4DDB4D","#33D633","#19D119","#00CC00"]);
+            } else if (third_name == "States' Rights") {
+              // brown
+              var quantizeThird = d3.scale.quantize()
+                .domain([0, 20])
+                .range(["#94704D","#855C33","#754719","#663300"]);
+            }
             noodle = quantizeThird(d.thirdPct - Math.max(d.demPct, d.gopPct));
           }
         // if there is no third party
