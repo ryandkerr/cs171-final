@@ -72,7 +72,7 @@
       <div class="col-md-3" id="stDemographic" style="background-color: #D6FFEB">
         state demographic pie chart 
       </div>
-      <div class="col-md-3" id="stParty" style="background-color: #D6FF65">
+      <div class="col-md-6" id="stParty" style="background-color: #D6FF65">
         state party line graph
       </div>
       <div class="col-md-3" id="stCompare" style="background-color: #D6FFEB">
@@ -538,7 +538,7 @@ var updateVis = function () {
     .attr("transform", "translate(0," + stPartyHeight + ")")
     .call(xAxis)
     .selectAll("text")
-    .attr("transform", "rotate(-90)");
+    // .attr("transform", "rotate(-90)");
 
   st_party_svg.append("g")
     .attr("class", "axis")
