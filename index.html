@@ -92,6 +92,7 @@
 // http://bl.ocks.org/mbostock/1346410
 // http://bl.ocks.org/mbostock/3151228
 // http://bl.ocks.org/d3noob/e34791a32a54e015f57d
+// http://bl.ocks.org/mbostock/4403522
 
 
 // helper to find width of element
@@ -511,8 +512,9 @@ var updateVis = function () {
     .remove();
 
   x.domain(d3.extent(ELECFILTERED, function(d) { return d.year }));
-  y.domain([0, d3.max(ELECFILTERED, function(d) {
-     return Math.max(d.gopPct, d.demPct, d.thirdPct)})]); 
+  // y.domain([0, d3.max(ELECFILTERED, function(d) {
+  //    return Math.max(d.gopPct, d.demPct, d.thirdPct)})]);
+  y.domain([0, 100]); 
   st_party_svg.append("path")
     .attr("class", "pathLine")
     .attr("d", valueline(ELECFILTERED));
@@ -538,7 +540,8 @@ var updateVis = function () {
     .attr("transform", "translate(0," + stPartyHeight + ")")
     .call(xAxis)
     .selectAll("text")
-    .attr("transform", "rotate(-90)");
+    .attr("x", -12)
+    .attr("transform", "rotate(-75)");
 
   st_party_svg.append("g")
     .attr("class", "axis")
