@@ -649,6 +649,14 @@ var initVis = function (error, stateJson, elecData) {
       })
     .attr("stroke", "#555555")
     .attr("stroke-width", 1.5)
+
+  states.selectAll("text")
+    .data(stateJson.features)
+    .enter().append("svg:text")
+    .text(function(d) { return d.properties.NAME; })
+    .attr("x", function(d) { return path.centroid(d)[0]; })
+    .attr("y", function(d) { return path.centroid(d)[1]; })
+    .attr("text-anchor", "middle")
   
   // load in our central election data file
   updateVis()
