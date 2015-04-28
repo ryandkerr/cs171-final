@@ -75,7 +75,7 @@
       <div class="col-md-6" id="stParty" style="background-color: #D6FF65">
         state party line graph
       </div>
-      <div class="col-md-3" id="stTurnt" style="background-color: #D6FF10">
+      <div class="col-md-3" id="stTurnt" style="background-color: #D6FFEB">
         state turnout
       </div>
       <div class="col-md-1" id="stCompare" style="background-color: #D6FFEB">
@@ -145,7 +145,7 @@ var st_party_svg = d3.select("#stParty")
   .attr("height", 450);
 
 // create svg canvas for stTurnt vis
-var st_party_svg = d3.select("#stTurnt")
+var st_turnt_svg = d3.select("#stTurnt")
   .append("svg")
   .attr("width", getInnerWidth(d3.select("#stTurnt")))
   .attr("height", 450);
@@ -478,7 +478,7 @@ var updateVis = function () {
 
   function formatYear(year) {
     var year = year.toString();
-    return year//.charAt(2) + year.charAt(3)
+    return year.charAt(2) + year.charAt(3)
   }
 
   var ELECFILTERED = ELECGLOBAL.filter(isGood);
@@ -551,6 +551,7 @@ var updateVis = function () {
     .call(xAxis)
     .selectAll("text")
     .attr("x", -12)
+    // this is bad because labels don't line up with ticks
     .attr("transform", "rotate(-70)");
 
   st_party_svg.append("g")
@@ -566,39 +567,56 @@ var updateVis = function () {
   //   .call(yAxisDot); 
 
   // stTurnt
-
+  // may actually be more useful to just have this shit on the same graph
   var stTurntHeight = 300;
   var stTurntWidth = (getInnerWidth(d3.select("#stTurnt")) - 55);
 
-  var years = [1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012]
+  var xTurnt = d3.scale.linear().range([35, stTurntWidth]);
+  var yTurnt = d3.scale.linear().range([stTurntHeight, 0]);
 
-  var xAxis = d3.svg.axis().scale(x)
+  var yearsTurnt = [1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012]
+
+  var xAxisTurnt = d3.svg.axis().scale(xTurnt)
     .tickFormat(function(d) {return formatYear(d)})
-    .tickValues(years)
+    .tickValues(yearsTurnt)
     .orient("bottom").ticks(5);
 
-  var yAxis = d3.svg.axis().scale(y)
+  var yAxisTurnt = d3.svg.axis().scale(yTurnt)
     .orient("left").ticks(5);
 
-  x.domain(d3.extent(ELECFILTERED, function(d) { return d.year }));
-  y.domain([0, d3.max(ELECFILTERED, function(d) {
-    return Math.max(d.gopPct, d.demPct, d.thirdPct)
-  })]); 
+  var valuelineTurnt = d3.svg.line()
+    .x(function(d, i) { if (d.year > 1979) { {return xTurnt(d.year)}}} )
+    .y(function(d) {  {return yTurnt(d.turntA)}});
+    
+  var valuelineTurnt2 = d3.svg.line()  
+    .x(function(d, i) {if (d.year > 1979) { return xTurnt(d.year)}})
+    .y(function(d) {  {return yTurnt(d.turntE)}}); 
 
-  st_party_svg.append("path")
+  xTurnt.domain([1980, 2012]);
+  yTurnt.domain([0, 1])
+
+  st_turnt_svg.append("path")
     .attr("class", "pathLine")
-    .attr("d", valueline(ELECFILTERED));
+    .style("stroke", "orange")
+    .attr("d", valuelineTurnt(ELECFILTERED));
 
-  st_party_svg.append("g")          
+  st_turnt_svg.append("path")
+    .attr("class", "pathLine")
+    .style("stroke", "green")
+    .attr("d", valuelineTurnt2(ELECFILTERED));
+
+  st_turnt_svg.append("g")          
     .attr("class", "axis")
-    .attr("transform", "translate(0," + stTurntHeight + ")")
-    .call(xAxis)
+    .attr("transform", "translate(0," + (stTurntHeight+10) + ")")
+    .call(xAxisTurnt)
     .selectAll("text")
+    .attr("x", -12)
+    .attr("transform", "rotate(-70)");
 
-  st_party_svg.append("g")
+  st_turnt_svg.append("g")
     .attr("class", "axis")
-    .attr("transform", "translate(35,0)")
-    .call(yAxis); 
+    .attr("transform", "translate(35,10)")
+    .call(yAxisTurnt); 
 
   // update choropleth
   var state_paths = states.selectAll("path");
