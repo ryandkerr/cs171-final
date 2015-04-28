@@ -75,7 +75,10 @@
       <div class="col-md-6" id="stParty" style="background-color: #D6FF65">
         state party line graph
       </div>
-      <div class="col-md-3" id="stCompare" style="background-color: #D6FFEB">
+      <div class="col-md-3" id="stTurnt" style="background-color: #D6FF10">
+        state turnout
+      </div>
+      <div class="col-md-1" id="stCompare" style="background-color: #D6FFEB">
         state to nation comparison
       </div>
       <!--replicate stParty for national EV and national pct-->
@@ -138,6 +141,12 @@ var st_demo_svg = d3.select("#stDemographic")
 var st_party_svg = d3.select("#stParty")
   .append("svg")
   .attr("width", getInnerWidth(d3.select("#stParty")))
+  .attr("height", 450);
+
+// create svg canvas for stTurnt vis
+var st_party_svg = d3.select("#stTurnt")
+  .append("svg")
+  .attr("width", getInnerWidth(d3.select("#stTurnt")))
   .attr("height", 450);
 
 // create usa projection
@@ -468,7 +477,7 @@ var updateVis = function () {
 
   function formatYear(year) {
     var year = year.toString();
-    return year.charAt(2) + year.charAt(3)
+    return year//.charAt(2) + year.charAt(3)
   }
 
   var ELECFILTERED = ELECGLOBAL.filter(isGood);
@@ -552,6 +561,41 @@ var updateVis = function () {
   //   .attr("transform", "translate(" + (35 + 4.5 * (CURRENT_YEAR - 1912)) + ",0)")
   //   .style("stroke-dasharray", ("3, 3"))
   //   .call(yAxisDot); 
+
+  // stTurnt
+
+  var stTurntHeight = 300;
+  var stTurntWidth = (getInnerWidth(d3.select("#stTurnt")) - 55);
+
+  var years = [1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012]
+
+  var xAxis = d3.svg.axis().scale(x)
+    .tickFormat(function(d) {return formatYear(d)})
+    .tickValues(years)
+    .orient("bottom").ticks(5);
+
+  var yAxis = d3.svg.axis().scale(y)
+    .orient("left").ticks(5);
+
+  x.domain(d3.extent(ELECFILTERED, function(d) { return d.year }));
+  y.domain([0, d3.max(ELECFILTERED, function(d) {
+    return Math.max(d.gopPct, d.demPct, d.thirdPct)
+  })]); 
+
+  st_party_svg.append("path")
+    .attr("class", "pathLine")
+    .attr("d", valueline(ELECFILTERED));
+
+  st_party_svg.append("g")          
+    .attr("class", "axis")
+    .attr("transform", "translate(0," + stTurntHeight + ")")
+    .call(xAxis)
+    .selectAll("text")
+
+  st_party_svg.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(35,0)")
+    .call(yAxis); 
 
   // update choropleth
   var state_paths = states.selectAll("path");
