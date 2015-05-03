@@ -632,6 +632,8 @@ var updateVis = function () {
 
   // update choropleth
   var state_paths = states.selectAll("path");
+
+  var state_text = states.selectAll("text");
   
   state_paths
     .on("click", function() {
@@ -700,6 +702,20 @@ var updateVis = function () {
     return noodle;
      
   })
+
+  state_text.transition().duration(500)
+    .text(function() {
+      var that = this;
+      var noodle = "";
+      ELECGLOBAL.forEach(function(d) {
+        if(d.year == CURRENT_YEAR && d.state.concat("txt") == that.id) {
+          var total_ev = d.demEV + d.gopEV + d.thirdEV;
+          console.log(total_ev.toString());
+          noodle = total_ev.toString();
+        }
+      })
+      return noodle;
+    })
 };
 
 
@@ -727,10 +743,11 @@ var initVis = function (error, stateJson, elecData) {
   states.selectAll("text")
     .data(stateJson.features)
     .enter().append("svg:text")
-    .text(function(d) { return d.properties.NAME; })
+    .text(function(d) { return ""; })
     .attr("x", function(d) { return path.centroid(d)[0]; })
     .attr("y", function(d) { return path.centroid(d)[1]; })
     .attr("text-anchor", "middle")
+    .attr("id", function(d) { return d.properties.NAME.concat("txt"); });
   
   // load in our central election data file
   updateVis()
