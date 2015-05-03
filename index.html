@@ -61,8 +61,8 @@
       
       <div class="col-md-3" id="presVis" style="background-color: #FFD8D8">
         <h2 class="centered"><span class="cur">2012</span> Election</h2>
-        <h4 class="centered">Winner: <span id="winner"></span></h4>
-        <h4 class="centered">Runner-up: <span id="loser"></span></h4>
+        <h4 class="centered">Winners: <span id="winner"></span></h4>
+        <h4 class="centered">Runners-up: <span id="loser"></span></h4>
         <h4 class="centered"> <span id="loser2pre"></span><span id="loser2"></span></h4>
       </div>
 
@@ -258,6 +258,9 @@ var updateVis = function () {
   var gop_pres;
   var dem_pres;
   var third_pres;
+  var gop_vice;
+  var dem_vice;
+  var third_vice;
   var third_name;
 
   ELECGLOBAL.forEach(function(d) {
@@ -287,6 +290,9 @@ var updateVis = function () {
       gop_pres = d.gopPres;
       dem_pres = d.demPres;
       third_pres = d.thirdPres;
+      gop_vice = d.gopVice;
+      dem_vice = d.demVice;
+      third_vice = d.thirdVice;
 
       third_name = d.thirdName;
     }
@@ -296,20 +302,20 @@ var updateVis = function () {
   // if there is no third party
   if (third_pres == "") {
     if(gop_ev > dem_ev) {
-      document.getElementById('winner').innerHTML = gop_pres;
+      document.getElementById('winner').innerHTML = gop_pres + " and " + gop_vice;
       d3.select("#winner")
         .attr("style", "color:red");
-      document.getElementById('loser').innerHTML = dem_pres;
+      document.getElementById('loser').innerHTML = dem_pres + " and " + dem_vice;
       d3.select("#loser")
         .attr("style", "color:blue");
       document.getElementById('loser2pre').innerHTML = "";
       document.getElementById('loser2').innerHTML = "";
     } else {
-      document.getElementById('winner').innerHTML = dem_pres;
+      document.getElementById('winner').innerHTML = dem_pres + " and " + dem_vice;
       d3.select("#winner")
         .attr("style", "color:blue");
 
-      document.getElementById('loser').innerHTML = gop_pres;
+      document.getElementById('loser').innerHTML = gop_pres + " and " + gop_vice;
       d3.select("#loser")
         .attr("style", "color:red");
       document.getElementById('loser2pre').innerHTML = "";
@@ -318,14 +324,14 @@ var updateVis = function () {
   // if there is a third party
   } else {
     if(gop_ev > dem_ev) {
-      document.getElementById('winner').innerHTML = gop_pres;
+      document.getElementById('winner').innerHTML = gop_pres + " and " + gop_vice;
       d3.select("#winner")
         .attr("style", "color:red");
-      document.getElementById('loser').innerHTML = dem_pres;
+      document.getElementById('loser').innerHTML = dem_pres + " and " + dem_vice;
       d3.select("#loser")
         .attr("style", "color:blue");
-      document.getElementById('loser2pre').innerHTML = "Second runner-up: ";
-      document.getElementById('loser2').innerHTML = third_pres;
+      document.getElementById('loser2pre').innerHTML = "Second runners-up: ";
+      document.getElementById('loser2').innerHTML = third_pres + " and " + third_vice;
       d3.select("#loser2")
         .attr("style", function(d) {
           if (third_name == "Democratic") {
@@ -341,14 +347,14 @@ var updateVis = function () {
           }
         });
     } else {
-      document.getElementById('winner').innerHTML = dem_pres;
+      document.getElementById('winner').innerHTML = dem_pres + " and " + dem_vice;
       d3.select("#winner")
         .attr("style", "color:blue");
-      document.getElementById('loser').innerHTML = gop_pres;
+      document.getElementById('loser').innerHTML = gop_pres + " and " + gop_vice;
       d3.select("#loser")
         .attr("style", "color:red");
-      document.getElementById('loser2pre').innerHTML = "Second runner-up: ";
-      document.getElementById('loser2').innerHTML = third_pres;
+      document.getElementById('loser2pre').innerHTML = "Second runners-up: ";
+      document.getElementById('loser2').innerHTML = third_pres + " and " +third_vice;
       d3.select("#loser2")
         .attr("style", function(d) {
           if (third_name == "Democratic") {
