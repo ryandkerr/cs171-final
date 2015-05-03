@@ -479,7 +479,7 @@ var updateVis = function () {
 
   // prepare state-party line graph
   function isGood(obj) {
-    return obj.state == st_name
+    return obj.state == clickState
   }
 
   function formatYear(year) {
@@ -698,6 +698,16 @@ var updateVis = function () {
     .attr("fill", function() { 
     var that = this;
     var noodle = "cat";
+    var current_states_obj = ELECGLOBAL.filter(function(obj) {
+      return obj.year == CURRENT_YEAR
+    })
+    var current_states_str = []
+    current_states_obj.forEach(function(d) {
+      current_states_str.push(d.name)
+    })
+    if (!(this.id in current_states_str)) {
+      noodle = "gray"
+    }
     ELECGLOBAL.forEach(function(d) {
       if(d.year == CURRENT_YEAR && d.state == that.id) {
         // if there is a third party 
