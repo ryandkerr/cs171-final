@@ -488,6 +488,8 @@ var updateVis = function () {
   }
 
   var ELECFILTERED = ELECGLOBAL.filter(isGood);
+  var ELEC_TOTALS = ELECGLOBAL.filter(function(obj) {return obj.state == "Totals"})
+
 
   var stPartyHeight = 300;
   var stPartyWidth = (getInnerWidth(d3.select("#stParty")) - 55);
@@ -521,6 +523,14 @@ var updateVis = function () {
     .x(function(d) { return x(d.year)})
     .y(function(d) {  {return y(d.gopPct)}}); 
 
+  var valueline3 = d3.svg.line()
+    .x(function(d) {  {return x(d.year)}} )
+    .y(function(d) {  {return y(d.demPct)}});
+    
+  var valueline4 = d3.svg.line()  
+    .x(function(d) { return x(d.year)})
+    .y(function(d) {  {return y(d.gopPct)}}); 
+
   d3.selectAll(".pathLine")
     .remove();
 
@@ -539,6 +549,16 @@ var updateVis = function () {
     .style("stroke", "red")
     .attr("class", "pathLine")
     .attr("d", valueline2(ELECFILTERED));
+
+  st_party_svg.append("path")
+    .style("stroke", "brown")
+    .attr("class", "pathLine")
+    .attr("d", valueline3(ELEC_TOTALS));
+
+  st_party_svg.append("path")
+    .style("stroke", "purple")
+    .attr("class", "pathLine")
+    .attr("d", valueline4(ELEC_TOTALS));
 
   // if (CURRENT_YEAR == 1968) {
   //   var valueline3 = d3.svg.line()  
@@ -585,7 +605,12 @@ var updateVis = function () {
   var xTurnt = d3.scale.linear().range([35, stTurntWidth]);
   var yTurnt = d3.scale.linear().range([stTurntHeight, 0]);
 
-  var yearsTurnt = [1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012]
+  var yearsTurnt = []
+  tickYear = 1980;
+  while (tickYear <= 2012) {
+    yearsTurnt.push(tickYear)
+    tickYear += 4
+  }
 
   var xAxisTurnt = d3.svg.axis().scale(xTurnt)
     .tickFormat(function(d) {return formatYear(d)})
@@ -604,6 +629,14 @@ var updateVis = function () {
     .x(function(d, i) {if (d.year > 1979) { return xTurnt(d.year)}})
     .y(function(d) {  {return yTurnt(d.turntE)}}); 
 
+  var valuelineTurnt3 = d3.svg.line()  
+    .x(function(d, i) {if (d.year > 1979) { return xTurnt(d.year)}})
+    .y(function(d) {  {return yTurnt(d.turntE)}}); 
+
+  var valuelineTurnt4 = d3.svg.line()  
+    .x(function(d, i) {if (d.year > 1979) { return xTurnt(d.year)}})
+    .y(function(d) {  {return yTurnt(d.turntA)}}); 
+
   xTurnt.domain([1980, 2012]);
   yTurnt.domain([0, 1])
 
@@ -616,6 +649,16 @@ var updateVis = function () {
     .attr("class", "pathLine")
     .style("stroke", "green")
     .attr("d", valuelineTurnt2(ELECFILTERED));
+
+  st_turnt_svg.append("path")
+    .attr("class", "pathLine")
+    .style("stroke", "yellow")
+    .attr("d", valuelineTurnt3(ELEC_TOTALS));
+
+  st_turnt_svg.append("path")
+    .attr("class", "pathLine")
+    .style("stroke", "purple")
+    .attr("d", valuelineTurnt4(ELEC_TOTALS));
 
   st_turnt_svg.append("g")          
     .attr("class", "axis")
