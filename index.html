@@ -313,7 +313,7 @@ legend.append("text")
 
 // Percentages
 legend.append("text")
-  .text("+20% +10% +5% +2%")
+  .text("0%__2%__5%__10%")
   .attr("text-decoration", "underline")
   .attr("font-size", "14px")
   .attr("transform", "translate(120, 40)");
@@ -354,38 +354,49 @@ legend.append("text")
 
 var addColors = function(y_coord, colors) {
   legend.append("rect")
-    .attr("x", 125)
+    .attr("x", 135)
     .attr("y", y_coord - 10)
-    .attr("width", 10)
+    .attr("width", 25)
     .attr("height", 10)
-    .attr("border-style" , "solid")
-    .attr("border-color", "black")
-    .attr("stroke-width", "3px")
-    .attr("fill", colors[0]);
-  
-  legend.append("rect")
-    .attr("x", 145)
-    .attr("y", y_coord - 10)
-    .attr("width", 10)
-    .attr("height", 10)
+    // .attr("stroke", "black")
+    // .attr("stroke-width", "1px")
     .attr("fill", colors[0]);
   
   legend.append("rect")
     .attr("x", 165)
     .attr("y", y_coord - 10)
-    .attr("width", 10)
+    .attr("width", 25)
     .attr("height", 10)
-    .attr("fill", colors[0]);
+    .attr("fill", colors[1]);
   
   legend.append("rect")
-    .attr("x", 185)
+    .attr("x", 195)
     .attr("y", y_coord - 10)
-    .attr("width", 10)
+    .attr("width", 25)
     .attr("height", 10)
-    .attr("fill", colors[0]);
+    .attr("fill", colors[2]);
+  
+  legend.append("rect")
+    .attr("x", 225)
+    .attr("y", y_coord - 10)
+    .attr("width", 25)
+    .attr("height", 10)
+    .attr("fill", colors[3]);
 }
 
-addColors(75, ["#ff9e9e"]);
+// arrays with state colors
+var dem_colors = ["#c2eaff", "#aae2ff", "#91daff", "#75d1ff"];
+var gop_colors = ["#ffd6d6", "#ffbaba", "#ff9e9e", "#ff8383"];
+var amer_colors = ["#D1B2F0", "#C299EB", "#B280E6", "#A366E0"];
+var sr_colors = ["#94704D", "#855C33", "#754719", "#663300"];
+var prog24_colors = ["#4DDB4D", "#33D633", "#19D119", "#00CC00"];
+var prog12_colors = ["#FFB84D", "#FFAD33", "#FFA319", "#FF9900"];
+
+addColors(60, dem_colors);
+addColors(75, gop_colors);
+addColors(90, amer_colors);
+addColors(120, sr_colors);
+addColors(135, prog24_colors);
 
 // initialize state views for FLorida before user clicks anything
 var clickState = "Florida";
