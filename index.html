@@ -13,6 +13,7 @@
   <!--Stylesheets-->
   <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="shortcut icon" href="favicon.ico">
   <style>
   .pathLine { 
     stroke: steelblue;
@@ -20,10 +21,33 @@
     fill: none;
   }
 
-  .circles-1 {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjZmZmJyAvPgogIDxjaXJjbGUgY3g9IjEiIGN5PSIxIiByPSIxIiBmaWxsPSIjMDAwIi8+Cjwvc3ZnPg==");
-  background-repeat: repeat;
+
+
+/*#tooltip {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        padding: 10px;
+        background-color: white;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
 }
+
+#tooltip.hidden {
+        display: none;
+}
+
+#tooltip p {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+}*/
 
   .axis pathLine,
   .axis line {
@@ -38,20 +62,28 @@
   </style>
 
   <!--Patterns-->
-  <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="vertical-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMScgaGVpZ2h0PScxMCcgZmlsbD0nYmxhY2snIC8+Cjwvc3ZnPg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
+  <!--actually width 4-->
+  <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="vertical-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nNCcgaGVpZ2h0PScxMCcgZmlsbD0nYmxhY2snIC8+Cjwvc3ZnPg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
 
-  <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="horizontal-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMTAnIGhlaWdodD0nMScgZmlsbD0nYmxhY2snIC8+Cjwvc3ZnPg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
+  <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="horizontal-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMTAnIGhlaWdodD0nNCcgZmlsbD0nYmxhY2snIC8+Cjwvc3ZnPg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
 
-  <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="diagonal-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzEnLz4KPC9zdmc+Cg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
+  <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="ladder-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+ICA8cmVjdCB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9J3doaXRlJyAvPiAgPHJlY3QgeD0nMCcgeT0nMCcgd2lkdGg9JzQnIGhlaWdodD0nMTAnIGZpbGw9J2JsYWNrJyAvPiAgPHJlY3QgeD0nMCcgeT0nMCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzQnIGZpbGw9J2JsYWNrJyAvPjwvc3ZnPg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
+
+  <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="diagonal-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSdibGFjaycvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J3doaXRlJyBzdHJva2Utd2lkdGg9JzMnLz4KPC9zdmc+" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
 </head>
+
 <body>
-  <div class ="container">
-    <h1>American Politics: The Past 100 Years</h1>
-    <br>Click a state or drag the slider to explore the data!
+  <div class="container">
+    <div class="row"> 
+      <h1>American Politics: The Past 100 Years</h1>
+      <p>Click a state or drag the slider to explore the data!</p>
+    </div>
     
-    <div class="row">
-      <div class="col-md-9" id="col1" style="background-color: #CCF2FF">
-        
+    <div class="row"> 
+      <!-- <br> -->
+      <!-- <div class="col-md-9" id="col1" style="background-color: #CCF2FF"> -->
+      <div class="col-md-9" id="col1">
+        <br>
         <!-- Slider here -->
         <form>
           <div>
@@ -71,7 +103,8 @@
 
       </div>
       
-      <div class="col-md-3" id="presVis" style="background-color: #FFD8D8">
+      <!-- <div class="col-md-3" id="presVis" style="background-color: #FFD8D8"> -->
+      <div class="col-md-3" id="presVis">
         <h2 class="centered"><span class="cur">2012</span> Election</h2>
         <h4 class="centered">Winners: <span id="winner"></span></h4>
         <h4 class="centered">Runners-up: <span id="loser"></span></h4>
@@ -171,16 +204,8 @@ var path = d3.geo.path()
   .projection(projection);
 
 
-var state_pattern_dem = choro_svg.append("g")
-  .attr("class", "state_pattern_dem")
-  .attr("transform", "translate(-40, -10)");
-
-var state_pattern_gop = choro_svg.append("g")
-  .attr("class", "state_pattern_gop")
-  .attr("transform", "translate(-40, -10)");
-
-var state_pattern_thr = choro_svg.append("g")
-  .attr("class", "state_pattern_thr")
+var state_pattern = choro_svg.append("g")
+  .attr("class", "state_pattern")
   .attr("transform", "translate(-40, -10)");
 
 var states = choro_svg.append("g")
@@ -633,9 +658,9 @@ var updateVis = function () {
     .attr("transform", "translate(0," + stPartyHeight + ")")
     .call(xAxis)
     .selectAll("text")
-    .attr("x", -12)
+    // .attr("x", -12)
     // this is bad because labels don't line up with ticks
-    .attr("transform", "rotate(-70)");
+    // .attr("transform", "rotate(-70)");
 
   st_party_svg.append("g")
     .attr("class", "axis")
@@ -722,8 +747,8 @@ var updateVis = function () {
     .attr("transform", "translate(0," + (stTurntHeight+10) + ")")
     .call(xAxisTurnt)
     .selectAll("text")
-    .attr("x", -12)
-    .attr("transform", "rotate(-70)");
+    // .attr("x", -12)
+    // .attr("transform", "rotate(-70)");
 
   st_turnt_svg.append("g")
     .attr("class", "axis")
@@ -732,9 +757,7 @@ var updateVis = function () {
 
   // update choropleth
   var state_paths = states.selectAll("path");
-  var state_pattern_dem_path = state_pattern_dem.selectAll("path");
-  var state_pattern_gop_path = state_pattern_gop.selectAll("path");
-  var state_pattern_thr_path = state_pattern_thr.selectAll("path");
+  var state_pattern_path = state_pattern.selectAll("path");
 
   var state_text = states.selectAll("text");
   
@@ -753,40 +776,62 @@ var updateVis = function () {
     //     .attr("fill", "blue");
     // })
     .style('cursor', 'pointer');
+//     .on("mouseover", function(d) {console.log('mouseover!');
+// console.log(this);
+// //Get this bar's x/y values, then augment for the tooltip
+// var xPosition = d3.event.pageX;//parseFloat(d3.select(this).attr("x"));// + xScale.rangeBand() / 2;
+// var yPosition = d3.event.pageY;//parseFloat(d3.select(this).attr("y")) / 2 ;//+ h / 2;
 
-  state_pattern_dem_path.transition().duration(500)
-    // .attr("fill", "url(#vertical-stripe-1)");
-    .attr("fill-opacity", .5)
-    .attr("fill", function() {
-      if (this.id == dem_home) {
-        return "url(#vertical-stripe-1)"
-      } else {
-        return "white"
-      }
-    });
-    
+// //Update the tooltip position and value
+// d3.select("#tooltip")
+//   .style("left", xPosition + "px")
+//   .style("top", yPosition + "px")
+  
 
-  state_pattern_gop_path.transition().duration(500)
+// //Show the tooltip
+// d3.select("#tooltip").classed("hidden", false);
+
+// })
+//     .on("mouseout", function() {console.log('mouseout!');
+
+// //Hide the tooltip
+// d3.select("#tooltip").classed("hidden", true);
+
+// })
+
+  // var div = state_paths.append('div');
+  // div
+  //   .attr('class', 'hidden')
+  //   .attr('id', 'tooltip')
+  //   .html("hello world");
+
+  state_pattern_path.transition().duration(500)
     // .attr("fill", "url(#vertical-stripe-1)");
-    .attr("fill-opacity", .5)
+    // .attr("fill-opacity", .5)
     .attr("fill", function() {
-      if (this.id == gop_home) {
+      if (this.id == dem_home && this.id == gop_home) {
+        return "url(#ladder-stripe-1)"
+      } else if (this.id == gop_home) {
         return "url(#horizontal-stripe-1)"
-      } else {
-        return "white"
-      }
-    });
-
-  state_pattern_thr_path.transition().duration(500)
-    // .attr("fill", "url(#vertical-stripe-1)");
-    .attr("fill-opacity", .5)
-    .attr("fill", function() {
-      if (this.id == third_home) {
+      } else if (this.id == dem_home) {
+        return "url(#vertical-stripe-1)"
+      } else if (this.id == third_home) {
         return "url(#diagonal-stripe-1)"
       } else {
         return "white"
       }
+    })
+    .attr("fill-opacity", function() {
+      if (this.id != dem_home && this.id != gop_home && this.id != third_home) {
+        return 0
+      } else {
+        return 1
+      }
     });
+    
+
+  state_paths.append("title")
+    .text(function(d) {return d.properties.NAME});
 
   state_paths.transition().duration(500)
     .attr("fill", function() { 
@@ -881,21 +926,9 @@ var initVis = function (error, stateJson, elecData) {
   ELECGLOBAL = elecData
   
   // draw states
-  state_pattern_dem.selectAll("path")
-    .data(stateJson.features)
-    .enter().append("path")
-    .attr("id", function(d) { return d.properties.NAME; })
-    .attr("d", path)
-    .attr("fill", "white")
 
-  state_pattern_gop.selectAll("path")
-    .data(stateJson.features)
-    .enter().append("path")
-    .attr("id", function(d) { return d.properties.NAME; })
-    .attr("d", path)
-    .attr("fill", "white")
 
-  state_pattern_thr.selectAll("path")
+  state_pattern.selectAll("path")
     .data(stateJson.features)
     .enter().append("path")
     .attr("id", function(d) { return d.properties.NAME; })
