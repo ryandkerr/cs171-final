@@ -606,9 +606,9 @@ var updateVis = function () {
     .attr("transform", "translate(0," + stPartyHeight + ")")
     .call(xAxis)
     .selectAll("text")
-    .attr("x", -12)
+    // .attr("x", -12)
     // this is bad because labels don't line up with ticks
-    .attr("transform", "rotate(-70)");
+    // .attr("transform", "rotate(-70)");
 
   st_party_svg.append("g")
     .attr("class", "axis")
@@ -695,8 +695,8 @@ var updateVis = function () {
     .attr("transform", "translate(0," + (stTurntHeight+10) + ")")
     .call(xAxisTurnt)
     .selectAll("text")
-    .attr("x", -12)
-    .attr("transform", "rotate(-70)");
+    // .attr("x", -12)
+    // .attr("transform", "rotate(-70)");
 
   st_turnt_svg.append("g")
     .attr("class", "axis")
