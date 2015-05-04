@@ -20,12 +20,9 @@
     fill: none;
   }
 
-  .circles-1 {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjZmZmJyAvPgogIDxjaXJjbGUgY3g9IjEiIGN5PSIxIiByPSIxIiBmaWxsPSIjMDAwIi8+Cjwvc3ZnPg==");
-  background-repeat: repeat;
-}
 
-#tooltip {
+
+/*#tooltip {
         position: absolute;
         width: 200px;
         height: auto;
@@ -49,7 +46,7 @@
         font-family: sans-serif;
         font-size: 16px;
         line-height: 20px;
-}
+}*/
 
   .axis pathLine,
   .axis line {
@@ -754,36 +751,35 @@ var updateVis = function () {
     //   d3.select(this)
     //     .attr("fill", "blue");
     // })
-    .style('cursor', 'pointer')
-    .on("mouseover", function(d) {
+    .style('cursor', 'pointer');
+//     .on("mouseover", function(d) {console.log('mouseover!');
+// console.log(this);
+// //Get this bar's x/y values, then augment for the tooltip
+// var xPosition = d3.event.pageX;//parseFloat(d3.select(this).attr("x"));// + xScale.rangeBand() / 2;
+// var yPosition = d3.event.pageY;//parseFloat(d3.select(this).attr("y")) / 2 ;//+ h / 2;
 
-//Get this bar's x/y values, then augment for the tooltip
-var xPosition = parseFloat(d3.select(this).attr("x")) + xScale.rangeBand() / 2;
-var yPosition = parseFloat(d3.select(this).attr("y")) / 2 + h / 2;
+// //Update the tooltip position and value
+// d3.select("#tooltip")
+//   .style("left", xPosition + "px")
+//   .style("top", yPosition + "px")
+  
 
-//Update the tooltip position and value
-d3.select("#tooltip")
-  .style("left", xPosition + "px")
-  .style("top", yPosition + "px")
-  .select("#value")
-  .text(d);
+// //Show the tooltip
+// d3.select("#tooltip").classed("hidden", false);
 
-//Show the tooltip
-d3.select("#tooltip").classed("hidden", false);
+// })
+//     .on("mouseout", function() {console.log('mouseout!');
 
-})
-    .on("mouseout", function() {
+// //Hide the tooltip
+// d3.select("#tooltip").classed("hidden", true);
 
-//Hide the tooltip
-d3.select("#tooltip").classed("hidden", true);
+// })
 
-})
-
-  var div = state_paths.append('div');
-  div
-    .attr('class', 'hidden')
-    .attr('id', 'tooltip')
-    .html("hello world");
+  // var div = state_paths.append('div');
+  // div
+  //   .attr('class', 'hidden')
+  //   .attr('id', 'tooltip')
+  //   .html("hello world");
 
   state_pattern_path.transition().duration(500)
     // .attr("fill", "url(#vertical-stripe-1)");
@@ -810,6 +806,8 @@ d3.select("#tooltip").classed("hidden", true);
     });
     
 
+  state_paths.append("title")
+    .text(function(d) {console.log(d);return d.properties.NAME});
 
   state_paths.transition().duration(500)
     .attr("fill", function() { 
