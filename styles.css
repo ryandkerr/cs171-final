@@ -23,6 +23,11 @@
   src: url('../fonts/roboto/Roboto-Thin.ttf');
 }
 
+@font-face {
+  font-family: neou;
+  src: url('../fonts/neou/Neou-Thin.ttf');
+}
+
 .states {
     fill: #FFFFFF
 }
@@ -40,6 +45,10 @@
 body {
   font-family: lane;
   background-color: #ddd;
+}
+
+h1 {
+  font-family: neou;
 }
 
 /*.Arizona {
