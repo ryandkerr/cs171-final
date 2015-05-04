@@ -287,6 +287,19 @@ pres_svg.append("text")
   .attr("xlink:href", "#vote_path")
   .text("Popular Vote");
 
+// add legend/key for colors
+var legend = pres_svg.append("g");
+
+// line 1
+legend.append("text")
+  .text("Legend")
+  .attr("font-size", "large")
+  .attr("text-decoration", "underline")
+  .attr("transform", "translate(100, 250)");
+
+
+
+
 // initialize state views for FLorida before user clicks anything
 var clickState = "Florida";
 
