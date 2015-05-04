@@ -39,6 +39,10 @@
 
   <!--Patterns-->
   <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="vertical-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMScgaGVpZ2h0PScxMCcgZmlsbD0nYmxhY2snIC8+Cjwvc3ZnPg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
+
+  <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="horizontal-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMTAnIGhlaWdodD0nMScgZmlsbD0nYmxhY2snIC8+Cjwvc3ZnPg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
+
+  <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="diagonal-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzEnLz4KPC9zdmc+Cg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
 </head>
 <body>
   <div class ="container">
@@ -731,7 +735,7 @@ var updateVis = function () {
   state_pattern_dem_path.transition().duration(500)
     // .attr("fill", "url(#vertical-stripe-1)");
     .attr("fill-opacity", .5)
-    .attr("fill", function() {console.log(dem_home);console.log(this.id);
+    .attr("fill", function() {
       if (this.id == dem_home) {
         return "url(#vertical-stripe-1)"
       } else {
@@ -743,12 +747,24 @@ var updateVis = function () {
   state_pattern_gop_path.transition().duration(500)
     // .attr("fill", "url(#vertical-stripe-1)");
     .attr("fill-opacity", .5)
-    .attr("fill", "white");
+    .attr("fill", function() {
+      if (this.id == gop_home) {
+        return "url(#horizontal-stripe-1)"
+      } else {
+        return "white"
+      }
+    });
 
   state_pattern_thr_path.transition().duration(500)
     // .attr("fill", "url(#vertical-stripe-1)");
     .attr("fill-opacity", .5)
-    .attr("fill", "white");
+    .attr("fill", function() {
+      if (this.id == third_home) {
+        return "url(#diagonal-stripe-1)"
+      } else {
+        return "white"
+      }
+    });
 
   state_paths.transition().duration(500)
     .attr("fill", function() { 
