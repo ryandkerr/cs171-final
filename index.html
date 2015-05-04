@@ -408,16 +408,17 @@ var updateVis = function () {
   }
   
   // select pie paths
-  var ev_path = pres_svg.selectAll("#outer")
+  var ev_path = pres_svg.selectAll(".outer")
       .data(pie([gop_ev, dem_ev, amer_ev, badDem_ev, prog_ev, progTwo_ev, SR_ev]));
 
-  var vote_path = pres_svg.selectAll("#inner")
+  var vote_path = pres_svg.selectAll(".inner")
       .data(pie([gop_votes, dem_votes, amer_votes,
                  badDem_votes, prog_votes, progTwo_votes, SR_votes]));
+
     
   // add new slices for first time
   ev_path.enter().append("path")
-      .attr("id", "outer")
+      .attr("class", "outer")
       .attr("fill", function(d, i) { 
         if(i == 0) {
           return "#ff8383";
@@ -442,7 +443,7 @@ var updateVis = function () {
       .each(function(d) { this._current = d; });
 
   vote_path.enter().append("path")
-      .attr("id", "inner")
+      .attr("class", "inner")
       .attr("fill", function(d, i) { 
         if(i == 0) {
           return "#ff8383";
@@ -466,9 +467,28 @@ var updateVis = function () {
       .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
+  // add total vote text to slices
+  ev_text = ev_path.enter().append("g")
+    .attr("class", "arc");
+
+  ev_text.append("text")
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .attr("text-anchor", "middle")
+    .text(function(d) {
+      // return total electoral votes
+      return d.value;
+    });
+
+
   // update if slices already exist
   ev_path
     .transition().duration(500).attrTween("d", arcTween); 
+
+  debugger;
 
   vote_path
     .transition().duration(500).attrTween("d", arcTweenInner);  
