@@ -468,20 +468,22 @@ var updateVis = function () {
       .each(function(d) { this._current = d; });
 
   // add total vote text to slices
-  ev_text = ev_path.enter().append("g")
+  var ev_text = ev_path;
+
+  ev_text.enter().append("g")
     .attr("class", "arc");
 
-  ev_text.append("text")
-    .attr("transform", function(d) {
-      var x = arc.centroid(d)[0] + 130;
-      var y = arc.centroid(d)[1] + 120;
-      return "translate(" + x + ", " + y + ")";
-    })
-    .attr("text-anchor", "middle")
-    .text(function(d) {
-      // return total electoral votes
-      return d.value;
-    });
+  // ev_text.append("text")
+  //   .attr("transform", function(d) {
+  //     var x = arc.centroid(d)[0] + 130;
+  //     var y = arc.centroid(d)[1] + 120;
+  //     return "translate(" + x + ", " + y + ")";
+  //   })
+  //   .attr("text-anchor", "middle")
+  //   .text(function(d) {
+  //     // return total electoral votes
+  //     return d.value;
+  //   });
 
 
   // update if slices already exist
