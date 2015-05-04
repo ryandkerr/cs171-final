@@ -349,8 +349,43 @@ legend.append("text")
 legend.append("text")
   .text("Progressive")
   .attr("font-size", "14px")
-  .attr("transform", "translate(25, 135)");
+  .attr("transform", "translate(25, 135)")
 
+
+var addColors = function(y_coord, colors) {
+  legend.append("rect")
+    .attr("x", 125)
+    .attr("y", y_coord - 10)
+    .attr("width", 10)
+    .attr("height", 10)
+    .attr("border-style" , "solid")
+    .attr("border-color", "black")
+    .attr("stroke-width", "3px")
+    .attr("fill", colors[0]);
+  
+  legend.append("rect")
+    .attr("x", 145)
+    .attr("y", y_coord - 10)
+    .attr("width", 10)
+    .attr("height", 10)
+    .attr("fill", colors[0]);
+  
+  legend.append("rect")
+    .attr("x", 165)
+    .attr("y", y_coord - 10)
+    .attr("width", 10)
+    .attr("height", 10)
+    .attr("fill", colors[0]);
+  
+  legend.append("rect")
+    .attr("x", 185)
+    .attr("y", y_coord - 10)
+    .attr("width", 10)
+    .attr("height", 10)
+    .attr("fill", colors[0]);
+}
+
+addColors(75, ["#ff9e9e"]);
 
 // initialize state views for FLorida before user clicks anything
 var clickState = "Florida";
