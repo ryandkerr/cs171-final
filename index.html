@@ -42,6 +42,8 @@
 
   <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="horizontal-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMTAnIGhlaWdodD0nMScgZmlsbD0nYmxhY2snIC8+Cjwvc3ZnPg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
 
+  <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="ladder-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+ICA8cmVjdCB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9J3doaXRlJyAvPiAgPHJlY3QgeD0nMCcgeT0nMCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEnIGZpbGw9J2JsYWNrJyAvPjwvc3ZnPg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
+
   <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="diagonal-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzEnLz4KPC9zdmc+Cg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
 </head>
 <body>
@@ -171,16 +173,8 @@ var path = d3.geo.path()
   .projection(projection);
 
 
-var state_pattern_dem = choro_svg.append("g")
-  .attr("class", "state_pattern_dem")
-  .attr("transform", "translate(-40, -10)");
-
-var state_pattern_gop = choro_svg.append("g")
-  .attr("class", "state_pattern_gop")
-  .attr("transform", "translate(-40, -10)");
-
-var state_pattern_thr = choro_svg.append("g")
-  .attr("class", "state_pattern_thr")
+var state_pattern = choro_svg.append("g")
+  .attr("class", "state_pattern")
   .attr("transform", "translate(-40, -10)");
 
 var states = choro_svg.append("g")
@@ -710,9 +704,7 @@ var updateVis = function () {
 
   // update choropleth
   var state_paths = states.selectAll("path");
-  var state_pattern_dem_path = state_pattern_dem.selectAll("path");
-  var state_pattern_gop_path = state_pattern_gop.selectAll("path");
-  var state_pattern_thr_path = state_pattern_thr.selectAll("path");
+  var state_pattern_path = state_pattern.selectAll("path");
 
   var state_text = states.selectAll("text");
   
@@ -732,39 +724,31 @@ var updateVis = function () {
     // })
     .style('cursor', 'pointer');
 
-  state_pattern_dem_path.transition().duration(500)
+  state_pattern_path.transition().duration(500)
     // .attr("fill", "url(#vertical-stripe-1)");
-    .attr("fill-opacity", .5)
+    // .attr("fill-opacity", .5)
     .attr("fill", function() {
-      if (this.id == dem_home) {
-        return "url(#vertical-stripe-1)"
-      } else {
-        return "white"
-      }
-    });
-    
-
-  state_pattern_gop_path.transition().duration(500)
-    // .attr("fill", "url(#vertical-stripe-1)");
-    .attr("fill-opacity", .5)
-    .attr("fill", function() {
-      if (this.id == gop_home) {
+      if (this.id == dem_home && this.id == gop_home) {
+        return "url(#ladder-stripe-1)"
+      } else if (this.id == gop_home) {
         return "url(#horizontal-stripe-1)"
-      } else {
-        return "white"
-      }
-    });
-
-  state_pattern_thr_path.transition().duration(500)
-    // .attr("fill", "url(#vertical-stripe-1)");
-    .attr("fill-opacity", .5)
-    .attr("fill", function() {
-      if (this.id == third_home) {
+      } else if (this.id == dem_home) {
+        return "url(#vertical-stripe-1)"
+      } else if (this.id == third_home) {
         return "url(#diagonal-stripe-1)"
       } else {
         return "white"
       }
+    })
+    .attr("fill-opacity", function() {
+      if (this.id != dem_home && this.id != gop_home && this.id != third_home) {
+        return 0
+      } else {
+        return 1
+      }
     });
+    
+
 
   state_paths.transition().duration(500)
     .attr("fill", function() { 
@@ -859,21 +843,9 @@ var initVis = function (error, stateJson, elecData) {
   ELECGLOBAL = elecData
   
   // draw states
-  state_pattern_dem.selectAll("path")
-    .data(stateJson.features)
-    .enter().append("path")
-    .attr("id", function(d) { return d.properties.NAME; })
-    .attr("d", path)
-    .attr("fill", "white")
 
-  state_pattern_gop.selectAll("path")
-    .data(stateJson.features)
-    .enter().append("path")
-    .attr("id", function(d) { return d.properties.NAME; })
-    .attr("d", path)
-    .attr("fill", "white")
 
-  state_pattern_thr.selectAll("path")
+  state_pattern.selectAll("path")
     .data(stateJson.features)
     .enter().append("path")
     .attr("id", function(d) { return d.properties.NAME; })
