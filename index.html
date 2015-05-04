@@ -443,6 +443,8 @@ var updateVis = function () {
     
   var ev_group = ev_path.enter().append("g");
 
+  var vote_group = vote_path.enter().append("g");
+
   ev_slices = ev_group.append("path")
       .attr("class", "outer")
       .attr("fill", function(d, i) { 
@@ -483,35 +485,7 @@ var updateVis = function () {
       }
     });
 
-
-
-  // add new slices for first time
-  // ev_path.enter().append("path")
-  //     .attr("class", "outer")
-  //     .attr("fill", function(d, i) { 
-  //       if(i == 0) {
-  //         return "#ff8383";
-  //       } else if (i == 1) {
-  //         return "#75d1ff";
-  //       } else if (i == 2) {
-  //         return "#8533D6";
-  //       } else if (i == 3) {
-  //         return "blue";
-  //       } else if (i == 4) {
-  //         return "orange";
-  //       } else if (i == 5) {
-  //         return "green";
-  //       } else if (i == 6) {
-  //         return "#663300";
-  //       }
-  //     })
-  //     .attr("d", function(d) {
-  //       return arc(d);
-  //     })
-  //     .attr("transform", "translate(130, 120)")
-  //     .each(function(d) { this._current = d; });
-
-  vote_path.enter().append("path")
+  vote_slices = vote_group.append("path")
       .attr("class", "inner")
       .attr("fill", function(d, i) { 
         if(i == 0) {
@@ -536,23 +510,22 @@ var updateVis = function () {
       .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
-  // add total vote text to slices
-  // var ev_text = ev_path;
 
-  // ev_text.enter().append("g")
-  //   .attr("class", "arc");
+  vote_labels = vote_group.append("text")
+    .attr("class", "textInner")
+    .attr("transform", function(d) {
+      var x = arcInner.centroid(d)[0] + 130;
+      var y = arcInner.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .attr("text-anchor", "middle")
+    .text(function(d) {
+      // return total electoral votes
+      if(d.value > 0) {
+        return d.value/1000000 + "M";
+      }
+    });
 
-  // ev_text.append("text")
-  //   .attr("transform", function(d) {
-  //     var x = arc.centroid(d)[0] + 130;
-  //     var y = arc.centroid(d)[1] + 120;
-  //     return "translate(" + x + ", " + y + ")";
-  //   })
-  //   .attr("text-anchor", "middle")
-  //   .text(function(d) {
-  //     // return total electoral votes
-  //     return d.value;
-  //   });
 
   // update if slices already exist
   ev_path = pres_svg.selectAll(".outer")
@@ -561,7 +534,7 @@ var updateVis = function () {
   ev_path
     .transition().duration(500).attrTween("d", arcTween);
 
-  var ev_text = pres_svg.selectAll(".textOuter")
+  ev_text = pres_svg.selectAll(".textOuter")
       .data(pie([gop_ev, dem_ev, amer_ev, badDem_ev, prog_ev, progTwo_ev, SR_ev]));
 
   ev_text.transition().duration(500)
@@ -577,8 +550,29 @@ var updateVis = function () {
       }
     });;
 
+  vote_path = pres_svg.selectAll(".inner")
+      .data(pie([gop_votes, dem_votes, amer_votes,
+                 badDem_votes, prog_votes, progTwo_votes, SR_votes]));
+
   vote_path
-    .transition().duration(500).attrTween("d", arcTweenInner);  
+    .transition().duration(500).attrTween("d", arcTweenInner); 
+
+  vote_text = pres_svg.selectAll(".textInner")
+      .data(pie([gop_votes, dem_votes, amer_votes,
+                 badDem_votes, prog_votes, progTwo_votes, SR_votes]));
+
+  vote_text.transition().duration(500)
+    .attr("transform", function(d) {
+      var x = arcInner.centroid(d)[0] + 130;
+      var y = arcInner.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .text(function(d) {
+      // return total electoral votes
+      if(d.value > 0) {
+        return (d.value/1000000).toFixed(1) + "M";
+      }
+    });; 
 
   
   //get state demographic data
