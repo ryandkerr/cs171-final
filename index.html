@@ -807,7 +807,7 @@ var updateVis = function () {
     
 
   state_paths.append("title")
-    .text(function(d) {console.log(d);return d.properties.NAME});
+    .text(function(d) {return d.properties.NAME});
 
   state_paths.transition().duration(500)
     .attr("fill", function() { 
