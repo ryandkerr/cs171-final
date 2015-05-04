@@ -1,31 +1,26 @@
 @font-face {
   font-family: quicksand-book;
-  src: url('../fonts/quicksand/Quicksand_Book.otf');
-}
-
-@font-face {
-  font-family: clemente-xlight;
-  src: url('../fonts/clemente_pd/ClementePDac-ExtraLight.ttf');
+  src: url('../font/quicksand/Quicksand_Book.otf');
 }
 
 @font-face {
   font-family: geo-sans-light;
-  src: url('../fonts/geo_sans_light/GeosansLight.ttf');
+  src: url('../font/geo_sans_light/GeosansLight.ttf');
 }
 
 @font-face {
   font-family: lane;
-  src: url('../fonts/lane/LANENAR_.ttf');
+  src: url('../font/lane/LANENAR_.ttf');
 }
 
 @font-face {
   font-family: roboto-light;
-  src: url('../fonts/roboto/Roboto-Thin.ttf');
+  src: url('../font/roboto/Roboto-Thin.ttf');
 }
 
 @font-face {
   font-family: neou;
-  src: url('../fonts/neou/Neou-Thin.ttf');
+  src: url('../font/neou/Neou-Thin.ttf');
 }
 
 .states {
