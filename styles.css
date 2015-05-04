@@ -10,7 +10,8 @@
 
 @font-face {
   font-family: lane;
-  src: url('../font/lane/LANENAR_.ttf');
+  src: url("https://github.com/ryandkerr/cs171-final/blob/gh-pages/font/lane/LANENAR_.ttf");
+  /*src: url('../font/lane/LANENAR_.ttf');*/
 }
 
 @font-face {
