@@ -167,10 +167,18 @@ var path = d3.geo.path()
   .projection(projection);
 
 
-var state_pattern = choro_svg.append("g")
-  .attr("class", "state_pattern")
+var state_pattern_dem = choro_svg.append("g")
+  .attr("class", "state_pattern_dem")
   .attr("transform", "translate(-40, -10)");
-  
+
+var state_pattern_gop = choro_svg.append("g")
+  .attr("class", "state_pattern_gop")
+  .attr("transform", "translate(-40, -10)");
+
+var state_pattern_thr = choro_svg.append("g")
+  .attr("class", "state_pattern_thr")
+  .attr("transform", "translate(-40, -10)");
+
 var states = choro_svg.append("g")
   .attr("class", "states")
   .attr("transform", "translate(-40, -10)");
@@ -278,6 +286,9 @@ var updateVis = function () {
   var dem_vice;
   var third_vice;
   var third_name;
+  var gop_home;
+  var dem_home;
+  var third_home;
 
   ELECGLOBAL.forEach(function(d) {
     if(d.year == CURRENT_YEAR && d.state == "Totals") {
@@ -302,6 +313,10 @@ var updateVis = function () {
 
       gop_votes = d.gopVotes;
       dem_votes = d.demVotes;
+
+      gop_home = d.gopPresBorn;
+      dem_home = d.demPresBorn;
+      third_home = d.thirdPresBorn;
 
       gop_pres = d.gopPres;
       dem_pres = d.demPres;
@@ -380,7 +395,7 @@ var updateVis = function () {
           } else if (third_name == "Progressive (1912)") {
             return "color:orange"
           } else if (third_name == "Progressive (1924)") {
-            console.log('green');return "color:green"
+            return "color:green"
           } else if (third_name == "States' Rights") {
             return "color:#663300"
           }
@@ -691,7 +706,9 @@ var updateVis = function () {
 
   // update choropleth
   var state_paths = states.selectAll("path");
-  var state_pattern_path = state_pattern.selectAll("path");
+  var state_pattern_dem_path = state_pattern_dem.selectAll("path");
+  var state_pattern_gop_path = state_pattern_gop.selectAll("path");
+  var state_pattern_thr_path = state_pattern_thr.selectAll("path");
 
   var state_text = states.selectAll("text");
   
@@ -711,8 +728,27 @@ var updateVis = function () {
     // })
     .style('cursor', 'pointer');
 
-  state_pattern_path.transition().duration(500)
-    .attr("fill", "url(#vertical-stripe-1)");
+  state_pattern_dem_path.transition().duration(500)
+    // .attr("fill", "url(#vertical-stripe-1)");
+    .attr("fill-opacity", .5)
+    .attr("fill", function() {console.log(dem_home);console.log(this.id);
+      if (this.id == dem_home) {
+        return "url(#vertical-stripe-1)"
+      } else {
+        return "white"
+      }
+    });
+    
+
+  state_pattern_gop_path.transition().duration(500)
+    // .attr("fill", "url(#vertical-stripe-1)");
+    .attr("fill-opacity", .5)
+    .attr("fill", "white");
+
+  state_pattern_thr_path.transition().duration(500)
+    // .attr("fill", "url(#vertical-stripe-1)");
+    .attr("fill-opacity", .5)
+    .attr("fill", "white");
 
   state_paths.transition().duration(500)
     .attr("fill", function() { 
@@ -775,9 +811,9 @@ var updateVis = function () {
     return noodle;
      
     })
-    .attr("fill-opacity", .8)
+    .attr("fill-opacity", .5)
     // .attr("class", "circles-1");
-    // .attr("fill-opacity", .8)
+    // .attr("fill-opacity", .5)
     // .attr("fill", "url(#verticall-stripe-1) blue")
     // .attr("fill", "blue");
     
@@ -791,7 +827,7 @@ var updateVis = function () {
       ELECGLOBAL.forEach(function(d) {
         if(d.year == CURRENT_YEAR && d.state.concat("txt") == that.id) {
           var total_ev = d.demEV + d.gopEV + d.thirdEV;
-          console.log(total_ev.toString());
+          // console.log(total_ev.toString());
           noodle = total_ev.toString();
         }
       })
@@ -807,12 +843,26 @@ var initVis = function (error, stateJson, elecData) {
   ELECGLOBAL = elecData
   
   // draw states
-  state_pattern.selectAll("path")
+  state_pattern_dem.selectAll("path")
     .data(stateJson.features)
     .enter().append("path")
     .attr("id", function(d) { return d.properties.NAME; })
     .attr("d", path)
-    .attr("fill", "url(#vertical-stripe-1)")
+    .attr("fill", "white")
+
+  state_pattern_gop.selectAll("path")
+    .data(stateJson.features)
+    .enter().append("path")
+    .attr("id", function(d) { return d.properties.NAME; })
+    .attr("d", path)
+    .attr("fill", "white")
+
+  state_pattern_thr.selectAll("path")
+    .data(stateJson.features)
+    .enter().append("path")
+    .attr("id", function(d) { return d.properties.NAME; })
+    .attr("d", path)
+    .attr("fill", "white")
 
   states.selectAll("path")
     .data(stateJson.features)
@@ -825,7 +875,7 @@ var initVis = function (error, stateJson, elecData) {
         return "#AAAAAA";
       }
       })
-    .attr("fill-opacity", .8)
+    .attr("fill-opacity", .5)
     .attr("stroke", "#555555")
     .attr("stroke-width", 1.5)
 
