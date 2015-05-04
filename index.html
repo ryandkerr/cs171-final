@@ -262,7 +262,7 @@ var vote_arc = d3.svg.arc()
 
 // add curved text
 pres_svg.append("path")
-  .attr("id", "ev_path")
+  .attr("id", "ev_words")
   .attr("d", ev_arc())
   .attr("transform", "translate(130, 120)");
 
@@ -276,7 +276,7 @@ pres_svg.append("text")
   .attr("dy", 28)
   .append("textPath")
   .attr("class", "textpath")
-  .attr("xlink:href", "#ev_path")
+  .attr("xlink:href", "#ev_words")
   .text("Electoral Votes");
 
 pres_svg.append("text")
@@ -441,9 +441,9 @@ var updateVis = function () {
                  badDem_votes, prog_votes, progTwo_votes, SR_votes]));
 
     
-  var ev_slices = ev_path.enter().append("g");
+  var ev_group = ev_path.enter().append("g");
 
-  ev_slices.append("path")
+  ev_slices = ev_group.append("path")
       .attr("class", "outer")
       .attr("fill", function(d, i) { 
         if(i == 0) {
@@ -468,7 +468,8 @@ var updateVis = function () {
       .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
-  ev_slices.append("text")
+  ev_labels = ev_group.append("text")
+    .attr("class", "textOuter")
     .attr("transform", function(d) {
       var x = arc.centroid(d)[0] + 130;
       var y = arc.centroid(d)[1] + 120;
@@ -477,7 +478,9 @@ var updateVis = function () {
     .attr("text-anchor", "middle")
     .text(function(d) {
       // return total electoral votes
-      return d.value;
+      if(d.value > 0) {
+        return d.value;
+      }
     });
 
 
@@ -551,10 +554,28 @@ var updateVis = function () {
   //     return d.value;
   //   });
 
-
   // update if slices already exist
-  // ev_path
-  //   .transition().duration(500).attrTween("d", arcTween); 
+  ev_path = pres_svg.selectAll(".outer")
+      .data(pie([gop_ev, dem_ev, amer_ev, badDem_ev, prog_ev, progTwo_ev, SR_ev]));
+
+  ev_path
+    .transition().duration(500).attrTween("d", arcTween);
+
+  var ev_text = pres_svg.selectAll(".textOuter")
+      .data(pie([gop_ev, dem_ev, amer_ev, badDem_ev, prog_ev, progTwo_ev, SR_ev]));
+
+  ev_text.transition().duration(500)
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .text(function(d) {
+      // return total electoral votes
+      if(d.value > 0) {
+        return d.value;
+      }
+    });;
 
   vote_path
     .transition().duration(500).attrTween("d", arcTweenInner);  
