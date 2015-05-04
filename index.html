@@ -433,17 +433,57 @@ var updateVis = function () {
   }
   
   // select pie paths
-  // var ev_path = pres_svg.selectAll(".outer")
-  //     .data(pie([gop_ev, dem_ev, amer_ev, badDem_ev, prog_ev, progTwo_ev, SR_ev]))
-  //     .enter().append("g");
+  var ev_path = pres_svg.selectAll(".outer")
+      .data(pie([gop_ev, dem_ev, amer_ev, badDem_ev, prog_ev, progTwo_ev, SR_ev]));
 
   var vote_path = pres_svg.selectAll(".inner")
       .data(pie([gop_votes, dem_votes, amer_votes,
                  badDem_votes, prog_votes, progTwo_votes, SR_votes]));
 
     
+  var ev_slices = ev_path.enter().append("g");
+
+  ev_slices.append("path")
+      .attr("class", "outer")
+      .attr("fill", function(d, i) { 
+        if(i == 0) {
+          return "#ff8383";
+        } else if (i == 1) {
+          return "#75d1ff";
+        } else if (i == 2) {
+          return "#8533D6";
+        } else if (i == 3) {
+          return "blue";
+        } else if (i == 4) {
+          return "orange";
+        } else if (i == 5) {
+          return "green";
+        } else if (i == 6) {
+          return "#663300";
+        }
+      })
+      .attr("d", function(d) {
+        return arc(d);
+      })
+      .attr("transform", "translate(130, 120)")
+      .each(function(d) { this._current = d; });
+
+  ev_slices.append("text")
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .attr("text-anchor", "middle")
+    .text(function(d) {
+      // return total electoral votes
+      return d.value;
+    });
+
+
+
   // add new slices for first time
-  // ev_path.append("path")
+  // ev_path.enter().append("path")
   //     .attr("class", "outer")
   //     .attr("fill", function(d, i) { 
   //       if(i == 0) {
@@ -513,10 +553,8 @@ var updateVis = function () {
 
 
   // update if slices already exist
-  ev_path.data(pie([gop_ev, dem_ev, amer_ev, badDem_ev, prog_ev, progTwo_ev, SR_ev]))
-    .transition().duration(500).attrTween("d", arcTween); 
-
-  debugger;
+  // ev_path
+  //   .transition().duration(500).attrTween("d", arcTween); 
 
   vote_path
     .transition().duration(500).attrTween("d", arcTweenInner);  
@@ -961,35 +999,35 @@ var initVis = function (error, stateJson, elecData) {
     .attr("id", function(d) { return d.properties.NAME.concat("txt"); });
   
   // create donuts for first time
-  var ev_group = pres_svg.selectAll("path, .outer")
-      .data(pie([1, 1, 1, 1, 1, 1, 1]))
-    .enter()
-      .append("g")
+  // var ev_group = pres_svg.selectAll("path, .outer")
+  //     .data(pie([1, 1, 1, 1, 1, 1, 1]))
+  //   .enter()
+  //     .append("g")
 
-  var ev_path = ev_group.append("path")
-      .attr("class", "outer")
-      .attr("fill", function(d, i) { 
-        if(i == 0) {
-          return "#ff8383";
-        } else if (i == 1) {
-          return "#75d1ff";
-        } else if (i == 2) {
-          return "#8533D6";
-        } else if (i == 3) {
-          return "blue";
-        } else if (i == 4) {
-          return "orange";
-        } else if (i == 5) {
-          return "green";
-        } else if (i == 6) {
-          return "#663300";
-        }
-      })
-      .attr("d", function(d) {
-        return arc(d);
-      })
-      .attr("transform", "translate(130, 120)")
-      .each(function(d) { this._current = d; });
+  // var ev_path = ev_group.append("path")
+  //     .attr("class", "outer")
+  //     .attr("fill", function(d, i) { 
+  //       if(i == 0) {
+  //         return "#ff8383";
+  //       } else if (i == 1) {
+  //         return "#75d1ff";
+  //       } else if (i == 2) {
+  //         return "#8533D6";
+  //       } else if (i == 3) {
+  //         return "blue";
+  //       } else if (i == 4) {
+  //         return "orange";
+  //       } else if (i == 5) {
+  //         return "green";
+  //       } else if (i == 6) {
+  //         return "#663300";
+  //       }
+  //     })
+  //     .attr("d", function(d) {
+  //       return arc(d);
+  //     })
+  //     .attr("transform", "translate(130, 120)")
+  //     .each(function(d) { this._current = d; });
 
 
   // load in our central election data file
