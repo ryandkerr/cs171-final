@@ -20,6 +20,11 @@
     fill: none;
   }
 
+  .circles-1 {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjZmZmJyAvPgogIDxjaXJjbGUgY3g9IjEiIGN5PSIxIiByPSIxIiBmaWxsPSIjMDAwIi8+Cjwvc3ZnPg==");
+  background-repeat: repeat;
+}
+
   .axis pathLine,
   .axis line {
     fill: none;
@@ -31,6 +36,9 @@
 
   }
   </style>
+
+  <!--Patterns-->
+  <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="vertical-stripe-1" patternUnits="userSpaceOnUse" width="10" height="10"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMScgaGVpZ2h0PScxMCcgZmlsbD0nYmxhY2snIC8+Cjwvc3ZnPg==" x="0" y="0" width="10" height="10"> </image> </pattern> </defs> </svg>
 </head>
 <body>
   <div class ="container">
@@ -97,6 +105,7 @@
 // http://bl.ocks.org/d3noob/e34791a32a54e015f57d
 // http://bl.ocks.org/mbostock/4403522
 // http://bl.ocks.org/d3noob/e1aa61856118edfa624d
+// http://bocoup.com/weblog/using-svg-patterns-as-fills/
 
 
 // helper to find width of element
@@ -754,7 +763,15 @@ var updateVis = function () {
     })
     return noodle;
      
-  })
+    })
+    // .attr("fill-opacity", .5)
+    // .attr("class", "circles-1");
+    // .attr("fill-opacity", .5)
+    // .attr("fill", "url(#verticall-stripe-1) blue")
+    // .attr("fill", "blue");
+    
+    // state_paths.transition(5000)
+    //   .attr("fill", "url(#vertical-stripe-1) blue");
 
   state_text.transition().duration(500)
     .text(function() {
