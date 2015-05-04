@@ -166,9 +166,16 @@ var projection = d3.geo.albersUsa()
 var path = d3.geo.path()
   .projection(projection);
 
+
+var state_pattern = choro_svg.append("g")
+  .attr("class", "state_pattern")
+  .attr("transform", "translate(-40, -10)");
+  
 var states = choro_svg.append("g")
   .attr("class", "states")
   .attr("transform", "translate(-40, -10)");
+
+
 
 // pie chart functions
 var arc = d3.svg.arc()
@@ -684,6 +691,7 @@ var updateVis = function () {
 
   // update choropleth
   var state_paths = states.selectAll("path");
+  var state_pattern_path = state_pattern.selectAll("path");
 
   var state_text = states.selectAll("text");
   
@@ -702,6 +710,9 @@ var updateVis = function () {
     //     .attr("fill", "blue");
     // })
     .style('cursor', 'pointer');
+
+  state_pattern_path.transition().duration(500)
+    .attr("fill", "url(#vertical-stripe-1)");
 
   state_paths.transition().duration(500)
     .attr("fill", function() { 
@@ -764,9 +775,9 @@ var updateVis = function () {
     return noodle;
      
     })
-    // .attr("fill-opacity", .5)
+    .attr("fill-opacity", .8)
     // .attr("class", "circles-1");
-    // .attr("fill-opacity", .5)
+    // .attr("fill-opacity", .8)
     // .attr("fill", "url(#verticall-stripe-1) blue")
     // .attr("fill", "blue");
     
@@ -796,6 +807,13 @@ var initVis = function (error, stateJson, elecData) {
   ELECGLOBAL = elecData
   
   // draw states
+  state_pattern.selectAll("path")
+    .data(stateJson.features)
+    .enter().append("path")
+    .attr("id", function(d) { return d.properties.NAME; })
+    .attr("d", path)
+    .attr("fill", "url(#vertical-stripe-1)")
+
   states.selectAll("path")
     .data(stateJson.features)
     .enter().append("path")
@@ -807,6 +825,7 @@ var initVis = function (error, stateJson, elecData) {
         return "#AAAAAA";
       }
       })
+    .attr("fill-opacity", .8)
     .attr("stroke", "#555555")
     .attr("stroke-width", 1.5)
 
