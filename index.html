@@ -771,13 +771,13 @@ var updateVis = function () {
     .x(function(d) { return x(d.year)})
     .y(function(d) {  {return y(d.gopPct)}}); 
 
-  var valueline3 = d3.svg.line()
-    .x(function(d) {  {return x(d.year)}} )
-    .y(function(d) {  {return y(d.demPct)}});
+  // var valueline3 = d3.svg.line()
+  //   .x(function(d) {  {return x(d.year)}} )
+  //   .y(function(d) {  {return y(d.demPct)}});
     
-  var valueline4 = d3.svg.line()  
-    .x(function(d) { return x(d.year)})
-    .y(function(d) {  {return y(d.gopPct)}}); 
+  // var valueline4 = d3.svg.line()  
+  //   .x(function(d) { return x(d.year)})
+  //   .y(function(d) {  {return y(d.gopPct)}}); 
 
   d3.selectAll(".pathLine")
     .remove();
@@ -798,15 +798,15 @@ var updateVis = function () {
     .attr("class", "pathLine")
     .attr("d", valueline2(ELECFILTERED));
 
-  st_party_svg.append("path")
-    .style("stroke", "brown")
-    .attr("class", "pathLine")
-    .attr("d", valueline3(ELEC_TOTALS));
+  // st_party_svg.append("path")
+  //   .style("stroke", "brown")
+  //   .attr("class", "pathLine")
+  //   .attr("d", valueline3(ELEC_TOTALS));
 
-  st_party_svg.append("path")
-    .style("stroke", "purple")
-    .attr("class", "pathLine")
-    .attr("d", valueline4(ELEC_TOTALS));
+  // st_party_svg.append("path")
+  //   .style("stroke", "purple")
+  //   .attr("class", "pathLine")
+  //   .attr("d", valueline4(ELEC_TOTALS));
 
   // if (CURRENT_YEAR == 1968) {
   //   var valueline3 = d3.svg.line()  
@@ -890,7 +890,8 @@ var updateVis = function () {
 
   st_turnt_svg.append("path")
     .attr("class", "pathLine")
-    .style("stroke", "orange")
+    .style("stroke", "green")
+    .style("stroke-dasharray", ("3, 3"))
     .attr("d", valuelineTurnt(ELECFILTERED));
 
   st_turnt_svg.append("path")
@@ -900,12 +901,13 @@ var updateVis = function () {
 
   st_turnt_svg.append("path")
     .attr("class", "pathLine")
-    .style("stroke", "yellow")
+    .style("stroke", "purple")
     .attr("d", valuelineTurnt3(ELEC_TOTALS));
 
   st_turnt_svg.append("path")
     .attr("class", "pathLine")
     .style("stroke", "purple")
+    .style("stroke-dasharray", ("3, 3"))
     .attr("d", valuelineTurnt4(ELEC_TOTALS));
 
   st_turnt_svg.append("g")          
