@@ -288,16 +288,68 @@ pres_svg.append("text")
   .text("Popular Vote");
 
 // add legend/key for colors
-var legend = pres_svg.append("g");
+var legend = pres_svg.append("g")
+  .attr("transform", "translate(0, 255)");
 
-// line 1
+// "Legend"
 legend.append("text")
   .text("Legend")
-  .attr("font-size", "large")
+  .attr("font-size", "28px")
   .attr("text-decoration", "underline")
-  .attr("transform", "translate(100, 250)");
+  .attr("transform", "translate(85, 0)");
+
+// "Margin of Victory - Popular Vote
+legend.append("text")
+  .text("Margin of Victory - Popular Vote")
+  .attr("font-size", "16px")
+  .attr("transform", "translate(25, 25)");
+
+// "Party"
+legend.append("text")
+  .text("Party")
+  .attr("text-decoration", "underline")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(25, 40)");
+
+// Percentages
+legend.append("text")
+  .text("+20% +10% +5% +2%")
+  .attr("text-decoration", "underline")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(120, 40)");
+
+// Parties
+legend.append("text")
+  // .text("Democratic\nRepublican\nAmerican Independent\nState's Rights\nProgressive (1924)\nProgressive (1912)")
+  .text("Democratic")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(25, 60)")
+
+legend.append("text")
+  .text("Republican")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(25, 75)");
+
+legend.append("text")
+  .text("American")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(25, 90)");
+
+legend.append("text")
+  .text("Independent")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(35, 105)");
 
 
+legend.append("text")
+  .text("State's Rights")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(25, 120)");
+
+legend.append("text")
+  .text("Progressive")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(25, 135)");
 
 
 // initialize state views for FLorida before user clicks anything
