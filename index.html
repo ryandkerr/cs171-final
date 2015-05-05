@@ -73,7 +73,7 @@
 </head>
 
 <body>
-  <!-- <div class="container"> -->
+  <div class="container-fluid">
     <div class="row" id="title"> 
       <h1>American Politics: The Past 100 Years</h1>
       <p>Click a state or drag the slider to explore the data!</p>
@@ -108,11 +108,12 @@
         <div id="choroVis">
           <!-- Main Cloropleth goes here -->
         </div>
-
       </div>
+    </div>
       
-
-    <br>State Views (currently showing <span id="clickState">Florida</span>)
+    <div class="row" id="state-div">
+      <h2>State Views (currently showing <span id="clickState">Florida</span>)</h2>
+    </div>
 
     <div class="row">
       <div class="col-md-3" id="stDemographic" style="background-color: #D6FFEB">
@@ -125,11 +126,15 @@
       <div class="col-md-3" id="stTurnt" style="background-color: #D6FFEB">
         state turnout
       </div>
-      <div class="col-md-1" id="stCompare" style="background-color: #D6FFEB">
+    </div>
+
+    <div class="row">
+      <div class="col-md-12" id="stCompare">
         state to nation comparison
       </div>
       <!--replicate stParty for national EV and national pct-->
     </div>
+
   </div>
 
 <script>
@@ -731,7 +736,7 @@ var updateVis = function () {
 
   // select pie paths
   var elig_path = elig_svg.selectAll("#categ")
-      .data(pie([felon, nonCit, other]));
+      .data(pie([nonCit, other, felon]));
 
   var elig_group = elig_path.enter().append("g");
 
@@ -766,7 +771,7 @@ var updateVis = function () {
   // update if slices already exist
 
   var elig_path = elig_svg.selectAll("#categ")
-      .data(pie([felon, nonCit, other]));
+      .data(pie([nonCit, other, felon]));
 
   elig_path
     .transition().duration(500)
@@ -775,7 +780,7 @@ var updateVis = function () {
       });
 
   elig_text = elig_svg.selectAll(".text")
-      .data(pie([felon, nonCit, other]));
+      .data(pie([nonCit, other, felon]));
 
   var rounded = d3.format(".1")
 
@@ -1076,7 +1081,6 @@ var updateVis = function () {
   
   state_paths
     .on("click", function() {
-      debugger;
       clickState = this.id;
       document.getElementById("clickState").innerHTML = clickState;
       updateVis();
@@ -1102,7 +1106,7 @@ var updateVis = function () {
 
       tip.append("text")
         .text(function() {
-          debugger;
+          // return "poo";
           return that.id;
         })
         .attr("fill", "white")
