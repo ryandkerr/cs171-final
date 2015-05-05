@@ -1632,6 +1632,16 @@ var updateVis = function () {
     .style("text-anchor", "middle")
     .text("Percent Margin of Victory");
 
+  st_comp_svg.append("text")      // text label for the x axis
+    .attr("transform", "translate(" + (stCompWidth / 2) + " ," + (stCompHeight + 30) + ")")
+    .style("text-anchor", "middle")
+    .text("Each bar represents a state");
+
+  st_comp_svg.append("text")      // text label for the x axis
+    .attr("transform", "translate(" + (stCompWidth / 2) + " ," + (stCompHeight + 45) + ")")
+    .style("text-anchor", "middle")
+    .text("Hilighted bar represents the selected state");
+
   var comp_width = 4;
 
   var comp_bars = st_comp_svg.selectAll("rect")
