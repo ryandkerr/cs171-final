@@ -104,10 +104,7 @@
           <div>
             <label>Year:</label>
             <label>1912</label>
-            <label><input type="range" name="points" min='1912' max='2012' step="4" value="2012" id="year_slider" oninput="CURRENT_YEAR=this.value;
-            document.getElementsByClassName('cur')[0].innerHTML = CURRENT_YEAR;
-            document.getElementsByClassName('cur')[1].innerHTML = CURRENT_YEAR;
-            updateVis();" style="width: 300px"></label><label>2012 (Currently showing <span class="cur">2012</span>)</label>
+            <label><input type="range" name="points" min='1912' max='2012' step="4" value="2012" id="year_slider" oninput="changeYear(this.value);" style="width: 300px"></label><label>2012 (Currently showing <span class="cur">2012</span>)</label>
           </div>
         </form>
         <br>
@@ -122,14 +119,16 @@
  -->
         <div id="storyControls" style="position:absolute; top:20px; left:25px; z-index: 999;">
           <div id="storyPages" class="btn-group btn-group-sm">
-              <button type="button" class="btn btn-default" value='L'>&laquo</button>
-              <button type="button" class="btn btn-default btn-primary" value=1>1</button>
+              <button type="button" class="btn btn-default" value=1>1</button>
               <button type="button" class="btn btn-default" value=2>2</button>
               <button type="button" class="btn btn-default" value=3>3</button>
               <button type="button" class="btn btn-default" value=4>4</button>
               <button type="button" class="btn btn-default" value=5>5</button>
               <button type="button" class="btn btn-default" value=6>6</button>
-              <button type="button" class="btn btn-default" value='R'>&raquo</button>
+          </div>
+          <br><br>
+          <div>
+          <p class="storyP">Click the buttons above to see the story of American Electoral Politics</p>
           </div>
         </div>
       </div>
@@ -140,10 +139,7 @@
     </div>
 
     <div class="row" id="state-div-size">
-      <div class="col-md-3" id="stDemographic" style="background-color: #D6FFEB">
-        <div id="state-title">state demographic pie chart</div> <br>
-        <span id="noFelon"></span>
-      </div>
+      
       <div class="col-md-6" id="stParty" style="background-color: #D6FF65">
         <div id="state-title">state party line graph</div> <br>
       </div>
@@ -160,7 +156,9 @@
       <div class="col-md-6" id="stInc">
         <div id="state-title">state median household income</div> <br>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-8" id="stDemographic" style="background-color: #D6FFEB">
+        <div id="state-title">state demographic pie chart</div> <br>
+        <span id="noFelon"></span>
       </div>
     </div>
 
@@ -180,6 +178,7 @@
 // http://bl.ocks.org/d3noob/e1aa61856118edfa624d
 // http://bocoup.com/weblog/using-svg-patterns-as-fills/
 // http://chimera.labs.oreilly.com/books/1230000000345/ch10.html#_html_div_tooltips
+// http://www.d3noob.org/2012/12/adding-axis-labels-to-d3js-graph.html
 
 
 // helper to find width of element
@@ -194,6 +193,45 @@ var HEIGHT = 600;
 var ELECGLOBAL;
 var INCGLOBAL;
 var CURRENT_YEAR = 2012;
+
+
+// function to change the year and update vis, yext, and slider
+var changeYear = function(year) {
+  CURRENT_YEAR = year;
+  document.getElementsByClassName('cur')[0].innerHTML = CURRENT_YEAR;
+  document.getElementsByClassName('cur')[1].innerHTML = CURRENT_YEAR;
+  d3.select("#year_slider")[0][0].value = year;
+  updateVis();
+}
+
+var story0 = document.getElementsByClassName("storyP")[0];
+
+// story mode button listeners
+d3.selectAll(".btn")
+  .on("click", function() {
+    if(this.value == 1) {
+      changeYear(1912);
+      story0.innerHTML = "This is a new story about the election.";
+      setTimeout(function() { changeYear(1936) }, 5000);
+    } else if(this.value == 2) {
+      changeYear(1924);
+      story0.innerHTML = "This is a shitty story about the election.";
+    } else if(this.value == 3) {
+      changeYear(1964)
+      story0.innerHTML = "This is a noob story about the election.";
+    } else if(this.value == 4) {
+      changeYear(1980)
+      story0.innerHTML = "This is a red story about the election.";
+    } else if(this.value == 5) {
+      changeYear(2000)
+      story0.innerHTML = "This is a blue story about the election.";
+    } else if(this.value == 6) {
+      changeYear(2012)
+      story0.innerHTML = "This is a fish story about the election.";
+    }
+  })
+
+
 
 // scale to assign margin of victory to bins, which end up as colors
 var quantize = d3.scale.quantize()
@@ -222,12 +260,12 @@ var pres_svg = d3.select("#presVis")
 var st_demo_svg = d3.select("#stDemographic")
   .append("svg")
   .attr("width", getInnerWidth(d3.select("#stDemographic")))
-  .attr("height", 250);
+  .attr("height", 300);
 
 var elig_svg = d3.select("#stDemographic")
   .append("svg")
   .attr("width", getInnerWidth(d3.select("#stDemographic")))
-  .attr("height", 250);
+  .attr("height", 300);
 
 // create svg canvas for stParty vis
 var st_party_svg = d3.select("#stParty")
@@ -865,6 +903,45 @@ var updateVis = function () {
       }
     });
 
+  elig_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 225)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#5C3D00")
+
+  elig_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 250)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#7A5200")
+
+  elig_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 275)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#A37519")
+
+  elig_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 240)
+    // .style("text-anchor", "middle")
+    .text("Non-citizen");
+
+  elig_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 265)
+    // .style("text-anchor", "middle")
+    .text("Voting-eligible");
+
+  elig_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 290)
+    // .style("text-anchor", "middle")
+    .text("Ineligible felon");
+
   // update if slices already exist
 
   var elig_path = elig_svg.selectAll("#categ")
@@ -930,6 +1007,51 @@ var updateVis = function () {
         return d.value;
       }
     });
+
+
+// var st_demo_svg = d3.select("#stDemographic")
+//   .append("svg")
+//   .attr("width", getInnerWidth(d3.select("#stDemographic")))
+//   .attr("height", 250);
+
+  st_demo_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 225)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#5C3D00")
+
+  st_demo_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 250)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#7A5200")
+
+  st_demo_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 275)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#A37519")
+
+  st_demo_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 240)
+    // .style("text-anchor", "middle")
+    .text("Prison");
+
+  st_demo_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 265)
+    // .style("text-anchor", "middle")
+    .text("Probation");
+
+  st_demo_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 290)
+    // .style("text-anchor", "middle")
+    .text("Parole");
 
   // update if slices already exist
   if (prison==0 && parole==0 && probation==0) {
@@ -1037,14 +1159,17 @@ var updateVis = function () {
   x.domain(d3.extent(ELECFILTERED, function(d) { return d.year }));
   // y.domain([0, d3.max(ELECFILTERED, function(d) {
   //    return Math.max(d.gopPct, d.demPct, d.thirdPct)})]);
-  y.domain([0, 105]); 
+  y.domain([0, 100]); 
+
   st_party_svg.append("path")
     .attr("class", "pathLine")
+    .attr("transform", "translate(0,5)")
     .attr("d", valueline(ELECFILTERED));
     
   st_party_svg.append("path")
     .style("stroke", "red")
     .attr("class", "pathLine")
+    .attr("transform", "translate(0,5)")
     .attr("d", valueline2(ELECFILTERED));
 
   // st_party_svg.append("path")
@@ -1070,16 +1195,32 @@ var updateVis = function () {
 
   st_party_svg.append("g")          
     .attr("class", "axis")
-    .attr("transform", "translate(0," + stPartyHeight + ")")
+    .attr("transform", "translate(0," + (stPartyHeight+5) + ")")
     .call(xAxis)
     .selectAll("text")
     // .attr("x", -12)
     // this is bad because labels don't line up with ticks
     // .attr("transform", "rotate(-70)");
 
+  var margin_bottom = 50;
+  var margin_left = 4;
+
+  st_party_svg.append("text")      // text label for the x axis
+    .attr("transform", "translate(" + (stPartyWidth / 2) + " ," + (stPartyHeight + margin_bottom) + ")")
+    .style("text-anchor", "middle")
+    .text("Year");
+
+  st_party_svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", (0 - margin_left))
+    .attr("x",0 - (stPartyHeight / 2))
+    .attr("dy", "1em")
+    .style("text-anchor", "middle")
+    .text("Percentage of Popular Vote");
+
   st_party_svg.append("g")
     .attr("class", "axis")
-    .attr("transform", "translate(35,0)")
+    .attr("transform", "translate(35,5)")
     .call(yAxis); 
 
   // st_party_svg.append("g")
@@ -1093,11 +1234,6 @@ var updateVis = function () {
   // may actually be more useful to just have this shit on the same graph
   var stTurntHeight = 300;
   var stTurntWidth = (getInnerWidth(d3.select("#stTurnt")) - 55);
-
-  function formatPct(pct) {
-    pct *= 100;
-    return pct;
-  }
 
   var xTurnt = d3.scale.linear().range([35, stTurntWidth]);
   var yTurnt = d3.scale.linear().range([stTurntHeight, 0]);
@@ -1115,7 +1251,7 @@ var updateVis = function () {
     .orient("bottom").ticks(5);
 
   var yAxisTurnt = d3.svg.axis().scale(yTurnt)
-    .tickFormat(function(d) {return formatPct(d)})
+    .tickFormat(function(d) {return d*100})
     .orient("left").ticks(5);
 
   var valuelineTurnt = d3.svg.line()
@@ -1172,17 +1308,28 @@ var updateVis = function () {
     .attr("transform", "translate(35,10)")
     .call(yAxisTurnt); 
 
+  var margin_bottom = 50;
+  var margin_left = 4;
+
+  st_turnt_svg.append("text")      // text label for the x axis
+    .attr("transform", "translate(" + (stTurntWidth / 2) + " ," + (stTurntHeight + margin_bottom) + ")")
+    .style("text-anchor", "middle")
+    .text("Year");
+
+  st_turnt_svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", (0 - margin_left))
+    .attr("x",0 - (stTurntHeight / 2))
+    .attr("dy", "1em")
+    .style("text-anchor", "middle")
+    .text("Percentage of VAP or VEP");
+
   //
   //
   //
   // income
   var stIncHeight = 300;
   var stIncWidth = (getInnerWidth(d3.select("#stInc")) - 55);
-
-  function formatPct(pct) {
-    //pct *= 100;
-    return pct;
-  }
 
   var xInc = d3.scale.linear().range([35, stIncWidth]);
   var yInc = d3.scale.linear().range([stIncHeight, 0]);
@@ -1200,7 +1347,7 @@ var updateVis = function () {
     .orient("bottom").ticks(5);
 
   var yAxisInc = d3.svg.axis().scale(yInc)
-    .tickFormat(function(d) {return formatPct(d)})
+    .tickFormat(function(d) {return d})
     .orient("left").ticks(5);
 
   var valuelineInc = d3.svg.line()
@@ -1217,28 +1364,44 @@ var updateVis = function () {
   st_inc_svg.append("path")
     .attr("class", "pathLine")
     .style("stroke", "green")
-    .attr("transform", "translate(20,0)")
+    .attr("transform", "translate(40,0)")
     .attr("d", valuelineInc(INCFILTERED));
 
   st_inc_svg.append("path")
     .attr("class", "pathLine")
     .style("stroke", "purple")
-    .attr("transform", "translate(20,0)")
+    .attr("transform", "translate(40,0)")
     .attr("d", valuelineInc2(INC_TOTALS));
 
   
   st_inc_svg.append("g")          
     .attr("class", "axis")
-    .attr("transform", "translate(20," + (stIncHeight+10) + ")")
+    .attr("transform", "translate(40," + (stIncHeight+10) + ")")
     .call(xAxisInc)
-    .selectAll("text")
+    // .selectAll("text")
     // .attr("x", -12)
     // .attr("transform", "rotate(-70)");
 
   st_inc_svg.append("g")
     .attr("class", "axis")
-    .attr("transform", "translate(55,10)")
+    .attr("transform", "translate(75,10)")
     .call(yAxisInc); 
+
+  var margin_bottom = 50;
+  var margin_left = 3;
+
+  st_inc_svg.append("text")      // text label for the x axis
+    .attr("transform", "translate(" + (stIncWidth / 2) + " ," + (stIncHeight + margin_bottom) + ")")
+    .style("text-anchor", "middle")
+    .text("Year");
+
+  st_inc_svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", (0 - margin_left))
+    .attr("x",0 - (stIncHeight / 2))
+    .attr("dy", "1em")
+    .style("text-anchor", "middle")
+    .text("Median Household Income (USD)");
 
   // update choropleth
   var state_paths = states.selectAll("path");
@@ -1619,6 +1782,8 @@ var initVis = function (error, stateJson, elecData, incData) {
   //     })
   //     .attr("transform", "translate(130, 120)")
   //     .each(function(d) { this._current = d; });
+
+
 
 
   // load in our central election data file
