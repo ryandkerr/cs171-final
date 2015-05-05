@@ -1080,7 +1080,6 @@ var updateVis = function () {
   
   state_paths
     .on("click", function() {
-      debugger;
       clickState = this.id;
       document.getElementById("clickState").innerHTML = clickState;
       updateVis();
@@ -1113,7 +1112,6 @@ var updateVis = function () {
 
       tip.append("text")
         .text(function() {
-          debugger;
           // return "poo";
           return that.id;
         })
