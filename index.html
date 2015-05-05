@@ -145,6 +145,7 @@
 // http://bl.ocks.org/mbostock/4403522
 // http://bl.ocks.org/d3noob/e1aa61856118edfa624d
 // http://bocoup.com/weblog/using-svg-patterns-as-fills/
+// http://chimera.labs.oreilly.com/books/1230000000345/ch10.html#_html_div_tooltips
 
 
 // helper to find width of element
@@ -1001,14 +1002,6 @@ var updateVis = function () {
       document.getElementById("clickState").innerHTML = clickState;
       updateVis();
     })
-    // http://chimera.labs.oreilly.com/books/1230000000345/ch10.html#_html_div_tooltips
-    // https://github.com/mbostock/d3/wiki/Selections
-    // .on("mouseover", function() {
-    //   console.log(this);})
-    // .on("mouseout", function() {
-    //   d3.select(this)
-    //     .attr("fill", "blue");
-    // })
     .style('cursor', 'pointer')
     .on("mouseover", function(d) {
       var that = this;
@@ -1030,7 +1023,6 @@ var updateVis = function () {
       tip.append("text")
         .text(function() {
           debugger;
-          // return "poo";
           return that.id;
         })
         .attr("fill", "white")
@@ -1158,7 +1150,7 @@ var updateVis = function () {
     return noodle;
      
     })
-    .attr("fill-opacity", .5)
+    .attr("fill-opacity", .85)
     // .attr("class", "circles-1");
     // .attr("fill-opacity", .5)
     // .attr("fill", "url(#verticall-stripe-1) blue")
