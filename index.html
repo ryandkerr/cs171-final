@@ -1147,6 +1147,39 @@ var updateVis = function () {
     .x(function(d) { return x(d.year)})
     .y(function(d) {  {return y(d.gopPct)}}); 
 
+  var valueline3 = d3.svg.line()  
+    .x(function(d) { return x(d.year)})
+    .y(function(d) {  if (d.thirdName == "American Independent") {
+      return y(d.thirdPct)
+    } else {
+      return y(0)
+    }})
+
+  var valueline4 = d3.svg.line()  
+    .x(function(d) { return x(d.year)})
+    .y(function(d) {  if (d.thirdName == "States' Rights") {
+      return y(d.thirdPct)
+    } else {
+      return y(0)
+    }})
+
+  var valueline5 = d3.svg.line()  
+    .x(function(d) { return x(d.year)})
+    .y(function(d) {  if (d.thirdName == "Progressive (1924)") {
+      return y(d.thirdPct)
+    } else {
+      return y(0)
+    }})
+
+  var valueline6 = d3.svg.line()  
+    .x(function(d) { return x(d.year)})
+    .y(function(d) {  if (d.thirdName == "Progressive (1912)") {
+      return y(d.thirdPct)
+    } else {
+      return y(0) 
+    }})
+
+
   // var valueline3 = d3.svg.line()
   //   .x(function(d) {  {return x(d.year)}} )
   //   .y(function(d) {  {return y(d.demPct)}});
@@ -1176,6 +1209,30 @@ var updateVis = function () {
     .attr("class", "pathLine")
     .attr("transform", "translate(0,5)")
     .attr("d", valueline2(ELECFILTERED));
+
+  st_party_svg.append("path")
+    .style("stroke", "purple")
+    .attr("class", "pathLine")
+    .attr("transform", "translate(0,5)")
+    .attr("d", valueline3(ELECFILTERED));
+
+  st_party_svg.append("path")
+    .style("stroke", "orange")
+    .attr("class", "pathLine")
+    .attr("transform", "translate(0,5)")
+    .attr("d", valueline4(ELECFILTERED));
+
+  st_party_svg.append("path")
+    .style("stroke", "green")
+    .attr("class", "pathLine")
+    .attr("transform", "translate(0,5)")
+    .attr("d", valueline5(ELECFILTERED));
+
+  st_party_svg.append("path")
+    .style("stroke", "yellow")
+    .attr("class", "pathLine")
+    .attr("transform", "translate(0,5)")
+    .attr("d", valueline6(ELECFILTERED));
 
   // st_party_svg.append("path")
   //   .style("stroke", "brown")
