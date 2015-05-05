@@ -753,7 +753,10 @@ var updateVis = function () {
       .data(pie([prison, probation, parole]));
 
   demo_path
-    .transition().duration(500).attrTween("d", arcTween);
+    .transition().duration(500)
+    .attr("d", function(d) {
+        return arcDemo(d);
+      });
 
   demo_text = st_demo_svg.selectAll(".text")
       .data(pie([prison, probation, parole]));
