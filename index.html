@@ -1682,8 +1682,14 @@ var updateVis = function () {
         party = "dem";
       }
 
-      var sorted = [d.gopPct, d.demPct, d.thirdPct].sorted();
-      margin = sorted[0] - sorted[1];
+      var sorted = [d.gopPct, d.demPct, d.thirdPct].sort(function (a, b) {
+        if(a < b) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      margin = (sorted[0] - sorted[1])/100;
     } else {
       if(d.gopPct > d.demPct) {
         party = "gop";
@@ -1708,7 +1714,8 @@ var updateVis = function () {
       return stCompHeight + 10 - yComp(getMargin(d)[0]);
     })
     .attr("fill", function(d) {
-      var winner = getMargin[1];
+      
+      var winner = getMargin(d)[1];
 
       if(winner == "gop") {
         if(d.state == clickState) {
