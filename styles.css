@@ -23,7 +23,8 @@ body {
   /*font-family: 'Raleway', sans-serif;*/
   /*font-family: 'Josefin Slab', serif;*/
   /*font-family: 'Lato', sans-serif;*/
-  font-family: 'Source Sans Pro', sans-serif;
+  /*font-family: 'Source Sans Pro', sans-serif;*/
+  font-family: 'Alegreya Sans SC', sans-serif;
   background-color: #ddd;
 }
 
@@ -40,6 +41,19 @@ body {
 #stCompare {
   height:250px;
   background-color:#E8AEB7;
+}
+
+#stInc {
+  background-color: #EDFBFF;
+}
+
+#state-div {
+  box-shadow: 0 0 2px black;
+}
+
+#stDemographic, #stParty, #stTurnt {
+  box-shadow: 0 0 2px black;
+  height:550px;
 }
 
 .axis path,
