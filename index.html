@@ -1076,7 +1076,6 @@ var updateVis = function () {
   // update choropleth
   var state_paths = states.selectAll("path");
   var state_pattern_path = state_pattern.selectAll("path");
-
   var state_text = states.selectAll("text");
   
   state_paths
@@ -1086,8 +1085,22 @@ var updateVis = function () {
       updateVis();
     })
     .style('cursor', 'pointer')
-    .on("mouseover", function(d) {
+    .on("mouseenter", function(d) {
       var that = this;
+
+      var this_ev = 0;
+      var this_pct_dem = 0;
+      var this_pct_gop = 0;
+      var this_pct_third = 0;
+
+      ELECGLOBAL.forEach(function(d) {
+        if(d.state == that.id && d.year == CURRENT_YEAR){
+          this_ev = d.gopEV + d.demEV + d.thirdEV;
+          this_pct_dem = d.demPct;
+          this_pct_gop = d.gopPct;
+          this_pct_third = d.thirdPct;
+        }
+      })
 
       var tip = choro_svg.append("g")
           .attr("id", "toolTip");
@@ -1097,10 +1110,10 @@ var updateVis = function () {
           return d3.mouse(this)[0] - 30;
         })
         .attr("y", function(d) {
-          return d3.mouse(this)[1] - 60;
+          return d3.mouse(this)[1] - 90;
         })
         .attr("width", 125)
-        .attr("height", 50)
+        .attr("height", 80)
         .attr("fill", "black")
         .attr("fill-opacity", .75);
 
@@ -1114,30 +1127,54 @@ var updateVis = function () {
           return d3.mouse(this)[0] - 25;
         })
         .attr("y", function(d) {
-          return d3.mouse(this)[1] - 45;
+          return d3.mouse(this)[1] - 75;
         });
 
       tip.append("text")
-        .text(function() {
-          var noodle = 0;
-
-          ELECGLOBAL.forEach(function(d) {
-            if(d.state == that.id && d.year == CURRENT_YEAR){
-              debugger;
-              noodle = d.gopEV + d.demEV + d.thirdEV; 
-            }
-          })
-          return "Electoral Votes: " + noodle;
-        })
+        .text("Electoral Votes: " + this_ev)
         .attr("fill", "white")
         .attr("x", function(d) {
           return d3.mouse(this)[0] - 25;
         })
         .attr("y", function(d) {
-          return d3.mouse(this)[1] - 28;
+          return d3.mouse(this)[1] - 58;
         });
+
+      tip.append("text")
+        .text("Democrat: " + this_pct_dem + "%")
+        .attr("fill", "white")
+        .attr("x", function(d) {
+          return d3.mouse(this)[0] - 25;
+        })
+        .attr("y", function(d) {
+          return d3.mouse(this)[1] - 44;
+        });
+
+      tip.append("text")
+        .text("Republican: " + this_pct_gop + "%")
+        .attr("fill", "white")
+        .attr("x", function(d) {
+          return d3.mouse(this)[0] - 25;
+        })
+        .attr("y", function(d) {
+          return d3.mouse(this)[1] - 30;
+        });
+
+      if(this_pct_third != null) {
+        tip.append("text")
+          .text("3rd Party: " + this_pct_third + "%")
+          .attr("fill", "white")
+          .attr("x", function(d) {
+            return d3.mouse(this)[0] - 25;
+          })
+          .attr("y", function(d) {
+            return d3.mouse(this)[1] - 15;
+          });
+      }
+
+
     })
-    .on("mouseout", function(d) {
+    .on("mouseleave", function(d) {
       d3.select("#toolTip").remove();
     });
 //     .on("mouseover", function(d) {console.log('mouseover!');
