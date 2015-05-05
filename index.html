@@ -329,7 +329,7 @@ legend.append("text")
   .text("0%__2%__5%__10%")
   .attr("text-decoration", "underline")
   .attr("font-size", "14px")
-  .attr("transform", "translate(120, 40)");
+  .attr("transform", "translate(130, 40)");
 
 // Parties
 legend.append("text")
@@ -360,39 +360,44 @@ legend.append("text")
   .attr("transform", "translate(25, 120)");
 
 legend.append("text")
-  .text("Progressive")
+  .text("Progressive (1924)")
   .attr("font-size", "14px")
   .attr("transform", "translate(25, 135)")
+
+legend.append("text")
+  .text("Progressive (1912)")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(25, 150)")
 
 
 var addColors = function(y_coord, colors) {
   legend.append("rect")
     .attr("x", 135)
     .attr("y", y_coord - 10)
-    .attr("width", 25)
+    .attr("width", 28)
     .attr("height", 10)
     // .attr("stroke", "black")
     // .attr("stroke-width", "1px")
     .attr("fill", colors[0]);
   
   legend.append("rect")
-    .attr("x", 165)
+    .attr("x", 168)
     .attr("y", y_coord - 10)
-    .attr("width", 25)
+    .attr("width", 28)
     .attr("height", 10)
     .attr("fill", colors[1]);
   
   legend.append("rect")
-    .attr("x", 195)
+    .attr("x", 201)
     .attr("y", y_coord - 10)
-    .attr("width", 25)
+    .attr("width", 28)
     .attr("height", 10)
     .attr("fill", colors[2]);
   
   legend.append("rect")
-    .attr("x", 225)
+    .attr("x", 234)
     .attr("y", y_coord - 10)
-    .attr("width", 25)
+    .attr("width", 28)
     .attr("height", 10)
     .attr("fill", colors[3]);
 }
@@ -410,6 +415,7 @@ addColors(75, gop_colors);
 addColors(90, amer_colors);
 addColors(120, sr_colors);
 addColors(135, prog24_colors);
+addColors(150, prog12_colors);
 
 // initialize state views for FLorida before user clicks anything
 var clickState = "Florida";
@@ -1171,40 +1177,103 @@ var updateVis = function () {
             return d3.mouse(this)[1] - 15;
           });
       }
-
-
     })
     .on("mouseleave", function(d) {
       d3.select("#toolTip").remove();
     });
-//     .on("mouseover", function(d) {console.log('mouseover!');
-// console.log(this);
-// //Get this bar's x/y values, then augment for the tooltip
-// var xPosition = d3.event.pageX;//parseFloat(d3.select(this).attr("x"));// + xScale.rangeBand() / 2;
-// var yPosition = d3.event.pageY;//parseFloat(d3.select(this).attr("y")) / 2 ;//+ h / 2;
 
-// //Update the tooltip position and value
-// d3.select("#tooltip")
-//   .style("left", xPosition + "px")
-//   .style("top", yPosition + "px")
-  
+  state_text
+    .style('cursor', 'pointer')
+    .on("mouseenter", function(d) {
+      var that = this;
 
-// //Show the tooltip
-// d3.select("#tooltip").classed("hidden", false);
+      var this_ev = 0;
+      var this_pct_dem = 0;
+      var this_pct_gop = 0;
+      var this_pct_third = 0;
+      var this_name = "";
 
-// })
-//     .on("mouseout", function() {console.log('mouseout!');
+      ELECGLOBAL.forEach(function(d) {
+        if((d.state + "txt") == that.id && d.year == CURRENT_YEAR){
+          this_ev = d.gopEV + d.demEV + d.thirdEV;
+          this_pct_dem = d.demPct;
+          this_pct_gop = d.gopPct;
+          this_pct_third = d.thirdPct;
+          this_name = d.state;
+        }
+      })
 
-// //Hide the tooltip
-// d3.select("#tooltip").classed("hidden", true);
+      var tip = choro_svg.append("g")
+          .attr("id", "toolTip");
 
-// })
+      tip.append("rect")
+        .attr("x", function(d) {
+          return d3.mouse(this)[0] - 30;
+        })
+        .attr("y", function(d) {
+          return d3.mouse(this)[1] - 90;
+        })
+        .attr("width", 125)
+        .attr("height", 80)
+        .attr("fill", "black")
+        .attr("fill-opacity", .75);
 
-  // var div = state_paths.append('div');
-  // div
-  //   .attr('class', 'hidden')
-  //   .attr('id', 'tooltip')
-  //   .html("hello world");
+      tip.append("text")
+        .text(this_name)
+        .attr("text-decoration", "underline")
+        .attr("fill", "white")
+        .attr("x", function(d) {
+          return d3.mouse(this)[0] - 25;
+        })
+        .attr("y", function(d) {
+          return d3.mouse(this)[1] - 75;
+        });
+
+      tip.append("text")
+        .text("Electoral Votes: " + this_ev)
+        .attr("fill", "white")
+        .attr("x", function(d) {
+          return d3.mouse(this)[0] - 25;
+        })
+        .attr("y", function(d) {
+          return d3.mouse(this)[1] - 58;
+        });
+
+      tip.append("text")
+        .text("Democrat: " + this_pct_dem + "%")
+        .attr("fill", "white")
+        .attr("x", function(d) {
+          return d3.mouse(this)[0] - 25;
+        })
+        .attr("y", function(d) {
+          return d3.mouse(this)[1] - 44;
+        });
+
+      tip.append("text")
+        .text("Republican: " + this_pct_gop + "%")
+        .attr("fill", "white")
+        .attr("x", function(d) {
+          return d3.mouse(this)[0] - 25;
+        })
+        .attr("y", function(d) {
+          return d3.mouse(this)[1] - 30;
+        });
+
+      if(this_pct_third != null) {
+        tip.append("text")
+          .text("3rd Party: " + this_pct_third + "%")
+          .attr("fill", "white")
+          .attr("x", function(d) {
+            return d3.mouse(this)[0] - 25;
+          })
+          .attr("y", function(d) {
+            return d3.mouse(this)[1] - 15;
+          });
+      }
+    })
+    .on("mouseleave", function(d) {
+      d3.select("#toolTip").remove();
+    });
 
   state_pattern_path.transition().duration(500)
     // .attr("fill", "url(#vertical-stripe-1)");
