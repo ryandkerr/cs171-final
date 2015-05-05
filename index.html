@@ -132,10 +132,7 @@
     </div>
 
     <div class="row" id="state-div-size">
-      <div class="col-md-3" id="stDemographic" style="background-color: #D6FFEB">
-        <div id="state-title">state demographic pie chart</div> <br>
-        <span id="noFelon"></span>
-      </div>
+      
       <div class="col-md-6" id="stParty" style="background-color: #D6FF65">
         <div id="state-title">state party line graph</div> <br>
       </div>
@@ -152,7 +149,9 @@
       <div class="col-md-6" id="stInc">
         <div id="state-title">state median household income</div> <br>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-8" id="stDemographic" style="background-color: #D6FFEB">
+        <div id="state-title">state demographic pie chart</div> <br>
+        <span id="noFelon"></span>
       </div>
     </div>
 
@@ -254,12 +253,12 @@ var pres_svg = d3.select("#presVis")
 var st_demo_svg = d3.select("#stDemographic")
   .append("svg")
   .attr("width", getInnerWidth(d3.select("#stDemographic")))
-  .attr("height", 250);
+  .attr("height", 300);
 
 var elig_svg = d3.select("#stDemographic")
   .append("svg")
   .attr("width", getInnerWidth(d3.select("#stDemographic")))
-  .attr("height", 250);
+  .attr("height", 300);
 
 // create svg canvas for stParty vis
 var st_party_svg = d3.select("#stParty")
@@ -897,6 +896,45 @@ var updateVis = function () {
       }
     });
 
+  elig_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 225)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#5C3D00")
+
+  elig_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 250)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#7A5200")
+
+  elig_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 275)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#A37519")
+
+  elig_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 240)
+    // .style("text-anchor", "middle")
+    .text("Non-citizen");
+
+  elig_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 265)
+    // .style("text-anchor", "middle")
+    .text("Voting-eligible");
+
+  elig_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 290)
+    // .style("text-anchor", "middle")
+    .text("Ineligible felon");
+
   // update if slices already exist
 
   var elig_path = elig_svg.selectAll("#categ")
@@ -962,6 +1000,51 @@ var updateVis = function () {
         return d.value;
       }
     });
+
+
+// var st_demo_svg = d3.select("#stDemographic")
+//   .append("svg")
+//   .attr("width", getInnerWidth(d3.select("#stDemographic")))
+//   .attr("height", 250);
+
+  st_demo_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 225)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#5C3D00")
+
+  st_demo_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 250)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#7A5200")
+
+  st_demo_svg.append("rect")
+    .attr("x", 20)
+    .attr("y", 275)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "#A37519")
+
+  st_demo_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 240)
+    // .style("text-anchor", "middle")
+    .text("Prison");
+
+  st_demo_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 265)
+    // .style("text-anchor", "middle")
+    .text("Probation");
+
+  st_demo_svg.append("text")
+    .attr("x", 45)
+    .attr("y", 290)
+    // .style("text-anchor", "middle")
+    .text("Parole");
 
   // update if slices already exist
   if (prison==0 && parole==0 && probation==0) {
@@ -1692,6 +1775,8 @@ var initVis = function (error, stateJson, elecData, incData) {
   //     })
   //     .attr("transform", "translate(130, 120)")
   //     .each(function(d) { this._current = d; });
+
+
 
 
   // load in our central election data file
