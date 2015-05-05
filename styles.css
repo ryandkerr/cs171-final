@@ -46,6 +46,10 @@ h1 {
   font-family: neou;
 }
 
+#title {
+  text-align: center;
+}
+
 /*.Arizona {
     fill: #456712
 }*/
