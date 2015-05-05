@@ -1095,7 +1095,7 @@ var updateVis = function () {
         .attr("y", function(d) {
           return d3.mouse(this)[1] - 60;
         })
-        .attr("width", 90)
+        .attr("width", 125)
         .attr("height", 50)
         .attr("fill", "black")
         .attr("fill-opacity", .75);
@@ -1111,6 +1111,25 @@ var updateVis = function () {
         })
         .attr("y", function(d) {
           return d3.mouse(this)[1] - 45;
+        });
+
+      tip.append("text")
+        .text(function() {
+          var noodle = 0;
+
+          ELECGLOBAL.forEach(function(d) {
+            if(d.name == that.id && d.year == CURRENT_YEAR){
+              noodle = d.gopEV + d.demEV + d.thirdEV; 
+            }
+          })
+          return "Electoral Votes: " + noodle;
+        })
+        .attr("fill", "white")
+        .attr("x", function(d) {
+          return d3.mouse(this)[0] - 25;
+        })
+        .attr("y", function(d) {
+          return d3.mouse(this)[1] - 30;
         });
     })
     .on("mouseout", function(d) {
