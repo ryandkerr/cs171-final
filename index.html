@@ -1605,7 +1605,7 @@ var updateVis = function () {
   });
 
   var stCompHeight = 300;
-  var stCompWidth = (getInnerWidth(d3.select("#stCompare")) - 55);
+  var stCompWidth = (getInnerWidth(d3.select("#stCompare")) - 25);
 
   var xComp = d3.scale.linear().range([35, stCompWidth]);
   var yComp = d3.scale.linear().range([stCompHeight, 0]);
@@ -1671,45 +1671,107 @@ var updateVis = function () {
       }
     });
 
-  comp_bars.enter().append("text")
-    .text("test")
-    .attr("x", function(d, i) {
-      return i * (comp_width + 2) + 35;
-    })
-    .attr("y", function(d) {
-      return stCompHeight + 30;
-    })
+  // comp_bars.enter().append("text")
+  //   .text("test")
+  //   .attr("x", function(d, i) {
+  //     return i * (comp_width + 2) + 35;
+  //   })
+  //   .attr("y", function(d) {
+  //     return stCompHeight + 30;
+  //   })
     // .attr("transform", "rotate(90)");
 
   comp_bars = st_comp_svg.selectAll("rect")
     .data(comp_filtered);
+
+  var getMargin = function(d) {
+    var margin = 0;
+    var party = "";
+
+    if(d.thirdPct != null) {
+      if(d.thirdPct > d.gopPct && d.thirdPct > d.demPct) {
+        party = d.thirdName;
+      } else if(d.gopPct > d.demPct) {
+        party = "gop";
+      } else {
+        party = "dem";
+      }
+
+      var sorted = [d.gopPct, d.demPct, d.thirdPct].sort(function (a, b) {
+        if(a < b) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      margin = (sorted[0] - sorted[1])/100;
+    } else {
+      if(d.gopPct > d.demPct) {
+        party = "gop";
+      } else {
+        party = "dem";
+      }
+      margin = Math.abs(d.gopPct - d.demPct)/100;
+    }
+
+    return [margin, party];
+  };
 
   comp_bars.transition().duration(500)
     .attr("x", function(d, i) {
       return i * (comp_width + 2) + 35;
     })
     .attr("y", function(d) {
-      return yComp(Math.abs(d.gopPct - d.demPct)/100);
+      return yComp(getMargin(d)[0]);
     })
     .attr("width", comp_width)
     .attr("height", function(d) {
-      return stCompHeight + 10 - yComp(Math.abs(d.gopPct - d.demPct)/100);
+      return stCompHeight + 10 - yComp(getMargin(d)[0]);
     })
     .attr("fill", function(d) {
-      if(d.gopPct > d.demPct) {
+      
+      var winner = getMargin(d)[1];
+
+      if(winner == "gop") {
         if(d.state == clickState) {
           return gop_colors[3];
         } else {
           return gop_colors[0];
         }
-      } else {
+      } else if(winner == "dem") {
         if(d.state == clickState) {
           return dem_colors[3];
         } else {
           return dem_colors[0];
         }
-      }
+      } else if(winner == "States' Rights") {
+        if(d.state == clickState) {
+          return sr_colors[3];
+        } else {
+          return sr_colors[0];
+        }
+      } else if(winner == "Progressive (1924)") {
+        if(d.state == clickState) {
+          return prog24_colors[3];
+        } else {
+          return prog24_colors[0];
+        }
+      } else if(winner == "Progressive (1912)") {
+        if(d.state == clickState) {
+          return prog12_colors[3];
+        } else {
+          return prog12_colors[0];
+        }
+      } else if(winner == "American Independent") {
+        if(d.state == clickState) {
+          return am_colors[3];
+        } else {
+          return am_colors[0];
+        }
+    }
     });
+
+  comp_bars.exit().remove();
 
  
 
