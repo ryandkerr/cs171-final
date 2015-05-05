@@ -32,7 +32,7 @@ body {
   text-align: center;
 }
 
-#col1, #presVis {
+#col1, #presVis, #storyCol {
   box-shadow: 0 0 2px black;
   background-color: #FFFFFF;
   height:625px;
