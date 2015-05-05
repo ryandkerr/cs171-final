@@ -1592,7 +1592,7 @@ var updateVis = function () {
   var stCompHeight = 300;
   var stCompWidth = (getInnerWidth(d3.select("#stCompare")) - 25);
 
-  var xComp = d3.scale.linear().range([35, stCompWidth]);
+  var xComp = d3.scale.linear().range([45, stCompWidth]);
   var yComp = d3.scale.linear().range([stCompHeight, 0]);
 
   var yearsComp = []
@@ -1621,8 +1621,16 @@ var updateVis = function () {
 
   st_comp_svg.append("g")
     .attr("class", "axis")
-    .attr("transform", "translate(35,10)")
+    .attr("transform", "translate(45,10)")
     .call(yAxisComp);
+
+  st_comp_svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", (0))
+    .attr("x",0 - (stCompHeight / 2))
+    .attr("dy", "1em")
+    .style("text-anchor", "middle")
+    .text("Percent Margin of Victory");
 
   var comp_width = 4;
 
@@ -1631,7 +1639,7 @@ var updateVis = function () {
 
   comp_bars.enter().append("rect")
     .attr("x", function(d, i) {
-      return i * (comp_width + 2) + 35;
+      return i * (comp_width + 2) + 45;
     })
     .attr("y", function(d) {
       return yComp(Math.abs(d.gopPct - d.demPct)/100);
@@ -1704,7 +1712,7 @@ var updateVis = function () {
 
   comp_bars.transition().duration(500)
     .attr("x", function(d, i) {
-      return i * (comp_width + 2) + 35;
+      return i * (comp_width + 2) + 45;
     })
     .attr("y", function(d) {
       return yComp(getMargin(d)[0]);
