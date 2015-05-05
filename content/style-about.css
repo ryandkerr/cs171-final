@@ -5,7 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400);
 
 
-h1 {
+h1, .header-right-clickable {
   /*font-family: 'Raleway', sans-serif;*/
   font-family: 'Alegreya Sans SC', sans-serif;
   font-weight: 400;
@@ -14,12 +14,16 @@ h1 {
 body {
   /*font-family: 'Raleway', sans-serif;*/
   /*font-family: 'Josefin Slab', serif;*/
-  /*font-family: 'Lato', sans-serif;*/
+  font-family: 'Lato', sans-serif;
   /*font-family: 'Source Sans Pro', sans-serif;*/
-  font-family: 'Alegreya Sans SC', sans-serif;
+  /*font-family: 'Alegreya Sans SC', sans-serif;*/
   background-color: #ddd;
 }
 
 #title {
   text-align: center;
+}
+
+.page-header {
+  font-family: 'Alegreya Sans SC', sans-serif;
 }
