@@ -883,6 +883,7 @@ var updateVis = function () {
   var felon;
   var nonCit;
   var other;
+  var prisonT; var probationT; var paroleT; var felonT; var nonCitT; var otherT;
 
   // updating values
   ELECGLOBAL.forEach(function(d) {
@@ -902,6 +903,14 @@ var updateVis = function () {
       // unsure about the following 2 defns
       nonCit = d.pctNonCit * d.VAP
       other = d.VAP - nonCit - felon
+    } else if (d.year == CURRENT_YEAR && d.state == "Totals") {
+      prisonT = d.prison;
+      probationT = d.probation;
+      paroleT = d.parole;
+      felonT = d.felon;
+      // unsure about the following 2 defns
+      nonCitT = d.pctNonCit * d.VAP
+      otherT = d.VAP - nonCitT - felonT
     }
   })
 
@@ -943,7 +952,7 @@ var updateVis = function () {
 
   // select pie paths
   var elig2_path = elig2_svg.selectAll("#categ")
-      .data(pie([nonCit, other, felon]));
+      .data(pie([nonCitT, otherT, felonT]));
 
   var elig2_group = elig2_path.enter().append("g");
 
@@ -1084,7 +1093,7 @@ var updateVis = function () {
 
     // select pie paths
   var demo2_path = st_demo2_svg.selectAll("#demographic2")
-      .data(pie([prison, probation, parole]));
+      .data(pie([prisonT, probationT, paroleT]));
 
   var demo2_group = demo2_path.enter().append("g");
 
