@@ -1021,9 +1021,9 @@ var updateVis = function () {
           return d3.mouse(this)[0] - 30;
         })
         .attr("y", function(d) {
-          return d3.mouse(this)[1] - 70;
+          return d3.mouse(this)[1] - 60;
         })
-        .attr("width", 75)
+        .attr("width", 90)
         .attr("height", 50)
         .attr("fill", "black");
 
@@ -1038,7 +1038,7 @@ var updateVis = function () {
           return d3.mouse(this)[0] - 25;
         })
         .attr("y", function(d) {
-          return d3.mouse(this)[1] - 55;
+          return d3.mouse(this)[1] - 45;
         });
     })
     .on("mouseout", function(d) {
@@ -1097,10 +1097,6 @@ var updateVis = function () {
       }
     });
     
-
-  state_paths.append("title")
-    .text(function(d) {return d.properties.NAME});
-
   state_paths.transition().duration(500)
     .attr("fill", function() { 
     var that = this;
