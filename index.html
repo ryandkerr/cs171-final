@@ -82,7 +82,7 @@
     
     <div class="row"> 
       <!-- <div class="col-md-3" id="presVis" style="background-color: #FFD8D8"> -->
-      <div class="col-md-3" id="presVis">
+      <div class="col-md-3" id="presVis" style="text-align:center">
         <h2 class="centered"><span class="cur">2012</span> Election</h2>
         <h4 class="centered">Winners: <span id="winner"></span></h4>
         <h4 class="centered">Runners-up: <span id="loser"></span></h4>
@@ -184,8 +184,10 @@ var choro_svg = d3.select("#choroVis")
 // create svg canvas for president vis
 var pres_svg = d3.select("#presVis")
   .append("svg")
-  .attr("width", getInnerWidth(d3.select("#presVis")))
+  // .attr("width", getInnerWidth(d3.select("#presVis")))
+  .attr("width", 260)
   .attr("height", 450);
+  // .attr("class", "centered");
 
 // create svg canvas for president vis
 var st_demo_svg = d3.select("#stDemographic")
