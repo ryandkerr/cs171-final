@@ -18,10 +18,10 @@
   src: url('../font/roboto/Roboto-Thin.ttf');
 }
 
-@font-face {
+/*@font-face {
   font-family: neou;
   src: url('../font/neou/Neou-Thin.ttf');
-}
+}*/
 
 .states {
     fill: #FFFFFF
@@ -38,7 +38,7 @@ body {
 }
 
 h1 {
-  font-family: neou;
+  font-family: neouthin;
 }
 
 #title, #state-div {
