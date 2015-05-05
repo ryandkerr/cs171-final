@@ -688,30 +688,38 @@ var updateVis = function () {
 
   
   //get state demographic data
-  var st_white = 0;
-  var st_black = 0;
-  var st_native = 0;
-  var st_asian = 0;
-  var st_pacific = 0;
-  var st_mult = 0;
+  // var st_white = 0;
+  // var st_black = 0;
+  // var st_native = 0;
+  // var st_asian = 0;
+  // var st_pacific = 0;
+  // var st_mult = 0;
+  var prison = 0;
+  var probation = 0;
+  var parole = 0;
 
   // updating values
   ELECGLOBAL.forEach(function(d) {
     // make sure all names line up between map json and data json
     if(d.year == CURRENT_YEAR && d.state == clickState) {
-      st_white = d.white;
-      st_black = d.black;
-      st_native = d.native;
-      st_asian = d.asian;
-      st_pacific = d.pacific;
-      st_mult = d.mult;
-      st_name = d.state;
+      // st_white = d.white;
+      // st_black = d.black;
+      // st_native = d.native;
+      // st_asian = d.asian;
+      // st_pacific = d.pacific;
+      // st_mult = d.mult;
+      // st_name = d.state;
+      prison = d.prison;
+      probation = d.probation;
+      parole = d.parole;
     }
   })
 
   // select pie paths
   var demo_path = st_demo_svg.selectAll("#demographic")
-      .data(pie([st_white, st_black, st_native, st_asian, st_pacific, st_mult]));
+      .data(pie([prison, probation, parole]));
+
+  var demo_group = demo_path.enter().append("g");
 
   // add new slices for first time
   demo_path.enter().append("path")
@@ -724,6 +732,48 @@ var updateVis = function () {
       })
       .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
+
+  demo_labels = demo_group.append("text")
+    .attr("class", "text")
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .attr("text-anchor", "middle")
+    .text(function(d) {
+      // return total electoral votes
+      if(d.value > 0) {
+        return d.value;
+      }
+    });
+
+  // update if slices already exist
+  var demo_path = st_demo_svg.selectAll("#demographic")
+      .data(pie([prison, probation, parole]));
+
+  demo_path
+    .transition().duration(500).attrTween("d", arcTween);
+
+  demo_text = st_demo_svg.selectAll(".text")
+      .data(pie([prison, probation, parole]));
+
+  demo_text.transition().duration(500)
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .text(function(d) {
+      // return total electoral votes
+      if(d.value > 0) {
+        return d.value;
+      }
+    });;
+
+  
+
+
 
   // prepare state-party line graph
   function isGood(obj) {
