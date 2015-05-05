@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: quicksand-book;
   src: url('../font/quicksand/Quicksand_Book.otf');
 }
@@ -17,11 +17,13 @@
   font-family: roboto-light;
   src: url('../font/roboto/Roboto-Thin.ttf');
 }
-
+*/
 /*@font-face {
   font-family: neou;
   src: url('../font/neou/Neou-Thin.ttf');
 }*/
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
 
 .states {
     fill: #FFFFFF
@@ -33,12 +35,13 @@
 }
 
 body {
-  font-family: lane;
+  font-family: Tahoma;
   background-color: #ddd;
 }
 
 h1 {
-  font-family: neouthin;
+  /*font-family: neouthin;*/
+  font-family: 'Raleway', sans-serif;
 }
 
 #title, #state-div {
