@@ -161,7 +161,7 @@ var getInnerWidth = function(element) {
 
 // global variables
 var WIDTH = getInnerWidth(d3.select("#col1")) - 15;
-var HEIGHT = 500;
+var HEIGHT = 600;
 var ELECGLOBAL;
 var CURRENT_YEAR = 2012;
 
@@ -1100,7 +1100,7 @@ var updateVis = function () {
           return d3.mouse(this)[1] - 60;
         })
         .attr("width", 125)
-        .attr("height", 50)
+        .attr("height", 40)
         .attr("fill", "black")
         .attr("fill-opacity", .75);
 
