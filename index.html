@@ -1069,14 +1069,17 @@ var updateVis = function () {
   x.domain(d3.extent(ELECFILTERED, function(d) { return d.year }));
   // y.domain([0, d3.max(ELECFILTERED, function(d) {
   //    return Math.max(d.gopPct, d.demPct, d.thirdPct)})]);
-  y.domain([0, 105]); 
+  y.domain([0, 100]); 
+
   st_party_svg.append("path")
     .attr("class", "pathLine")
+    .attr("transform", "translate(0,5)")
     .attr("d", valueline(ELECFILTERED));
     
   st_party_svg.append("path")
     .style("stroke", "red")
     .attr("class", "pathLine")
+    .attr("transform", "translate(0,5)")
     .attr("d", valueline2(ELECFILTERED));
 
   // st_party_svg.append("path")
@@ -1102,7 +1105,7 @@ var updateVis = function () {
 
   st_party_svg.append("g")          
     .attr("class", "axis")
-    .attr("transform", "translate(0," + stPartyHeight + ")")
+    .attr("transform", "translate(0," + (stPartyHeight+5) + ")")
     .call(xAxis)
     .selectAll("text")
     // .attr("x", -12)
@@ -1127,7 +1130,7 @@ var updateVis = function () {
 
   st_party_svg.append("g")
     .attr("class", "axis")
-    .attr("transform", "translate(35,0)")
+    .attr("transform", "translate(35,5)")
     .call(yAxis); 
 
   // st_party_svg.append("g")
