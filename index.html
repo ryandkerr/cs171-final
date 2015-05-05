@@ -129,14 +129,17 @@
     </div>
 
     <div class="row">
-      <div class="col-md-12" id="stCompare">
+      <div class="col-md-3" id="stCompare">
         state to nation comparison
       </div>
       <!--replicate stParty for national EV and national pct-->
+      <div class="col-md-6" id="stInc">
+        state median household income
+      </div>
     </div>
 
   </div>
-
+<!-- <script src="data/medInc.js"></script> -->
 <script>
 
 // some of this code is taken from these sources:
@@ -163,6 +166,7 @@ var getInnerWidth = function(element) {
 var WIDTH = getInnerWidth(d3.select("#col1")) - 15;
 var HEIGHT = 500;
 var ELECGLOBAL;
+var INCGLOBAL;
 var CURRENT_YEAR = 2012;
 
 // scale to assign margin of victory to bins, which end up as colors
@@ -207,6 +211,11 @@ var st_party_svg = d3.select("#stParty")
 var st_turnt_svg = d3.select("#stTurnt")
   .append("svg")
   .attr("width", getInnerWidth(d3.select("#stTurnt")))
+  .attr("height", 450);
+
+var st_inc_svg = d3.select("#stInc")
+  .append("svg")
+  .attr("width", getInnerWidth(d3.select("#stInc")))
   .attr("height", 450);
 
 // create usa projection
@@ -888,6 +897,8 @@ var updateVis = function () {
   var ELECFILTERED = ELECGLOBAL.filter(isGood);
   var ELEC_TOTALS = ELECGLOBAL.filter(function(obj) {return obj.state == "Totals"})
 
+  var INCFILTERED = INCGLOBAL.filter(isGood);
+  var INC_TOTALS = INCGLOBAL.filter(function(obj) {return obj.state == "Totals"})
 
   var stPartyHeight = 300;
   var stPartyWidth = (getInnerWidth(d3.select("#stParty")) - 55);
@@ -1072,6 +1083,72 @@ var updateVis = function () {
     .attr("class", "axis")
     .attr("transform", "translate(35,10)")
     .call(yAxisTurnt); 
+
+  //
+  //
+  //
+  // income
+  var stIncHeight = 300;
+  var stIncWidth = (getInnerWidth(d3.select("#stInc")) - 55);
+
+  function formatPct(pct) {
+    //pct *= 100;
+    return pct;
+  }
+
+  var xInc = d3.scale.linear().range([35, stIncWidth]);
+  var yInc = d3.scale.linear().range([stIncHeight, 0]);
+
+  var yearsInc = []
+  tickYear = 1984;
+  while (tickYear <= 2012) {
+    yearsTurnt.push(tickYear)
+    tickYear += 1
+  }
+
+  var xAxisInc = d3.svg.axis().scale(xInc)
+    .tickFormat(function(d) {return formatYear(d)})
+    .tickValues(yearsInc)
+    .orient("bottom").ticks(5);
+
+  var yAxisInc = d3.svg.axis().scale(yInc)
+    .tickFormat(function(d) {return formatPct(d)})
+    .orient("left").ticks(5);
+
+  var valuelineInc = d3.svg.line()
+    .x(function(d, i) { if (d.year >= 1984) { {console.log(d.year);console.log(xInc(d.year));return xInc(d.year)}}} )
+    .y(function(d) { if (d.year >= 1984) {console.log(d.medInc);console.log("this" +yInc(d.medInc));return yInc(d.medInc)}});
+    
+  var valuelineInc2 = d3.svg.line()  
+    .x(function(d, i) {if (d.year >= 1984) { return xInc(d.year)}})
+    .y(function(d) { if (d.year >= 1984) {return yInc(d.medInc)}}); 
+
+  xInc.domain([1984, 2012]);
+  yInc.domain([0, 80000])
+
+  st_inc_svg.append("path")
+    .attr("class", "pathLine")
+    .style("stroke", "green")
+    .attr("d", valuelineInc(INCFILTERED));
+
+  st_inc_svg.append("path")
+    .attr("class", "pathLine")
+    .style("stroke", "purple")
+    .attr("d", valuelineInc2(INC_TOTALS));
+
+  
+  st_inc_svg.append("g")          
+    .attr("class", "axis")
+    .attr("transform", "translate(0," + (stIncHeight+10) + ")")
+    .call(xAxisInc)
+    .selectAll("text")
+    // .attr("x", -12)
+    // .attr("transform", "rotate(-70)");
+
+  st_inc_svg.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(35,10)")
+    .call(yAxisInc); 
 
   // update choropleth
   var state_paths = states.selectAll("path");
@@ -1281,10 +1358,11 @@ var updateVis = function () {
 
 
 // initializes the visualization
-var initVis = function (error, stateJson, elecData) {
+var initVis = function (error, stateJson, elecData, incData) {
   // assign election data global
   ELECGLOBAL = elecData
-  
+  INCGLOBAL = incData;
+
   // draw states
 
 
@@ -1360,6 +1438,7 @@ var startHere = function () {
   queue()
     .defer(d3.json, "data/us_states_small.json")
     .defer(d3.json, "data/jsonMain.json")
+    .defer(d3.json, "data/medInc.json")
     .await(initVis);
 };
 
