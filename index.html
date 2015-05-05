@@ -1516,6 +1516,7 @@ var updateVis = function () {
     .text("Nation");
 
 
+  // state comparison to nation view
   var comp_filtered = ELECGLOBAL.filter(function(d) {
     return d.year == CURRENT_YEAR;
   });
@@ -1568,20 +1569,31 @@ var updateVis = function () {
 
   var comp_width = 4;
 
-  st_comp_svg.selectAll("rect")
-    .data(comp_filtered)
-    .enter().append("rect")
+  var comp_bars = st_comp_svg.selectAll("rect")
+    .data(comp_filtered);
+
+  comp_bars.enter().append("rect")
     .attr("x", function(d, i) {
       return i * (comp_width + 2) + 35;
     })
-    .attr("y", function(d, i) {
-      return stCompHeight+10 - i * 2;
+    .attr("y", function(d) {
+      return yComp(Math.abs(d.gopPct - d.demPct)/100);
     })
     .attr("width", comp_width)
-    .attr("height", function(d, i) {
-      return i * 2;
+    .attr("height", function(d) {
+      return stCompHeight + 10 - yComp(Math.abs(d.gopPct - d.demPct)/100);
     })
     .attr("fill", "black");
+
+  comp_bars.enter().append("text")
+    .text("test")
+    .attr("x", function(d, i) {
+      return i * (comp_width + 2) + 35;
+    })
+    .attr("y", function(d) {
+      return yComp(Math.abs(d.gopPct - d.demPct)/100);
+    });
+
  
 
 
