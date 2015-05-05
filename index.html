@@ -147,22 +147,22 @@
     </div>
 
     <div class="row" id="state-div">
-      <h2>State Views (currently showing <span id="clickState">Florida</span>, <span class="cur">2012</span>)</h2>
+      <h2>State Views (currently showing <span class="clickState">Florida</span>, <span class="cur">2012</span>)</h2>
     </div>
     
     <div class="row">
       <div class="col-md-4" id="stCompare">
-        <div id="state-title">state to nation comparison</div> <br>
+        <div id="state-title"><span class="clickState">Florida</span> to nation comparison</div> <br>
       </div>      
       
     </div>
 
 
     <div class="row" id="state-div-size">      
-      <div class="col-md-4" id="stParty" style="background-color: #D6FF65">
+      <div class="col-md-4" id="stParty">
         <div id="state-title">state party line graph</div> <br>
       </div>
-      <div class="col-md-3" id="stTurnt" style="background-color: #D6FFEB">
+      <div class="col-md-3" id="stTurnt">
         <div id="state-title">state turnout</div> <br>
       </div>
       <!--replicate stParty for national EV and national pct-->
@@ -1890,7 +1890,8 @@ var updateVis = function () {
   state_paths
     .on("click", function() {
       clickState = this.id;
-      document.getElementById("clickState").innerHTML = clickState;
+      document.getElementsByClassName('clickState')[0].innerHTML = clickState;
+      document.getElementsByClassName('clickState')[1].innerHTML = clickState;
       updateVis();
     })
     .style('cursor', 'pointer')

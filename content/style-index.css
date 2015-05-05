@@ -56,15 +56,25 @@ body {
   background-color:#E8AEB7;
 }
 
+#stParty, #stInc, #stTurnt {
+  box-shadow: 0 0 2px black;
+  height:500px;
+}
+
+#stParty {
+  background-color: #D6FF65;
+}
+
 #stInc {
   background-color: #EDFBFF;
 }
 
-
-#stInc, #stParty, #stTurnt {
-  box-shadow: 0 0 2px black;
-  height:500px;
+#stTurnt {
+  background-color: #D6FFEB;
 }
+
+
+
 
 .axis path,
 .axis line {
