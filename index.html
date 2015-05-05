@@ -154,35 +154,35 @@
       <div class="col-md-4" id="stCompare">
         <div id="state-title"><span class="clickState">Florida</span> to nation comparison</div> <br>
       </div>      
-      
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-4" id="stDemographic">
+            <div id="state-title"><span class="clickState">Florida</span> demographic pie chart</div> <br>
+            <span id="noFelon"></span>
+          </div>
+          <div class="col-md-4" id="stDemographic2">
+            <div id="state-title2">USA demographic pie chart</div> <br>
+            <span id="noFelon2"></span>
+          </div>      
+        </div>
+      </div>
     </div>
 
 
     <div class="row" id="state-div-size">      
       <div class="col-md-4" id="stParty">
-        <div id="state-title">state party line graph</div> <br>
+        <div id="state-title"><span class="clickState">Florida</span> party line graph</div> <br>
       </div>
       <div class="col-md-3" id="stTurnt">
-        <div id="state-title">state turnout</div> <br>
+            <div id="state-title"><span class="clickState">Florida</span> turnout</div> <br>
       </div>
       <!--replicate stParty for national EV and national pct-->
       <div class="col-md-5" id="stInc">
-        <div id="state-title">state median household income</div> <br>
-      </div>
-
-      <div class="col-md-8" id="stDemographic" style="background-color: #D6FFEB">
-        <div id="state-title">state demographic pie chart</div> <br>
-        <span id="noFelon"></span>
-      </div>
-      <div class="col-md-8" id="stDemographic2" style="background-color: #D6FFEB">
-        <div id="state-title2">nation demographic pie chart</div> <br>
-        <span id="noFelon2"></span>
+        <div id="state-title"><span class="clickState">Florida</span> median household income</div> <br>
       </div>
     </div>
-
-    
-
   </div>
+
 <!-- <script src="data/medInc.js"></script> -->
 <script>
 
@@ -1905,6 +1905,10 @@ var updateVis = function () {
       clickState = this.id;
       document.getElementsByClassName('clickState')[0].innerHTML = clickState;
       document.getElementsByClassName('clickState')[1].innerHTML = clickState;
+      document.getElementsByClassName('clickState')[2].innerHTML = clickState;
+      document.getElementsByClassName('clickState')[3].innerHTML = clickState;
+      document.getElementsByClassName('clickState')[4].innerHTML = clickState;
+      document.getElementsByClassName('clickState')[5].innerHTML = clickState;
       updateVis();
     })
     .style('cursor', 'pointer')
