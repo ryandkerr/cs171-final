@@ -1355,7 +1355,8 @@ var initVis = function (error, stateJson, elecData) {
     .attr("x", function(d) { return path.centroid(d)[0]; })
     .attr("y", function(d) { return path.centroid(d)[1]; })
     .attr("text-anchor", "middle")
-    .attr("id", function(d) { return d.properties.NAME.concat("txt"); });
+    .attr("font-weight", "bold")
+    .attr("id", function(d) { return d.properties.NAME.concat("txt"); }); 
   
   // create donuts for first time
   // var ev_group = pres_svg.selectAll("path, .outer")
