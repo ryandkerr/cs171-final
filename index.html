@@ -113,13 +113,17 @@
         <div id="storyControls" style="position:absolute; top:20px; left:25px; z-index: 999;">
           <div id="storyPages" class="btn-group btn-group-sm">
               <button type="button" class="btn btn-default" value='L'>&laquo</button>
-              <button type="button" class="btn btn-default btn-primary" value=1>1</button>
-              <button type="button" class="btn btn-default" value=2 onclick="debugger;">2</button>
+              <button type="button" class="btn btn-default" value=1>1</button>
+              <button type="button" class="btn btn-default" value=2>2</button>
               <button type="button" class="btn btn-default" value=3>3</button>
               <button type="button" class="btn btn-default" value=4>4</button>
               <button type="button" class="btn btn-default" value=5>5</button>
               <button type="button" class="btn btn-default" value=6>6</button>
               <button type="button" class="btn btn-default" value='R'>&raquo</button>
+          </div>
+          <br><br>
+          <div>
+          <p class="storyP"></p>
           </div>
         </div>
       </div>
@@ -187,6 +191,7 @@ var INCGLOBAL;
 var CURRENT_YEAR = 2012;
 
 
+// function to change the year and update vis, yext, and slider
 var changeYear = function(year) {
   CURRENT_YEAR = year;
   document.getElementsByClassName('cur')[0].innerHTML = CURRENT_YEAR;
@@ -195,22 +200,29 @@ var changeYear = function(year) {
   updateVis();
 }
 
+var storyP = document.getElementsByClassName("storyP")[0];
 
 // story mode button listeners
 d3.selectAll(".btn")
   .on("click", function() {
     if(this.value == 1) {
       changeYear(1912);
+      storyP.innerHTML = "This is a new story about the election.";
     } else if(this.value == 2) {
-      changeYear(1924)
+      changeYear(1924);
+      storyP.innerHTML = "This is a shitty story about the election.";
     } else if(this.value == 3) {
       changeYear(1964)
+      storyP.innerHTML = "This is a noob story about the election.";
     } else if(this.value == 4) {
       changeYear(1980)
+      storyP.innerHTML = "This is a red story about the election.";
     } else if(this.value == 5) {
       changeYear(2000)
+      storyP.innerHTML = "This is a blue story about the election.";
     } else if(this.value == 6) {
       changeYear(2012)
+      storyP.innerHTML = "This is a fish story about the election.";
     }
   })
 
