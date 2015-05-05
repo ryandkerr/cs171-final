@@ -73,17 +73,27 @@
 </head>
 
 <body>
+  <!-- <div class="container-fluid"> -->
   <div class="container-fluid">
     <div class="row" id="title"> 
       <div class="col-md-11">
         <h1>American Politics: The Past 100 Years</h1>
-        <p>Click a state or drag the slider to explore the data!</p>
+        
       </div>
       <div class="col-md-1">
         <span class="header-right-clickable">
             <a href="about/about.html">about</a>
         </span>
       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-6">
+      <p class="exploreData">Click a state or drag the slider to explore the data!</p>
+      </div>
+
     </div>
     
     <div class="row"> 
@@ -98,20 +108,22 @@
       <!-- <br> -->
       <!-- <div class="col-md-9" id="col1" style="background-color: #CCF2FF"> -->
       <div class="col-md-7" id="col1">
-        <br>
-        <!-- Slider here -->
-        <form>
-          <div>
-            <label>Year:</label>
-            <label>1912</label>
-            <label><input type="range" name="points" min='1912' max='2012' step="4" value="2012" id="year_slider" oninput="changeYear(this.value);" style="width: 300px"></label><label>2012 (Currently showing <span class="cur">2012</span>)</label>
-          </div>
-        </form>
-        <br>
         
         <div id="choroVis">
           <!-- Main Cloropleth goes here -->
         </div>
+
+        <div class="row" id="slider">
+          <!-- Slider here -->
+          <form>
+            <div>
+              <label>Year:</label>
+              <label>1912</label>
+              <label><input type="range" name="points" min='1912' max='2012' step="4" value="2012" id="year_slider" oninput="changeYear(this.value);" style="width: 300px"></label><label>2012 (Currently showing <span class="cur">2012</span>)</label>
+            </div>
+          </form>
+        </div>
+        <br>
       </div>
 
       <div class="col-md-2" id="storyCol">
@@ -133,29 +145,31 @@
         </div>
       </div>
     </div>
-      
+
     <div class="row" id="state-div">
-      <h2>State Views (currently showing <span id="clickState">Florida</span>)</h2>
+      <h2>State Views (currently showing <span id="clickState">Florida</span>, <span class="cur">2012</span>)</h2>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-4" id="stCompare">
+        <div id="state-title">state to nation comparison</div> <br>
+      </div>      
+      
     </div>
 
-    <div class="row" id="state-div-size">
-      
-      <div class="col-md-6" id="stParty" style="background-color: #D6FF65">
+
+    <div class="row" id="state-div-size">      
+      <div class="col-md-4" id="stParty" style="background-color: #D6FF65">
         <div id="state-title">state party line graph</div> <br>
       </div>
       <div class="col-md-3" id="stTurnt" style="background-color: #D6FFEB">
         <div id="state-title">state turnout</div> <br>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-3" id="stCompare">
-        <div id="state-title">state to nation comparison</div> <br>
-      </div>
       <!--replicate stParty for national EV and national pct-->
-      <div class="col-md-6" id="stInc">
+      <div class="col-md-5" id="stInc">
         <div id="state-title">state median household income</div> <br>
       </div>
+
       <div class="col-md-8" id="stDemographic" style="background-color: #D6FFEB">
         <div id="state-title">state demographic pie chart</div> <br>
         <span id="noFelon"></span>
@@ -165,6 +179,8 @@
         <span id="noFelon2"></span>
       </div>
     </div>
+
+    
 
   </div>
 <!-- <script src="data/medInc.js"></script> -->
@@ -204,6 +220,7 @@ var changeYear = function(year) {
   CURRENT_YEAR = year;
   document.getElementsByClassName('cur')[0].innerHTML = CURRENT_YEAR;
   document.getElementsByClassName('cur')[1].innerHTML = CURRENT_YEAR;
+  document.getElementsByClassName('cur')[2].innerHTML = CURRENT_YEAR;
   d3.select("#year_slider")[0][0].value = year;
   updateVis();
 }
@@ -1659,6 +1676,7 @@ var updateVis = function () {
     .text("Nation");
 
 
+  // state comparison to nation view
   var comp_filtered = ELECGLOBAL.filter(function(d) {
     return d.year == CURRENT_YEAR;
   });
@@ -1675,9 +1693,9 @@ var updateVis = function () {
   });
 
   var stCompHeight = 300;
-  var stCompWidth = (getInnerWidth(d3.select("#stCompare")) - 55);
+  var stCompWidth = (getInnerWidth(d3.select("#stCompare")) - 25);
 
-  var xComp = d3.scale.linear().range([35, stCompWidth]);
+  var xComp = d3.scale.linear().range([45, stCompWidth]);
   var yComp = d3.scale.linear().range([stCompHeight, 0]);
 
   var yearsComp = []
@@ -1689,8 +1707,8 @@ var updateVis = function () {
 
   var xAxisComp = d3.svg.axis().scale(xComp)
     .tickFormat(function(d) {return formatYear(d); })
-    .tickValues(yearsComp)
-    .orient("bottom").ticks(5);
+    .tickValues([])
+    .orient("bottom").ticks(0);
 
   var yAxisComp = d3.svg.axis().scale(yComp)
     .tickFormat(function(d) {return d*100})
@@ -1706,25 +1724,161 @@ var updateVis = function () {
 
   st_comp_svg.append("g")
     .attr("class", "axis")
-    .attr("transform", "translate(35,10)")
+    .attr("transform", "translate(45,10)")
     .call(yAxisComp);
+
+  st_comp_svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", (0))
+    .attr("x",0 - (stCompHeight / 2))
+    .attr("dy", "1em")
+    .style("text-anchor", "middle")
+    .text("Percent Margin of Victory");
+
+  st_comp_svg.append("text")      // text label for the x axis
+    .attr("transform", "translate(" + (stCompWidth / 2) + " ," + (stCompHeight + 30) + ")")
+    .style("text-anchor", "middle")
+    .text("Each bar represents a state");
+
+  st_comp_svg.append("text")      // text label for the x axis
+    .attr("transform", "translate(" + (stCompWidth / 2) + " ," + (stCompHeight + 45) + ")")
+    .style("text-anchor", "middle")
+    .text("Hilighted bar represents the selected state");
 
   var comp_width = 4;
 
-  st_comp_svg.selectAll("rect")
-    .data(comp_filtered)
-    .enter().append("rect")
+  var comp_bars = st_comp_svg.selectAll("rect")
+    .data(comp_filtered);
+
+  comp_bars.enter().append("rect")
     .attr("x", function(d, i) {
-      return i * (comp_width + 2) + 35;
+      return i * (comp_width + 2) + 45;
     })
-    .attr("y", function(d, i) {
-      return stCompHeight+10 - i * 2;
+    .attr("y", function(d) {
+      return yComp(Math.abs(d.gopPct - d.demPct)/100);
     })
     .attr("width", comp_width)
-    .attr("height", function(d, i) {
-      return i * 2;
+    .attr("height", function(d) {
+      return stCompHeight + 10 - yComp(Math.abs(d.gopPct - d.demPct)/100);
     })
-    .attr("fill", "black");
+    .attr("fill", function(d) {
+      if(d.gopPct > d.demPct) {
+        if(d.state == clickState) {
+          return gop_colors[3];
+        } else {
+          return gop_colors[0];
+        }
+      } else {
+        if(d.state == clickState) {
+          return dem_colors[3];
+        } else {
+          return dem_colors[0];
+        }
+      }
+    });
+
+  // comp_bars.enter().append("text")
+  //   .text("test")
+  //   .attr("x", function(d, i) {
+  //     return i * (comp_width + 2) + 35;
+  //   })
+  //   .attr("y", function(d) {
+  //     return stCompHeight + 30;
+  //   })
+    // .attr("transform", "rotate(90)");
+
+  comp_bars = st_comp_svg.selectAll("rect")
+    .data(comp_filtered);
+
+  var getMargin = function(d) {
+    var margin = 0;
+    var party = "";
+
+    if(d.thirdPct != null) {
+      if(d.thirdPct > d.gopPct && d.thirdPct > d.demPct) {
+        party = d.thirdName;
+      } else if(d.gopPct > d.demPct) {
+        party = "gop";
+      } else {
+        party = "dem";
+      }
+
+      var sorted = [d.gopPct, d.demPct, d.thirdPct].sort(function (a, b) {
+        if(a < b) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      margin = (sorted[0] - sorted[1])/100;
+    } else {
+      if(d.gopPct > d.demPct) {
+        party = "gop";
+      } else {
+        party = "dem";
+      }
+      margin = Math.abs(d.gopPct - d.demPct)/100;
+    }
+
+    return [margin, party];
+  };
+
+  comp_bars.transition().duration(500)
+    .attr("x", function(d, i) {
+      return i * (comp_width + 2) + 45;
+    })
+    .attr("y", function(d) {
+      return yComp(getMargin(d)[0]);
+    })
+    .attr("width", comp_width)
+    .attr("height", function(d) {
+      return stCompHeight + 10 - yComp(getMargin(d)[0]);
+    })
+    .attr("fill", function(d) {
+      
+      var winner = getMargin(d)[1];
+
+      if(winner == "gop") {
+        if(d.state == clickState) {
+          return gop_colors[3];
+        } else {
+          return gop_colors[0];
+        }
+      } else if(winner == "dem") {
+        if(d.state == clickState) {
+          return dem_colors[3];
+        } else {
+          return dem_colors[0];
+        }
+      } else if(winner == "States' Rights") {
+        if(d.state == clickState) {
+          return sr_colors[3];
+        } else {
+          return sr_colors[0];
+        }
+      } else if(winner == "Progressive (1924)") {
+        if(d.state == clickState) {
+          return prog24_colors[3];
+        } else {
+          return prog24_colors[0];
+        }
+      } else if(winner == "Progressive (1912)") {
+        if(d.state == clickState) {
+          return prog12_colors[3];
+        } else {
+          return prog12_colors[0];
+        }
+      } else if(winner == "American Independent") {
+        if(d.state == clickState) {
+          return am_colors[3];
+        } else {
+          return am_colors[0];
+        }
+    }
+    });
+
+  comp_bars.exit().remove();
+
  
 
 

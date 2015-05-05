@@ -28,7 +28,11 @@ body {
   background-color: #ddd;
 }
 
-#title, #state-div {
+#slider {
+  text-align: center;
+}
+
+#title {
   text-align: center;
 }
 
@@ -38,8 +42,17 @@ body {
   height:675px;
 }
 
+
+#state-div {
+  box-shadow: 0 0 2px black;
+  text-align: center;
+}
+
+#stCompare, #stDemographic {
+  height:700px;
+}
+
 #stCompare {
-  height:250px;
   background-color:#E8AEB7;
 }
 
@@ -47,13 +60,10 @@ body {
   background-color: #EDFBFF;
 }
 
-#state-div {
-  box-shadow: 0 0 2px black;
-}
 
-#stDemographic, #stParty, #stTurnt {
+#stInc, #stParty, #stTurnt {
   box-shadow: 0 0 2px black;
-  height:550px;
+  height:500px;
 }
 
 .axis path,
