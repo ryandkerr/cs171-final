@@ -1040,19 +1040,19 @@ var updateVis = function () {
 
   var valuelineTurnt = d3.svg.line()
     .x(function(d, i) { if (d.year > 1979) { {return xTurnt(d.year)}}} )
-    .y(function(d) {  {return yTurnt(d.turntA)}});
+    .y(function(d) { if (d.year > 1979) {return yTurnt(d.turntA)}});
     
   var valuelineTurnt2 = d3.svg.line()  
     .x(function(d, i) {if (d.year > 1979) { return xTurnt(d.year)}})
-    .y(function(d) {  {return yTurnt(d.turntE)}}); 
+    .y(function(d) { if (d.year > 1979) {return yTurnt(d.turntE)}}); 
 
   var valuelineTurnt3 = d3.svg.line()  
     .x(function(d, i) {if (d.year > 1979) { return xTurnt(d.year)}})
-    .y(function(d) {  {return yTurnt(d.turntE)}}); 
+    .y(function(d) { if (d.year > 1979) {return yTurnt(d.turntE)}}); 
 
   var valuelineTurnt4 = d3.svg.line()  
     .x(function(d, i) {if (d.year > 1979) { return xTurnt(d.year)}})
-    .y(function(d) {  {return yTurnt(d.turntA)}}); 
+    .y(function(d) { if (d.year > 1979) {return yTurnt(d.turntA)}}); 
 
   xTurnt.domain([1980, 2012]);
   yTurnt.domain([0, 1])
@@ -1137,17 +1137,19 @@ var updateVis = function () {
   st_inc_svg.append("path")
     .attr("class", "pathLine")
     .style("stroke", "green")
+    .attr("transform", "translate(20,0)")
     .attr("d", valuelineInc(INCFILTERED));
 
   st_inc_svg.append("path")
     .attr("class", "pathLine")
     .style("stroke", "purple")
+    .attr("transform", "translate(20,0)")
     .attr("d", valuelineInc2(INC_TOTALS));
 
   
   st_inc_svg.append("g")          
     .attr("class", "axis")
-    .attr("transform", "translate(0," + (stIncHeight+10) + ")")
+    .attr("transform", "translate(20," + (stIncHeight+10) + ")")
     .call(xAxisInc)
     .selectAll("text")
     // .attr("x", -12)
@@ -1155,7 +1157,7 @@ var updateVis = function () {
 
   st_inc_svg.append("g")
     .attr("class", "axis")
-    .attr("transform", "translate(35,10)")
+    .attr("transform", "translate(55,10)")
     .call(yAxisInc); 
 
   // update choropleth
