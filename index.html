@@ -1403,6 +1403,21 @@ var updateVis = function () {
 
 
 
+  var comp_filtered = ELECGLOBAL.filter(function(d) {
+    return d.year == CURRENT_YEAR;
+  });
+
+  comp_filtered.sort(function(a, b) {
+    var a_margin = a.demPct - a.gopPct;
+    var b_margin = b.demPct - b.gopPct;
+
+    if(a_margin > b_margin) {
+      return 1;
+    } else {
+      return -1;
+    } 
+  });
+
   var stCompHeight = 300;
   var stCompWidth = (getInnerWidth(d3.select("#stCompare")) - 55);
 
@@ -1437,6 +1452,23 @@ var updateVis = function () {
     .attr("class", "axis")
     .attr("transform", "translate(35,10)")
     .call(yAxisComp);
+
+  var comp_width = 4;
+
+  st_comp_svg.selectAll("rect")
+    .data(comp_filtered)
+    .enter().append("rect")
+    .attr("x", function(d, i) {
+      return i * (comp_width + 2) + 35;
+    })
+    .attr("y", function(d, i) {
+      return stCompHeight+10 - i * 2;
+    })
+    .attr("width", comp_width)
+    .attr("height", function(d, i) {
+      return i * 2;
+    })
+    .attr("fill", "black");
 
 
     
