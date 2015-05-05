@@ -278,6 +278,11 @@ var st_inc_svg = d3.select("#stInc")
   .attr("width", getInnerWidth(d3.select("#stInc")))
   .attr("height", 450);
 
+var st_comp_svg = d3.select("#stCompare")
+  .append("svg")
+  .attr("width", getInnerWidth(d3.select("#stCompare")))
+  .attr("height", 450);
+
 // create usa projection
 var projection = d3.geo.albersUsa()
   .scale(1050);
@@ -1310,6 +1315,46 @@ var updateVis = function () {
     .style("text-anchor", "middle")
     .text("Median Household Income (USD)");
 
+
+
+  var stCompHeight = 300;
+  var stCompWidth = (getInnerWidth(d3.select("#stCompare")) - 55);
+
+  var xComp = d3.scale.linear().range([35, stCompWidth]);
+  var yComp = d3.scale.linear().range([stCompHeight, 0]);
+
+  var yearsComp = []
+    tickYear = 1980;
+    while (tickYear <= 2012) {
+      yearsComp.push(tickYear)
+      tickYear += 4
+    }
+
+  var xAxisComp = d3.svg.axis().scale(xComp)
+    .tickFormat(function(d) {return formatYear(d); })
+    .tickValues(yearsComp)
+    .orient("bottom").ticks(5);
+
+  var yAxisComp = d3.svg.axis().scale(yComp)
+    .tickFormat(function(d) {return d*100})
+    .orient("left").ticks(5);
+
+  xComp.domain([1980, 2012]);
+  yComp.domain([0, 1]);
+
+  st_comp_svg.append("g")         
+    .attr("class", "axis")
+    .attr("transform", "translate(0," + (stCompHeight+10) + ")")
+    .call(xAxisComp);
+
+  st_comp_svg.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(35,10)")
+    .call(yAxisComp);
+
+
+    
+
   // update choropleth
   var state_paths = states.selectAll("path");
   var state_pattern_path = state_pattern.selectAll("path");
@@ -1625,8 +1670,6 @@ var initVis = function (error, stateJson, elecData, incData) {
   INCGLOBAL = incData;
 
   // draw states
-
-
   state_pattern.selectAll("path")
     .data(stateJson.features)
     .enter().append("path")
@@ -1658,37 +1701,6 @@ var initVis = function (error, stateJson, elecData, incData) {
     .attr("text-anchor", "middle")
     .attr("font-weight", "bold")
     .attr("id", function(d) { return d.properties.NAME.concat("txt"); }); 
-  
-  // create donuts for first time
-  // var ev_group = pres_svg.selectAll("path, .outer")
-  //     .data(pie([1, 1, 1, 1, 1, 1, 1]))
-  //   .enter()
-  //     .append("g")
-
-  // var ev_path = ev_group.append("path")
-  //     .attr("class", "outer")
-  //     .attr("fill", function(d, i) { 
-  //       if(i == 0) {
-  //         return "#ff8383";
-  //       } else if (i == 1) {
-  //         return "#75d1ff";
-  //       } else if (i == 2) {
-  //         return amer_colors[3];
-  //       } else if (i == 3) {
-  //         return dem_colors[1];
-  //       } else if (i == 4) {
-  //         return sr_colors[3];
-  //       } else if (i == 5) {
-  //         return "green";
-  //       } else if (i == 6) {
-  //         return sr_colors[3];
-  //       }
-  //     })
-  //     .attr("d", function(d) {
-  //       return arc(d);
-  //     })
-  //     .attr("transform", "translate(130, 120)")
-  //     .each(function(d) { this._current = d; });
 
 
   // load in our central election data file
