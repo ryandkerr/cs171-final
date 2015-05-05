@@ -32,11 +32,6 @@
   text-decoration: underline;
 }
 
-#col1, #presVis {
-  box-shadow: 0 0 2px black;
-  background-color: #FFFFFF;
-}
-
 body {
   font-family: lane;
   background-color: #ddd;
@@ -46,8 +41,19 @@ h1 {
   font-family: neou;
 }
 
-#title {
+#title, #state-div {
   text-align: center;
+}
+
+#col1, #presVis {
+  box-shadow: 0 0 2px black;
+  background-color: #FFFFFF;
+  height:600px;
+}
+
+#stCompare {
+  height:250px;
+  background-color:#E8AEB7;
 }
 
 /*.Arizona {

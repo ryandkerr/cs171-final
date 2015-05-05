@@ -73,7 +73,7 @@
 </head>
 
 <body>
-  <!-- <div class="container"> -->
+  <div class="container-fluid">
     <div class="row" id="title"> 
       <h1>American Politics: The Past 100 Years</h1>
       <p>Click a state or drag the slider to explore the data!</p>
@@ -108,11 +108,12 @@
         <div id="choroVis">
           <!-- Main Cloropleth goes here -->
         </div>
-
       </div>
+    </div>
       
-
-    <br>State Views (currently showing <span id="clickState">Florida</span>)
+    <div class="row" id="state-div">
+      <h2>State Views (currently showing <span id="clickState">Florida</span>)</h2>
+    </div>
 
     <div class="row">
       <div class="col-md-3" id="stDemographic" style="background-color: #D6FFEB">
@@ -125,11 +126,15 @@
       <div class="col-md-3" id="stTurnt" style="background-color: #D6FFEB">
         state turnout
       </div>
-      <div class="col-md-1" id="stCompare" style="background-color: #D6FFEB">
+    </div>
+
+    <div class="row">
+      <div class="col-md-12" id="stCompare">
         state to nation comparison
       </div>
       <!--replicate stParty for national EV and national pct-->
     </div>
+
   </div>
 
 <script>
