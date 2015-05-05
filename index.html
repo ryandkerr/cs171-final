@@ -190,6 +190,7 @@ var changeYear = function(year) {
   CURRENT_YEAR = year;
   document.getElementsByClassName('cur')[0].innerHTML = CURRENT_YEAR;
   document.getElementsByClassName('cur')[1].innerHTML = CURRENT_YEAR;
+  d3.select("#year_slider")[0][0].value = year;
   updateVis();
 }
 
@@ -200,20 +201,15 @@ d3.selectAll(".btn")
     if(this.value == 1) {
       changeYear(1912);
     } else if(this.value == 2) {
-      CURRENT_YEAR = 1924;
-      updateVis();
+      changeYear(1924)
     } else if(this.value == 3) {
-      CURRENT_YEAR = 1964;
-      updateVis();
+      changeYear(1964)
     } else if(this.value == 4) {
-      CURRENT_YEAR = 1980;
-      updateVis();
+      changeYear(1980)
     } else if(this.value == 5) {
-      CURRENT_YEAR = 2000;
-      updateVis();
+      changeYear(2000)
     } else if(this.value == 6) {
-      CURRENT_YEAR = 2012;
-      updateVis();
+      changeYear(2012)
     }
   })
 
