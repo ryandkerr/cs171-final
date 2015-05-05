@@ -1110,6 +1110,22 @@ var updateVis = function () {
     // this is bad because labels don't line up with ticks
     // .attr("transform", "rotate(-70)");
 
+  var margin_bottom = 50;
+  var margin_left = 4;
+
+  st_party_svg.append("text")      // text label for the x axis
+    .attr("transform", "translate(" + (stPartyWidth / 2) + " ," + (stPartyHeight + margin_bottom) + ")")
+    .style("text-anchor", "middle")
+    .text("Year");
+
+  st_party_svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", (0 - margin_left))
+    .attr("x",0 - (stPartyHeight / 2))
+    .attr("dy", "1em")
+    .style("text-anchor", "middle")
+    .text("Percentage of Popular Vote");
+
   st_party_svg.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(35,0)")
@@ -1128,7 +1144,7 @@ var updateVis = function () {
   var stTurntWidth = (getInnerWidth(d3.select("#stTurnt")) - 55);
 
   function formatPct(pct) {
-    pct *= 100;
+    pct = pct * 100;
     return pct;
   }
 
