@@ -730,7 +730,7 @@ var updateVis = function () {
 
   // select pie paths
   var elig_path = elig_svg.selectAll("#categ")
-      .data(pie([felon, nonCit, other]));
+      .data(pie([nonCit, other, felon]));
 
   var elig_group = elig_path.enter().append("g");
 
@@ -765,7 +765,7 @@ var updateVis = function () {
   // update if slices already exist
 
   var elig_path = elig_svg.selectAll("#categ")
-      .data(pie([felon, nonCit, other]));
+      .data(pie([nonCit, other, felon]));
 
   elig_path
     .transition().duration(500)
@@ -774,7 +774,7 @@ var updateVis = function () {
       });
 
   elig_text = elig_svg.selectAll(".text")
-      .data(pie([felon, nonCit, other]));
+      .data(pie([nonCit, other, felon]));
 
   var rounded = d3.format(".1")
 
