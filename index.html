@@ -197,30 +197,30 @@ var changeYear = function(year) {
   updateVis();
 }
 
-var storyP = document.getElementsByClassName("storyP")[0];
+var story0 = document.getElementsByClassName("storyP")[0];
 
 // story mode button listeners
 d3.selectAll(".btn")
   .on("click", function() {
     if(this.value == 1) {
       changeYear(1912);
-      storyP.innerHTML = "This is a new story about the election.";
+      story0.innerHTML = "This is a new story about the election.";
       setTimeout(function() { changeYear(1936) }, 5000);
     } else if(this.value == 2) {
       changeYear(1924);
-      storyP.innerHTML = "This is a shitty story about the election.";
+      story0.innerHTML = "This is a shitty story about the election.";
     } else if(this.value == 3) {
       changeYear(1964)
-      storyP.innerHTML = "This is a noob story about the election.";
+      story0.innerHTML = "This is a noob story about the election.";
     } else if(this.value == 4) {
       changeYear(1980)
-      storyP.innerHTML = "This is a red story about the election.";
+      story0.innerHTML = "This is a red story about the election.";
     } else if(this.value == 5) {
       changeYear(2000)
-      storyP.innerHTML = "This is a blue story about the election.";
+      story0.innerHTML = "This is a blue story about the election.";
     } else if(this.value == 6) {
       changeYear(2012)
-      storyP.innerHTML = "This is a fish story about the election.";
+      story0.innerHTML = "This is a fish story about the election.";
     }
   })
 
