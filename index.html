@@ -959,6 +959,8 @@ var updateVis = function () {
       .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
+  var rounded = d3.format(".1")
+
   elig2_labels = elig2_group.append("text")
     .attr("class", "text")
     .attr("transform", function(d) {
@@ -971,7 +973,7 @@ var updateVis = function () {
     .text(function(d) {
       // return total 
       if(d.value > 0) {
-        return d.value;
+        return rounded((d.value/1000000).toFixed(1)) + "M";
       }
     });
 
@@ -1038,7 +1040,7 @@ var updateVis = function () {
       return "translate(" + x + ", " + y + ")";
     })
     .text(function(d) {
-      // return total electoral votes
+      // return total 
       if(d.value > 0) {
         return rounded((d.value/1000000).toFixed(1)) + "M";
       }
@@ -1098,6 +1100,8 @@ var updateVis = function () {
       .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
+  var comma = d3.format(",")
+
   demo2_labels = demo2_group.append("text")
     .attr("class", "text")
     .attr("transform", function(d) {
@@ -1110,7 +1114,7 @@ var updateVis = function () {
     .text(function(d) {
       // return total 
       if(d.value > 0) {
-        return d.value;
+        return comma(d.value);
       }
     });
 
