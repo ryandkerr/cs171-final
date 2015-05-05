@@ -1547,8 +1547,8 @@ var updateVis = function () {
 
   var xAxisComp = d3.svg.axis().scale(xComp)
     .tickFormat(function(d) {return formatYear(d); })
-    .tickValues(yearsComp)
-    .orient("bottom").ticks(5);
+    .tickValues([])
+    .orient("bottom").ticks(0);
 
   var yAxisComp = d3.svg.axis().scale(yComp)
     .tickFormat(function(d) {return d*100})
@@ -1583,7 +1583,21 @@ var updateVis = function () {
     .attr("height", function(d) {
       return stCompHeight + 10 - yComp(Math.abs(d.gopPct - d.demPct)/100);
     })
-    .attr("fill", "black");
+    .attr("fill", function(d) {
+      if(d.gopPct > d.demPct) {
+        if(d.state == clickState) {
+          return gop_colors[3];
+        } else {
+          return gop_colors[0];
+        }
+      } else {
+        if(d.state == clickState) {
+          return dem_colors[3];
+        } else {
+          return dem_colors[0];
+        }
+      }
+    });
 
   comp_bars.enter().append("text")
     .text("test")
@@ -1591,8 +1605,9 @@ var updateVis = function () {
       return i * (comp_width + 2) + 35;
     })
     .attr("y", function(d) {
-      return yComp(Math.abs(d.gopPct - d.demPct)/100);
-    });
+      return stCompHeight + 30;
+    })
+    // .attr("transform", "rotate(90)");
 
  
 
