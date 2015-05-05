@@ -1666,6 +1666,36 @@ var updateVis = function () {
     })
     // .attr("transform", "rotate(90)");
 
+  comp_bars = st_comp_svg.selectAll("rect")
+    .data(comp_filtered);
+
+  comp_bars.transition().duration(500)
+    .attr("x", function(d, i) {
+      return i * (comp_width + 2) + 35;
+    })
+    .attr("y", function(d) {
+      return yComp(Math.abs(d.gopPct - d.demPct)/100);
+    })
+    .attr("width", comp_width)
+    .attr("height", function(d) {
+      return stCompHeight + 10 - yComp(Math.abs(d.gopPct - d.demPct)/100);
+    })
+    .attr("fill", function(d) {
+      if(d.gopPct > d.demPct) {
+        if(d.state == clickState) {
+          return gop_colors[3];
+        } else {
+          return gop_colors[0];
+        }
+      } else {
+        if(d.state == clickState) {
+          return dem_colors[3];
+        } else {
+          return dem_colors[0];
+        }
+      }
+    });
+
  
 
 
