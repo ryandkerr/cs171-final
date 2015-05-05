@@ -165,8 +165,8 @@ var quantize = d3.scale.quantize()
   .range(["#ff8383", "#ff9e9e", "#ffbaba", "#ffd6d6", "#c2eaff", "#aae2ff", "#91daff", "#75d1ff"]);
 
 var demo_scale = d3.scale.ordinal()
-  .domain([0, 1, 2, 3, 4, 5]) 
-  .range(["#fae7d0", "#573719", "#c18e74", "#e8cda8", "#ceab67", "#c8aca3"]);
+  .domain([0, 1, 2]) 
+  .range(["#5C3D00", "#7A5200", "#A37519"]);
 
 // create svg canvas in chorovis div
 var choro_svg = d3.select("#choroVis")
@@ -725,7 +725,7 @@ var updateVis = function () {
   var demo_group = demo_path.enter().append("g");
 
   // add new slices for first time
-  demo_path.enter().append("path")
+  demo_group.append("path")
       .attr("id", "demographic")
       .attr("fill", function(d, i) {
         return demo_scale(i);
@@ -744,8 +744,9 @@ var updateVis = function () {
       return "translate(" + x + ", " + y + ")";
     })
     .attr("text-anchor", "middle")
+    .attr("fill", "white")
     .text(function(d) {
-      // return total electoral votes
+      // return total 
       if(d.value > 0) {
         return d.value;
       }
@@ -770,6 +771,8 @@ var updateVis = function () {
   demo_text = st_demo_svg.selectAll(".text")
       .data(pie([prison, probation, parole]));
 
+  var comma = d3.format(",")
+
   demo_text.transition().duration(500)
     .attr("transform", function(d) {
       var x = arc.centroid(d)[0] + 130;
@@ -778,8 +781,8 @@ var updateVis = function () {
     })
     .text(function(d) {
       // return total electoral votes
-      if(d.value > 0) {
-        return d.value;
+      if(d.value > 0) {console.log(d.value);
+        return comma(d.value);
       }
     });;
 
