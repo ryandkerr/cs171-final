@@ -1143,11 +1143,6 @@ var updateVis = function () {
   var stTurntHeight = 300;
   var stTurntWidth = (getInnerWidth(d3.select("#stTurnt")) - 55);
 
-  function formatPct(pct) {
-    pct = pct * 100;
-    return pct;
-  }
-
   var xTurnt = d3.scale.linear().range([35, stTurntWidth]);
   var yTurnt = d3.scale.linear().range([stTurntHeight, 0]);
 
@@ -1164,7 +1159,7 @@ var updateVis = function () {
     .orient("bottom").ticks(5);
 
   var yAxisTurnt = d3.svg.axis().scale(yTurnt)
-    .tickFormat(function(d) {return formatPct(d)})
+    .tickFormat(function(d) {return d*100})
     .orient("left").ticks(5);
 
   var valuelineTurnt = d3.svg.line()
@@ -1228,11 +1223,6 @@ var updateVis = function () {
   var stIncHeight = 300;
   var stIncWidth = (getInnerWidth(d3.select("#stInc")) - 55);
 
-  function formatPct(pct) {
-    //pct *= 100;
-    return pct;
-  }
-
   var xInc = d3.scale.linear().range([35, stIncWidth]);
   var yInc = d3.scale.linear().range([stIncHeight, 0]);
 
@@ -1249,7 +1239,7 @@ var updateVis = function () {
     .orient("bottom").ticks(5);
 
   var yAxisInc = d3.svg.axis().scale(yInc)
-    .tickFormat(function(d) {return formatPct(d)})
+    .tickFormat(function(d) {return d})
     .orient("left").ticks(5);
 
   var valuelineInc = d3.svg.line()
