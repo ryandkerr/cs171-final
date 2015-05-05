@@ -189,7 +189,7 @@ var pres_svg = d3.select("#presVis")
   .append("svg")
   // .attr("width", getInnerWidth(d3.select("#presVis")))
   .attr("width", 280)
-  .attr("height", 450);
+  .attr("height", 500);
   // .attr("class", "centered");
 
 // create svg canvas for president vis
@@ -379,6 +379,52 @@ legend.append("text")
   .text("Progressive (1912)")
   .attr("font-size", "14px")
   .attr("transform", "translate(20, 150)")
+
+legend.append("text")
+  .text("Presidential Birth States")
+  .attr("font-size", "16px")
+  .attr("transform", "translate(20, 175)")
+
+legend.append("text")
+  .text("Democratic")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(20, 190)")
+
+legend.append("text")
+  .text("Republican")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(110, 190)")
+
+legend.append("text")
+  .text("3rd Party")
+  .attr("font-size", "14px")
+  .attr("transform", "translate(200, 190)")
+
+legend.append("rect")
+  .attr("x", 20)
+  .attr("y", 195)
+  .attr("width", 80)
+  .attr("height", 40)
+  .attr("stroke", "black")
+  .attr("fill", "url(#vertical-stripe-1)");
+
+legend.append("rect")
+  .attr("x", 110)
+  .attr("y", 195)
+  .attr("width", 80)
+  .attr("height", 40)
+  .attr("stroke", "black")
+  .attr("fill", "url(#horizontal-stripe-1)");
+
+
+legend.append("rect")
+  .attr("x", 200)
+  .attr("y", 195)
+  .attr("width", 80)
+  .attr("height", 40)
+  .attr("stroke", "black")
+  .attr("fill", "url(#diagonal-stripe-1)");
+
 
 
 var addColors = function(y_coord, colors) {
