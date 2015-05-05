@@ -73,8 +73,8 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row"> 
+  <!-- <div class="container"> -->
+    <div class="row" id="title"> 
       <h1>American Politics: The Past 100 Years</h1>
       <p>Click a state or drag the slider to explore the data!</p>
     </div>
@@ -117,6 +117,7 @@
     <div class="row">
       <div class="col-md-3" id="stDemographic" style="background-color: #D6FFEB">
         state demographic pie chart 
+        <span id="noFelon"></span>
       </div>
       <div class="col-md-6" id="stParty" style="background-color: #D6FF65">
         state party line graph
@@ -164,8 +165,8 @@ var quantize = d3.scale.quantize()
   .range(["#ff8383", "#ff9e9e", "#ffbaba", "#ffd6d6", "#c2eaff", "#aae2ff", "#91daff", "#75d1ff"]);
 
 var demo_scale = d3.scale.ordinal()
-  .domain([0, 1, 2, 3, 4, 5]) 
-  .range(["#fae7d0", "#573719", "#c18e74", "#e8cda8", "#ceab67", "#c8aca3"]);
+  .domain([0, 1, 2]) 
+  .range(["#5C3D00", "#7A5200", "#A37519"]);
 
 // create svg canvas in chorovis div
 var choro_svg = d3.select("#choroVis")
@@ -688,33 +689,43 @@ var updateVis = function () {
 
   
   //get state demographic data
-  var st_white = 0;
-  var st_black = 0;
-  var st_native = 0;
-  var st_asian = 0;
-  var st_pacific = 0;
-  var st_mult = 0;
+  // var st_white = 0;
+  // var st_black = 0;
+  // var st_native = 0;
+  // var st_asian = 0;
+  // var st_pacific = 0;
+  // var st_mult = 0;
+  var prison = 0;
+  var probation = 0;
+  var parole = 0;
+  var felon;
 
   // updating values
   ELECGLOBAL.forEach(function(d) {
     // make sure all names line up between map json and data json
     if(d.year == CURRENT_YEAR && d.state == clickState) {
-      st_white = d.white;
-      st_black = d.black;
-      st_native = d.native;
-      st_asian = d.asian;
-      st_pacific = d.pacific;
-      st_mult = d.mult;
-      st_name = d.state;
+      // st_white = d.white;
+      // st_black = d.black;
+      // st_native = d.native;
+      // st_asian = d.asian;
+      // st_pacific = d.pacific;
+      // st_mult = d.mult;
+      // st_name = d.state;
+      prison = d.prison;
+      probation = d.probation;
+      parole = d.parole;
+      felon = d.felon;
     }
   })
 
   // select pie paths
   var demo_path = st_demo_svg.selectAll("#demographic")
-      .data(pie([st_white, st_black, st_native, st_asian, st_pacific, st_mult]));
+      .data(pie([prison, probation, parole]));
+
+  var demo_group = demo_path.enter().append("g");
 
   // add new slices for first time
-  demo_path.enter().append("path")
+  demo_group.append("path")
       .attr("id", "demographic")
       .attr("fill", function(d, i) {
         return demo_scale(i);
@@ -724,6 +735,60 @@ var updateVis = function () {
       })
       .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
+
+  demo_labels = demo_group.append("text")
+    .attr("class", "text")
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .text(function(d) {
+      // return total 
+      if(d.value > 0) {
+        return d.value;
+      }
+    });
+
+  // update if slices already exist
+  if (prison==0 && parole==0 && probation==0) {
+    document.getElementById("noFelon").innerHTML = "<br>N/A"
+  } else {
+    document.getElementById("noFelon").innerHTML = ""
+  }
+
+  var demo_path = st_demo_svg.selectAll("#demographic")
+      .data(pie([prison, probation, parole]));
+
+  demo_path
+    .transition().duration(500)
+    .attr("d", function(d) {
+        return arcDemo(d);
+      });
+
+  demo_text = st_demo_svg.selectAll(".text")
+      .data(pie([prison, probation, parole]));
+
+  var comma = d3.format(",")
+
+  demo_text.transition().duration(500)
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .text(function(d) {
+      // return total electoral votes
+      if(d.value > 0) {console.log(d.value);
+        return comma(d.value);
+      }
+    });;
+
+  
+
+
 
   // prepare state-party line graph
   function isGood(obj) {
@@ -771,13 +836,13 @@ var updateVis = function () {
     .x(function(d) { return x(d.year)})
     .y(function(d) {  {return y(d.gopPct)}}); 
 
-  var valueline3 = d3.svg.line()
-    .x(function(d) {  {return x(d.year)}} )
-    .y(function(d) {  {return y(d.demPct)}});
+  // var valueline3 = d3.svg.line()
+  //   .x(function(d) {  {return x(d.year)}} )
+  //   .y(function(d) {  {return y(d.demPct)}});
     
-  var valueline4 = d3.svg.line()  
-    .x(function(d) { return x(d.year)})
-    .y(function(d) {  {return y(d.gopPct)}}); 
+  // var valueline4 = d3.svg.line()  
+  //   .x(function(d) { return x(d.year)})
+  //   .y(function(d) {  {return y(d.gopPct)}}); 
 
   d3.selectAll(".pathLine")
     .remove();
@@ -798,15 +863,15 @@ var updateVis = function () {
     .attr("class", "pathLine")
     .attr("d", valueline2(ELECFILTERED));
 
-  st_party_svg.append("path")
-    .style("stroke", "brown")
-    .attr("class", "pathLine")
-    .attr("d", valueline3(ELEC_TOTALS));
+  // st_party_svg.append("path")
+  //   .style("stroke", "brown")
+  //   .attr("class", "pathLine")
+  //   .attr("d", valueline3(ELEC_TOTALS));
 
-  st_party_svg.append("path")
-    .style("stroke", "purple")
-    .attr("class", "pathLine")
-    .attr("d", valueline4(ELEC_TOTALS));
+  // st_party_svg.append("path")
+  //   .style("stroke", "purple")
+  //   .attr("class", "pathLine")
+  //   .attr("d", valueline4(ELEC_TOTALS));
 
   // if (CURRENT_YEAR == 1968) {
   //   var valueline3 = d3.svg.line()  
@@ -890,7 +955,8 @@ var updateVis = function () {
 
   st_turnt_svg.append("path")
     .attr("class", "pathLine")
-    .style("stroke", "orange")
+    .style("stroke", "green")
+    .style("stroke-dasharray", ("3, 3"))
     .attr("d", valuelineTurnt(ELECFILTERED));
 
   st_turnt_svg.append("path")
@@ -900,12 +966,13 @@ var updateVis = function () {
 
   st_turnt_svg.append("path")
     .attr("class", "pathLine")
-    .style("stroke", "yellow")
+    .style("stroke", "purple")
     .attr("d", valuelineTurnt3(ELEC_TOTALS));
 
   st_turnt_svg.append("path")
     .attr("class", "pathLine")
     .style("stroke", "purple")
+    .style("stroke-dasharray", ("3, 3"))
     .attr("d", valuelineTurnt4(ELEC_TOTALS));
 
   st_turnt_svg.append("g")          
