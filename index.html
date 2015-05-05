@@ -407,10 +407,11 @@ var addColors = function(y_coord, colors) {
 // arrays with state colors
 var dem_colors = ["#c2eaff", "#aae2ff", "#91daff", "#75d1ff"];
 var gop_colors = ["#ffd6d6", "#ffbaba", "#ff9e9e", "#ff8383"];
-var amer_colors = ["#D1B2F0", "#C299EB", "#B280E6", "#A366E0"];
-var sr_colors = ["#94704D", "#855C33", "#754719", "#663300"];
-var prog24_colors = ["#4DDB4D", "#33D633", "#19D119", "#00CC00"];
-var prog12_colors = ["#FFB84D", "#FFAD33", "#FFA319", "#FF9900"];
+// var amer_colors = ["#D1B2F0", "#C299EB", "#B280E6", "#A366E0"];
+var amer_colors = ["#C8A5F9","#BC98E7","#B08CD4","#A37FC2"];
+var sr_colors = ["#FEAD4A","#F2A346","#E69943","#DA8F3F"];
+var prog24_colors = ["#57F1A4","#4BDC98","#40C88C","#36B480"];
+var prog12_colors = ["#F8E48D","#E7D281","#D6C176","#C6B06C"];
 
 addColors(60, dem_colors);
 addColors(75, gop_colors);
@@ -585,15 +586,15 @@ var updateVis = function () {
         } else if (i == 1) {
           return "#75d1ff";
         } else if (i == 2) {
-          return "#8533D6";
+          return amer_colors[3];
         } else if (i == 3) {
-          return "blue";
+          return dem_colors[1];
         } else if (i == 4) {
-          return "orange";
+          return prog12_colors[3];
         } else if (i == 5) {
-          return "green";
+          return prog24_colors[3];
         } else if (i == 6) {
-          return "#663300";
+          return sr_colors[3];
         }
       })
       .attr("d", function(d) {
@@ -625,15 +626,15 @@ var updateVis = function () {
         } else if (i == 1) {
           return "#75d1ff";
         } else if (i == 2) {
-          return "#8533D6";
+          return amer_colors[3];
         } else if (i == 3) {
-          return "blue";
+          return dem_colors[1];
         } else if (i == 4) {
-          return "orange";
+          return prog12_colors[3];
         } else if (i == 5) {
-          return "green";
+          return prog24_colors[3];
         } else if (i == 6) {
-          return "#663300";
+          return sr_colors[3];
         }
       })
       .attr("d", function(d) {
@@ -1334,22 +1335,22 @@ var updateVis = function () {
               // purple
               var quantizeThird = d3.scale.quantize()
                 .domain([0, 20])
-                .range(["#D1B2F0","#C299EB","#B280E6","#A366E0"]);
+                .range(amer_colors);
             } else if (third_name == "Progressive (1912)") {
               // orange
               var quantizeThird = d3.scale.quantize()
                 .domain([0, 20])
-                .range(["#FFB84D","#FFAD33","#FFA319","#FF9900"]);
+                .range(prog12_colors);
             } else if (third_name == "Progressive (1924)") {
               // green
               var quantizeThird = d3.scale.quantize()
                 .domain([0, 20])
-                .range(["#4DDB4D","#33D633","#19D119","#00CC00"]);
+                .range(prog24_colors);
             } else if (third_name == "States' Rights") {
               // brown
               var quantizeThird = d3.scale.quantize()
                 .domain([0, 20])
-                .range(["#94704D","#855C33","#754719","#663300"]);
+                .range(sr_colors);
             }
             noodle = quantizeThird(d.thirdPct - Math.max(d.demPct, d.gopPct));
           }
@@ -1366,7 +1367,7 @@ var updateVis = function () {
     // .attr("class", "circles-1");
     // .attr("fill-opacity", .5)
     // .attr("fill", "url(#verticall-stripe-1) blue")
-    // .attr("fill", "blue");
+    // .attr("fill", dem_colors[1]);
     
     // state_paths.transition(5000)
     //   .attr("fill", "url(#vertical-stripe-1) blue");
@@ -1443,15 +1444,15 @@ var initVis = function (error, stateJson, elecData) {
   //       } else if (i == 1) {
   //         return "#75d1ff";
   //       } else if (i == 2) {
-  //         return "#8533D6";
+  //         return amer_colors[3];
   //       } else if (i == 3) {
-  //         return "blue";
+  //         return dem_colors[1];
   //       } else if (i == 4) {
-  //         return "orange";
+  //         return sr_colors[3];
   //       } else if (i == 5) {
   //         return "green";
   //       } else if (i == 6) {
-  //         return "#663300";
+  //         return sr_colors[3];
   //       }
   //     })
   //     .attr("d", function(d) {
