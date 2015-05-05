@@ -1124,8 +1124,8 @@ var updateVis = function () {
     .orient("left").ticks(5);
 
   var valuelineInc = d3.svg.line()
-    .x(function(d, i) { if (d.year >= 1984) { {console.log(d.year);console.log(xInc(d.year));return xInc(d.year)}}} )
-    .y(function(d) { if (d.year >= 1984) {console.log(d.medInc);console.log("this" +yInc(d.medInc));return yInc(d.medInc)}});
+    .x(function(d, i) { if (d.year >= 1984) { {return xInc(d.year)}}} )
+    .y(function(d) { if (d.year >= 1984) {;return yInc(d.medInc)}});
     
   var valuelineInc2 = d3.svg.line()  
     .x(function(d, i) {if (d.year >= 1984) { return xInc(d.year)}})
