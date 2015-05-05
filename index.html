@@ -883,6 +883,7 @@ var updateVis = function () {
   var felon;
   var nonCit;
   var other;
+  var prisonT; var probationT; var paroleT; var felonT; var nonCitT; var otherT;
 
   // updating values
   ELECGLOBAL.forEach(function(d) {
@@ -902,6 +903,14 @@ var updateVis = function () {
       // unsure about the following 2 defns
       nonCit = d.pctNonCit * d.VAP
       other = d.VAP - nonCit - felon
+    } else if (d.year == CURRENT_YEAR && d.state == "Totals") {
+      prisonT = d.prison;
+      probationT = d.probation;
+      paroleT = d.parole;
+      felonT = d.felon;
+      // unsure about the following 2 defns
+      nonCitT = d.pctNonCit * d.VAP
+      otherT = d.VAP - nonCitT - felonT
     }
   })
 
@@ -943,7 +952,7 @@ var updateVis = function () {
 
   // select pie paths
   var elig2_path = elig2_svg.selectAll("#categ")
-      .data(pie([nonCit, other, felon]));
+      .data(pie([nonCitT, otherT, felonT]));
 
   var elig2_group = elig2_path.enter().append("g");
 
@@ -959,6 +968,8 @@ var updateVis = function () {
       .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
+  var rounded = d3.format(".1")
+
   elig2_labels = elig2_group.append("text")
     .attr("class", "text")
     .attr("transform", function(d) {
@@ -971,7 +982,7 @@ var updateVis = function () {
     .text(function(d) {
       // return total 
       if(d.value > 0) {
-        return d.value;
+        return rounded((d.value/1000000).toFixed(1)) + "M";
       }
     });
 
@@ -1038,7 +1049,7 @@ var updateVis = function () {
       return "translate(" + x + ", " + y + ")";
     })
     .text(function(d) {
-      // return total electoral votes
+      // return total 
       if(d.value > 0) {
         return rounded((d.value/1000000).toFixed(1)) + "M";
       }
@@ -1082,7 +1093,7 @@ var updateVis = function () {
 
     // select pie paths
   var demo2_path = st_demo2_svg.selectAll("#demographic2")
-      .data(pie([prison, probation, parole]));
+      .data(pie([prisonT, probationT, paroleT]));
 
   var demo2_group = demo2_path.enter().append("g");
 
@@ -1098,6 +1109,8 @@ var updateVis = function () {
       .attr("transform", "translate(130, 120)")
       .each(function(d) { this._current = d; });
 
+  var comma = d3.format(",")
+
   demo2_labels = demo2_group.append("text")
     .attr("class", "text")
     .attr("transform", function(d) {
@@ -1110,7 +1123,7 @@ var updateVis = function () {
     .text(function(d) {
       // return total 
       if(d.value > 0) {
-        return d.value;
+        return comma(d.value);
       }
     });
 
