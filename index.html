@@ -117,6 +117,7 @@
     <div class="row">
       <div class="col-md-3" id="stDemographic" style="background-color: #D6FFEB">
         state demographic pie chart 
+        <span id="noFelon"></span>
       </div>
       <div class="col-md-6" id="stParty" style="background-color: #D6FF65">
         state party line graph
@@ -697,6 +698,7 @@ var updateVis = function () {
   var prison = 0;
   var probation = 0;
   var parole = 0;
+  var felon;
 
   // updating values
   ELECGLOBAL.forEach(function(d) {
@@ -712,6 +714,7 @@ var updateVis = function () {
       prison = d.prison;
       probation = d.probation;
       parole = d.parole;
+      felon = d.felon;
     }
   })
 
@@ -749,6 +752,12 @@ var updateVis = function () {
     });
 
   // update if slices already exist
+  if (prison==0 && parole==0 && probation==0) {
+    document.getElementById("noFelon").innerHTML = "<br>N/A"
+  } else {
+    document.getElementById("noFelon").innerHTML = ""
+  }
+
   var demo_path = st_demo_svg.selectAll("#demographic")
       .data(pie([prison, probation, parole]));
 
