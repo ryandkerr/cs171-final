@@ -1215,6 +1215,22 @@ var updateVis = function () {
     .attr("transform", "translate(35,10)")
     .call(yAxisTurnt); 
 
+  var margin_bottom = 50;
+  var margin_left = 4;
+
+  st_turnt_svg.append("text")      // text label for the x axis
+    .attr("transform", "translate(" + (stTurntWidth / 2) + " ," + (stTurntHeight + margin_bottom) + ")")
+    .style("text-anchor", "middle")
+    .text("Year");
+
+  st_turnt_svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", (0 - margin_left))
+    .attr("x",0 - (stTurntHeight / 2))
+    .attr("dy", "1em")
+    .style("text-anchor", "middle")
+    .text("Percentage of VAP or VEP");
+
   //
   //
   //
