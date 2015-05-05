@@ -111,7 +111,20 @@
       </div>
 
       <div class="col-md-2" id="storyCol">
-
+<!--       code taken from https://github.com/jbencook/cs171-ag-viz/blob/master/src/CountyData.html
+ -->
+        <div id="storyControls" style="position:absolute; top:20px; left:25px; z-index: 999;">
+          <div id="storyPages" class="btn-group btn-group-sm">
+              <button type="button" class="btn btn-default" value='L'>&laquo</button>
+              <button type="button" class="btn btn-default btn-primary" value=1>1</button>
+              <button type="button" class="btn btn-default" value=2>2</button>
+              <button type="button" class="btn btn-default" value=3>3</button>
+              <button type="button" class="btn btn-default" value=4>4</button>
+              <button type="button" class="btn btn-default" value=5>5</button>
+              <button type="button" class="btn btn-default" value=6>6</button>
+              <button type="button" class="btn btn-default" value='R'>&raquo</button>
+          </div>
+        </div>
       </div>
     </div>
       
@@ -141,21 +154,6 @@
         <div id="state-title">state median household income</div> <br>
       </div>
       <div class="col-md-3">
-<!--       code taken from https://github.com/jbencook/cs171-ag-viz/blob/master/src/CountyData.html
- -->
-      <div id="storyControls" style="position:absolute; top:0px; left:25px; z-index: 999;">
-          <div id="storyPages" class="btn-group btn-group-sm">
-              <button type="button" class="btn btn-default" value='L'>&laquo</button>
-              <button type="button" class="btn btn-default btn-primary" value=1>1</button>
-              <button type="button" class="btn btn-default" value=2>2</button>
-              <button type="button" class="btn btn-default" value=3>3</button>
-              <button type="button" class="btn btn-default" value=4>4</button>
-              <button type="button" class="btn btn-default" value=5>5</button>
-              <button type="button" class="btn btn-default" value=6>6</button>
-              <button type="button" class="btn btn-default" value=7>7</button>
-              <button type="button" class="btn btn-default" value='R'>&raquo</button>
-          </div>
-      </div>
       </div>
     </div>
 
@@ -210,7 +208,7 @@ var pres_svg = d3.select("#presVis")
   .append("svg")
   // .attr("width", getInnerWidth(d3.select("#presVis")))
   .attr("width", 280)
-  .attr("height", 500);
+  .attr("height", 600);
   // .attr("class", "centered");
 
 // create svg canvas for president vis
