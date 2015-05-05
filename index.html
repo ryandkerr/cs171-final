@@ -160,6 +160,10 @@
         <div id="state-title">state demographic pie chart</div> <br>
         <span id="noFelon"></span>
       </div>
+      <div class="col-md-8" id="stDemographic2" style="background-color: #D6FFEB">
+        <div id="state-title2">nation demographic pie chart</div> <br>
+        <span id="noFelon2"></span>
+      </div>
     </div>
 
   </div>
@@ -267,6 +271,16 @@ var elig_svg = d3.select("#stDemographic")
   .attr("width", getInnerWidth(d3.select("#stDemographic")))
   .attr("height", 300);
 
+var st_demo2_svg = d3.select("#stDemographic2")
+  .append("svg")
+  .attr("width", getInnerWidth(d3.select("#stDemographic2")))
+  .attr("height", 300);
+
+var elig2_svg = d3.select("#stDemographic2")
+  .append("svg")
+  .attr("width", getInnerWidth(d3.select("#stDemographic2")))
+  .attr("height", 300);
+
 // create svg canvas for stParty vis
 var st_party_svg = d3.select("#stParty")
   .append("svg")
@@ -322,7 +336,7 @@ var arcDemo = d3.svg.arc()
 
 var pie = d3.layout.pie()
   .sort(null)
-  .value(function(d) { return d; });
+  .value(function(d) { return d; }); 
 
 var arcTween = function (a) {
   var i = d3.interpolate(this._current, a);
@@ -908,6 +922,42 @@ var updateVis = function () {
       }
     });
 
+
+
+  // select pie paths
+  var elig2_path = elig2_svg.selectAll("#categ")
+      .data(pie([nonCit, other, felon]));
+
+  var elig2_group = elig2_path.enter().append("g");
+
+  // add new slices for first time
+  elig2_group.append("path")
+      .attr("id", "categ")
+      .attr("fill", function(d, i) {
+        return demo_scale(i);
+      })
+      .attr("d", function(d) {
+        return arcDemo(d);
+      })
+      .attr("transform", "translate(130, 120)")
+      .each(function(d) { this._current = d; });
+
+  elig2_labels = elig2_group.append("text")
+    .attr("class", "text")
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .text(function(d) {
+      // return total 
+      if(d.value > 0) {
+        return d.value;
+      }
+    });
+
   elig_svg.append("rect")
     .attr("x", 20)
     .attr("y", 225)
@@ -1013,6 +1063,40 @@ var updateVis = function () {
       }
     });
 
+    // select pie paths
+  var demo2_path = st_demo2_svg.selectAll("#demographic2")
+      .data(pie([prison, probation, parole]));
+
+  var demo2_group = demo2_path.enter().append("g");
+
+  // add new slices for first time
+  demo2_group.append("path")
+      .attr("id", "demographic2")
+      .attr("fill", function(d, i) {
+        return demo_scale(i);
+      })
+      .attr("d", function(d) {
+        return arcDemo(d);
+      })
+      .attr("transform", "translate(130, 120)")
+      .each(function(d) { this._current = d; });
+
+  demo2_labels = demo2_group.append("text")
+    .attr("class", "text")
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .text(function(d) {
+      // return total 
+      if(d.value > 0) {
+        return d.value;
+      }
+    });
+
 
 // var st_demo_svg = d3.select("#stDemographic")
 //   .append("svg")
@@ -1060,9 +1144,11 @@ var updateVis = function () {
 
   // update if slices already exist
   if (prison==0 && parole==0 && probation==0) {
-    document.getElementById("noFelon").innerHTML = "<br>N/A"
+    document.getElementById("noFelon").innerHTML = "<br>N/A";
+    document.getElementById("noFelon2").innerHTML = "<br>N/A";
   } else {
-    document.getElementById("noFelon").innerHTML = ""
+    document.getElementById("noFelon").innerHTML = "";
+    document.getElementById("noFelon2").innerHTML = "";
   }
 
   var demo_path = st_demo_svg.selectAll("#demographic")
