@@ -996,6 +996,7 @@ var updateVis = function () {
   
   state_paths
     .on("click", function() {
+      debugger;
       clickState = this.id;
       document.getElementById("clickState").innerHTML = clickState;
       updateVis();
@@ -1008,7 +1009,41 @@ var updateVis = function () {
     //   d3.select(this)
     //     .attr("fill", "blue");
     // })
-    .style('cursor', 'pointer');
+    .style('cursor', 'pointer')
+    .on("mouseover", function(d) {
+      var that = this;
+
+      var tip = choro_svg.append("g")
+          .attr("id", "toolTip");
+
+      tip.append("rect")
+        .attr("x", function(d) {
+          return d3.mouse(this)[0] - 30;
+        })
+        .attr("y", function(d) {
+          return d3.mouse(this)[1] - 70;
+        })
+        .attr("width", 75)
+        .attr("height", 50)
+        .attr("fill", "black");
+
+      tip.append("text")
+        .text(function() {
+          debugger;
+          // return "poo";
+          return that.id;
+        })
+        .attr("fill", "white")
+        .attr("x", function(d) {
+          return d3.mouse(this)[0] - 25;
+        })
+        .attr("y", function(d) {
+          return d3.mouse(this)[1] - 55;
+        });
+    })
+    .on("mouseout", function(d) {
+      d3.select("#toolTip").remove();
+    });
 //     .on("mouseover", function(d) {console.log('mouseover!');
 // console.log(this);
 // //Get this bar's x/y values, then augment for the tooltip
