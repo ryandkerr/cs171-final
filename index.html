@@ -187,6 +187,11 @@ var st_demo_svg = d3.select("#stDemographic")
   .attr("width", getInnerWidth(d3.select("#stDemographic")))
   .attr("height", 450);
 
+var elig_svg = d3.select("#stDemographic")
+  .append("svg")
+  .attr("width", getInnerWidth(d3.select("#stDemographic")))
+  .attr("height", 450);
+
 // create svg canvas for stParty vis
 var st_party_svg = d3.select("#stParty")
   .append("svg")
@@ -700,6 +705,8 @@ var updateVis = function () {
   var probation = 0;
   var parole = 0;
   var felon;
+  var nonCit;
+  var other;
 
   // updating values
   ELECGLOBAL.forEach(function(d) {
@@ -716,8 +723,77 @@ var updateVis = function () {
       probation = d.probation;
       parole = d.parole;
       felon = d.felon;
+      // unsure about the following 2 defns
+      nonCit = d.pctNonCit * d.VAP
+      other = d.VAP - nonCit - felon
     }
   })
+
+  // select pie paths
+  var elig_path = elig_svg.selectAll("#categ")
+      .data(pie([felon, nonCit, other]));
+
+  var elig_group = elig_path.enter().append("g");
+
+  // add new slices for first time
+  elig_group.append("path")
+      .attr("id", "categ")
+      .attr("fill", function(d, i) {
+        return demo_scale(i);
+      })
+      .attr("d", function(d) {
+        return arcDemo(d);
+      })
+      .attr("transform", "translate(130, 120)")
+      .each(function(d) { this._current = d; });
+
+  elig_labels = elig_group.append("text")
+    .attr("class", "text")
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .text(function(d) {
+      // return total 
+      if(d.value > 0) {
+        return d.value;
+      }
+    });
+
+  // update if slices already exist
+
+  var elig_path = elig_svg.selectAll("#categ")
+      .data(pie([felon, nonCit, other]));
+
+  elig_path
+    .transition().duration(500)
+    .attr("d", function(d) {
+        return arcDemo(d);
+      });
+
+  elig_text = elig_svg.selectAll(".text")
+      .data(pie([felon, nonCit, other]));
+
+  var rounded = d3.format(".1")
+
+
+  elig_text.transition().duration(500)
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .text(function(d) {
+      // return total electoral votes
+      if(d.value > 0) {
+        return rounded((d.value/1000000).toFixed(1)) + "M";
+      }
+    });;
+
+  
 
   // select pie paths
   var demo_path = st_demo_svg.selectAll("#demographic")
@@ -782,12 +858,15 @@ var updateVis = function () {
     })
     .text(function(d) {
       // return total electoral votes
-      if(d.value > 0) {console.log(d.value);
+      if(d.value > 0) {
         return comma(d.value);
       }
     });;
 
-  
+
+
+
+
 
 
 
