@@ -117,7 +117,7 @@
           <div id="storyPages" class="btn-group btn-group-sm">
               <button type="button" class="btn btn-default" value='L'>&laquo</button>
               <button type="button" class="btn btn-default btn-primary" value=1>1</button>
-              <button type="button" class="btn btn-default" value=2>2</button>
+              <button type="button" class="btn btn-default" value=2 onclick="debugger;">2</button>
               <button type="button" class="btn btn-default" value=3>3</button>
               <button type="button" class="btn btn-default" value=4>4</button>
               <button type="button" class="btn btn-default" value=5>5</button>
@@ -187,6 +187,34 @@ var HEIGHT = 600;
 var ELECGLOBAL;
 var INCGLOBAL;
 var CURRENT_YEAR = 2012;
+
+
+
+// story mode button listeners
+d3.selectAll(".btn")
+  .on("click", function() {
+    if(this.value == 1) {
+      CURRENT_YEAR = 1912;
+      updateVis();
+    } else if(this.value == 2) {
+      CURRENT_YEAR = 1924;
+      updateVis();
+    } else if(this.value == 3) {
+      CURRENT_YEAR = 1964;
+      updateVis();
+    } else if(this.value == 4) {
+      CURRENT_YEAR = 1980;
+      updateVis();
+    } else if(this.value == 5) {
+      CURRENT_YEAR = 2000;
+      updateVis();
+    } else if(this.value == 6) {
+      CURRENT_YEAR = 2012;
+      updateVis();
+    }
+  })
+
+
 
 // scale to assign margin of victory to bins, which end up as colors
 var quantize = d3.scale.quantize()
