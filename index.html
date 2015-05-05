@@ -188,7 +188,7 @@ var choro_svg = d3.select("#choroVis")
 var pres_svg = d3.select("#presVis")
   .append("svg")
   // .attr("width", getInnerWidth(d3.select("#presVis")))
-  .attr("width", 260)
+  .attr("width", 280)
   .attr("height", 450);
   // .attr("class", "centered");
 
@@ -326,64 +326,64 @@ legend.append("text")
 legend.append("text")
   .text("Margin of Victory - Popular Vote")
   .attr("font-size", "16px")
-  .attr("transform", "translate(25, 25)");
+  .attr("transform", "translate(20, 25)");
 
 // "Party"
 legend.append("text")
   .text("Party")
   .attr("text-decoration", "underline")
   .attr("font-size", "14px")
-  .attr("transform", "translate(25, 40)");
+  .attr("transform", "translate(20, 40)");
 
 // Percentages
 legend.append("text")
-  .text("0%__2%__5%__10%")
+  .text("0%__5%__10%__15%")
   .attr("text-decoration", "underline")
   .attr("font-size", "14px")
-  .attr("transform", "translate(130, 40)");
+  .attr("transform", "translate(125, 40)");
 
 // Parties
 legend.append("text")
   // .text("Democratic\nRepublican\nAmerican Independent\nState's Rights\nProgressive (1924)\nProgressive (1912)")
   .text("Democratic")
   .attr("font-size", "14px")
-  .attr("transform", "translate(25, 60)")
+  .attr("transform", "translate(20, 60)")
 
 legend.append("text")
   .text("Republican")
   .attr("font-size", "14px")
-  .attr("transform", "translate(25, 75)");
+  .attr("transform", "translate(20, 75)");
 
 legend.append("text")
   .text("American")
   .attr("font-size", "14px")
-  .attr("transform", "translate(25, 90)");
+  .attr("transform", "translate(20, 90)");
 
 legend.append("text")
   .text("Independent")
   .attr("font-size", "14px")
-  .attr("transform", "translate(35, 105)");
+  .attr("transform", "translate(30, 105)");
 
 
 legend.append("text")
   .text("State's Rights")
   .attr("font-size", "14px")
-  .attr("transform", "translate(25, 120)");
+  .attr("transform", "translate(20, 120)");
 
 legend.append("text")
   .text("Progressive (1924)")
   .attr("font-size", "14px")
-  .attr("transform", "translate(25, 135)")
+  .attr("transform", "translate(20, 135)")
 
 legend.append("text")
   .text("Progressive (1912)")
   .attr("font-size", "14px")
-  .attr("transform", "translate(25, 150)")
+  .attr("transform", "translate(20, 150)")
 
 
 var addColors = function(y_coord, colors) {
   legend.append("rect")
-    .attr("x", 135)
+    .attr("x", 130)
     .attr("y", y_coord - 10)
     .attr("width", 28)
     .attr("height", 10)
@@ -392,21 +392,21 @@ var addColors = function(y_coord, colors) {
     .attr("fill", colors[0]);
   
   legend.append("rect")
-    .attr("x", 168)
+    .attr("x", 165)
     .attr("y", y_coord - 10)
     .attr("width", 28)
     .attr("height", 10)
     .attr("fill", colors[1]);
   
   legend.append("rect")
-    .attr("x", 201)
+    .attr("x", 200)
     .attr("y", y_coord - 10)
     .attr("width", 28)
     .attr("height", 10)
     .attr("fill", colors[2]);
   
   legend.append("rect")
-    .attr("x", 234)
+    .attr("x", 235)
     .attr("y", y_coord - 10)
     .attr("width", 28)
     .attr("height", 10)
