@@ -54,6 +54,7 @@ body {
 
 #stCompare, #stDemographic0 {
   height:700px;
+  box-shadow: 0 0 2px black;
 }
 
 #stCompare {

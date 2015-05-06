@@ -156,17 +156,20 @@
     
     <div class="row" id="row2">
       <div class="col-md-4" id="stCompare">
+        <p></p>
         <div id="state-title"><span class="clickState">Alabama</span> to All States comparison</div> <br>
-      </div>      
+      </div>
       <div class="col-md-8" id="stDemographic0">
         <div class="row">
           <div class="col-md-2">          </div>
           <div class="col-md-4" id="stDemographic">
+            <p></p>
             <div id="state-title"><span class="clickState">Alabama</span> Voter Demographics (1980+)</div> 
             <br>
             <span id="noFelon"></span>
           </div>
           <div class="col-md-4" id="stDemographic2">
+            <p></p>
             <div id="state-title2">USA Voter Demographics</div> 
             <br>
             <span id="noFelon2"></span>
@@ -179,13 +182,16 @@
 
     <div class="row" id="state-div-size">      
       <div class="col-md-4" id="stParty">
+        <p></p>
         <div id="state-title">Political Party Trends: <span class="clickState">Alabama</span></div> <br>
       </div>
       <div class="col-md-3" id="stTurnt">
+        <p></p>
             <div id="state-title">Voter Turnout: <span class="clickState">Alabama</span></div> <br>
       </div>
       <!--replicate stParty for national EV and national pct-->
       <div class="col-md-5" id="stInc">
+        <p></p>
         <div id="state-title">Median Household Income: <span class="clickState">Alabama</span></div> <br>
       </div>
     </div>
@@ -241,7 +247,7 @@ d3.selectAll(".btn")
   .on("click", function() {
     if(this.value == 1) {
       changeYear(1912);
-      story0.innerHTML = "This is a new story about the election.";
+      story0.innerHTML = "<p>In 1912, when former President Theodore Roosevelt failed to receive the Republican nomination, he called his own convention and created the Progressive Party (nicknamed the \"Bull Moose Party\").<br><br>This was the last election in which a candidate who was not a Republican or Democrat came second in either the popular vote or the Electoral College, and the first election in which all 48 states of the contiguous United States participated. <br><br> <a title=\"By Harris & Ewing [Public domain], via Wikimedia Commons\" href=\"http://commons.wikimedia.org/wiki/File%3AWoodrow_Wilson-H%26E.jpg\"><img width=\"256\" alt=\"Woodrow Wilson-H&E\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Woodrow_Wilson-H%26E.jpg/256px-Woodrow_Wilson-H%26E.jpg\"/></a>";
       setTimeout(function() { changeYear(1936) }, 5000);
     } else if(this.value == 2) {
       changeYear(1924);
