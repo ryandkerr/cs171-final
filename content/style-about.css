@@ -27,3 +27,7 @@ body {
 .page-header {
   font-family: 'Alegreya Sans SC', sans-serif;
 }
+
+#processbook {
+  font-size: 150%;
+}
