@@ -164,13 +164,13 @@
           <div class="col-md-2">          </div>
           <div class="col-md-4" id="stDemographic">
             <p></p>
-            <div id="state-title"><span class="clickState">Alabama</span> Voter Demographics (1980+)</div> 
+            <div id="state-title"><span class="clickState">Alabama</span> Voter Eligibility (1980+)</div> 
             <br>
             <span id="noFelon"></span>
           </div>
           <div class="col-md-4" id="stDemographic2">
             <p></p>
-            <div id="state-title2">USA Voter Demographics</div> 
+            <div id="state-title2">USA Voter Eligibility</div> 
             <br>
             <span id="noFelon2"></span>
           </div>
@@ -293,9 +293,11 @@ var pres_svg = d3.select("#presVis")
   // .attr("class", "centered");
 
 // create svg canvas for president vis
-var st_demo_svg = d3.select("#stDemographic")
+
+
+var elig2_svg = d3.select("#stDemographic2")
   .append("svg")
-  .attr("width", getInnerWidth(d3.select("#stDemographic")))
+  .attr("width", getInnerWidth(d3.select("#stDemographic2")))
   .attr("height", 300);
 
 var elig_svg = d3.select("#stDemographic")
@@ -308,10 +310,12 @@ var st_demo2_svg = d3.select("#stDemographic2")
   .attr("width", getInnerWidth(d3.select("#stDemographic2")))
   .attr("height", 300);
 
-var elig2_svg = d3.select("#stDemographic2")
+var st_demo_svg = d3.select("#stDemographic")
   .append("svg")
-  .attr("width", getInnerWidth(d3.select("#stDemographic2")))
+  .attr("width", getInnerWidth(d3.select("#stDemographic")))
   .attr("height", 300);
+
+
 
 // create svg canvas for stParty vis
 var st_party_svg = d3.select("#stParty")
@@ -1012,43 +1016,49 @@ var updateVis = function () {
     });
 
   elig_svg.append("rect")
-    .attr("x", 20)
+    .attr("x", 100)
     .attr("y", 225)
     .attr("width", 20)
     .attr("height", 20)
     .attr("fill", "#5C3D00")
 
   elig_svg.append("rect")
-    .attr("x", 20)
+    .attr("x", 100)
     .attr("y", 250)
     .attr("width", 20)
     .attr("height", 20)
     .attr("fill", "#7A5200")
 
   elig_svg.append("rect")
-    .attr("x", 20)
+    .attr("x", 100)
     .attr("y", 275)
     .attr("width", 20)
     .attr("height", 20)
     .attr("fill", "#A37519")
 
   elig_svg.append("text")
-    .attr("x", 45)
-    .attr("y", 240)
+    .attr("x", 125)
+    .attr("y", 235)
     // .style("text-anchor", "middle")
-    .text("Non-citizen");
+    .text("Ineligible");//citizen)");
 
   elig_svg.append("text")
-    .attr("x", 45)
+    .attr("x", 125)
+    .attr("y", 245)
+    // .style("text-anchor", "middle")
+    .text("(non-citizen)");
+
+  elig_svg.append("text")
+    .attr("x", 125)
     .attr("y", 265)
     // .style("text-anchor", "middle")
     .text("Voting-eligible");
 
   elig_svg.append("text")
-    .attr("x", 45)
+    .attr("x", 125)
     .attr("y", 290)
     // .style("text-anchor", "middle")
-    .text("Ineligible felon");
+    .text("Ineligible (felon)");
 
   // update if slices already exist
 
@@ -1159,52 +1169,82 @@ var updateVis = function () {
 //   .attr("height", 250);
 
   st_demo_svg.append("rect")
-    .attr("x", 20)
+    .attr("x", 100)
     .attr("y", 225)
     .attr("width", 20)
     .attr("height", 20)
     .attr("fill", "#5C3D00")
 
   st_demo_svg.append("rect")
-    .attr("x", 20)
+    .attr("x", 100)
     .attr("y", 250)
     .attr("width", 20)
     .attr("height", 20)
     .attr("fill", "#7A5200")
 
   st_demo_svg.append("rect")
-    .attr("x", 20)
+    .attr("x", 100)
     .attr("y", 275)
     .attr("width", 20)
     .attr("height", 20)
     .attr("fill", "#A37519")
 
   st_demo_svg.append("text")
-    .attr("x", 45)
+    .attr("x", 125)
     .attr("y", 240)
     // .style("text-anchor", "middle")
     .text("Prison");
 
   st_demo_svg.append("text")
-    .attr("x", 45)
+    .attr("x", 125)
     .attr("y", 265)
     // .style("text-anchor", "middle")
     .text("Probation");
 
   st_demo_svg.append("text")
-    .attr("x", 45)
+    .attr("x", 125)
     .attr("y", 290)
     // .style("text-anchor", "middle")
     .text("Parole");
 
   // update if slices already exist
   if (prison==0 && parole==0 && probation==0) {
-    document.getElementById("noFelon").innerHTML = "<br>N/A";
-    document.getElementById("noFelon2").innerHTML = "<br>N/A";
+    document.getElementById("noFelon").innerHTML = "N/A: felons are not ineligible, or data are not available.";
+    document.getElementById("noFelon2").innerHTML = "";
   } else {
     document.getElementById("noFelon").innerHTML = "";
     document.getElementById("noFelon2").innerHTML = "";
-  }
+  };
+
+  st_demo_svg.append("text")
+    .attr("x", 0)
+    .attr("y", 230)
+    .text("Breakdown of");
+
+  st_demo_svg.append("text")
+    .attr("x", 0)
+    .attr("y", 240)
+    .text("Ineligible");
+
+  st_demo_svg.append("text")
+    .attr("x", 0)
+    .attr("y", 250)
+    .text("Felons");
+
+  elig_svg.append("text")
+    .attr("x", 0)
+    .attr("y", 230)
+    .text("Breakdown of");
+
+  elig_svg.append("text")
+    .attr("x", 0)
+    .attr("y", 240)
+    .text("Voting-Age");
+
+  elig_svg.append("text")
+    .attr("x", 0)
+    .attr("y", 250)
+    .text("Population");
 
   var demo_path = st_demo_svg.selectAll("#demographic")
       .data(pie([prison, probation, parole]));
