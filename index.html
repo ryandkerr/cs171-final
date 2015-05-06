@@ -148,6 +148,9 @@
 
     <div class="row" id="state-div">
       <h2>State Views (currently showing <span class="clickState">Florida</span>, <span class="cur">2012</span>)</h2>
+      Select state: <select id="dropState">
+
+      </select>
     </div>
     
     <div class="row">
@@ -199,6 +202,7 @@
 // http://bocoup.com/weblog/using-svg-patterns-as-fills/
 // http://chimera.labs.oreilly.com/books/1230000000345/ch10.html#_html_div_tooltips
 // http://www.d3noob.org/2012/12/adding-axis-labels-to-d3js-graph.html
+// http://jsfiddle.net/nExgJ/
 
 
 // helper to find width of element
@@ -913,6 +917,24 @@ var updateVis = function () {
       otherT = d.VAP - nonCitT - felonT
     }
   })
+
+  var all_states = []
+
+  ELECGLOBAL.forEach(function(d) {
+    if (d.year == 2012 && d.state != "Totals") {
+      all_states.push(d.state)
+    }
+  })
+
+  // Get dropdown element from DOM
+  var dropdown = document.getElementById("dropState");
+
+  // Loop through the array
+  for (var i = 0; i < all_states.length; ++i) {
+    // Append the element to the end of Array list
+    dropdown[dropdown.length] = new Option(all_states[i], all_states[i]);
+  }
+
 
   // select pie paths
   var elig_path = elig_svg.selectAll("#categ")
