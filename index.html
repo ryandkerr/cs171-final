@@ -147,7 +147,7 @@
     </div>
 
     <div class="row" id="state-div">
-      <h2>State Views (currently showing <span class="clickState">Florida</span>, <span class="cur">2012</span>)</h2>
+      <h2>State Views (currently showing <span class="clickState">Alabama</span>, <span class="cur">2012</span>)</h2>
       Select state: <select id="dropState">
 
       </select>
@@ -155,12 +155,12 @@
     
     <div class="row">
       <div class="col-md-4" id="stCompare">
-        <div id="state-title"><span class="clickState">Florida</span> to nation comparison</div> <br>
+        <div id="state-title"><span class="clickState">Alabama</span> to nation comparison</div> <br>
       </div>      
       <div class="col-md-8">
         <div class="row">
           <div class="col-md-4" id="stDemographic">
-            <div id="state-title"><span class="clickState">Florida</span> demographic pie chart</div> <br>
+            <div id="state-title"><span class="clickState">Alabama</span> demographic pie chart</div> <br>
             <span id="noFelon"></span>
           </div>
           <div class="col-md-4" id="stDemographic2">
@@ -174,14 +174,14 @@
 
     <div class="row" id="state-div-size">      
       <div class="col-md-4" id="stParty">
-        <div id="state-title"><span class="clickState">Florida</span> party line graph</div> <br>
+        <div id="state-title"><span class="clickState">Alabama</span> party line graph</div> <br>
       </div>
       <div class="col-md-3" id="stTurnt">
-            <div id="state-title"><span class="clickState">Florida</span> turnout</div> <br>
+            <div id="state-title"><span class="clickState">Alabama</span> turnout</div> <br>
       </div>
       <!--replicate stParty for national EV and national pct-->
       <div class="col-md-5" id="stInc">
-        <div id="state-title"><span class="clickState">Florida</span> median household income</div> <br>
+        <div id="state-title"><span class="clickState">Alabama</span> median household income</div> <br>
       </div>
     </div>
   </div>
@@ -586,8 +586,8 @@ addColors(120, sr_colors);
 addColors(135, prog24_colors);
 addColors(150, prog12_colors);
 
-// initialize state views for FLorida before user clicks anything
-var clickState = "Florida";
+// initialize state views for Alabama before user clicks anything
+var clickState = "Alabama";
 
 // updates choropleth with election data
 var updateVis = function () {
@@ -926,15 +926,7 @@ var updateVis = function () {
     }
   })
 
-  // Get dropdown element from DOM
-  var dropdown = document.getElementById("dropState");
-
-  // Loop through the array
-  for (var i = 0; i < all_states.length; ++i) {
-    // Append the element to the end of Array list
-    dropdown[dropdown.length] = new Option(all_states[i], all_states[i]);
-  }
-
+  
 
   // select pie paths
   var elig_path = elig_svg.selectAll("#categ")
@@ -1922,16 +1914,39 @@ var updateVis = function () {
   var state_pattern_path = state_pattern.selectAll("path");
   var state_text = states.selectAll("text");
   
-  state_paths
-    .on("click", function() {
-      clickState = this.id;
-      document.getElementsByClassName('clickState')[0].innerHTML = clickState;
+  function update(clickState) {
+    document.getElementById("dropState").value = "clickState";
+    document.getElementsByClassName('clickState')[0].innerHTML = clickState;
       document.getElementsByClassName('clickState')[1].innerHTML = clickState;
       document.getElementsByClassName('clickState')[2].innerHTML = clickState;
       document.getElementsByClassName('clickState')[3].innerHTML = clickState;
       document.getElementsByClassName('clickState')[4].innerHTML = clickState;
       document.getElementsByClassName('clickState')[5].innerHTML = clickState;
       updateVis();
+  }
+
+  // Get dropdown element from DOM
+  var dropdown = document.getElementById("dropState");
+
+  // Loop through the array
+  for (var i = 0; i < all_states.length; ++i) {
+    // Append the element to the end of Array list
+    dropdown[dropdown.length] = new Option(all_states[i], all_states[i]);
+  }
+
+  d3.selectAll("#dropState")
+  .on("change", function() {
+    d3.selectAll("option").each(function(d) {
+      if(d3.select(this).property('selected')) {
+        clickState = this.value;
+        update(clickState);
+      }
+  })})
+
+  state_paths
+    .on("click", function() {
+      clickState = this.id;
+      update(clickState);
     })
     .style('cursor', 'pointer')
     .on("mouseenter", function(d) {
@@ -2024,6 +2039,8 @@ var updateVis = function () {
     .on("mouseleave", function(d) {
       d3.select("#toolTip").remove();
     });
+
+
 
   state_text
     .style('cursor', 'pointer')
