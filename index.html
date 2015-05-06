@@ -919,15 +919,14 @@ var updateVis = function () {
       probation = d.probation;
       parole = d.parole;
       felon = d.felon;
-      // unsure about the following 2 defns
       nonCit = d.pctNonCit * d.VAP
       other = d.VAP - nonCit - felon
-    } else if (d.year == CURRENT_YEAR && d.state == "Totals") {
+    }
+    if (d.year == CURRENT_YEAR && d.state == "Totals") {
       prisonT = d.prison;
       probationT = d.probation;
       paroleT = d.parole;
       felonT = d.felon;
-      // unsure about the following 2 defns
       nonCitT = d.pctNonCit * d.VAP
       otherT = d.VAP - nonCitT - felonT
     }
@@ -987,6 +986,7 @@ var updateVis = function () {
 
   // add new slices for first time
   elig2_group.append("path")
+      // .transition.duration(500)
       .attr("id", "categ")
       .attr("fill", function(d, i) {
         return demo_scale(i);
@@ -1000,6 +1000,7 @@ var updateVis = function () {
   var rounded = d3.format(".1")
 
   elig2_labels = elig2_group.append("text")
+    // .transition.duration(500)
     .attr("class", "text")
     .attr("transform", function(d) {
       var x = arc.centroid(d)[0] + 130;
@@ -1014,6 +1015,35 @@ var updateVis = function () {
         return rounded((d.value/1000000).toFixed(1)) + "M";
       }
     });
+
+  update
+  var elig2_path = elig2_svg.selectAll("#categ")
+      .data(pie([nonCitT, otherT, felonT]));
+
+  elig2_path
+    .transition().duration(500)
+    .attr("d", function(d) {
+        return arcDemo(d);
+      });
+
+  elig2_text = elig2_svg.selectAll(".text")
+      .data(pie([nonCitT, otherT, felonT]));
+
+  var rounded = d3.format(".1")
+
+
+  elig2_text.transition().duration(500)
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .text(function(d) {
+      // return total 
+      if(d.value > 0) {
+        return rounded((d.value/1000000).toFixed(1)) + "M";
+      }
+    });;
 
   elig_svg.append("rect")
     .attr("x", 100)
@@ -1134,6 +1164,7 @@ var updateVis = function () {
 
   // add new slices for first time
   demo2_group.append("path")
+      // .transition.duration(500)
       .attr("id", "demographic2")
       .attr("fill", function(d, i) {
         return demo_scale(i);
@@ -1147,6 +1178,7 @@ var updateVis = function () {
   var comma = d3.format(",")
 
   demo2_labels = demo2_group.append("text")
+    // .transition.duration(500)
     .attr("class", "text")
     .attr("transform", function(d) {
       var x = arc.centroid(d)[0] + 130;
@@ -1216,6 +1248,11 @@ var updateVis = function () {
     document.getElementById("noFelon2").innerHTML = "";
   };
 
+  if (CURRENT_YEAR < 1980) {
+    document.getElementById("noFelon").innerHTML = "N/A: data unavailable.";
+    document.getElementById("noFelon2").innerHTML = "N/A: data unavailable.";
+  };
+
   st_demo_svg.append("text")
     .attr("x", 0)
     .attr("y", 230)
@@ -1273,6 +1310,32 @@ var updateVis = function () {
       }
     });;
 
+  var demo2_path = st_demo2_svg.selectAll("#demographic2")
+      .data(pie([prisonT, probationT, paroleT]));
+
+  demo2_path
+    .transition().duration(500)
+    .attr("d", function(d) {
+        return arcDemo(d);
+      });
+
+  demo2_text = st_demo2_svg.selectAll(".text")
+      .data(pie([prisonT, probationT, paroleT]));
+
+  var comma = d3.format(",")
+
+  demo2_text.transition().duration(500)
+    .attr("transform", function(d) {
+      var x = arc.centroid(d)[0] + 130;
+      var y = arc.centroid(d)[1] + 120;
+      return "translate(" + x + ", " + y + ")";
+    })
+    .text(function(d) {
+      // return total electoral votes
+      if(d.value > 0) {
+        return comma(d.value);
+      }
+    });;
 
 
 
@@ -1556,8 +1619,10 @@ var updateVis = function () {
     .attr("y", 360)
     .attr("width", 240)
     .attr("height", 80)
-    .attr("fill", "gray")
-    .attr("fill-opacity", .3);
+    .attr("fill", "white")
+    .attr("stroke", "black")
+    .attr("stroke-width", 3)
+    .attr("fill-opacity", 0);
 
   var legLen = 66;
   var legLenD = 87;
