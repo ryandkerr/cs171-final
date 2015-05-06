@@ -1919,7 +1919,7 @@ var updateVis = function () {
   var state_text = states.selectAll("text");
   
   function update(clickState) {
-    document.getElementById("dropState").value = "clickState";
+    document.getElementById("dropState").value = clickState;
     document.getElementsByClassName('clickState')[0].innerHTML = clickState;
       document.getElementsByClassName('clickState')[1].innerHTML = clickState;
       document.getElementsByClassName('clickState')[2].innerHTML = clickState;
