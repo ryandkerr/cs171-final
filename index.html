@@ -276,7 +276,11 @@ var quantize = d3.scale.quantize()
 
 var demo_scale = d3.scale.ordinal()
   .domain([0, 1, 2]) 
-  .range(["#5C3D00", "#7A5200", "#A37519"]);
+  .range(["#5C3D00", "orange", "#A37519"]);
+
+var demo2_scale = d3.scale.ordinal()
+  .domain([0, 1, 2]) 
+  .range(["black", "gray", "#666699"]);
 
 // create svg canvas in chorovis div
 var choro_svg = d3.select("#choroVis")
@@ -952,7 +956,7 @@ var updateVis = function () {
   elig_group.append("path")
       .attr("id", "categ")
       .attr("fill", function(d, i) {
-        return demo_scale(i);
+        return demo2_scale(i);
       })
       .attr("d", function(d) {
         return arcDemo(d);
@@ -989,7 +993,7 @@ var updateVis = function () {
       // .transition.duration(500)
       .attr("id", "categ")
       .attr("fill", function(d, i) {
-        return demo_scale(i);
+        return demo2_scale(i);
       })
       .attr("d", function(d) {
         return arcDemo(d);
@@ -1050,21 +1054,21 @@ var updateVis = function () {
     .attr("y", 225)
     .attr("width", 20)
     .attr("height", 20)
-    .attr("fill", "#5C3D00")
+    .attr("fill", "black")
 
   elig_svg.append("rect")
     .attr("x", 100)
     .attr("y", 250)
     .attr("width", 20)
     .attr("height", 20)
-    .attr("fill", "#7A5200")
+    .attr("fill", "gray")
 
   elig_svg.append("rect")
     .attr("x", 100)
     .attr("y", 275)
     .attr("width", 20)
     .attr("height", 20)
-    .attr("fill", "#A37519")
+    .attr("fill", "#666699")
 
   elig_svg.append("text")
     .attr("x", 125)
@@ -1212,7 +1216,7 @@ var updateVis = function () {
     .attr("y", 250)
     .attr("width", 20)
     .attr("height", 20)
-    .attr("fill", "#7A5200")
+    .attr("fill", "orange")
 
   st_demo_svg.append("rect")
     .attr("x", 100)
