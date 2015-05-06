@@ -48,7 +48,7 @@ body {
   text-align: center;
 }
 
-#stCompare, #stDemographic {
+#stCompare, #stDemographic0 {
   height:700px;
 }
 
@@ -56,21 +56,26 @@ body {
   background-color:#E8AEB7;
 }
 
-#stParty, #stInc, #stTurnt {
+#stDemographic0 {
+  background-color: #FFD6D6;
+}
+
+#stParty, #stTurnt, #stInc {
   box-shadow: 0 0 2px black;
   height:500px;
 }
 
 #stParty {
-  background-color: #D6FF65;
-}
-
-#stInc {
-  background-color: #EDFBFF;
+  /*background-color: #D6FF65;*/
+  background-color: #BBFBEB;
 }
 
 #stTurnt {
   background-color: #D6FFEB;
+}
+
+#stInc {
+  background-color: #EDFBFF;
 }
 
 
