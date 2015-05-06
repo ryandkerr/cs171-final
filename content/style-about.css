@@ -29,5 +29,9 @@ body {
 }
 
 #processbook {
-  font-size: 150%;
+  font-size: 125%;
+}
+
+#blurb {
+  font-size: 125%;
 }
