@@ -1499,6 +1499,8 @@ var updateVis = function () {
   //     .attr("d", valueline3(ELECFILTERED));
   // }
 
+
+
   st_party_svg.append("g")          
     .attr("class", "axis")
     .attr("transform", "translate(0," + (stPartyHeight+5) + ")")
@@ -1535,6 +1537,78 @@ var updateVis = function () {
   //   .attr("transform", "translate(" + (35 + 4.5 * (CURRENT_YEAR - 1912)) + ",0)")
   //   .style("stroke-dasharray", ("3, 3"))
   //   .call(yAxisDot); 
+
+  st_party_svg.append("rect")
+    .attr("x", stPartyWidth - 125)
+    .attr("y", 360)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "blue")
+
+  st_party_svg.append("text")
+    .attr("x", stPartyWidth - 100)
+    .attr("y", 375)
+    .text("Democratic");
+
+  st_party_svg.append("rect")
+    .attr("x", stPartyWidth - 375)
+    .attr("y", 360)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "red")
+
+  st_party_svg.append("text")
+    .attr("x", stPartyWidth - 350)
+    .attr("y", 375)
+    .text("Republican");
+
+  st_party_svg.append("rect")
+    .attr("x", stPartyWidth - 625)
+    .attr("y", 360)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "purple")
+
+  st_party_svg.append("text")
+    .attr("x", stPartyWidth - 600)
+    .attr("y", 375)
+    .text("American Independent");
+
+  st_party_svg.append("rect")
+    .attr("x", stPartyWidth - 125)
+    .attr("y", 390)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "yellow")
+
+  st_party_svg.append("text")
+    .attr("x", stPartyWidth - 100)
+    .attr("y", 405)
+    .text("Progressive (1912)");
+
+  st_party_svg.append("rect")
+    .attr("x", stPartyWidth - 375)
+    .attr("y", 390)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "orange")
+
+  st_party_svg.append("text")
+    .attr("x", stPartyWidth - 350)
+    .attr("y", 405)
+    .text("States' Rights");
+
+  st_party_svg.append("rect")
+    .attr("x", stPartyWidth - 625)
+    .attr("y", 390)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "green")
+
+  st_party_svg.append("text")
+    .attr("x", stPartyWidth - 600)
+    .attr("y", 405)
+    .text("Progressive (1924)");
 
   // stTurnt
   // may actually be more useful to just have this shit on the same graph
