@@ -293,9 +293,11 @@ var pres_svg = d3.select("#presVis")
   // .attr("class", "centered");
 
 // create svg canvas for president vis
-var st_demo_svg = d3.select("#stDemographic")
+
+
+var elig2_svg = d3.select("#stDemographic2")
   .append("svg")
-  .attr("width", getInnerWidth(d3.select("#stDemographic")))
+  .attr("width", getInnerWidth(d3.select("#stDemographic2")))
   .attr("height", 300);
 
 var elig_svg = d3.select("#stDemographic")
@@ -308,10 +310,12 @@ var st_demo2_svg = d3.select("#stDemographic2")
   .attr("width", getInnerWidth(d3.select("#stDemographic2")))
   .attr("height", 300);
 
-var elig2_svg = d3.select("#stDemographic2")
+var st_demo_svg = d3.select("#stDemographic")
   .append("svg")
-  .attr("width", getInnerWidth(d3.select("#stDemographic2")))
+  .attr("width", getInnerWidth(d3.select("#stDemographic")))
   .attr("height", 300);
+
+
 
 // create svg canvas for stParty vis
 var st_party_svg = d3.select("#stParty")
