@@ -157,7 +157,7 @@
     <div class="row" id="row2">
       <div class="col-md-4" id="stCompare">
         <p></p>
-        <div id="state-title"><span class="clickState">Alabama</span> to All States comparison</div> <br>
+        <div id="state-title"><span class="clickState">Alabama</span>'s Vote in National Context</div> <br>
       </div>
       <div class="col-md-8" id="stDemographic0">
         <div class="row">
@@ -170,7 +170,7 @@
           </div>
           <div class="col-md-4" id="stDemographic2">
             <p></p>
-            <div id="state-title2">USA Voter Eligibility</div> 
+            <div id="state-title2">USA Voter Eligibility (1980+)</div> 
             <br>
             <span id="noFelon2"></span>
           </div>
@@ -181,7 +181,7 @@
 
 
     <div class="row" id="state-div-size">      
-      <div class="col-md-4" id="stParty">
+      <div class="col-md-6" id="stParty">
         <p></p>
         <div id="state-title">Political Party Trends: <span class="clickState">Alabama</span></div> <br>
       </div>
@@ -190,7 +190,7 @@
             <div id="state-title">Voter Turnout: <span class="clickState">Alabama</span></div> <br>
       </div>
       <!--replicate stParty for national EV and national pct-->
-      <div class="col-md-5" id="stInc">
+      <div class="col-md-3" id="stInc">
         <p></p>
         <div id="state-title">Median Household Income: <span class="clickState">Alabama</span></div> <br>
       </div>
@@ -1711,7 +1711,7 @@ var updateVis = function () {
     .attr("x",0 - (stTurntHeight / 2))
     .attr("dy", "1em")
     .style("text-anchor", "middle")
-    .text("Percentage of VAP or VEP");
+    .text("Ballots Cast as % of VAP or VEP");
 
   //
   //
@@ -1727,7 +1727,7 @@ var updateVis = function () {
   tickYear = 1984;
   while (tickYear <= 2012) {
     yearsInc.push(tickYear)
-    tickYear += 1
+    tickYear += 4
   }
 
   var xAxisInc = d3.svg.axis().scale(xInc)
@@ -1753,19 +1753,19 @@ var updateVis = function () {
   st_inc_svg.append("path")
     .attr("class", "pathLine")
     .style("stroke", "green")
-    .attr("transform", "translate(40,0)")
+    .attr("transform", "translate(30,0)")
     .attr("d", valuelineInc(INCFILTERED));
 
   st_inc_svg.append("path")
     .attr("class", "pathLine")
     .style("stroke", "purple")
-    .attr("transform", "translate(40,0)")
+    .attr("transform", "translate(30,0)")
     .attr("d", valuelineInc2(INC_TOTALS));
 
   
   st_inc_svg.append("g")          
     .attr("class", "axis")
-    .attr("transform", "translate(40," + (stIncHeight+10) + ")")
+    .attr("transform", "translate(30," + (stIncHeight+10) + ")")
     .call(xAxisInc)
     // .selectAll("text")
     // .attr("x", -12)
@@ -1773,7 +1773,7 @@ var updateVis = function () {
 
   st_inc_svg.append("g")
     .attr("class", "axis")
-    .attr("transform", "translate(75,10)")
+    .attr("transform", "translate(65,10)")
     .call(yAxisInc); 
 
   var margin_bottom = 50;
@@ -1876,7 +1876,7 @@ var updateVis = function () {
     .attr("x",0 - (stCompHeight / 2))
     .attr("dy", "1em")
     .style("text-anchor", "middle")
-    .text("Percent Margin of Victory");
+    .text("% Margin of Victory (Popular Vote)");
 
   st_comp_svg.append("text")      // text label for the x axis
     .attr("transform", "translate(" + (stCompWidth / 2) + " ," + (stCompHeight + 30) + ")")
@@ -1887,6 +1887,11 @@ var updateVis = function () {
     .attr("transform", "translate(" + (stCompWidth / 2) + " ," + (stCompHeight + 45) + ")")
     .style("text-anchor", "middle")
     .text("Highlighted bar represents the selected state");
+
+  st_comp_svg.append("text")      // text label for the x axis
+    .attr("transform", "translate(" + (stCompWidth / 2) + " ," + (stCompHeight + 60) + ")")
+    .style("text-anchor", "middle")
+    .text("Omitting states won by third parties, for simplicity");
 
   var comp_width = 4;
 
