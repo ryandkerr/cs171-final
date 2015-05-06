@@ -48,6 +48,10 @@ body {
   text-align: center;
 }
 
+#row2 {
+  box-shadow: 0 0 2px black;
+}
+
 #stCompare, #stDemographic0 {
   height:700px;
 }
