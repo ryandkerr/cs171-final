@@ -21,6 +21,14 @@
     fill: none;
   }
 
+  .grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+.grid path {
+      stroke-width: 0;
+}
+
 
 
 /*#tooltip {
@@ -464,6 +472,7 @@ legend.append("text")
 // Percentages
 var pad = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 var padSm = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+
 legend.append("text")
   .html("0%"+pad+"5%"+pad+"10%"+padSm+"15% &nbsp;&nbsp;")
   .attr("text-decoration", "underline")
@@ -1485,6 +1494,36 @@ var updateVis = function () {
     .attr("class", "pathLine")
     .attr("transform", "translate(0,5)")
     .attr("d", valueline6(ELECFILTERED));
+
+    function make_x_grid() {        
+    return d3.svg.axis()
+        .scale(x)
+         .orient("bottom")
+         .ticks(25)
+}
+
+function make_y_grid() {        
+    return d3.svg.axis()
+        .scale(y)
+        .orient("left")
+        .ticks(5)
+}
+
+    // st_party_svg.append("g")         
+    //     .attr("class", "grid")
+    //     .attr("transform", "translate(0," + (stPartyHeight+5) + ")")
+    //     .call(make_x_grid()
+    //         .tickSize(-stPartyHeight, 0, 0)
+    //         .tickFormat("")
+    //     )
+
+    // st_party_svg.append("g")         
+    //     .attr("class", "grid")
+    //     .attr("transform", "translate(0,5)")
+    //     .call(make_y_grid()
+    //         .tickSize(-stPartyWidth, 0, 0)
+    //         .tickFormat("")
+    //     )
 
   // st_party_svg.append("path")
   //   .style("stroke", "brown")
