@@ -2340,7 +2340,7 @@ var updateVis = function () {
       d3.select("#toolTip").remove();
     });
 
-  state_pattern_path.transition().duration(500)
+  state_pattern_path//.transition().duration(500)
     // .attr("fill", "url(#vertical-stripe-1)");
     // .attr("fill-opacity", .5)
     .attr("fill", function() {
@@ -2364,7 +2364,7 @@ var updateVis = function () {
       }
     });
     
-  state_paths.transition().duration(500)
+  state_paths//.transition().duration(500)
     .attr("fill", function() { 
     var that = this;
     var noodle = "cat";
@@ -2434,7 +2434,7 @@ var updateVis = function () {
     // state_paths.transition(5000)
     //   .attr("fill", "url(#vertical-stripe-1) blue");
 
-  state_text.transition().duration(500)
+  state_text//.transition().duration(500)
     .text(function() {
       var that = this;
       var noodle = "";
