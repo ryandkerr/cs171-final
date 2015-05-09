@@ -462,11 +462,13 @@ legend.append("text")
   .attr("transform", "translate(20, 40)");
 
 // Percentages
+var pad = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+var padSm = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 legend.append("text")
-  .text("0%__5%__10%__15%")
+  .html("0%"+pad+"5%"+pad+"10%"+padSm+"15% &nbsp;&nbsp;")
   .attr("text-decoration", "underline")
   .attr("font-size", "14px")
-  .attr("transform", "translate(125, 40)");
+  .attr("transform", "translate(130, 40)");
 
 // Parties
 legend.append("text")
