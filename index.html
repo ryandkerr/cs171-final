@@ -156,11 +156,11 @@
     </div>
     
     <div class="row" id="row2">
-      <div class="col-md-4" id="stCompare">
+      <div class="col-md-6" id="stCompare">
         <p></p>
         <div id="state-title"><span class="clickState">Alabama</span>'s Vote in National Context</div> <br>
       </div>
-      <div class="col-md-8" id="stDemographic0">
+      <div class="col-md-6" id="stDemographic0">
         <div class="row">
           <div class="col-md-2">          </div>
           <div class="col-md-4" id="stDemographic">
@@ -342,7 +342,8 @@ var st_inc_svg = d3.select("#stInc")
 var st_comp_svg = d3.select("#stCompare")
   .append("svg")
   .attr("width", getInnerWidth(d3.select("#stCompare")))
-  .attr("height", 450);
+  .attr("class", "stComparison")
+  .attr("height", 700);
 
 // create usa projection
 var projection = d3.geo.albersUsa()
@@ -1914,18 +1915,19 @@ var updateVis = function () {
     } 
   });
 
-  var stCompHeight = 300;
+
+  var stCompHeight = d3.select(".stComparison")[0][0].height.baseVal.value - 150
   var stCompWidth = (getInnerWidth(d3.select("#stCompare")) - 25);
 
   var xComp = d3.scale.linear().range([45, stCompWidth]);
   var yComp = d3.scale.linear().range([stCompHeight, 0]);
 
-  var yearsComp = []
-    tickYear = 1980;
-    while (tickYear <= 2012) {
-      yearsComp.push(tickYear)
-      tickYear += 4
-    }
+  // var yearsComp = []
+  //   tickYear = 1980;
+  //   while (tickYear <= 2012) {
+  //     yearsComp.push(tickYear)
+  //     tickYear += 4
+  //   }
 
   var xAxisComp = d3.svg.axis().scale(xComp)
     .tickFormat(function(d) {return formatYear(d); })
@@ -1936,7 +1938,7 @@ var updateVis = function () {
     .tickFormat(function(d) {return d*100})
     .orient("left").ticks(5);
 
-  xComp.domain([1980, 2012]);
+  xComp.domain([1912, 2012]);
   yComp.domain([0, 1]);
 
   st_comp_svg.append("g")         
@@ -1972,17 +1974,20 @@ var updateVis = function () {
     .style("text-anchor", "middle")
     // .text("Omitting states won by third parties, for simplicity");
 
-  var comp_width = 4;
+  var comp_width = 11;
+  var padding = 3.8;
+  var offsetX = 46;
+  var offsetY = -1;
 
   var comp_bars = st_comp_svg.selectAll("rect")
     .data(comp_filtered);
 
   comp_bars.enter().append("rect")
     .attr("x", function(d, i) {
-      return i * (comp_width + 2) + 45;
+      return i * (comp_width + padding) + offsetX;
     })
     .attr("y", function(d) {
-      return yComp(Math.abs(d.gopPct - d.demPct)/100);
+      return yComp(Math.abs(d.gopPct - d.demPct)/100) + offsetY;
     })
     .attr("width", comp_width)
     .attr("height", function(d) {
@@ -2052,10 +2057,10 @@ var updateVis = function () {
 
   comp_bars.transition().duration(500)
     .attr("x", function(d, i) {
-      return i * (comp_width + 2) + 45;
+      return i * (comp_width + padding) + offsetX;
     })
     .attr("y", function(d) {
-      return yComp(getMargin(d)[0]);
+      return yComp(getMargin(d)[0]) + offsetY;
     })
     .attr("width", comp_width)
     .attr("height", function(d) {
