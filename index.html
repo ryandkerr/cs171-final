@@ -1449,8 +1449,8 @@ var updateVis = function () {
   //   .x(function(d) { return x(d.year)})
   //   .y(function(d) {  {return y(d.gopPct)}}); 
 
-  d3.selectAll(".pathLine")
-    .remove();
+  // d3.selectAll(".pathLine")
+  //   .remove();
 
   d3.selectAll(".axis")
     .remove();
@@ -1871,16 +1871,34 @@ function make_y_grid() {
   xInc.domain([1984, 2012]);
   yInc.domain([0, 80000])
 
+
   st_inc_svg.append("path")
     .attr("class", "pathLine")
+    .attr("id", "first")
     .style("stroke", "green")
     .attr("transform", "translate(30,0)")
     .attr("d", valuelineInc(INCFILTERED));
 
   st_inc_svg.append("path")
     .attr("class", "pathLine")
+    .attr("id", "second")
     .style("stroke", "purple")
     .attr("transform", "translate(30,0)")
+    .attr("d", valuelineInc2(INC_TOTALS));
+
+
+  st_inc_svg.select("#first")
+   .attr("class", "first")
+    .transition().duration(500)
+   
+    .attr("class", "pathLine")
+    .attr("d", valuelineInc(INCFILTERED));
+
+  st_inc_svg.select("#second")
+  .attr("class", "second")
+    .transition().duration(500)
+    
+    .attr("class", "pathLine")
     .attr("d", valuelineInc2(INC_TOTALS));
 
   
