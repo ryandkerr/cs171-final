@@ -2478,6 +2478,9 @@ function make_y_grid() {
         // if there is no third party
         } else {
           // debug blue florida in 2000
+          // first idea: add digits to data
+          // second idea: check EV then return lightest appropriate color
+          // must deal with 3rd parties too for robustness, then thoroughly "problem!" debug
           if (d.state == "Florida") {
             console.log(d.demPct - d.gopPct);
           }
