@@ -2486,8 +2486,14 @@ function make_y_grid() {
           }
           if (d.demPct == d.gopPct) {
             console.log("problem!");
+            if (d.demEV > d.gopEV) {
+              noodle = quantize(.01);
+            } else {
+              noodle = quantize(-.01);
+            }
+          } else {
+            noodle = quantize(d.demPct - d.gopPct);
           }
-          noodle = quantize(d.demPct - d.gopPct);
         }
       } 
     })
