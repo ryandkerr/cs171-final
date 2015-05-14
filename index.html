@@ -2481,6 +2481,9 @@ function make_y_grid() {
           if (d.state == "Florida") {
             console.log(d.demPct - d.gopPct);
           }
+          if (d.demPct == d.gopPct) {
+            console.log("problem!");
+          }
           noodle = quantize(d.demPct - d.gopPct);
         }
       } 
