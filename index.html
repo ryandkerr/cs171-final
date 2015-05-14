@@ -2478,7 +2478,9 @@ function make_y_grid() {
         // if there is no third party
         } else {
           // debug blue florida in 2000
-          console.log(d.demPct - d.gopPct);
+          if (d.name == "Florida") {
+            console.log(d.demPct - d.gopPct);
+          }
           noodle = quantize(d.demPct - d.gopPct);
         }
       } 
