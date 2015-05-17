@@ -1449,8 +1449,8 @@ var updateVis = function () {
   //   .x(function(d) { return x(d.year)})
   //   .y(function(d) {  {return y(d.gopPct)}}); 
 
-  d3.selectAll(".pathLine")
-    .remove();
+  // d3.selectAll(".pathLine")
+  //   .remove();
 
   d3.selectAll(".axis")
     .remove();
@@ -1700,27 +1700,35 @@ function make_y_grid() {
   xTurnt.domain([1980, 2012]);
   yTurnt.domain([0, 1])
 
-  st_turnt_svg.append("path")
-    .attr("class", "pathLine")
-    .style("stroke", "green")
-    .style("stroke-dasharray", ("3, 3"))
-    .attr("d", valuelineTurnt(ELECFILTERED));
+  if (first) {
+    st_turnt_svg.append("path")
+      .attr("class", "pathLine")
+      .style("stroke", "green")
+      .style("stroke-dasharray", ("3, 3"))
+      .attr("d", valuelineTurnt(ELECFILTERED));
 
-  st_turnt_svg.append("path")
-    .attr("class", "pathLine")
-    .style("stroke", "green")
-    .attr("d", valuelineTurnt2(ELECFILTERED));
+    st_turnt_svg.append("path")
+      .attr("class", "pathLine")
+      .style("stroke", "green")
+      .attr("d", valuelineTurnt2(ELECFILTERED));
 
-  st_turnt_svg.append("path")
-    .attr("class", "pathLine")
-    .style("stroke", "purple")
-    .attr("d", valuelineTurnt3(ELEC_TOTALS));
+    st_turnt_svg.append("path")
+      .attr("class", "pathLine")
+      .style("stroke", "purple")
+      .attr("d", valuelineTurnt3(ELEC_TOTALS));
 
-  st_turnt_svg.append("path")
+    st_turnt_svg.append("path")
+      .attr("class", "pathLine")
+      .style("stroke", "purple")
+      .style("stroke-dasharray", ("3, 3"))
+      .attr("d", valuelineTurnt4(ELEC_TOTALS));
+  }
+
+  st_inc_svg.select("#turntFirst")
+    .transition().duration(500)
+   
     .attr("class", "pathLine")
-    .style("stroke", "purple")
-    .style("stroke-dasharray", ("3, 3"))
-    .attr("d", valuelineTurnt4(ELEC_TOTALS));
+    .attr("d", valuelineInc(INCFILTERED));
 
   st_turnt_svg.append("g")          
     .attr("class", "axis")
@@ -1872,20 +1880,22 @@ function make_y_grid() {
   yInc.domain([0, 80000])
 
 
-  st_inc_svg.append("path")
-    .attr("class", "pathLine")
-    .attr("id", "first")
-    .style("stroke", "green")
-    .attr("transform", "translate(30,0)")
-    .attr("d", valuelineInc(INCFILTERED));
+  if (first) {
+    st_inc_svg.append("path")
+      .attr("class", "pathLine")
+      .attr("id", "first")
+      .style("stroke", "green")
+      .attr("transform", "translate(30,0)")
+      .attr("d", valuelineInc(INCFILTERED));
 
-  st_inc_svg.append("path")
-    .attr("class", "pathLine")
-    .attr("id", "second")
-    .style("stroke", "purple")
-    .attr("transform", "translate(30,0)")
-    .attr("d", valuelineInc2(INC_TOTALS));
-
+    st_inc_svg.append("path")
+      .attr("class", "pathLine")
+      .attr("id", "second")
+      .style("stroke", "purple")
+      .attr("transform", "translate(30,0)")
+      .attr("d", valuelineInc2(INC_TOTALS));
+  }
+  first = false;
 
   st_inc_svg.select("#first")
    .attr("class", "first")
@@ -2582,6 +2592,7 @@ var startHere = function () {
     .await(initVis);
 };
 
+var first = true;
 startHere()
 
 </script>
