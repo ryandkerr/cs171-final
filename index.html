@@ -1449,8 +1449,6 @@ var updateVis = function () {
   //   .x(function(d) { return x(d.year)})
   //   .y(function(d) {  {return y(d.gopPct)}}); 
 
-  // d3.selectAll(".pathLine")
-  //   .remove();
 
   d3.selectAll(".axis")
     .remove();
@@ -1460,54 +1458,86 @@ var updateVis = function () {
   //    return Math.max(d.gopPct, d.demPct, d.thirdPct)})]);
   y.domain([0, 100]); 
 
-  st_party_svg.append("path")
-    .attr("class", "pathLine")
-    .attr("transform", "translate(0,5)")
+  if (first) {
+    st_party_svg.append("path")
+      .attr("class", "pathLine")
+      .attr("id", "party1")
+      .attr("transform", "translate(0,5)")
+      .attr("d", valueline(ELECFILTERED));
+      
+    st_party_svg.append("path")
+      .style("stroke", "red")
+      .attr("id", "party2")
+      .attr("class", "pathLine")
+      .attr("transform", "translate(0,5)")
+      .attr("d", valueline2(ELECFILTERED));
+
+    st_party_svg.append("path")
+      .style("stroke", "purple")
+      .attr("id", "party3")
+      .attr("class", "pathLine")
+      .attr("transform", "translate(0,5)")
+      .attr("d", valueline3(ELECFILTERED));
+
+    st_party_svg.append("path")
+      .style("stroke", "orange")
+      .attr("id", "party4")
+      .attr("class", "pathLine")
+      .attr("transform", "translate(0,5)")
+      .attr("d", valueline4(ELECFILTERED));
+
+    st_party_svg.append("path")
+      .style("stroke", "green")
+      .attr("id", "party5")
+      .attr("class", "pathLine")
+      .attr("transform", "translate(0,5)")
+      .attr("d", valueline5(ELECFILTERED));
+
+    st_party_svg.append("path")
+      .style("stroke", "yellow")
+      .attr("id", "party6")
+      .attr("class", "pathLine")
+      .attr("transform", "translate(0,5)")
+      .attr("d", valueline6(ELECFILTERED));
+  }
+
+  st_party_svg.select("#party1")
+    .transition().duration(500)
     .attr("d", valueline(ELECFILTERED));
-    
-  st_party_svg.append("path")
-    .style("stroke", "red")
-    .attr("class", "pathLine")
-    .attr("transform", "translate(0,5)")
+
+  st_party_svg.select("#party2")
+    .transition().duration(500)
     .attr("d", valueline2(ELECFILTERED));
 
-  st_party_svg.append("path")
-    .style("stroke", "purple")
-    .attr("class", "pathLine")
-    .attr("transform", "translate(0,5)")
+  st_party_svg.select("#party3")
+    .transition().duration(500)
     .attr("d", valueline3(ELECFILTERED));
 
-  st_party_svg.append("path")
-    .style("stroke", "orange")
-    .attr("class", "pathLine")
-    .attr("transform", "translate(0,5)")
+  st_party_svg.select("#party4")
+    .transition().duration(500)
     .attr("d", valueline4(ELECFILTERED));
 
-  st_party_svg.append("path")
-    .style("stroke", "green")
-    .attr("class", "pathLine")
-    .attr("transform", "translate(0,5)")
+  st_party_svg.select("#party5")
+    .transition().duration(500)
     .attr("d", valueline5(ELECFILTERED));
 
-  st_party_svg.append("path")
-    .style("stroke", "yellow")
-    .attr("class", "pathLine")
-    .attr("transform", "translate(0,5)")
+  st_party_svg.select("#party6")
+    .transition().duration(500)
     .attr("d", valueline6(ELECFILTERED));
 
-    function make_x_grid() {        
+  function make_x_grid() {        
     return d3.svg.axis()
-        .scale(x)
-         .orient("bottom")
-         .ticks(25)
-}
+      .scale(x)
+      .orient("bottom")
+      .ticks(25)
+  }
 
-function make_y_grid() {        
+  function make_y_grid() {        
     return d3.svg.axis()
-        .scale(y)
-        .orient("left")
-        .ticks(5)
-}
+      .scale(y)
+      .orient("left")
+      .ticks(5)
+  }
 
     // st_party_svg.append("g")         
     //     .attr("class", "grid")
@@ -1703,12 +1733,14 @@ function make_y_grid() {
   if (first) {
     st_turnt_svg.append("path")
       .attr("class", "pathLine")
+      .attr("id", "turntFirst")
       .style("stroke", "green")
       .style("stroke-dasharray", ("3, 3"))
       .attr("d", valuelineTurnt(ELECFILTERED));
 
     st_turnt_svg.append("path")
       .attr("class", "pathLine")
+      .attr("id", "turntSecond")
       .style("stroke", "green")
       .attr("d", valuelineTurnt2(ELECFILTERED));
 
@@ -1724,11 +1756,13 @@ function make_y_grid() {
       .attr("d", valuelineTurnt4(ELEC_TOTALS));
   }
 
-  st_inc_svg.select("#turntFirst")
+  st_turnt_svg.select("#turntFirst")
     .transition().duration(500)
-   
-    .attr("class", "pathLine")
-    .attr("d", valuelineInc(INCFILTERED));
+    .attr("d", valuelineTurnt(ELECFILTERED));
+
+  st_turnt_svg.select("#turntSecond")
+    .transition().duration(500)
+    .attr("d", valuelineTurnt2(ELECFILTERED));
 
   st_turnt_svg.append("g")          
     .attr("class", "axis")
@@ -1898,17 +1932,11 @@ function make_y_grid() {
   first = false;
 
   st_inc_svg.select("#first")
-   .attr("class", "first")
     .transition().duration(500)
-   
-    .attr("class", "pathLine")
     .attr("d", valuelineInc(INCFILTERED));
 
   st_inc_svg.select("#second")
-  .attr("class", "second")
     .transition().duration(500)
-    
-    .attr("class", "pathLine")
     .attr("d", valuelineInc2(INC_TOTALS));
 
   
