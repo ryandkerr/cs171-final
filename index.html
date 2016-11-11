@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="content/style-index.css">
   <link rel="shortcut icon" href="content/favicon.ico">
   <style>
-  .pathLine { 
+  .pathLine {
     stroke: steelblue;
     stroke-width: 2;
     fill: none;
@@ -83,10 +83,10 @@
 <body>
   <!-- <div class="container-fluid"> -->
   <div class="container-fluid">
-    <div class="row" id="title"> 
+    <div class="row" id="title">
       <div class="col-md-11">
         <h1>American Electoral Politics: The Past 100 Years</h1>
-        
+
       </div>
       <div class="col-md-1">
         <span class="header-right-clickable">
@@ -104,8 +104,8 @@
       </div>
 
     </div>
-    
-    <div class="row"> 
+
+    <div class="row">
       <!-- <div class='col-md-3' id="presVis" style="background-color: #FFD8D8"> -->
       <div class="col-md-3" id="presVis" style="text-align:center">
         <h2 class="centered"><span class="cur">2012</span> Election</h2>
@@ -117,7 +117,7 @@
       <!-- <br> -->
       <!-- <div class="col-md-9" id="col1" style="background-color: #CCF2FF"> -->
       <div class="col-md-7" id="col1">
-        
+
         <div id="choroVis">
           <!-- Main Cloropleth goes here -->
         </div>
@@ -158,11 +158,11 @@
     <div class="row" id="state-div">
 
       <h2>State Views: <span class="clickState">Alabama</span>, <span class="cur">2012</span></h2>
-      
-      
+
+
       <p></p>
     </div>
-    
+
     <div class="row" id="row2">
       <div class="col-md-6" id="stCompare">
         <p></p>
@@ -174,24 +174,24 @@
           <div class="col-md-2">          </div>
           <div class="col-md-4" id="stDemographic">
             <p></p>
-            <div id="state-title"><span class="clickState">Alabama</span> Voter Eligibility (1980+)</div> 
+            <div id="state-title"><span class="clickState">Alabama</span> Voter Eligibility (1980+)</div>
             <br>
             <span id="noFelon"></span>
           </div>
           <div class="col-md-4" id="stDemographic2">
             <p></p>
-            <div id="state-title2">USA Voter Eligibility (1980+)</div> 
+            <div id="state-title2">USA Voter Eligibility (1980+)</div>
             <br>
             <span id="noFelon2"></span>
           </div>
-          <div class="col-md-2">          </div> 
+          <div class="col-md-2">          </div>
         </div>
       </div>
     </div>
 
   <div class="row" align="center"><br><p>Select state: <select id="dropState"></p></select></div>
 
-    <div class="row" id="state-div-size">      
+    <div class="row" id="state-div-size">
       <div class="col-md-6" id="stParty">
         <p></p>
         <div id="state-title">Political Party Trends: <span class="clickState">Alabama</span></div> <br>
@@ -287,11 +287,11 @@ var quantize = d3.scale.quantize()
   .range(["#ff8383", "#ff9e9e", "#ffbaba", "#ffd6d6", "#c2eaff", "#aae2ff", "#91daff", "#75d1ff"]);
 
 var demo_scale = d3.scale.ordinal()
-  .domain([0, 1, 2]) 
+  .domain([0, 1, 2])
   .range(["#5C3D00", "orange", "#A37519"]);
 
 var demo2_scale = d3.scale.ordinal()
-  .domain([0, 1, 2]) 
+  .domain([0, 1, 2])
   .range(["black", "gray", "#666699"]);
 
 // create svg canvas in chorovis div
@@ -389,7 +389,7 @@ var arcDemo = d3.svg.arc()
 
 var pie = d3.layout.pie()
   .sort(null)
-  .value(function(d) { return d; }); 
+  .value(function(d) { return d; });
 
 var arcTween = function (a) {
   var i = d3.interpolate(this._current, a);
@@ -582,21 +582,21 @@ var addColors = function(y_coord, colors) {
     // .attr("stroke", "black")
     // .attr("stroke-width", "1px")
     .attr("fill", colors[0]);
-  
+
   legend.append("rect")
     .attr("x", 165)
     .attr("y", y_coord - 10)
     .attr("width", 28)
     .attr("height", 10)
     .attr("fill", colors[1]);
-  
+
   legend.append("rect")
     .attr("x", 200)
     .attr("y", y_coord - 10)
     .attr("width", 28)
     .attr("height", 10)
     .attr("fill", colors[2]);
-  
+
   legend.append("rect")
     .attr("x", 235)
     .attr("y", y_coord - 10)
@@ -691,7 +691,7 @@ var updateVis = function () {
       third_name = d.thirdName;
     }
   })
-  
+
   // change names in html
   // if there is no third party
   if (third_pres == "") {
@@ -714,7 +714,7 @@ var updateVis = function () {
         .attr("style", "color:red");
       document.getElementById('loser2pre').innerHTML = "";
       document.getElementById('loser2').innerHTML = "";
-    } 
+    }
   // if there is a third party
   } else {
     if(gop_ev > dem_ev) {
@@ -763,9 +763,9 @@ var updateVis = function () {
             return "color:#663300"
           }
         });
-    } 
+    }
   }
-  
+
   // select pie paths
   var ev_path = pres_svg.selectAll(".outer")
       .data(pie([gop_ev, dem_ev, amer_ev, badDem_ev, prog_ev, progTwo_ev, SR_ev]));
@@ -774,14 +774,14 @@ var updateVis = function () {
       .data(pie([gop_votes, dem_votes, amer_votes,
                  badDem_votes, prog_votes, progTwo_votes, SR_votes]));
 
-    
+
   var ev_group = ev_path.enter().append("g");
 
   var vote_group = vote_path.enter().append("g");
 
   ev_slices = ev_group.append("path")
       .attr("class", "outer")
-      .attr("fill", function(d, i) { 
+      .attr("fill", function(d, i) {
         if(i == 0) {
           return "#ff8383";
         } else if (i == 1) {
@@ -821,7 +821,7 @@ var updateVis = function () {
 
   vote_slices = vote_group.append("path")
       .attr("class", "inner")
-      .attr("fill", function(d, i) { 
+      .attr("fill", function(d, i) {
         if(i == 0) {
           return "#ff8383";
         } else if (i == 1) {
@@ -889,7 +889,7 @@ var updateVis = function () {
                  badDem_votes, prog_votes, progTwo_votes, SR_votes]));
 
   vote_path
-    .transition().duration(500).attrTween("d", arcTweenInner); 
+    .transition().duration(500).attrTween("d", arcTweenInner);
 
   vote_text = pres_svg.selectAll(".textInner")
       .data(pie([gop_votes, dem_votes, amer_votes,
@@ -906,9 +906,9 @@ var updateVis = function () {
       if(d.value > 0) {
         return (Math.round(((d.value/1000000) + 0.00001) * 100) / 100) + "M";
       }
-    });; 
+    });;
 
-  
+
   //get state demographic data
   // var st_white = 0;
   // var st_black = 0;
@@ -960,7 +960,7 @@ var updateVis = function () {
     }
   })
 
-  
+
 
   // select pie paths
   var elig_path = elig_svg.selectAll("#categ")
@@ -990,7 +990,7 @@ var updateVis = function () {
     .attr("text-anchor", "middle")
     .attr("fill", "white")
     .text(function(d) {
-      // return total 
+      // return total
       if(d.value > 0) {
         return d.value;
       }
@@ -1030,7 +1030,7 @@ var updateVis = function () {
     .attr("text-anchor", "middle")
     .attr("fill", "white")
     .text(function(d) {
-      // return total 
+      // return total
       if(d.value > 0) {
         return rounded((d.value/1000000).toFixed(1)) + "M";
       }
@@ -1059,7 +1059,7 @@ var updateVis = function () {
       return "translate(" + x + ", " + y + ")";
     })
     .text(function(d) {
-      // return total 
+      // return total
       if(d.value > 0) {
         return rounded((d.value/1000000).toFixed(1)) + "M";
       }
@@ -1134,13 +1134,13 @@ var updateVis = function () {
       return "translate(" + x + ", " + y + ")";
     })
     .text(function(d) {
-      // return total 
+      // return total
       if(d.value > 0) {
         return rounded((d.value/1000000).toFixed(1)) + "M";
       }
     });;
 
-  
+
 
   // select pie paths
   var demo_path = st_demo_svg.selectAll("#demographic")
@@ -1170,7 +1170,7 @@ var updateVis = function () {
     .attr("text-anchor", "middle")
     .attr("fill", "white")
     .text(function(d) {
-      // return total 
+      // return total
       if(d.value > 0) {
         return d.value;
       }
@@ -1208,7 +1208,7 @@ var updateVis = function () {
     .attr("text-anchor", "middle")
     .attr("fill", "white")
     .text(function(d) {
-      // return total 
+      // return total
       if(d.value > 0) {
         return comma(d.value);
       }
@@ -1406,12 +1406,12 @@ var updateVis = function () {
   var valueline = d3.svg.line()
     .x(function(d) {  {return x(d.year)}} )
     .y(function(d) {  {return y(d.demPct)}});
-    
-  var valueline2 = d3.svg.line()  
-    .x(function(d) { return x(d.year)})
-    .y(function(d) {  {return y(d.gopPct)}}); 
 
-  var valueline3 = d3.svg.line()  
+  var valueline2 = d3.svg.line()
+    .x(function(d) { return x(d.year)})
+    .y(function(d) {  {return y(d.gopPct)}});
+
+  var valueline3 = d3.svg.line()
     .x(function(d) { return x(d.year)})
     .y(function(d) {  if (d.thirdName == "American Independent") {
       return y(d.thirdPct)
@@ -1419,7 +1419,7 @@ var updateVis = function () {
       return y(0)
     }})
 
-  var valueline4 = d3.svg.line()  
+  var valueline4 = d3.svg.line()
     .x(function(d) { return x(d.year)})
     .y(function(d) {  if (d.thirdName == "States' Rights") {
       return y(d.thirdPct)
@@ -1427,7 +1427,7 @@ var updateVis = function () {
       return y(0)
     }})
 
-  var valueline5 = d3.svg.line()  
+  var valueline5 = d3.svg.line()
     .x(function(d) { return x(d.year)})
     .y(function(d) {  if (d.thirdName == "Progressive (1924)") {
       return y(d.thirdPct)
@@ -1435,22 +1435,22 @@ var updateVis = function () {
       return y(0)
     }})
 
-  var valueline6 = d3.svg.line()  
+  var valueline6 = d3.svg.line()
     .x(function(d) { return x(d.year)})
     .y(function(d) {  if (d.thirdName == "Progressive (1912)") {
       return y(d.thirdPct)
     } else {
-      return y(0) 
+      return y(0)
     }})
 
 
   // var valueline3 = d3.svg.line()
   //   .x(function(d) {  {return x(d.year)}} )
   //   .y(function(d) {  {return y(d.demPct)}});
-    
-  // var valueline4 = d3.svg.line()  
+
+  // var valueline4 = d3.svg.line()
   //   .x(function(d) { return x(d.year)})
-  //   .y(function(d) {  {return y(d.gopPct)}}); 
+  //   .y(function(d) {  {return y(d.gopPct)}});
 
 
   d3.selectAll(".axis")
@@ -1459,7 +1459,7 @@ var updateVis = function () {
   x.domain(d3.extent(ELECFILTERED, function(d) { return d.year }));
   // y.domain([0, d3.max(ELECFILTERED, function(d) {
   //    return Math.max(d.gopPct, d.demPct, d.thirdPct)})]);
-  y.domain([0, 100]); 
+  y.domain([0, 100]);
 
   if (first) {
     st_party_svg.append("path")
@@ -1467,7 +1467,7 @@ var updateVis = function () {
       .attr("id", "party1")
       .attr("transform", "translate(0,5)")
       .attr("d", valueline(ELECFILTERED));
-      
+
     st_party_svg.append("path")
       .style("stroke", "red")
       .attr("id", "party2")
@@ -1528,21 +1528,21 @@ var updateVis = function () {
     .transition().duration(500)
     .attr("d", valueline6(ELECFILTERED));
 
-  function make_x_grid() {        
+  function make_x_grid() {
     return d3.svg.axis()
       .scale(x)
       .orient("bottom")
       .ticks(25)
   }
 
-  function make_y_grid() {        
+  function make_y_grid() {
     return d3.svg.axis()
       .scale(y)
       .orient("left")
       .ticks(5)
   }
 
-    // st_party_svg.append("g")         
+    // st_party_svg.append("g")
     //     .attr("class", "grid")
     //     .attr("transform", "translate(0," + (stPartyHeight+5) + ")")
     //     .call(make_x_grid()
@@ -1550,7 +1550,7 @@ var updateVis = function () {
     //         .tickFormat("")
     //     )
 
-    // st_party_svg.append("g")         
+    // st_party_svg.append("g")
     //     .attr("class", "grid")
     //     .attr("transform", "translate(0,5)")
     //     .call(make_y_grid()
@@ -1569,7 +1569,7 @@ var updateVis = function () {
   //   .attr("d", valueline4(ELEC_TOTALS));
 
   // if (CURRENT_YEAR == 1968) {
-  //   var valueline3 = d3.svg.line()  
+  //   var valueline3 = d3.svg.line()
   //     .x(function(d) { return x(d.year)})
   //     .y(function(d) {  {return y(d.thirdPct)} });
 
@@ -1581,7 +1581,7 @@ var updateVis = function () {
 
 
 
-  st_party_svg.append("g")          
+  st_party_svg.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(0," + (stPartyHeight+5) + ")")
     .call(xAxis)
@@ -1609,14 +1609,14 @@ var updateVis = function () {
   st_party_svg.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(35,5)")
-    .call(yAxis); 
+    .call(yAxis);
 
   // st_party_svg.append("g")
   //   .attr("class", "dotAxis")
   //   .attr("class", "axis")
   //   .attr("transform", "translate(" + (35 + 4.5 * (CURRENT_YEAR - 1912)) + ",0)")
   //   .style("stroke-dasharray", ("3, 3"))
-  //   .call(yAxisDot); 
+  //   .call(yAxisDot);
 
   st_party_svg.append("rect")
     .attr("x", stPartyWidth - 125)
@@ -1717,18 +1717,18 @@ var updateVis = function () {
   var valuelineTurnt = d3.svg.line()
     .x(function(d, i) { if (d.year > 1979) { {return xTurnt(d.year)}}} )
     .y(function(d) { if (d.year > 1979) {return yTurnt(d.turntA)}});
-    
-  var valuelineTurnt2 = d3.svg.line()  
-    .x(function(d, i) {if (d.year > 1979) { return xTurnt(d.year)}})
-    .y(function(d) { if (d.year > 1979) {return yTurnt(d.turntE)}}); 
 
-  var valuelineTurnt3 = d3.svg.line()  
+  var valuelineTurnt2 = d3.svg.line()
     .x(function(d, i) {if (d.year > 1979) { return xTurnt(d.year)}})
-    .y(function(d) { if (d.year > 1979) {return yTurnt(d.turntE)}}); 
+    .y(function(d) { if (d.year > 1979) {return yTurnt(d.turntE)}});
 
-  var valuelineTurnt4 = d3.svg.line()  
+  var valuelineTurnt3 = d3.svg.line()
     .x(function(d, i) {if (d.year > 1979) { return xTurnt(d.year)}})
-    .y(function(d) { if (d.year > 1979) {return yTurnt(d.turntA)}}); 
+    .y(function(d) { if (d.year > 1979) {return yTurnt(d.turntE)}});
+
+  var valuelineTurnt4 = d3.svg.line()
+    .x(function(d, i) {if (d.year > 1979) { return xTurnt(d.year)}})
+    .y(function(d) { if (d.year > 1979) {return yTurnt(d.turntA)}});
 
   xTurnt.domain([1980, 2012]);
   yTurnt.domain([0, 1])
@@ -1767,7 +1767,7 @@ var updateVis = function () {
     .transition().duration(500)
     .attr("d", valuelineTurnt2(ELECFILTERED));
 
-  st_turnt_svg.append("g")          
+  st_turnt_svg.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(0," + (stTurntHeight+10) + ")")
     .call(xAxisTurnt)
@@ -1778,7 +1778,7 @@ var updateVis = function () {
   st_turnt_svg.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(35,10)")
-    .call(yAxisTurnt); 
+    .call(yAxisTurnt);
 
   st_turnt_svg.append("rect")
     .attr("x", stTurntWidth - 250)
@@ -1831,13 +1831,13 @@ var updateVis = function () {
     .attr("x", stTurntWidth - 195)
     .attr("y", 375)
     // .style("text-anchor", "middle")
-    .text("Voting-age"); 
+    .text("Voting-age");
 
   st_turnt_svg.append("text")
     .attr("x", stTurntWidth - 195)
     .attr("y", 385)
     // .style("text-anchor", "middle")
-    .text("population"); 
+    .text("population");
 
   st_turnt_svg.append("text")
     .attr("x", stTurntWidth - 110)
@@ -1908,10 +1908,10 @@ var updateVis = function () {
   var valuelineInc = d3.svg.line()
     .x(function(d, i) { if (d.year >= 1984) { {return xInc(d.year)}}} )
     .y(function(d) { if (d.year >= 1984) {;return yInc(d.medInc)}});
-    
-  var valuelineInc2 = d3.svg.line()  
+
+  var valuelineInc2 = d3.svg.line()
     .x(function(d, i) {if (d.year >= 1984) { return xInc(d.year)}})
-    .y(function(d) { if (d.year >= 1984) {return yInc(d.medInc)}}); 
+    .y(function(d) { if (d.year >= 1984) {return yInc(d.medInc)}});
 
   xInc.domain([1984, 2012]);
   yInc.domain([0, 80000])
@@ -1942,8 +1942,8 @@ var updateVis = function () {
     .transition().duration(500)
     .attr("d", valuelineInc2(INC_TOTALS));
 
-  
-  st_inc_svg.append("g")          
+
+  st_inc_svg.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(30," + (stIncHeight+10) + ")")
     .call(xAxisInc)
@@ -1954,7 +1954,7 @@ var updateVis = function () {
   st_inc_svg.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(65,10)")
-    .call(yAxisInc); 
+    .call(yAxisInc);
 
   var margin_bottom = 50;
   var margin_left = 3;
@@ -2012,7 +2012,7 @@ var updateVis = function () {
       return 1;
     } else {
       return -1;
-    } 
+    }
   });
 
 
@@ -2041,7 +2041,7 @@ var updateVis = function () {
   xComp.domain([1912, 2012]);
   yComp.domain([0, 1]);
 
-  st_comp_svg.append("g")         
+  st_comp_svg.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(0," + (stCompHeight+10) + ")")
     .call(xAxisComp);
@@ -2167,7 +2167,7 @@ var updateVis = function () {
       return stCompHeight + 10 - yComp(getMargin(d)[0]);
     })
     .attr("fill", function(d) {
-      
+
       var winner = getMargin(d)[1];
 
       if(winner == "gop") {
@@ -2211,14 +2211,14 @@ var updateVis = function () {
 
   comp_bars.exit().remove();
 
- 
+
 
 
   // update choropleth
   var state_paths = states.selectAll("path");
   var state_pattern_path = state_pattern.selectAll("path");
   var state_text = states.selectAll("text");
-  
+
   function update(clickState) {
     document.getElementById("dropState").value = clickState;
     document.getElementsByClassName('clickState')[0].innerHTML = clickState;
@@ -2463,9 +2463,9 @@ var updateVis = function () {
         return 1
       }
     });
-    
-  state_paths//.transition().duration(500)
-    .attr("fill", function() { 
+
+  state_paths.transition().duration(500)
+    .attr("fill", function() {
     var that = this;
     var noodle = "cat";
     var current_states_obj = ELECGLOBAL.filter(function(obj) {
@@ -2480,7 +2480,7 @@ var updateVis = function () {
     }
     ELECGLOBAL.forEach(function(d) {
       if(d.year == CURRENT_YEAR && d.state == that.id) {
-        // if there is a third party 
+        // if there is a third party
         if (d.thirdPct !== null) {
           // if the third party loses the state
           if (d.thirdPct < d.demPct || d.thirdPct < d.gopPct) {
@@ -2536,17 +2536,17 @@ var updateVis = function () {
             noodle = quantize(d.demPct - d.gopPct);
           }
         }
-      } 
+      }
     })
     return noodle;
-     
+
     })
     .attr("fill-opacity", .85)
     // .attr("class", "circles-1");
     // .attr("fill-opacity", .5)
     // .attr("fill", "url(#verticall-stripe-1) blue")
     // .attr("fill", dem_colors[1]);
-    
+
     // state_paths.transition(5000)
     //   .attr("fill", "url(#vertical-stripe-1) blue");
 
@@ -2588,7 +2588,7 @@ var initVis = function (error, stateJson, elecData, incData) {
     .attr("id", function(d) { return d.properties.NAME; })
     .attr("d", path)
     .attr("fill", function(d) { if(d.properties.CENSUSAREA > 113590) {
-        return "#AAAAAA"; 
+        return "#AAAAAA";
       } else {
         return "#AAAAAA";
       }
@@ -2605,7 +2605,7 @@ var initVis = function (error, stateJson, elecData, incData) {
     .attr("y", function(d) { return path.centroid(d)[1]; })
     .attr("text-anchor", "middle")
     .attr("font-weight", "bold")
-    .attr("id", function(d) { return d.properties.NAME.concat("txt"); }); 
+    .attr("id", function(d) { return d.properties.NAME.concat("txt"); });
 
 
 
